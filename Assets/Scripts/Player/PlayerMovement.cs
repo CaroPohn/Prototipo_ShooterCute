@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsPlayerOnGround;
 
     public Transform orientation;
+    public Transform cameraOrientation;
     private Vector2 inputDir;
     private Vector3 moveDirection;
     private Rigidbody rb;
@@ -47,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         IsPlayerOnGround = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
+
+        transform.rotation = Quaternion.Euler(0, cameraOrientation.eulerAngles.y, 0);
     }
 
     private void FixedUpdate()
