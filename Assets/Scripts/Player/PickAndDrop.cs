@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PickAndDrop : MonoBehaviour
@@ -5,7 +6,10 @@ public class PickAndDrop : MonoBehaviour
     [SerializeField] private Transform holdPosition;
     private GameObject heldEgg;
 
-    void Update()
+    public event Action<GameObject> OnEggGrabbed;
+    public event Action<GameObject> OnEggDropped;
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -30,7 +34,7 @@ public class PickAndDrop : MonoBehaviour
         }
     }
 
-    void TryPickUp()
+    private void TryPickUp()
     {
         RaycastHit hit;
         Vector3 rayOrigin = Camera.main.transform.position;
@@ -45,6 +49,8 @@ public class PickAndDrop : MonoBehaviour
                 heldEgg.transform.SetParent(holdPosition);
                 heldEgg.transform.localPosition = Vector3.zero;
                 heldEgg.transform.localRotation = Quaternion.identity;
+
+                OnEggGrabbed?.Invoke(heldEgg);
 
                 Rigidbody rb = heldEgg.GetComponent<Rigidbody>();
 
@@ -61,7 +67,7 @@ public class PickAndDrop : MonoBehaviour
         }
     }
 
-    void PlaceEgg()
+    private void PlaceEgg()
     {
         if (heldEgg != null)
         {
@@ -83,6 +89,8 @@ public class PickAndDrop : MonoBehaviour
                     heldEgg.transform.rotation = Quaternion.identity;
                 }
             }
+
+            OnEggDropped?.Invoke(heldEgg);
 
             Rigidbody rb = heldEgg.GetComponent<Rigidbody>();
             rb.isKinematic = true;
