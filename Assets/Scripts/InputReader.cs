@@ -8,6 +8,8 @@ public class InputReader : MonoBehaviour
     public Action<Vector2> OnMove;
     public Action<Vector2> OnMoveCamera;
     public Action OnJump;
+    public Action OnShoot;
+    public Action OnReload;
 
     public void HandleMoveInput(InputAction.CallbackContext context)
     {
@@ -24,6 +26,22 @@ public class InputReader : MonoBehaviour
         if (context.started)
         {
             OnJump?.Invoke();
+        }
+    }
+
+    public void HandleShootInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnShoot?.Invoke();
+        }
+    }
+
+    public void HandleReloadInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnReload?.Invoke();
         }
     }
 }
