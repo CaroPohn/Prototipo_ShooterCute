@@ -71,8 +71,6 @@ public class PickAndDrop : MonoBehaviour
     {
         if (heldEgg != null)
         {
-            heldEgg.transform.SetParent(null);
-
             RaycastHit hit;
             Vector3 rayOrigin = Camera.main.transform.position;
             Vector3 rayDirection = Camera.main.transform.forward;
@@ -83,18 +81,28 @@ public class PickAndDrop : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Floor"))
                 {
+                    heldEgg.transform.SetParent(null);
+
                     float eggHeight = heldEgg.GetComponent<Collider>().bounds.extents.y;
 
                     heldEgg.transform.position = hit.point + Vector3.up * eggHeight;
                     heldEgg.transform.rotation = Quaternion.identity;
+
+                    Rigidbody rb = heldEgg.GetComponent<Rigidbody>();
+                    rb.isKinematic = true;
+
+                    OnEggDropped?.Invoke(heldEgg);
+                    heldEgg = null;
+                }
+                else
+                {
+                    Debug.Log("No estás apuntando al piso.");
                 }
             }
-
-            OnEggDropped?.Invoke(heldEgg);
-
-            Rigidbody rb = heldEgg.GetComponent<Rigidbody>();
-            rb.isKinematic = true;
-            heldEgg = null;
+            else
+            {
+                Debug.Log("No hay nada en el raycast.");
+            }
         }
     }
 }
