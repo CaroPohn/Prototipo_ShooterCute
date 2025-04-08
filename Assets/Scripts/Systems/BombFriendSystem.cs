@@ -1,0 +1,91 @@
+using UnityEngine;
+
+public class BombFriendSystem : MonoBehaviour
+{
+    public float runSpeed = 3f;
+    public float maxDistance = 10f;
+    public KeyCode activateKey = KeyCode.E;
+
+    private bool isRunning = false;
+    private Vector3 startPosition;
+    private Transform player;
+
+    void Start()
+    {
+        player = transform.parent;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
+
+        Collider myCollider = GetComponent<Collider>();
+        Collider playerCollider = player.GetComponent<Collider>();
+
+        if (myCollider != null && playerCollider != null)
+        {
+            Physics.IgnoreCollision(myCollider, playerCollider, true);
+        }
+    }
+
+    void Update()
+    {
+        if (!isRunning && Input.GetKeyDown(activateKey))
+        {
+            DropAndRun();
+        }
+
+        if (isRunning)
+        {
+            transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+
+            float distance = Vector3.Distance(startPosition, transform.position);
+            if (distance >= maxDistance)
+            {
+                Explode();
+            }
+        }
+    }
+
+    void DropAndRun()
+    {
+        transform.parent = null;
+
+        Vector3 dropPosition = player.position + player.forward * 1f;
+        dropPosition.y = GetGroundY(dropPosition) + 0.1f;
+        transform.position = dropPosition;
+
+        transform.rotation = Quaternion.LookRotation(player.forward);
+
+        startPosition = transform.position;
+        isRunning = true;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+            rb.isKinematic = true;
+    }
+
+    float GetGroundY(Vector3 pos)
+    {
+        if (Physics.Raycast(pos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 5f))
+        {
+            return hit.point.y;
+        }
+        return pos.y;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (isRunning)
+        {
+            Explode();
+        }
+    }
+
+    void Explode()
+    {
+        Destroy(gameObject);
+    }
+}

@@ -5,6 +5,7 @@ public class WaponChanger : MonoBehaviour
     [SerializeField] GameObject Gun1;
     [SerializeField] GameObject Gun2;
     [SerializeField] GameObject Gun3;
+    [SerializeField] GameObject Gun4;
 
     private int weaponIndex;
 
@@ -36,6 +37,11 @@ public class WaponChanger : MonoBehaviour
             weaponIndex = 3;
             ChangeWeapon(weaponIndex);
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            weaponIndex = 4;
+            ChangeWeapon(weaponIndex);
+        }
     }
 
     private void ChangeWeapon(int weaponIndex)
@@ -45,18 +51,32 @@ public class WaponChanger : MonoBehaviour
             Gun1.SetActive(true);
             Gun2.SetActive(false);
             Gun3.SetActive(false);
+            if(Gun4 != null)
+                Gun4.SetActive(false);
         } 
         else if (weaponIndex == 2) 
         {
             Gun1.SetActive(false);
             Gun2.SetActive(true);
             Gun3.SetActive(false);
+            if (Gun4 != null)
+                Gun4.SetActive(false);
         }
         else if (weaponIndex == 3)
         {
             Gun1.SetActive(false);
             Gun2.SetActive(false);
             Gun3.SetActive(true);
+            if (Gun4 != null)
+                Gun4.SetActive(false);
+        }
+        else if (weaponIndex == 4)
+        {
+            Gun1.SetActive(false);
+            Gun2.SetActive(false);
+            Gun3.SetActive(false);
+            if (Gun4 != null)
+                Gun4.SetActive(true);
         }
     }
 }
