@@ -2034,6 +2034,10 @@ MonoBehaviour:
   runSpeed: 3
   maxDistance: 5
   activateKey: 101
+  explosionForce: 5
+  explosionRadius: 5
+  damage: 100
+  waitForExplosionTime: 0.5
 --- !u!65 &1007886077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3529,9 +3533,10 @@ GameObject:
   - component: {fileID: 1664436725}
   - component: {fileID: 1664436724}
   - component: {fileID: 1664436723}
+  - component: {fileID: 1664436729}
   m_Layer: 0
   m_Name: FollowEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3657,6 +3662,33 @@ Transform:
   - {fileID: 1421750023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1664436729
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664436722}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1681012402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,9 +4109,10 @@ GameObject:
   - component: {fileID: 1784896012}
   - component: {fileID: 1784896011}
   - component: {fileID: 1784896016}
+  - component: {fileID: 1784896017}
   m_Layer: 0
   m_Name: PatrolEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4209,6 +4242,33 @@ MonoBehaviour:
   speed: 4
   rotationSpeed: 5
   reachDistance: 0.2
+--- !u!54 &1784896017
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784896010}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1814267721
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BombFriendSystem : MonoBehaviour
@@ -9,6 +10,11 @@ public class BombFriendSystem : MonoBehaviour
     private bool isRunning = false;
     private Vector3 startPosition;
     private Transform player;
+
+    public float explosionForce;
+    public float explosionRadius;
+    public float damage;
+    public float waitForExplosionTime;
 
     void Start()
     {
@@ -80,12 +86,40 @@ public class BombFriendSystem : MonoBehaviour
     {
         if (isRunning)
         {
-            Explode();
+            StartCoroutine(ExplodeAfterDelay());
         }
     }
 
     void Explode()
     {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
+        foreach (var hitCollider in hitColliders)
+        {
+            Rigidbody rb = hitCollider.GetComponentInParent<Rigidbody>();
+
+            if (rb != null && rb.tag == "Enemy")
+            {
+                HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage((int)damage);
+                }
+            }        
+        }
+
         Destroy(gameObject);
+    }
+
+    private IEnumerator ExplodeAfterDelay()
+    {
+        yield return new WaitForSeconds(waitForExplosionTime);
+        Explode();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }
