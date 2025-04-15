@@ -20,8 +20,6 @@ public class GunSystem : MonoBehaviour
 
     public RaycastHit rayHit;
 
-    Vector3 direction;
-
     [SerializeField] public TextMeshProUGUI bulletsMagazine;
     [SerializeField] GameObject shootPivot;
     [SerializeField] LineRenderer lineRenderer;
@@ -80,14 +78,15 @@ public class GunSystem : MonoBehaviour
         lineRenderer.transform.position = shootPivot.transform.position;
         lineRenderer.SetPosition(0, shootPivot.transform.position);
 
-        float x = Random.Range(-spread, spread);
-        float y = Random.Range(-spread, spread);
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+        Vector2 offset = Random.insideUnitCircle * spread;
+        Vector3 shootPoint = screenCenter + new Vector3(offset.x, offset.y, 0f);
 
-        Vector3 spreadDirection = shootPivot.transform.forward + new Vector3(x, y, 0);
+        Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 
         lineRenderer.enabled = true;
 
-        if (Physics.Raycast(shootPivot.transform.position, spreadDirection, out rayHit, range))
+        if (Physics.Raycast(ray, out rayHit, range))
         {           
             lineRenderer.SetPosition(1, rayHit.point);
 
@@ -99,7 +98,7 @@ public class GunSystem : MonoBehaviour
         }
         else
         {
-            lineRenderer.SetPosition(1, playerCamera.transform.position + (playerCamera.transform.forward * range));
+            lineRenderer.SetPosition(1, ray.origin + ray.direction * range);
         }
 
         bulletsLeft--;
