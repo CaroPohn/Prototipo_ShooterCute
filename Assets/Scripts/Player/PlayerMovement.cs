@@ -49,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
     {
         IsPlayerOnGround = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
 
-        transform.rotation = Quaternion.Euler(0, cameraOrientation.eulerAngles.y, 0);
+        Quaternion targetRotation = Quaternion.Euler(0, cameraOrientation.eulerAngles.y, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15f);
     }
 
     private void FixedUpdate()
@@ -95,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * inputDir.y + orientation.right * inputDir.x;
+        moveDirection = cameraOrientation.forward * inputDir.y + cameraOrientation.right * inputDir.x;
 
         Vector3 groundNormal = GetGroundNormal();
         Vector3 adjustedDirection = Vector3.ProjectOnPlane(moveDirection, groundNormal).normalized;
