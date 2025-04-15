@@ -117,7 +117,7 @@ public class BombFriendSystem : MonoBehaviour
 
         isRunning = false;
         transform.position = player.position + player.forward * 1f;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = Quaternion.LookRotation(player.forward);
         transform.SetParent(player);
         gameObject.SetActive(false);
     }
