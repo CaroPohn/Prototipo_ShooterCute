@@ -16,6 +16,8 @@ public class BombFriendSystem : MonoBehaviour
     public float damage;
     public float waitForExplosionTime;
 
+    [SerializeField] private GameObject explosionVFXPrefab;
+
     void Start()
     {
         player = transform.parent;
@@ -92,6 +94,11 @@ public class BombFriendSystem : MonoBehaviour
 
     void Explode()
     {
+        if (explosionVFXPrefab != null)
+        {
+            Instantiate(explosionVFXPrefab, transform.position, Quaternion.identity);
+        }
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
 
         foreach (var hitCollider in hitColliders)
@@ -108,7 +115,11 @@ public class BombFriendSystem : MonoBehaviour
             }        
         }
 
-        Destroy(gameObject);
+        isRunning = false;
+        transform.position = player.position + player.forward * 1f;
+        transform.rotation = Quaternion.identity;
+        transform.SetParent(player);
+        gameObject.SetActive(false);
     }
 
     private IEnumerator ExplodeAfterDelay()
