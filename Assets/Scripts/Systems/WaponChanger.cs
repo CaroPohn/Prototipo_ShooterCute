@@ -5,7 +5,12 @@ public class WaponChanger : MonoBehaviour
     [SerializeField] GameObject Gun1;
     [SerializeField] GameObject Gun2;
     [SerializeField] GameObject Gun3;
-    [SerializeField] GameObject Gun4;
+    //[SerializeField] GameObject Gun4;
+
+    [SerializeField] private GameObject bomb;
+    [SerializeField] private Transform bombHolder;
+
+    private GameObject Gun4;
 
     private int weaponIndex;
 
@@ -51,7 +56,9 @@ public class WaponChanger : MonoBehaviour
             Gun1.SetActive(true);
             Gun2.SetActive(false);
             Gun3.SetActive(false);
-            if(Gun4 != null)
+
+            Gun4 = FindChildWithTag(transform, "Bomb");
+            if (Gun4 != null)
                 Gun4.SetActive(false);
         } 
         else if (weaponIndex == 2) 
@@ -59,6 +66,8 @@ public class WaponChanger : MonoBehaviour
             Gun1.SetActive(false);
             Gun2.SetActive(true);
             Gun3.SetActive(false);
+
+            Gun4 = FindChildWithTag(transform, "Bomb");
             if (Gun4 != null)
                 Gun4.SetActive(false);
         }
@@ -67,6 +76,8 @@ public class WaponChanger : MonoBehaviour
             Gun1.SetActive(false);
             Gun2.SetActive(false);
             Gun3.SetActive(true);
+
+            Gun4 = FindChildWithTag(transform, "Bomb");
             if (Gun4 != null)
                 Gun4.SetActive(false);
         }
@@ -75,9 +86,33 @@ public class WaponChanger : MonoBehaviour
             Gun1.SetActive(false);
             Gun2.SetActive(false);
             Gun3.SetActive(false);
+
+            Gun4 = FindChildWithTag(bombHolder, "Bomb");
+
             if (Gun4 != null)
+            {
                 Gun4.SetActive(true);
+            }
+            else if(Gun4 == null)
+            {
+                Instantiate(bomb, bombHolder.position, Quaternion.identity, bombHolder);
+                Gun4 = FindChildWithTag(bombHolder, "Bomb");
+                Gun4.SetActive(true);
+            }
         }
+    }
+
+    GameObject FindChildWithTag(Transform parent, string tag)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            if (child.CompareTag(tag))
+            {
+                return child.gameObject;
+            }
+        }
+
+        return null;
     }
 }
 
