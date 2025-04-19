@@ -10,6 +10,7 @@ public class BombFriendSystem : MonoBehaviour
     private bool isRunning = false;
     private Vector3 startPosition;
     private Transform player;
+    [SerializeField] private Transform holdPosition;
 
     public float explosionForce;
     public float explosionRadius;
@@ -103,16 +104,16 @@ public class BombFriendSystem : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            Rigidbody rb = hitCollider.GetComponentInParent<Rigidbody>();
+            Rigidbody hitRb = hitCollider.GetComponentInParent<Rigidbody>();
 
-            if (rb != null && rb.tag == "Enemy")
+            if (hitRb != null && hitRb.tag == "Enemy")
             {
                 HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
                 if (enemyHealth != null)
                 {
                     enemyHealth.TakeDamage((int)damage);
                 }
-            }        
+            }
         }
 
         isRunning = false;
