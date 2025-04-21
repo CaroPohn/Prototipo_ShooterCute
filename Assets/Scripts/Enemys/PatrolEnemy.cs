@@ -75,5 +75,8 @@ public class PatrolEnemy : MonoBehaviour
                 Gizmos.DrawLine(patrolPoints[i].position, patrolPoints[i + 1].position);
             }
         }
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, followDistance);
     }
 }
