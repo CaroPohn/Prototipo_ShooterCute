@@ -8,14 +8,12 @@ public class PatrolEnemy : MonoBehaviour
     public float rotationSpeed = 5f;
     public float reachDistance = 0.2f;
 
+    [SerializeField] Transform player;
+
+    public float followDistance;
+    public float followSpeed;
+
     private int currentPointIndex = 0;
-
-    //private void Update()
-    //{
-    //    if (patrolPoints.Count == 0) return;
-
-    //    MoveToNextPoint();
-    //}
 
     public void MoveToNextPoint()
     {
@@ -32,6 +30,35 @@ public class PatrolEnemy : MonoBehaviour
         {
             currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
         }
+    }
+
+    public bool IsPlayerOnRange()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (distanceToPlayer <= followDistance)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void FollowPlayer()
+    {
+        Vector3 moveDirection = (player.position - transform.position).normalized;
+        transform.position += moveDirection * followSpeed * Time.deltaTime;
+    }
+
+    public void SetLookAt()
+    {
+        Vector3 vec1 = transform.position;
+        Vector3 vec2 = player.position;
+
+        Vector3 vecLookAt = vec2 - vec1;
+        vecLookAt.y = 0f;
+
+        transform.forward = vecLookAt;
     }
 
     private void OnDrawGizmos()
