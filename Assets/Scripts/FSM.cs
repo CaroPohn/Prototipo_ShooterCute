@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class FSM : MonoBehaviour
 {
-    [SerializeField] private GameObject character;
+    [SerializeField] private PatrolEnemy patrolEnemy;
 
-    [SerializeField] private List<States> states = new List<States>();
+    [SerializeField] public List<EnemyStates> states = new List<EnemyStates>();
 
-    private States currentState;
+    private EnemyStates currentState;
 
     void Start()
     {
@@ -19,18 +19,18 @@ public class FSM : MonoBehaviour
     {
         if (currentState != null)
         {
-            currentState.UpdateState(character);
+            currentState.UpdateState(patrolEnemy);
         }
     }
 
-    public void ChangeState(States state)
+    public void ChangeState(EnemyStates state)
     {
         if (currentState != null)
         {
-            currentState.Exit(character);
+            currentState.Exit(patrolEnemy);
         }
 
         currentState = state;
-        currentState.Enter(character);
+        currentState.Enter(patrolEnemy);
     }
 }

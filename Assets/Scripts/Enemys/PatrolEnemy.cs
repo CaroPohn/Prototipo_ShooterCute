@@ -10,14 +10,14 @@ public class PatrolEnemy : MonoBehaviour
 
     private int currentPointIndex = 0;
 
-    private void Update()
-    {
-        if (patrolPoints.Count == 0) return;
+    //private void Update()
+    //{
+    //    if (patrolPoints.Count == 0) return;
 
-        MoveToNextPoint();
-    }
+    //    MoveToNextPoint();
+    //}
 
-    private void MoveToNextPoint()
+    public void MoveToNextPoint()
     {
         Transform targetPoint = patrolPoints[currentPointIndex];
 
