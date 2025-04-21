@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
     public float maxHealth;
-    private float health;
+    public float health;
 
     [SerializeField] private Image healthBarImage;
 
