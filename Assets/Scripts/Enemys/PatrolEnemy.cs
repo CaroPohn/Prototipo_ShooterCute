@@ -26,16 +26,9 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
 
     public float shootCoolDown;
-    public float shootDistance;
     public float damage;
 
     public float shootTimer;
-    private bool isAttacking;
-
-    private void Start()
-    {
-        isAttacking = false;
-    }
 
     public void MoveToNextPoint()
     {
@@ -54,7 +47,7 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
-    public bool IsPlayerOnRangeToFollowPlayer()
+    public bool IsPlayerOnRange()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -83,23 +76,8 @@ public class PatrolEnemy : MonoBehaviour
         transform.forward = vecLookAt;
     }
 
-    private void Shoot()
+    public void Shoot()
     {
-        if (shootTimer <= 0.0f)
-        {
-            ShootAction();
-            shootTimer = shootCoolDown;
-        }
-        else
-        {
-            isAttacking = false;
-        }
-    }
-
-    private void ShootAction()
-    {
-        isAttacking = true;
-
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
         Vector3 direction = (target.position - shootPoint.position).normalized * Time.deltaTime;

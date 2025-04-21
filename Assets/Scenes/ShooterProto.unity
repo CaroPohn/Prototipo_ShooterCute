@@ -325,6 +325,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa9ccf9b7db5fe446afe5746e7e46747, type: 2}
   - {fileID: 11400000, guid: a2bc5553a919274499450e62494f52bc, type: 2}
   - {fileID: 11400000, guid: 3eee7125ae3c0da449fd8d2be51a2133, type: 2}
+  - {fileID: 11400000, guid: 51204bdb45cb2be459e8d079e3928944, type: 2}
 --- !u!114 &77243437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +350,12 @@ MonoBehaviour:
   player: {fileID: 1226903909}
   followDistance: 11
   followSpeed: 4
+  shootPoint: {fileID: 1273680324}
+  target: {fileID: 1226903909}
+  projectilePrefab: {fileID: 1318284493881746266, guid: 5644d071379539b4c8aeaf7cc1c8dbf7, type: 3}
+  shootCoolDown: 4
+  damage: 50
+  shootTimer: 0
 --- !u!114 &77243438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +462,7 @@ Transform:
   - {fileID: 285755687}
   - {fileID: 969857820}
   - {fileID: 1436539968}
+  - {fileID: 1273680324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &83198847
@@ -1300,6 +1308,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &464551365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464551366}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464551366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464551365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 488708185}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488708178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1414,12 @@ MonoBehaviour:
   player: {fileID: 1226903909}
   followDistance: 11
   followSpeed: 4
+  shootPoint: {fileID: 464551366}
+  target: {fileID: 1226903909}
+  projectilePrefab: {fileID: 1318284493881746266, guid: 5644d071379539b4c8aeaf7cc1c8dbf7, type: 3}
+  shootCoolDown: 4
+  damage: 50
+  shootTimer: 0
 --- !u!114 &488708181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,6 +1526,7 @@ Transform:
   - {fileID: 22743553}
   - {fileID: 1881699154}
   - {fileID: 563191684}
+  - {fileID: 464551366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &488708186
@@ -1500,66 +1546,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa9ccf9b7db5fe446afe5746e7e46747, type: 2}
   - {fileID: 11400000, guid: a2bc5553a919274499450e62494f52bc, type: 2}
   - {fileID: 11400000, guid: 3eee7125ae3c0da449fd8d2be51a2133, type: 2}
---- !u!1 &507716853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 507716856}
-  - component: {fileID: 507716855}
-  - component: {fileID: 507716854}
-  m_Layer: 0
-  m_Name: VisualScripting SceneVariables
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &507716854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507716853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &507716855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507716853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!4 &507716856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507716853}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  - {fileID: 11400000, guid: 51204bdb45cb2be459e8d079e3928944, type: 2}
 --- !u!1 &551017446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,7 +3283,7 @@ GameObject:
   - component: {fileID: 1226903910}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3554,6 +3541,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269054901}
   m_CullTransparentMesh: 1
+--- !u!1 &1273680323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273680324}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273680324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273680323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 77243442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1330429590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,4 +5106,3 @@ SceneRoots:
   - {fileID: 564781760}
   - {fileID: 1716356022}
   - {fileID: 846350995}
-  - {fileID: 507716856}

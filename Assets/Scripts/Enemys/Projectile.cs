@@ -34,25 +34,19 @@ public class Projectile : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            Destroy(gameObject);
+
             HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
 
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
-            }
-
-            Destroy(gameObject);
+            }   
         }
         else
         {
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 3f);
         }
-    }
-
-    private IEnumerator RestoreDrag(PlayerMovement playerMovement, float originalDrag)
-    {
-        playerMovement.groundDrag = originalDrag;
-        yield return new WaitForSeconds(0.1f);
     }
 }
 
