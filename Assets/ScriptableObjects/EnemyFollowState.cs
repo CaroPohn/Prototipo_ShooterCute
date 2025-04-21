@@ -5,6 +5,8 @@ public class EnemyFollowState : EnemyStates
 {
     public override void UpdateState(PatrolEnemy patrolEnemy)
     {
+       
+
         patrolEnemy.FollowPlayer();
         patrolEnemy.SetLookAt();
     }

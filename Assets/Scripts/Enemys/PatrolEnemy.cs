@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
+    [Header("Patrol")]
+
     public List<Transform> patrolPoints;
     public float speed = 2f;
     public float rotationSpeed = 5f;
     public float reachDistance = 0.2f;
+
+    [Header("Follow")]
 
     [SerializeField] Transform player;
 
@@ -14,6 +18,24 @@ public class PatrolEnemy : MonoBehaviour
     public float followSpeed;
 
     private int currentPointIndex = 0;
+
+    [Header("Shoot")]
+
+    [SerializeField] private Transform shootPoint;
+    [SerializeField] private Transform target;
+    [SerializeField] GameObject projectilePrefab;
+
+    public float shootCoolDown;
+    public float shootDistance;
+    public float damage;
+
+    public float shootTimer;
+    private bool isAttacking;
+
+    private void Start()
+    {
+        isAttacking = false;
+    }
 
     public void MoveToNextPoint()
     {
@@ -32,7 +54,7 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
-    public bool IsPlayerOnRange()
+    public bool IsPlayerOnRangeToFollowPlayer()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -59,6 +81,35 @@ public class PatrolEnemy : MonoBehaviour
         vecLookAt.y = 0f;
 
         transform.forward = vecLookAt;
+    }
+
+    private void Shoot()
+    {
+        if (shootTimer <= 0.0f)
+        {
+            ShootAction();
+            shootTimer = shootCoolDown;
+        }
+        else
+        {
+            isAttacking = false;
+        }
+    }
+
+    private void ShootAction()
+    {
+        isAttacking = true;
+
+        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
+
+        Vector3 direction = (target.position - shootPoint.position).normalized * Time.deltaTime;
+
+        Projectile projScript = projectile.GetComponent<Projectile>();
+        if (projScript != null)
+        {
+            projScript.SetDamage(damage);
+            projScript.SetDirection(direction);
+        }
     }
 
     private void OnDrawGizmos()
