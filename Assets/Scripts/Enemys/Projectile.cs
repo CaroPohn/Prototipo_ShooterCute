@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     private Rigidbody projectileRB;
     public float speed;
 
+    private int counter;
+
     private void Start()
     {
         projectileRB = GetComponent<Rigidbody>();
@@ -32,8 +34,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        Destroy(gameObject);
+
+        counter++;
+
+        if (collision.transform.CompareTag("Player") && counter <= 1)
         {
+            Debug.Log("CHOCO");
+
             Destroy(gameObject);
 
             HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
@@ -42,10 +50,6 @@ public class Projectile : MonoBehaviour
             {
                 playerHealth.TakeDamage(damage);
             }   
-        }
-        else
-        {
-            Destroy(gameObject, 3f);
         }
     }
 }
