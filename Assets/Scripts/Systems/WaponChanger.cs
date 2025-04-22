@@ -57,7 +57,7 @@ public class WaponChanger : MonoBehaviour
             Gun2.SetActive(false);
             Gun3.SetActive(false);
 
-            Gun4 = FindChildWithTag(transform, "Bomb");
+            Gun4 = FindChildWithTag(bombHolder, "Bomb");
             if (Gun4 != null)
                 Gun4.SetActive(false);
         } 
@@ -67,7 +67,7 @@ public class WaponChanger : MonoBehaviour
             Gun2.SetActive(true);
             Gun3.SetActive(false);
 
-            Gun4 = FindChildWithTag(transform, "Bomb");
+            Gun4 = FindChildWithTag(bombHolder, "Bomb");
             if (Gun4 != null)
                 Gun4.SetActive(false);
         }
@@ -77,7 +77,7 @@ public class WaponChanger : MonoBehaviour
             Gun2.SetActive(false);
             Gun3.SetActive(true);
 
-            Gun4 = FindChildWithTag(transform, "Bomb");
+            Gun4 = FindChildWithTag(bombHolder, "Bomb");
             if (Gun4 != null)
                 Gun4.SetActive(false);
         }
