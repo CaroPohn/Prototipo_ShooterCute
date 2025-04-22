@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 22743554}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,6 +326,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2bc5553a919274499450e62494f52bc, type: 2}
   - {fileID: 11400000, guid: 3eee7125ae3c0da449fd8d2be51a2133, type: 2}
   - {fileID: 11400000, guid: 51204bdb45cb2be459e8d079e3928944, type: 2}
+  - {fileID: 11400000, guid: d28488cb868891c47b9afb6f346cd230, type: 2}
 --- !u!114 &77243437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,8 +708,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1226903901}
-  healthSystem: {fileID: 1226903910}
-  spawnPosition: {fileID: 705201474}
+  playerHealthSystem: {fileID: 1226903910}
+  playerSpawnPosition: {fileID: 705201474}
+  enemy1: {fileID: 488708178}
+  enemy2: {fileID: 77243434}
+  enemy1HealthSystem: {fileID: 488708181}
+  enemy2HealthSystem: {fileID: 77243438}
+  enemy1SpawnPoint: {fileID: 659698313}
+  enemy2SpawnPoint: {fileID: 220372739}
 --- !u!4 &142447411
 Transform:
   m_ObjectHideFlags: 0
@@ -750,6 +757,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.37, y: 1.193, z: 5.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &220372738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220372739}
+  m_Layer: 0
+  m_Name: Enemy2Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &220372739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220372738}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.3500004, y: 1.193, z: -24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -800,7 +838,7 @@ GameObject:
   - component: {fileID: 285755688}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1406,6 +1444,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2bc5553a919274499450e62494f52bc, type: 2}
   - {fileID: 11400000, guid: 3eee7125ae3c0da449fd8d2be51a2133, type: 2}
   - {fileID: 11400000, guid: 51204bdb45cb2be459e8d079e3928944, type: 2}
+  - {fileID: 11400000, guid: d28488cb868891c47b9afb6f346cd230, type: 2}
 --- !u!1 &551017446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1774,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581539867}
   m_CullTransparentMesh: 1
+--- !u!1 &659698312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659698313}
+  m_Layer: 0
+  m_Name: Enemy1Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659698313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659698312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.3500004, y: 1.193, z: 5.9900007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660800716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,7 +3001,7 @@ GameObject:
   - component: {fileID: 969857821}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4057,7 +4127,7 @@ GameObject:
   - component: {fileID: 1881699155}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4495,6 +4565,7 @@ SceneRoots:
   - {fileID: 1226903909}
   - {fileID: 665206004}
   - {fileID: 734849438}
+  - {fileID: 659698313}
   - {fileID: 488708185}
   - {fileID: 219066612}
   - {fileID: 242220450}
@@ -4502,6 +4573,7 @@ SceneRoots:
   - {fileID: 1687844348}
   - {fileID: 912433420}
   - {fileID: 938481759}
+  - {fileID: 220372739}
   - {fileID: 77243442}
   - {fileID: 1783107527}
   - {fileID: 1620207691}

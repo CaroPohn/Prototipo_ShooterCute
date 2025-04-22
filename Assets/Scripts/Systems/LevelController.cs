@@ -3,15 +3,26 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    [Header("Player")]
+
     [SerializeField] private GameObject player;
-    [SerializeField] private HealthSystem healthSystem;
-    [SerializeField] private Transform spawnPosition;
+    [SerializeField] private HealthSystem playerHealthSystem;
+    [SerializeField] private Transform playerSpawnPosition;
+
+    [Header("Enemy")]
+
+    [SerializeField] private GameObject enemy1;
+    [SerializeField] private GameObject enemy2;
+    [SerializeField] private HealthSystem enemy1HealthSystem;
+    [SerializeField] private HealthSystem enemy2HealthSystem;
+    [SerializeField] private Transform enemy1SpawnPoint;
+    [SerializeField] private Transform enemy2SpawnPoint;
 
     private void Update()
     {
-        if (healthSystem.health <= 0)
+        if (playerHealthSystem.health <= 0)
         {
-            healthSystem.health = healthSystem.maxHealth;
+            playerHealthSystem.health = playerHealthSystem.maxHealth;
 
             Rigidbody rb = player.GetComponent<Rigidbody>();
 
@@ -19,7 +30,29 @@ public class LevelController : MonoBehaviour
 
             player.SetActive(true);  
 
-            player.transform.position = spawnPosition.transform.position;
+            player.transform.position = playerSpawnPosition.transform.position;
+        }
+
+        if (enemy1HealthSystem.health <= 0)
+        {
+            enemy1HealthSystem.health = enemy1HealthSystem.maxHealth;
+
+            enemy1.SetActive(true);
+
+            enemy1.transform.position = enemy1SpawnPoint.transform.position;
+
+            enemy1.GetComponent<FSM>().ChangeState(enemy1.GetComponent<FSM>().states[0]);
+        }
+
+        if (enemy2HealthSystem.health <= 0)
+        {
+            enemy2HealthSystem.health = enemy2HealthSystem.maxHealth;
+
+            enemy2.SetActive(true);
+
+            enemy2.transform.position = enemy2SpawnPoint.transform.position;
+
+            enemy2.GetComponent<FSM>().ChangeState(enemy2.GetComponent<FSM>().states[0]);
         }
     }
 }

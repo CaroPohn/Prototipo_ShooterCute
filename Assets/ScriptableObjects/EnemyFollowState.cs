@@ -19,5 +19,12 @@ public class EnemyFollowState : EnemyStates
         {
             patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[3]);
         }
+
+        HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();
+
+        if (healthSystem.health <= 0) 
+        {
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[0]);
+        }
     }
 }
