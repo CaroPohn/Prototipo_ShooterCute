@@ -20,10 +20,19 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
+
         health -= damage;
+
+        Debug.Log(health + " Esto");
 
         if (health <= 0)
         {
+            health = 0;
+
             Die();
         }
     }

@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -28,31 +29,49 @@ public class LevelController : MonoBehaviour
 
             rb.AddForce(0, 0, 0);
 
-            player.SetActive(true);  
+            player.SetActive(true);
 
             player.transform.position = playerSpawnPosition.transform.position;
         }
 
         if (enemy1HealthSystem.health <= 0)
         {
+            StartCoroutine(RespawnEnemy1());
+        }
+
+            if (enemy2HealthSystem.health <= 0)
+        {
+            enemy2.SetActive(true);
+
+            enemy2.transform.position = enemy2SpawnPoint.transform.position;
+
+            enemy2.GetComponent<FSM>().ChangeState(enemy2.GetComponent<FSM>().states[0]);
+
+            enemy2HealthSystem.health = enemy2HealthSystem.maxHealth;
+        }
+    }
+
+    private IEnumerator RespawnEnemy1()
+    {
+        if (enemy1HealthSystem.health <= 0)
+        {
             enemy1HealthSystem.health = enemy1HealthSystem.maxHealth;
+
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
 
             enemy1.SetActive(true);
 
             enemy1.transform.position = enemy1SpawnPoint.transform.position;
 
             enemy1.GetComponent<FSM>().ChangeState(enemy1.GetComponent<FSM>().states[0]);
+
+            Debug.Log("Se resetearon " + enemy1HealthSystem.health);
         }
 
-        if (enemy2HealthSystem.health <= 0)
-        {
-            enemy2HealthSystem.health = enemy2HealthSystem.maxHealth;
-
-            enemy2.SetActive(true);
-
-            enemy2.transform.position = enemy2SpawnPoint.transform.position;
-
-            enemy2.GetComponent<FSM>().ChangeState(enemy2.GetComponent<FSM>().states[0]);
-        }
+        yield return null;
     }
+
+   
 }

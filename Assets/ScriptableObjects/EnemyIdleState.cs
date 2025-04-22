@@ -5,6 +5,6 @@ public class EnemyIdleState : EnemyStates
 {
     public override void Enter(PatrolEnemy patrolEnemy)
     {
-        patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[1]);
+        patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[1]);      
     }
 }

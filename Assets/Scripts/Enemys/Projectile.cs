@@ -40,8 +40,6 @@ public class Projectile : MonoBehaviour
 
         if (collision.transform.CompareTag("Player") && counter <= 1)
         {
-            Debug.Log("CHOCO");
-
             Destroy(gameObject);
 
             HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
