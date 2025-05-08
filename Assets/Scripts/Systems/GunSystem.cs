@@ -11,6 +11,9 @@ public class GunSystem : MonoBehaviour
     public float timeBetweenShots;
     public int magazineSize;
     public int bulletsPerTap;
+    public bool allowHoldingButton;
+
+    private bool isHoldingShoot;
 
     int bulletsLeft;
     int bulletsShot;
@@ -36,14 +39,16 @@ public class GunSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        inputReader.OnShoot += AttemptShoot;
+        inputReader.OnShoot += StartShooting;
         inputReader.OnReload += AttemptReload;
+        inputReader.OnHoldingShootCanceled += StopShooting;
     }
 
     private void OnDisable()
     {
-        inputReader.OnShoot -= AttemptShoot;
+        inputReader.OnShoot -= StartShooting;
         inputReader.OnReload -= AttemptReload;
+        inputReader.OnHoldingShootCanceled -= StopShooting;
     }
 
     private void Update()
@@ -54,6 +59,24 @@ public class GunSystem : MonoBehaviour
     private void UpdateBulletsMagazine()
     {
         bulletsMagazine.text = (bulletsLeft + " / " + magazineSize);
+    }
+
+    private void StartShooting()
+    {
+        if (allowHoldingButton)
+        {
+            isHoldingShoot = true;
+            AttemptShoot();
+        }
+        else
+        {
+            AttemptShoot();
+        }
+    }
+
+    private void StopShooting()
+    {
+        isHoldingShoot = false;
     }
 
     private void AttemptShoot()
@@ -108,7 +131,11 @@ public class GunSystem : MonoBehaviour
 
         if (bulletsShot > 0 && bulletsLeft > 0)
         {
-            Invoke("Shoot", timeBetweenShots);
+            Invoke(nameof(Shoot), timeBetweenShots);
+        }
+        else if (allowHoldingButton && isHoldingShoot && bulletsLeft > 0)
+        {
+            Invoke(nameof(AttemptShoot), timeBetweenShooting);
         }
     }
 

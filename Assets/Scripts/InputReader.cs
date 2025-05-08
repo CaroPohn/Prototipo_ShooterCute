@@ -9,6 +9,8 @@ public class InputReader : MonoBehaviour
     public Action<Vector2> OnMoveCamera;
     public Action OnJump;
     public Action OnShoot;
+    public Action OnHoldingShoot;
+    public Action OnHoldingShootCanceled;
     public Action OnReload;
 
     public void HandleMoveInput(InputAction.CallbackContext context)
@@ -31,9 +33,27 @@ public class InputReader : MonoBehaviour
 
     public void HandleShootInput(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.performed)
         {
             OnShoot?.Invoke();
+        }
+
+        if (context.canceled)
+        {
+            OnHoldingShootCanceled?.Invoke();
+        }
+    }
+
+    public void HandleHoldingShootInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnHoldingShoot?.Invoke();
+        }
+
+        if (context.canceled)
+        {
+            OnHoldingShootCanceled?.Invoke();
         }
     }
 

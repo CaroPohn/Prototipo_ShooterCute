@@ -2049,6 +2049,7 @@ MonoBehaviour:
   timeBetweenShots: 0
   magazineSize: 24
   bulletsPerTap: 8
+  allowHoldingButton: 0
   bulletsMagazine: {fileID: 124292452}
   shootPivot: {fileID: 1672932805}
   lineRenderer: {fileID: 665206003}
@@ -2757,6 +2758,7 @@ MonoBehaviour:
   timeBetweenShots: 0.05
   magazineSize: 12
   bulletsPerTap: 1
+  allowHoldingButton: 0
   bulletsMagazine: {fileID: 124292452}
   shootPivot: {fileID: 660800716}
   lineRenderer: {fileID: 665206003}
@@ -3935,13 +3937,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 12
-  timeBetweenShooting: 0.3
+  timeBetweenShooting: 0.08
   spread: 0
   range: 25
   reloadTime: 2
   timeBetweenShots: 0.05
   magazineSize: 30
   bulletsPerTap: 1
+  allowHoldingButton: 1
   bulletsMagazine: {fileID: 124292452}
   shootPivot: {fileID: 1881969593}
   lineRenderer: {fileID: 665206003}
