@@ -13,22 +13,25 @@ MonoBehaviour:
   m_Name: SMG
   m_EditorClassIdentifier: 
   name: Sub Machine Gun
-  fireRate: 18
-  reloadTime: 2.6
-  bulletsPerReload: 20
-  baseDamage: 6
+  fireRate: 0
+  reloadTime: 0
+  bulletsPerReload: 0
   mayInstantiateBullet: 0
-  isLaser: 0
-  laserPrefab: {fileID: 0}
+  shotPrefab: {fileID: 0}
+  gunType: 0
   maxEnergyCharge: 100
   energyDrainRate: 15
-  bulletPrefab: {fileID: 0}
+  baseDamage: 6
   projectileCount: 1
   dispersionAngle: 0
   dispersionDistance: 0
   magazine: 30
   bulletDrop: 0
   shotType: 00000000
+  minChargingTime: 1
+  maxChargingTime: 1
+  minDamage: 1
+  maxDamage: 1
   _weaponDescription: "Arma: Sub Machine Gun\nDa\xF1o por Disparo: 6\nTama\xF1o de
     cargador: 30\nDa\xF1o total por bala: 0,2\nDa\xF1o total por cargador: 180\nCadencia:
-    0,056 segundos entre disparos"
+    Infinito segundos entre disparos"
