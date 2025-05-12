@@ -1,0 +1,17 @@
+Sistemas necesarios:
+	- Sistema de Spawning (con objectpool o no): Utilizando el método de spawn. (HACER)
+		* Enum Enemigos
+
+	- GameManager: Maneja el momento en el que las waves deben cambiar. (HACER)
+
+Wave: La wave en si misma. Es una clase.
+	- Lista de enemigos
+	- Metodos
+		* 
+WaveManager:
+WaveParameters (Scriptable Object):
+	- Lista de enemigos 
+	- Bool de tener tiempo de cd de wave
+	- Tiempo de cooldown de wave
+	- Bool cant de enemigos matados
+	- Cant de bichos matados para pasar a la siguiente oleada.
