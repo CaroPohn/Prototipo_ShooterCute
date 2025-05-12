@@ -5,7 +5,6 @@ public class WaponChanger : MonoBehaviour
     [SerializeField] GameObject Gun1;
     [SerializeField] GameObject Gun2;
     [SerializeField] GameObject Gun3;
-    //[SerializeField] GameObject Gun4;
 
     [SerializeField] private GameObject bomb;
     [SerializeField] private Transform bombHolder;
@@ -53,33 +52,33 @@ public class WaponChanger : MonoBehaviour
     {
         if (weaponIndex == 1) 
         {
-            Gun1.SetActive(true);
-            Gun2.SetActive(false);
-            Gun3.SetActive(false);
+            //Gun1.SetActive(true);
+            //Gun2.SetActive(false);
+            //Gun3.SetActive(false);
 
-            Gun4 = FindChildWithTag(bombHolder, "Bomb");
-            if (Gun4 != null)
-                Gun4.SetActive(false);
+            //Gun4 = FindChildWithTag(bombHolder, "Bomb");
+            //if (Gun4 != null)
+            //    Gun4.SetActive(false);
         } 
         else if (weaponIndex == 2) 
         {
-            Gun1.SetActive(false);
-            Gun2.SetActive(true);
-            Gun3.SetActive(false);
+            //Gun1.SetActive(false);
+            //Gun2.SetActive(true);
+            //Gun3.SetActive(false);
 
-            Gun4 = FindChildWithTag(bombHolder, "Bomb");
-            if (Gun4 != null)
-                Gun4.SetActive(false);
+            //Gun4 = FindChildWithTag(bombHolder, "Bomb");
+            //if (Gun4 != null)
+            //    Gun4.SetActive(false);
         }
         else if (weaponIndex == 3)
         {
-            Gun1.SetActive(false);
-            Gun2.SetActive(false);
-            Gun3.SetActive(true);
+            //Gun1.SetActive(false);
+            //Gun2.SetActive(false);
+            //Gun3.SetActive(true);
 
-            Gun4 = FindChildWithTag(bombHolder, "Bomb");
-            if (Gun4 != null)
-                Gun4.SetActive(false);
+            //Gun4 = FindChildWithTag(bombHolder, "Bomb");
+            //if (Gun4 != null)
+            //    Gun4.SetActive(false);
         }
         else if (weaponIndex == 4)
         {
