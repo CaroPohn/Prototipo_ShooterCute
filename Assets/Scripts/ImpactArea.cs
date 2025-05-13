@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class ImpactArea : MonoBehaviour
+{
+    [SerializeField] private float lifetime = 3f;
+
+    [SerializeField] private int explosionRadius = 4;
+    [SerializeField] private int damage = 200;
+
+    private void Start()
+    {
+        Destroy(gameObject, lifetime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
+        foreach (var hitCollider in hitColliders)
+        {
+            Rigidbody hitRb = hitCollider.GetComponentInParent<Rigidbody>();
+
+            if (hitRb != null && hitRb.tag == "Enemy")
+            {
+                HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage((int)damage);
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+}

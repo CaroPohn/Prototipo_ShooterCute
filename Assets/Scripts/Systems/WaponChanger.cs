@@ -7,9 +7,11 @@ public class WaponChanger : MonoBehaviour
     [SerializeField] GameObject Gun3;
 
     [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject electric;
     [SerializeField] private Transform bombHolder;
 
     private GameObject Gun4;
+    private GameObject Gun5;
 
     private int weaponIndex;
 
@@ -44,6 +46,11 @@ public class WaponChanger : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             weaponIndex = 4;
+            ChangeWeapon(weaponIndex);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            weaponIndex = 5;
             ChangeWeapon(weaponIndex);
         }
     }
@@ -94,9 +101,30 @@ public class WaponChanger : MonoBehaviour
             }
             else if(Gun4 == null)
             {
-                Instantiate(bomb, bombHolder.position, Quaternion.identity, bombHolder);
+                GameObject bombInstance = Instantiate(bomb, bombHolder.position, Quaternion.identity);
+                bombInstance.transform.SetParent(bombHolder.transform, true);
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 Gun4.SetActive(true);
+            }
+        }
+        else if (weaponIndex == 5)
+        {
+            Gun1.SetActive(false);
+            Gun2.SetActive(false);
+            Gun3.SetActive(false);
+
+            Gun5 = FindChildWithTag(bombHolder, "Electric");
+
+            if (Gun5 != null)
+            {
+                Gun5.SetActive(true);
+            }
+            else if (Gun5 == null)
+            {
+                GameObject electricInstance = Instantiate(electric, bombHolder.position, Quaternion.identity);
+                electricInstance.transform.SetParent(bombHolder.transform, true);
+                Gun5 = FindChildWithTag(bombHolder, "Electric");
+                Gun5.SetActive(true);
             }
         }
     }
