@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerInput))]
 public class InputReader : MonoBehaviour
 {
     public Action<Vector2> OnMove;
@@ -12,6 +13,17 @@ public class InputReader : MonoBehaviour
     public Action OnHoldingShoot;
     public Action OnHoldingShootCanceled;
     public Action OnReload;
+
+    private PlayerInput playerInput = null;
+
+    private void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.notificationBehavior = PlayerNotifications.InvokeUnityEvents;
+
+        InputAction inputShoot = playerInput.actions["Shoot"];
+
+    }
 
     public void HandleMoveInput(InputAction.CallbackContext context)
     {

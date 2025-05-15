@@ -16,18 +16,22 @@ MonoBehaviour:
   fireRate: 10
   reloadTime: 2.5
   bulletsPerReload: 7
-  baseDamage: 10
-  isLaser: 0
-  laserPrefab: {fileID: 0}
+  mayInstantiateBullet: 0
+  shotPrefab: {fileID: 0}
+  gunType: 0
   maxEnergyCharge: 100
   energyDrainRate: 15
-  bulletPrefab: {fileID: 0}
+  baseDamage: 10
   projectileCount: 1
   dispersionAngle: 0
   dispersionDistance: 0
   magazine: 7
   bulletDrop: 0
   shotType: 00000000
+  minChargingTime: 1
+  maxChargingTime: 1
+  minDamage: 1
+  maxDamage: 1
   _weaponDescription: "Arma: Pistol\nDa\xF1o por Disparo: 10\nTama\xF1o de cargador:
     7\nDa\xF1o total por bala: 1,428571\nDa\xF1o total por cargador: 70\nCadencia:
     0,1 segundos entre disparos"
