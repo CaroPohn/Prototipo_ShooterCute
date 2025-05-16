@@ -19,6 +19,23 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform enemy1SpawnPoint;
     [SerializeField] private Transform enemy2SpawnPoint;
 
+    [Header("Canvas")]
+
+    [SerializeField] private Canvas chooseCanvas;
+    [SerializeField] private Canvas gamePlayCanvas;
+
+    private PlayerWeaponChoose playerChooseScript;
+
+    private void Start()
+    {
+        chooseCanvas.gameObject.SetActive(true);
+        gamePlayCanvas.gameObject.SetActive(false);
+
+        playerChooseScript = GetComponent<PlayerWeaponChoose>();
+
+        Time.timeScale = 0.0f;
+    }
+
     private void Update()
     {
         if (playerHealthSystem.health <= 0)
@@ -48,6 +65,22 @@ public class LevelController : MonoBehaviour
             enemy2.GetComponent<FSM>().ChangeState(enemy2.GetComponent<FSM>().states[0]);
 
             enemy2HealthSystem.health = enemy2HealthSystem.maxHealth;
+        }
+
+        PlayerChoose();
+    }
+
+    private void PlayerChoose()
+    {
+        if (playerChooseScript.playerHasChosen) 
+        {
+            chooseCanvas.gameObject.SetActive(false);
+            gamePlayCanvas.gameObject.SetActive(true);
+
+            Time.timeScale = 1.0f;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 

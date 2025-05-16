@@ -1,12 +1,9 @@
 using UnityEngine;
-
-[RequireComponent (typeof(InputReader))]
 public class GameManager : MonoBehaviour
 {
     private InputReader inputReader = null;
 
-    //Dos instancias de bichitos
-    //Una instancia de la gun
+    
 
     private void Awake()
     {
@@ -22,6 +19,6 @@ public class GameManager : MonoBehaviour
 
     private void Test()
     {
-        Debug.Log("Caro es una gran mujer");
+
     }
 }
