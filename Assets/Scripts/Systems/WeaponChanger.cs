@@ -136,6 +136,10 @@ public class WeaponChanger : MonoBehaviour
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 if (Gun4 != null)
                     Gun4.SetActive(false);
+
+                Gun5 = FindChildWithTag(bombHolder, "Electric");
+                if (Gun5 != null)
+                    Gun5.SetActive(false);
             }
             else if (weaponIndex == 2)
             {
@@ -169,6 +173,10 @@ public class WeaponChanger : MonoBehaviour
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 if (Gun4 != null)
                     Gun4.SetActive(false);
+
+                Gun5 = FindChildWithTag(bombHolder, "Electric");
+                if (Gun5 != null)
+                    Gun5.SetActive(false);
             }
             else if (weaponIndex == 2)
             {
