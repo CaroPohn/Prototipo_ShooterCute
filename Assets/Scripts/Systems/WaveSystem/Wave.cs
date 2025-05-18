@@ -1,6 +1,9 @@
- using UnityEngine;
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-public class Wave : MonoBehaviour
+[System.Serializable]
+public class Wave 
 {
-    
+    public List<SpawnInstruction> spawnInstructions;
 }

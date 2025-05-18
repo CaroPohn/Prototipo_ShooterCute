@@ -12,7 +12,7 @@ public class PatrolEnemy : MonoBehaviour
 
     [Header("Follow")]
 
-    [SerializeField] Transform player;
+    private Transform player;
 
     public float followDistance;
     public float followSpeed;
@@ -29,6 +29,11 @@ public class PatrolEnemy : MonoBehaviour
     public float damage;
 
     public float shootTimer;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     public void MoveToNextPoint()
     {
@@ -61,6 +66,11 @@ public class PatrolEnemy : MonoBehaviour
 
     public void FollowPlayer()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
         Vector3 moveDirection = (player.position - transform.position).normalized;
         transform.position += moveDirection * followSpeed * Time.deltaTime;
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class HealthSystem : MonoBehaviour
     public float health;
 
     [SerializeField] private Image healthBarImage;
+
+    public Action onDeath;
 
     private void Start()
     {
@@ -39,6 +42,7 @@ public class HealthSystem : MonoBehaviour
 
     protected void Die()
     {
+        onDeath?.Invoke();
         gameObject.SetActive(false);
     }
 
