@@ -12,12 +12,16 @@ public class EnemyFollowState : EnemyStates
     {
         patrolEnemy.shootTimer -= Time.deltaTime;
 
-        patrolEnemy.FollowPlayer();
+        if (!patrolEnemy.IsPlayerOnRange())
+        {
+            patrolEnemy.FollowPlayer();
+        }
+        
         patrolEnemy.SetLookAt();
 
         if (patrolEnemy.IsPlayerOnRange() == true && patrolEnemy.shootTimer <= 0.0f)
         {
-            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[3]);
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
         }
 
         HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();

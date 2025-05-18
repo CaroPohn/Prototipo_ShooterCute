@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,6 @@ public class PatrolEnemy : MonoBehaviour
     [Header("Shoot")]
 
     [SerializeField] private Transform shootPoint;
-    [SerializeField] private Transform target;
     [SerializeField] GameObject projectilePrefab;
 
     public float shootCoolDown;
@@ -90,7 +90,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
-        Vector3 direction = (target.position - shootPoint.position).normalized * Time.deltaTime;
+        Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
 
         Projectile projScript = projectile.GetComponent<Projectile>();
         if (projScript != null)
