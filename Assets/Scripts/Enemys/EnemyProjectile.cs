@@ -1,12 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     private float damage;
     private Vector3 moveDirection;
     private Rigidbody projectileRB;
     public float speed;
+
+    private float lifeTime = 5.0f;
 
     private int counter;
 
@@ -15,6 +17,8 @@ public class Projectile : MonoBehaviour
         projectileRB = GetComponent<Rigidbody>();
         projectileRB.useGravity = false;
         projectileRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+        Destroy(gameObject, lifeTime);
     }
 
     private void Update()
@@ -38,7 +42,7 @@ public class Projectile : MonoBehaviour
 
         counter++;
 
-        if (collision.transform.CompareTag("Player") && counter <= 1 || collision.transform.CompareTag("Enemy") && counter <= 1)
+        if (collision.transform.CompareTag("Player") && counter <= 1)
         {
             Destroy(gameObject);
 

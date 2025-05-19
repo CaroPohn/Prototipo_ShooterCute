@@ -28,7 +28,7 @@ public class FireGun : MonoBehaviour
 
         Vector3 direction = playerCamera.transform.forward;
 
-        Projectile projScript = projectile.GetComponent<Projectile>();
+        PlayerProjectile projScript = projectile.GetComponent<PlayerProjectile>();
         if (projScript != null)
         {
             projScript.SetDamage(damage);

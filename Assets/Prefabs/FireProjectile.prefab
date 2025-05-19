@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5318766716677491452}
   - component: {fileID: 2619480748133195561}
   - component: {fileID: 7610120469252542362}
-  - component: {fileID: 6127407408429214797}
+  - component: {fileID: 2955168244053359510}
   - component: {fileID: 7764807822606471805}
   m_Layer: 0
   m_Name: FireProjectile
@@ -110,7 +110,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6127407408429214797
+--- !u!114 &2955168244053359510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,10 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6736405824576053705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd055efdbf23ac46b21fbdaa46fdaf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ed610125b182774db3fa5ea0a26ba03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 40
 --- !u!54 &7764807822606471805
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ public class PatrolEnemy : MonoBehaviour
 
         Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
 
-        Projectile projScript = projectile.GetComponent<Projectile>();
+        EnemyProjectile projScript = projectile.GetComponent<EnemyProjectile>();
         if (projScript != null)
         {
             projScript.SetDamage(damage);

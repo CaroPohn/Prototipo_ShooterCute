@@ -258,7 +258,6 @@ MonoBehaviour:
   followDistance: 11
   followSpeed: 4
   shootPoint: {fileID: 7912267102624382315}
-  target: {fileID: 0}
   projectilePrefab: {fileID: 1318284493881746266, guid: 5644d071379539b4c8aeaf7cc1c8dbf7, type: 3}
   shootCoolDown: 4
   damage: 50
@@ -304,7 +303,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
