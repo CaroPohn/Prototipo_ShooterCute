@@ -4,7 +4,6 @@ public class WeaponChanger : MonoBehaviour
 {
     [SerializeField] GameObject Gun1;
     [SerializeField] GameObject Gun2;
-    [SerializeField] GameObject Gun3;
 
     [SerializeField] private GameObject bomb;
     [SerializeField] private GameObject electric;
@@ -131,7 +130,6 @@ public class WeaponChanger : MonoBehaviour
             {
                 Gun1.SetActive(true);
                 Gun2.SetActive(false);
-                Gun3.SetActive(false);
 
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 if (Gun4 != null)
@@ -145,7 +143,6 @@ public class WeaponChanger : MonoBehaviour
             {
                 Gun1.SetActive(false);
                 Gun2.SetActive(false);
-                Gun3.SetActive(false);
 
                 Gun5 = FindChildWithTag(bombHolder, "Electric");
 
@@ -168,7 +165,6 @@ public class WeaponChanger : MonoBehaviour
             {
                 Gun1.SetActive(false);
                 Gun2.SetActive(true);
-                Gun3.SetActive(false);
 
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 if (Gun4 != null)
@@ -182,7 +178,6 @@ public class WeaponChanger : MonoBehaviour
             {
                 Gun1.SetActive(false);
                 Gun2.SetActive(false);
-                Gun3.SetActive(false);
 
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
 
