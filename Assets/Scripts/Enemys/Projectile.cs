@@ -38,15 +38,15 @@ public class Projectile : MonoBehaviour
 
         counter++;
 
-        if (collision.transform.CompareTag("Player") && counter <= 1)
+        if (collision.transform.CompareTag("Player") && counter <= 1 || collision.transform.CompareTag("Enemy") && counter <= 1)
         {
             Destroy(gameObject);
 
-            HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
+            HealthSystem healthSystem = collision.transform.GetComponent<HealthSystem>();
 
-            if (playerHealth != null)
+            if (healthSystem != null)
             {
-                playerHealth.TakeDamage(damage);
+                healthSystem.TakeDamage(damage);
             }   
         }
     }
