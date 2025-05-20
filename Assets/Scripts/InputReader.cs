@@ -13,6 +13,8 @@ public class InputReader : MonoBehaviour
     public Action OnHoldingShoot;
     public Action OnHoldingShootCanceled;
     public Action OnReload;
+    public Action OnUseAbility;
+    public Action OnChangeToWeapon;
 
     private PlayerInput playerInput = null;
 
@@ -22,7 +24,22 @@ public class InputReader : MonoBehaviour
         playerInput.notificationBehavior = PlayerNotifications.InvokeUnityEvents;
 
         InputAction inputShoot = playerInput.actions["Shoot"];
+    }
 
+    public void HandleChangeToWeaponInput(InputAction.CallbackContext context)
+    {
+        if (context.started) 
+        {
+            OnChangeToWeapon?.Invoke();
+        }
+    }
+
+    public void HandleAbilityUseInput(InputAction.CallbackContext context)
+    {
+        if (context.started) 
+        {
+            OnUseAbility?.Invoke();
+        }
     }
 
     public void HandleMoveInput(InputAction.CallbackContext context)

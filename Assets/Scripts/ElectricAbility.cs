@@ -9,6 +9,8 @@ public class ElectricAbility : MonoBehaviour
     private GameObject player;
     private WeaponChanger weaponChangerScript;
 
+    private bool hasAbilityBeenUsed;
+
     private InputReader inputReader;
 
     private void Awake()
@@ -21,20 +23,32 @@ public class ElectricAbility : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         weaponChangerScript = player.GetComponent<WeaponChanger>();
+
+        hasAbilityBeenUsed = false;
     }
 
     private void OnEnable()
     {
-        inputReader.OnShoot += LaunchProjectile;
+        inputReader.OnShoot += AttemptLaunchProjectile;
     }
 
     private void OnDisable()
     {
-        inputReader.OnShoot -= LaunchProjectile;
+        inputReader.OnShoot -= AttemptLaunchProjectile;
+    }
+
+    private void AttemptLaunchProjectile()
+    {
+        if (!hasAbilityBeenUsed) 
+        { 
+            LaunchProjectile();
+        }
     }
 
     private void LaunchProjectile()
     {
+        hasAbilityBeenUsed = true;
+
         Rigidbody rb = GetComponent<Rigidbody>();
 
         rb.isKinematic = false;

@@ -18,26 +18,35 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] private PlayerWeaponChoose playerWeaponChooseScript;
 
+    [SerializeField] private InputReader inputReader;
+
+    private void OnEnable()
+    {
+        inputReader.OnUseAbility += ChangeToAbility;
+        inputReader.OnChangeToWeapon += ChangeToWeapon;
+    }
+
+    private void OnDisable()
+    {
+        inputReader.OnUseAbility -= ChangeToAbility;
+        inputReader.OnChangeToWeapon -= ChangeToWeapon;
+    }
+
     private void Update()
     {
-        ChangeWeaponInput();
         ChangeWeapon(weaponIndex);
 
         timer += Time.deltaTime;
     }
 
-    private void ChangeWeaponInput()
+    private void ChangeToWeapon()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            weaponIndex = 1;
-            ChangeWeapon(weaponIndex);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            weaponIndex = 2;
-            ChangeWeapon(weaponIndex);
-        }
+        weaponIndex = 1;
+    }
+
+    private void ChangeToAbility()
+    {
+        weaponIndex = 2;
     }
 
     private void ChangeWeapon(int weaponIndex)
