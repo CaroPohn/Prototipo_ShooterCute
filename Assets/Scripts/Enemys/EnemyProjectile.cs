@@ -18,6 +18,8 @@ public class EnemyProjectile : MonoBehaviour
         projectileRB.useGravity = false;
         projectileRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
+        counter = 0;
+
         Destroy(gameObject, lifeTime);
     }
 
@@ -38,15 +40,19 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Golpeo");
+
         if (!collision.transform.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }
 
-        counter++;
-
         if (collision.transform.CompareTag("Player") && counter <= 1)
         {
+            Debug.Log("Golpeo al player");
+
+            counter++;
+
             Destroy(gameObject);
 
             HealthSystem healthSystem = collision.transform.GetComponent<HealthSystem>();
