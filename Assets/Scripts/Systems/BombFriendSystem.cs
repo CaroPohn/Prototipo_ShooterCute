@@ -22,6 +22,13 @@ public class BombFriendSystem : MonoBehaviour
     private GameObject playerGO;
     private WeaponChanger weaponChangerScript;
 
+    private InputReader inputReader;
+
+    private void Awake()
+    {
+        inputReader = GameObject.FindGameObjectWithTag("InputReader").GetComponent<InputReader>();
+    }
+
     private void Start()
     {
         playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -45,13 +52,18 @@ public class BombFriendSystem : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        inputReader.OnShoot += AttemptDropAndRun;
+    }
+
+    private void OnDisable()
+    {
+         inputReader.OnShoot -= AttemptDropAndRun;
+    }
+
     private void Update()
     {
-        if (!isRunning && Input.GetKeyDown(activateKey))
-        {
-            DropAndRun();
-        }
-
         if (isRunning)
         {
             transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
@@ -62,6 +74,14 @@ public class BombFriendSystem : MonoBehaviour
                 Explode();
             }
         }
+    }
+
+    private void AttemptDropAndRun()
+    {
+        if (!isRunning)
+        {
+            DropAndRun();
+        }    
     }
 
     private void DropAndRun()

@@ -9,6 +9,13 @@ public class ElectricAbility : MonoBehaviour
     private GameObject player;
     private WeaponChanger weaponChangerScript;
 
+    private InputReader inputReader;
+
+    private void Awake()
+    {
+        inputReader = GameObject.FindGameObjectWithTag("InputReader").GetComponent<InputReader>();
+    }
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -16,12 +23,14 @@ public class ElectricAbility : MonoBehaviour
         weaponChangerScript = player.GetComponent<WeaponChanger>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            LaunchProjectile();
-        }
+        inputReader.OnShoot += LaunchProjectile;
+    }
+
+    private void OnDisable()
+    {
+        inputReader.OnShoot -= LaunchProjectile;
     }
 
     private void LaunchProjectile()
