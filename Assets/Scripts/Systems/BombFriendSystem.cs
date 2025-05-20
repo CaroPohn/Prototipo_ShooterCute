@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BombFriendSystem : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class BombFriendSystem : MonoBehaviour
     private bool isRunning = false;
     private Vector3 startPosition;
     private Transform player;
-    [SerializeField] private Transform holdPosition;
 
     public float explosionForce;
     public float explosionRadius;
@@ -18,6 +18,8 @@ public class BombFriendSystem : MonoBehaviour
     public float waitForExplosionTime;
 
     [SerializeField] private GameObject explosionVFXPrefab;
+
+    private NavMeshAgent agent;
 
     private GameObject playerGO;
     private WeaponChanger weaponChangerScript;
@@ -31,6 +33,10 @@ public class BombFriendSystem : MonoBehaviour
 
     private void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+
+        agent.enabled = false;
+
         playerGO = GameObject.FindGameObjectWithTag("Player");
         weaponChangerScript = playerGO.GetComponent<WeaponChanger>();
 
@@ -80,6 +86,7 @@ public class BombFriendSystem : MonoBehaviour
     {
         if (!isRunning)
         {
+            agent.enabled = true;
             DropAndRun();
         }    
     }
