@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 6510255957336241778}
   - component: {fileID: 6487542312207391474}
   - component: {fileID: 6494652195873474771}
+  - component: {fileID: 7990679395161050699}
   m_Layer: 0
   m_Name: mid_stone_1_low
   m_TagString: Untagged
@@ -150,6 +151,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7990679395161050699
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610994252616671845}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4697261622242338329, guid: 0a73b1b05a4f6594e84cfd8aff3d1c90, type: 3}
 --- !u!1 &6757805460231659290
 GameObject:
   m_ObjectHideFlags: 0
