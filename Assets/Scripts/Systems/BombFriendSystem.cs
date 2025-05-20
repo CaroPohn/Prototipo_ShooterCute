@@ -6,7 +6,7 @@ public class BombFriendSystem : MonoBehaviour
 {
     public float runSpeed = 3f;
     public float maxDistance = 10f;
-    public KeyCode activateKey = KeyCode.E;
+    public float maxTime = 3f;
 
     private bool isRunning = false;
     private Vector3 startPosition;
@@ -16,6 +16,8 @@ public class BombFriendSystem : MonoBehaviour
     public float explosionRadius;
     public float damage;
     public float waitForExplosionTime;
+
+    private float timer;
 
     [SerializeField] private GameObject explosionVFXPrefab;
 
@@ -33,6 +35,8 @@ public class BombFriendSystem : MonoBehaviour
 
     private void Start()
     {
+        timer = 0;
+
         agent = GetComponent<NavMeshAgent>();
 
         agent.enabled = false;
@@ -74,8 +78,15 @@ public class BombFriendSystem : MonoBehaviour
         {
             transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
 
+            timer += Time.deltaTime;
+
             float distance = Vector3.Distance(startPosition, transform.position);
             if (distance >= maxDistance)
+            {
+                Explode();
+            }
+
+            if (timer >= maxTime) 
             {
                 Explode();
             }
