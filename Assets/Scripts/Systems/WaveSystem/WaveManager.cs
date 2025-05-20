@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
     public List<Transform> spawnPoints;
     public List<Wave> waves;
+
+    [SerializeField] private TextMeshProUGUI waveText;
 
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
@@ -22,7 +25,24 @@ public class WaveManager : MonoBehaviour
     IEnumerator StartNextWave()
     {
         spawningWave = true;
-        yield return new WaitForSeconds(4f);
+        
+        if(currentWaveIndex ==  waves.Count)
+        {
+            waveText.text = "¡¡¡Final Wave Incoming!!!";
+        }
+        else
+        {
+            waveText.text = "¡¡¡Wave " + (currentWaveIndex + 1) + " Incoming!!!";
+        }
+
+        waveText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2f); 
+
+        waveText.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(2f); 
+
 
         Wave wave = waves[currentWaveIndex];
 
