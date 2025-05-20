@@ -4,7 +4,7 @@ public class ImpactArea : MonoBehaviour
 {
     [SerializeField] private float lifetime = 3f;
 
-    [SerializeField] private int explosionRadius = 4;
+    [SerializeField] private int explosionRadius = 5;
     [SerializeField] private int damage = 200;
 
     private void Start()
@@ -12,7 +12,12 @@ public class ImpactArea : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
+    {
+        DamageToEnemys();
+    }
+
+    private void DamageToEnemys()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
 

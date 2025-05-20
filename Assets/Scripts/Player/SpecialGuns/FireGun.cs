@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class FireGun : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class FireGun : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
 
     [SerializeField] private Camera playerCamera;
+
+    [SerializeField] private GameObject muzzleFlash;
     
     public float damage;
     public float timeBetweenShots = 0.5f;
@@ -24,6 +27,8 @@ public class FireGun : MonoBehaviour
 
     public void Shoot()
     {
+        Instantiate(muzzleFlash, shootPoint);
+
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
         Vector3 direction = playerCamera.transform.forward;

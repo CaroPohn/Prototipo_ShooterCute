@@ -629,7 +629,7 @@ Transform:
   m_GameObject: {fileID: 149070851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.288, y: 0, z: 0}
+  m_LocalPosition: {x: 0.004, y: 0.045, z: 0.419}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3368,7 +3368,9 @@ MonoBehaviour:
   range: 50
   reloadTime: 0
   timeBetweenShots: 0.5
-  shootPivot: {fileID: 149070851}
+  muzzleEffect: {fileID: 5477963788494047657, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
+  rayEffect: {fileID: 8611723687539211747, guid: 8a022fae1e58d164fb6170bc99d29ad7, type: 3}
+  shootPivot: {fileID: 149070852}
   lineRenderer: {fileID: 665206003}
   playerCamera: {fileID: 1562146863}
   inputReader: {fileID: 200610471}
@@ -3594,6 +3596,7 @@ MonoBehaviour:
   shootPoint: {fileID: 449099226}
   projectilePrefab: {fileID: 6736405824576053705, guid: 1e8e5d5c4e8201149b0bdbd6d6db278a, type: 3}
   playerCamera: {fileID: 1562146863}
+  muzzleFlash: {fileID: 6113756677811671005, guid: b669f9310112ac9479485de8d38a4fa1, type: 3}
   damage: 50
   timeBetweenShots: 0.5
   inputReader: {fileID: 200610471}
@@ -7150,6 +7153,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1050292573}
     - target: {fileID: 7143203567888084827, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: timer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143203567888084827, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: playerWeaponChooseScript
       value: 
       objectReference: {fileID: 142447412}
@@ -7165,6 +7172,10 @@ PrefabInstance:
       propertyPath: bulletsMagazine
       value: 
       objectReference: {fileID: 124292452}
+    - target: {fileID: 7360909791795414558, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7600292294892783196, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: inputReader
       value: 

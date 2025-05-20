@@ -19,8 +19,14 @@ public class BombFriendSystem : MonoBehaviour
 
     [SerializeField] private GameObject explosionVFXPrefab;
 
-    void Start()
+    private GameObject playerGO;
+    private WeaponChanger weaponChangerScript;
+
+    private void Start()
     {
+        playerGO = GameObject.FindGameObjectWithTag("Player");
+        weaponChangerScript = playerGO.GetComponent<WeaponChanger>();
+
         player = transform.parent;
 
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -39,7 +45,7 @@ public class BombFriendSystem : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (!isRunning && Input.GetKeyDown(activateKey))
         {
@@ -58,8 +64,11 @@ public class BombFriendSystem : MonoBehaviour
         }
     }
 
-    void DropAndRun()
+    private void DropAndRun()
     {
+        weaponChangerScript.timer = 0.0f;
+        weaponChangerScript.weaponIndex = 1;
+
         transform.parent = null;
 
         Vector3 dropPosition = player.position + player.forward * 1f;
@@ -76,7 +85,7 @@ public class BombFriendSystem : MonoBehaviour
             rb.isKinematic = true;
     }
 
-    float GetGroundY(Vector3 pos)
+    private float GetGroundY(Vector3 pos)
     {
         if (Physics.Raycast(pos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 5f))
         {
@@ -85,7 +94,7 @@ public class BombFriendSystem : MonoBehaviour
         return pos.y;
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (isRunning)
         {
@@ -93,7 +102,7 @@ public class BombFriendSystem : MonoBehaviour
         }
     }
 
-    void Explode()
+    private void Explode()
     {
         if (explosionVFXPrefab != null)
         {

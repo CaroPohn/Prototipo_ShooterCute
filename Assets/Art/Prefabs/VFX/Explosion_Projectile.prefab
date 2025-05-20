@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6278083788309311674}
   - component: {fileID: 6130551053844831662}
   - component: {fileID: 2579454943084420563}
-  - component: {fileID: 861251349689608515}
   m_Layer: 0
   m_Name: Explosion_Projectile
   m_TagString: Untagged
@@ -84,23 +83,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &861251349689608515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89756090796238255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20bd8672939ebc54ca38fdb25dfde20e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 6856262889937299067}
-  BulletTrail: {fileID: 7689934104609562522}
-  ExplosionVFX: {fileID: 89752009293548946, guid: c39a3a7a7b5b4694794dfa8f68ef8681,
-    type: 3}
-  LifetimeVFX: 5.2
 --- !u!1 &6856262889937299067
 GameObject:
   m_ObjectHideFlags: 0

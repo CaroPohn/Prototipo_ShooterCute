@@ -6,6 +6,16 @@ public class ElectricAbility : MonoBehaviour
     public float angleDegrees = 45f;    
     public float projectileGravity = -9.81f;
 
+    private GameObject player;
+    private WeaponChanger weaponChangerScript;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        weaponChangerScript = player.GetComponent<WeaponChanger>();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
@@ -29,5 +39,8 @@ public class ElectricAbility : MonoBehaviour
         rb.linearVelocity = direction * v;
 
         transform.parent = null;
+
+        weaponChangerScript.timer = 0.0f;
+        weaponChangerScript.weaponIndex = 1;
     }
 }
