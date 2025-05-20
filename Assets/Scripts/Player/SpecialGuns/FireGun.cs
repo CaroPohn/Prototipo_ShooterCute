@@ -11,22 +11,44 @@ public class FireGun : MonoBehaviour
     [SerializeField] private GameObject muzzleFlash;
     
     public float damage;
-    public float timeBetweenShots = 0.5f;
+    public float timeBetweenShots;
+
+    private float timer;
 
     [SerializeField] InputReader inputReader;
 
+    private void Start()
+    {
+        timer = 0.2f;
+    }
+
     private void OnEnable()
     {
-        inputReader.OnShoot += Shoot;
+        inputReader.OnShoot += AttemptShoot;
     }
 
     private void OnDisable()
     {
-        inputReader.OnShoot -= Shoot;
+        inputReader.OnShoot -= AttemptShoot;
     }
 
-    public void Shoot()
+    private void Update()
     {
+        timer += Time.deltaTime;
+    }
+
+    public void AttemptShoot()
+    {
+        if (timer >= timeBetweenShots)
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        timer = 0;
+
         Instantiate(muzzleFlash, shootPoint);
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);

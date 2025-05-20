@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 366725588129728846}
   - component: {fileID: 2764296742521977249}
   - component: {fileID: 8978013461087401928}
+  - component: {fileID: 2034877262682976914}
   - component: {fileID: 2332679638754715102}
   - component: {fileID: 331357644757154601}
   m_Layer: 0
@@ -250,17 +251,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a067fe95c502d6c488674e47335cc480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints: []
-  speed: 4
-  rotationSpeed: 5
-  reachDistance: 0.2
   followDistance: 11
-  followSpeed: 4
   shootPoint: {fileID: 7912267102624382315}
   projectilePrefab: {fileID: 1318284493881746266, guid: 5644d071379539b4c8aeaf7cc1c8dbf7, type: 3}
   shootCoolDown: 4
   damage: 50
   shootTimer: 0
+--- !u!195 &2034877262682976914
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407223967775278822}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2
+  m_Speed: 4
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.5
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &2332679638754715102
 MonoBehaviour:
   m_ObjectHideFlags: 0
