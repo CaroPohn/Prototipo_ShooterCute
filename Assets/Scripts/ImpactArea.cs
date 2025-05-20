@@ -5,7 +5,7 @@ public class ImpactArea : MonoBehaviour
     [SerializeField] private float lifetime = 3f;
 
     [SerializeField] private int explosionRadius = 5;
-    [SerializeField] private int damage = 200;
+    [SerializeField] private float damage;
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class ImpactArea : MonoBehaviour
                 HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
                 if (enemyHealth != null)
                 {
-                    enemyHealth.TakeDamage((int)damage);
+                    enemyHealth.TakeDamage(damage);
                 }
             }
         }
