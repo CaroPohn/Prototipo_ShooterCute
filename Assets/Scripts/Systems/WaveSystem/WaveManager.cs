@@ -26,7 +26,7 @@ public class WaveManager : MonoBehaviour
     {
         spawningWave = true;
         
-        if(currentWaveIndex ==  waves.Count)
+        if(currentWaveIndex == 5)
         {
             waveText.text = "¡¡¡Final Wave Incoming!!!";
         }
