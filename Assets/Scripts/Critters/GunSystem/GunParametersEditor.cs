@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace GunProperties
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(GunParameters))]
     public class GunParametersEditor : Editor
     {
@@ -183,4 +184,5 @@ namespace GunProperties
             }
         }
     }
+#endif
 }
