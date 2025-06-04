@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class DeathMapLimit : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public float damage = 0.2f;
+
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
             HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
 
-            playerHealth.TakeDamage(playerHealth.maxHealth);
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
     }
 }
