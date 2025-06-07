@@ -35,14 +35,7 @@ public class HitEffectController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetHit();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            GetHit(Color.green);
-        }
+        
     }
     public void GetHit()
     {
