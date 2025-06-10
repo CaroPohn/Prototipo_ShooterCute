@@ -90,8 +90,8 @@ public class WeaponChanger : MonoBehaviour
         {
             if (weaponIndex == 1)
             {
-                Gun1.SetActive(false);
-                Gun2.SetActive(true);
+                //Gun1.SetActive(false);
+                //Gun2.SetActive(true);
 
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
                 if (Gun4 != null)
@@ -103,8 +103,8 @@ public class WeaponChanger : MonoBehaviour
             }
             else if (weaponIndex == 2 && timer >= 10.0f)
             {
-                Gun1.SetActive(false);
-                Gun2.SetActive(false);
+                //Gun1.SetActive(false);
+                //Gun2.SetActive(false);
 
                 Gun4 = FindChildWithTag(bombHolder, "Bomb");
 
