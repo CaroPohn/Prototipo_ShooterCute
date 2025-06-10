@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class FireGun : MonoBehaviour
+public class FireGun : Gun
 {
     [SerializeField] private Transform shootPoint;
     [SerializeField] GameObject projectilePrefab;
@@ -45,7 +45,7 @@ public class FireGun : MonoBehaviour
         }
     }
 
-    private void Shoot()
+    public override void Shoot()
     {
         timer = 0;
 

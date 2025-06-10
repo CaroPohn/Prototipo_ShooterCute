@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,34 +6,31 @@ public class PlayerWeaponChoose : MonoBehaviour
 {
     [SerializeField] private Canvas chooseCanvas;
 
+    public static event Action OnGunSelected;
+
     public bool playerChooseFireGun;
-    public bool playerChooseElectricGun;
+    public bool playerChooseZapGun;
 
     [SerializeField] private Button fireGunButton;
     [SerializeField] private Button electricGunButton;
 
-    public bool playerHasChosen; 
-
     void Start()
     {
         playerChooseFireGun = false;
-        playerChooseElectricGun = false;    
-        playerHasChosen = false;
+        playerChooseZapGun = false;    
     }
 
     public void FireGunOption()
     {
         playerChooseFireGun = true;
 
-        Debug.Log("Player choose fire weapon");
-        playerHasChosen = true;
+        OnGunSelected?.Invoke();
     }
 
     public void ElectricGunOption() 
     { 
-        playerChooseElectricGun = true;
+        playerChooseZapGun = true;
 
-        Debug.Log("Player choose electric weapon");
-        playerHasChosen = true;
+        OnGunSelected?.Invoke();
     }
 }

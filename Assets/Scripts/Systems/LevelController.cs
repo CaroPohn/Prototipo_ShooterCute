@@ -1,5 +1,3 @@
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -15,14 +13,20 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Canvas chooseCanvas;
     [SerializeField] private Canvas gamePlayCanvas;
 
-    private PlayerWeaponChoose playerChooseScript;
+    private void OnEnable()
+    {
+        PlayerWeaponChoose.OnGunSelected += PlayerChoose;
+    }
+
+    private void OnDisable()
+    {
+        PlayerWeaponChoose.OnGunSelected -= PlayerChoose;
+    }
 
     private void Start()
     {
         chooseCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
-
-        playerChooseScript = GetComponent<PlayerWeaponChoose>();
 
         Time.timeScale = 0.0f;
     }
@@ -41,21 +45,16 @@ public class LevelController : MonoBehaviour
 
             player.transform.position = playerSpawnPosition.transform.position;
         }
-
-        PlayerChoose();
     }
 
     private void PlayerChoose()
     {
-        if (playerChooseScript.playerHasChosen) 
-        {
-            chooseCanvas.gameObject.SetActive(false);
-            gamePlayCanvas.gameObject.SetActive(true);
+        chooseCanvas.gameObject.SetActive(false);
+        gamePlayCanvas.gameObject.SetActive(true);
 
-            Time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
