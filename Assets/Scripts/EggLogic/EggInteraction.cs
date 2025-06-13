@@ -1,10 +1,13 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class EggInteraction : MonoBehaviour
 {
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Transform playerTransform;
+
+    [SerializeField] private GameObject interactText;
 
     public static event Action OnInteractWithEgg;
 
@@ -40,11 +43,13 @@ public class EggInteraction : MonoBehaviour
         if (distanceToPlayer < minimumDistanceToInteract) 
         { 
             isPlayerCloseEnough = true;
-            Debug.Log("Good");
+            SpawnInteractText(isPlayerCloseEnough);
+            MakeTextFollowPlayer();
         }
         else
         {
             isPlayerCloseEnough = false;
+            SpawnInteractText(isPlayerCloseEnough);
         }
     }
 
@@ -54,5 +59,15 @@ public class EggInteraction : MonoBehaviour
         { 
             OnInteractWithEgg?.Invoke();
         }
+    }
+
+    private void SpawnInteractText(bool isActive)
+    {
+        interactText.SetActive(isActive);
+    }
+
+    private void MakeTextFollowPlayer()
+    {
+        interactText.transform.LookAt(playerTransform.position);
     }
 }
