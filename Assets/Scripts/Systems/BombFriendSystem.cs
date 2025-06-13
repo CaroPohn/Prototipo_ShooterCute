@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,6 +12,8 @@ public class BombFriendSystem : MonoBehaviour
     private bool isRunning = false;
     private Vector3 startPosition;
     private Transform player;
+
+    private Transform parentTransform;
 
     public float explosionForce;
     public float explosionRadius;
@@ -45,6 +48,8 @@ public class BombFriendSystem : MonoBehaviour
         weaponChangerScript = playerGO.GetComponent<WeaponChanger>();
 
         player = transform.parent;
+
+        parentTransform = transform.parent;
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
@@ -107,6 +112,8 @@ public class BombFriendSystem : MonoBehaviour
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
 
+        weaponChangerScript.ChangeWeapon();
+
         transform.parent = null;
 
         Vector3 dropPosition = player.position + player.forward * 1f;
@@ -163,7 +170,11 @@ public class BombFriendSystem : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        isRunning = false;
+        gameObject.SetActive(false);
+        transform.parent = parentTransform;
+        transform.position = parentTransform.position;
+        transform.rotation = parentTransform.rotation;  
     }
 
     private IEnumerator ExplodeAfterDelay()

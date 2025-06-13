@@ -15,12 +15,14 @@ public class LevelController : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerWeaponChoose.OnGunSelected += PlayerChoose;
+        //PlayerWeaponChoose.OnGunSelected += PlayerChoose;
+        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose; 
     }
 
     private void OnDisable()
     {
-        PlayerWeaponChoose.OnGunSelected -= PlayerChoose;
+        //PlayerWeaponChoose.OnGunSelected -= PlayerChoose; 
+        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose;
     }
 
     private void Start()
