@@ -14,12 +14,35 @@ public class WaveManager : MonoBehaviour
     private int enemiesAlive = 0;
     private bool spawningWave = false;
 
+    private bool hasEggInteractedToStartWaves;
+
+    private void Start()
+    {
+        hasEggInteractedToStartWaves = false;
+    }
+
+    private void OnEnable()
+    {
+        EggInteraction.OnInteractWithEgg += InteractedWithEgg;
+    }
+
+    private void OnDisable()
+    {
+        EggInteraction.OnInteractWithEgg -= InteractedWithEgg;
+    }
+
     void Update()
     {
-        if (!spawningWave && enemiesAlive == 0 && currentWaveIndex < waves.Count)
+        if (!spawningWave && enemiesAlive == 0 && currentWaveIndex < waves.Count && hasEggInteractedToStartWaves)
         {
             StartCoroutine(StartNextWave());
         }
+    }
+
+    private void InteractedWithEgg()
+    {
+        hasEggInteractedToStartWaves = true;
+        Debug.Log("Interacted");
     }
 
     IEnumerator StartNextWave()

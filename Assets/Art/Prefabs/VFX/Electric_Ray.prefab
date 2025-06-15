@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8189254874996631369}
   - component: {fileID: 8594392855825705386}
   - component: {fileID: 3340851779876444499}
+  - component: {fileID: 4228690602215712075}
   m_Layer: 0
   m_Name: Electric_Ray
   m_TagString: Untagged
@@ -114,3 +115,16 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4228690602215712075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8611723687539211747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f13780015ccd934e9213efcdcab1757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3

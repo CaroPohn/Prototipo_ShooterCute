@@ -40,8 +40,6 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Golpeo");
-
         if (!collision.transform.CompareTag("Enemy"))
         {
             Destroy(gameObject);

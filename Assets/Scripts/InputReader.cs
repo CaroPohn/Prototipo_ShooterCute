@@ -15,6 +15,7 @@ public class InputReader : MonoBehaviour
     public Action OnReload;
     public Action OnUseAbility;
     public Action OnChangeToWeapon;
+    public Action OnInteraction;
 
     private PlayerInput playerInput = null;
 
@@ -31,6 +32,14 @@ public class InputReader : MonoBehaviour
         if (context.started) 
         {
             OnChangeToWeapon?.Invoke();
+        }
+    }
+
+    public void HandleInteraction(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnInteraction?.Invoke();
         }
     }
 

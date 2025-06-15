@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class ZapGun : MonoBehaviour
+public class ZapGun : Gun
 {
     public float spread;
     public float range;
@@ -23,10 +23,11 @@ public class ZapGun : MonoBehaviour
     [SerializeField] private GameObject rayEffect;
 
     [SerializeField] Transform shootPivot;
-    [SerializeField] LineRenderer lineRenderer;
     [SerializeField] Camera playerCamera;
 
     [SerializeField] InputReader inputReader;
+
+    private int totalDamage;
 
     private VisualEffect activeMuzzleEffect;
 
@@ -84,8 +85,9 @@ public class ZapGun : MonoBehaviour
         {
             damageToDeal = damageLevel2;
         }
-            
-        Shoot(damageToDeal);
+
+        totalDamage = damageToDeal;
+        Shoot();
         lastShootTime = Time.time;
 
         if (activeMuzzleEffect != null)
@@ -96,7 +98,7 @@ public class ZapGun : MonoBehaviour
         }
     }
 
-    private void Shoot(int damage)
+    public override void Shoot()
     {
         Instantiate(rayEffect, shootPivot.position, shootPivot.rotation);
 
@@ -108,23 +110,11 @@ public class ZapGun : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHit, range))
         {
-            lineRenderer.SetPosition(0, shootPivot.position);
-            lineRenderer.SetPosition(1, rayHit.point);
-            lineRenderer.enabled = true;
-            Invoke(nameof(DisableLine), 0.05f);
-
             HealthSystem health = rayHit.collider.GetComponent<HealthSystem>();
             if (health != null)
             {
-                health.TakeDamage(damage);
+                health.TakeDamage(totalDamage);
             }
-        }
-        else
-        {
-            lineRenderer.SetPosition(0, shootPivot.position);
-            lineRenderer.SetPosition(1, ray.origin + ray.direction * range);
-            lineRenderer.enabled = true;
-            Invoke(nameof(DisableLine), 0.05f);
         }
 
         if (activeMuzzleEffect != null)
@@ -133,10 +123,5 @@ public class ZapGun : MonoBehaviour
             Destroy(activeMuzzleEffect.gameObject);
             activeMuzzleEffect = null;
         }
-    }
-
-    private void DisableLine()
-    {
-        lineRenderer.enabled = false;
     }
 }
