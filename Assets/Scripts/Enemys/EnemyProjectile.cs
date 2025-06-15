@@ -47,8 +47,6 @@ public class EnemyProjectile : MonoBehaviour
 
         if (collision.transform.CompareTag("Player") && counter <= 1)
         {
-            Debug.Log("Golpeo al player");
-
             counter++;
 
             Destroy(gameObject);

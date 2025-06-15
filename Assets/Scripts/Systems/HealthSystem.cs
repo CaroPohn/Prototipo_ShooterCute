@@ -30,8 +30,6 @@ public class HealthSystem : MonoBehaviour
 
         health -= damage;
 
-        Debug.Log(health + " Esto");
-
         if (health <= 0)
         {
             health = 0;

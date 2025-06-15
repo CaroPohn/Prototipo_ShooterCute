@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -15,6 +16,8 @@ public class WaveManager : MonoBehaviour
     private bool spawningWave = false;
 
     private bool hasEggInteractedToStartWaves;
+
+    public static event Action OnWinningAllWaves;
 
     private void Start()
     {
@@ -37,12 +40,21 @@ public class WaveManager : MonoBehaviour
         {
             StartCoroutine(StartNextWave());
         }
+
+        CheckIfPlayerHasWinAllWaves();
     }
 
     private void InteractedWithEgg()
     {
         hasEggInteractedToStartWaves = true;
-        Debug.Log("Interacted");
+    }
+
+    private void CheckIfPlayerHasWinAllWaves()
+    {
+        if (enemiesAlive == 0 && currentWaveIndex == 6) 
+        { 
+            OnWinningAllWaves?.Invoke();
+        }
     }
 
     IEnumerator StartNextWave()
