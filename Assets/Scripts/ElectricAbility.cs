@@ -6,7 +6,7 @@ public class ElectricAbility : MonoBehaviour
     public float angleDegrees = 45f;    
     public float projectileGravity = -9.81f;
 
-    private GameObject player;
+    public GameObject player;
     private WeaponChanger weaponChangerScript;
 
     private bool hasAbilityBeenUsed;
@@ -65,5 +65,7 @@ public class ElectricAbility : MonoBehaviour
 
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
+
+        weaponChangerScript.ChangeWeapon();
     }
 }
