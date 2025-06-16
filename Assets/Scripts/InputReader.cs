@@ -82,18 +82,18 @@ public class InputReader : MonoBehaviour
         }
     }
 
-    public void HandleHoldingShootInput(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            OnHoldingShoot?.Invoke();
-        }
+    //public void HandleHoldingShootInput(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed)
+    //    {
+    //        OnHoldingShoot?.Invoke();
+    //    }
 
-        if (context.canceled)
-        {
-            OnHoldingShootCanceled?.Invoke();
-        }
-    }
+    //    if (context.canceled)
+    //    {
+    //        OnHoldingShootCanceled?.Invoke();
+    //    }
+    //}
 
     public void HandleReloadInput(InputAction.CallbackContext context)
     {

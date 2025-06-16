@@ -7,6 +7,8 @@ public class EggInteraction : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform eggHoldingSpot;
 
+    private FadeEggManager fadeEggManagerScript;
+
     [SerializeField] private GameObject interactText;
 
     public static event Action OnInteractWithEgg;
@@ -19,11 +21,15 @@ public class EggInteraction : MonoBehaviour
     private bool hasPlayerInteracted;
     private bool canPlayerGrabEgg;
 
+    private float corruptionFloat;
+
     private void Start()
     {
         isPlayerCloseEnough = false;
         hasPlayerInteracted = false;
         canPlayerGrabEgg = false;
+
+        fadeEggManagerScript = GetComponent<FadeEggManager>();
     }
 
     private void OnEnable()
@@ -31,6 +37,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction += AttemtInteraction;
         inputReader.OnInteraction += AttemptGivingEgg;
         WaveManager.OnWinningAllWaves += LetPlayerGrabEgg;
+        WaveManager.OnNewWave += CorruptionEggEffectManager;
     }
 
     private void OnDisable()
@@ -38,6 +45,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction -= AttemtInteraction;
         inputReader.OnInteraction -= AttemptGivingEgg;
         WaveManager.OnWinningAllWaves -= LetPlayerGrabEgg;
+        WaveManager.OnNewWave -= CorruptionEggEffectManager;
     }
 
     private void Update()
@@ -48,6 +56,13 @@ public class EggInteraction : MonoBehaviour
         {
             SpawnInteractText(false);
         }
+    }
+
+    private void CorruptionEggEffectManager()
+    {
+        corruptionFloat += 0.18f;
+
+        fadeEggManagerScript.UpdateEggFadeProgress(corruptionFloat);
     }
 
     private void CalculateDistanceToPlayer()

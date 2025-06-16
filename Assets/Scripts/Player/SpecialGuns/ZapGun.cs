@@ -19,8 +19,7 @@ public class ZapGun : Gun
 
     public RaycastHit rayHit;
 
-    [SerializeField] private GameObject muzzleEffect;
-    [SerializeField] private GameObject rayEffect;
+    [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
 
     [SerializeField] Transform shootPivot;
     [SerializeField] Camera playerCamera;
@@ -56,16 +55,13 @@ public class ZapGun : Gun
         isHoldingShoot = true;
         shootHoldTime = 0f;
 
-        if (activeMuzzleEffect == null)
-        {
-            GameObject instance = Instantiate(muzzleEffect, shootPivot.position, shootPivot.rotation, shootPivot);
-            activeMuzzleEffect = instance.GetComponent<VisualEffect>();
-            activeMuzzleEffect.Play();
-        }
+        electric_Gun_VFX_Script.Charge();
     }
 
     private void ReleaseShoot()
     {
+        electric_Gun_VFX_Script.Release();
+
         isHoldingShoot = false;
 
         if (Time.time - lastShootTime < timeBetweenShots)
@@ -100,8 +96,6 @@ public class ZapGun : Gun
 
     public override void Shoot()
     {
-        Instantiate(rayEffect, shootPivot.position, shootPivot.rotation);
-
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
         Vector2 offset = Random.insideUnitCircle * spread;
         Vector3 shootPoint = screenCenter + new Vector3(offset.x, offset.y, 0f);
