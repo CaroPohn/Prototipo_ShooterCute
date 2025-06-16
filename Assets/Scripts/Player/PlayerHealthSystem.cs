@@ -2,13 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class HealthSystem : MonoBehaviour
+public class PlayerHealthSystem : MonoBehaviour
 {
     public float maxHealth;
     public float health;
 
     [SerializeField] private Image healthBarImage;
-    [SerializeField] private HitEffectController effectControllerScript;
 
     public Action onDeath;
 
@@ -24,8 +23,6 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        effectControllerScript.GetHit();
-
         if (!gameObject.activeSelf)
         {
             return;
@@ -37,14 +34,13 @@ public class HealthSystem : MonoBehaviour
         {
             health = 0;
 
-            Die();
+            playerDeath();
         }
     }
 
-    protected void Die()
+    private void playerDeath()
     {
-        onDeath?.Invoke();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void UpdateHealthBar()

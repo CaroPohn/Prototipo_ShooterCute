@@ -10,7 +10,6 @@ public class HitEffectController : MonoBehaviour
     [SerializeField] private Renderer[] renderers;
     public float effectDuration = 0.4f;
     private MaterialPropertyBlock block;
-    private bool isPlayerInside = false;
     private Coroutine resetRoutine;
     [ColorUsageAttribute(true, true)] [SerializeField] Color originalColor;
     bool colorWasChanged = false;

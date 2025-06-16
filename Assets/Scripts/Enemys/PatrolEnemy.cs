@@ -1,9 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PatrolEnemy : MonoBehaviour
 {
+    [SerializeField] private Animator enemyAnimator;
+
     [Header("Follow")]
     private Transform player;
 
@@ -29,11 +32,16 @@ public class PatrolEnemy : MonoBehaviour
     public bool IsPlayerOnRange()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        Debug.Log(distanceToPlayer);
+
         return distanceToPlayer <= followDistance;
     }
 
     public void FollowPlayer()
     {
+        enemyAnimator.SetFloat("Velocity", 0.5f);
+
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -61,6 +69,9 @@ public class PatrolEnemy : MonoBehaviour
 
     public void Shoot()
     {
+        //enemyAnimator.SetFloat("Velocity", 0);
+        enemyAnimator.SetTrigger("Attack");
+
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
         Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
