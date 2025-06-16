@@ -12,23 +12,25 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private Canvas chooseCanvas;
     [SerializeField] private Canvas gamePlayCanvas;
+    [SerializeField] private Canvas winCanvas;
 
     private void OnEnable()
     {
-        //PlayerWeaponChoose.OnGunSelected += PlayerChoose;
-        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose; 
+        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose;
+        WinColliderTrigger.OnWinningLevel += WinLevel;
     }
 
     private void OnDisable()
     {
-        //PlayerWeaponChoose.OnGunSelected -= PlayerChoose; 
-        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose;
+        PlayerWeaponChoose.OnAbilitySelected -= PlayerChoose;
+        WinColliderTrigger.OnWinningLevel -= WinLevel;
     }
 
     private void Start()
     {
         chooseCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
+        winCanvas.gameObject.SetActive(false);
 
         Time.timeScale = 0.0f;
     }
@@ -58,5 +60,13 @@ public class LevelController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private void WinLevel()
+    {
+        Time.timeScale = 0.0f;
+
+        winCanvas.gameObject.SetActive(true);
+        gamePlayCanvas.gameObject.SetActive(false);
     }
 }

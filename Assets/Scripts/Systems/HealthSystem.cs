@@ -41,7 +41,7 @@ public class HealthSystem : MonoBehaviour
     protected void Die()
     {
         onDeath?.Invoke();
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     private void UpdateHealthBar()
