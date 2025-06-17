@@ -97,14 +97,15 @@ public class ZapGun : Gun
     public override void Shoot()
     {
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Vector2 offset = Random.insideUnitCircle * spread;
-        Vector3 shootPoint = screenCenter + new Vector3(offset.x, offset.y, 0f);
+        Vector3 shootPoint = screenCenter;
 
         Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 
+        Debug.DrawRay(ray.origin, ray.direction * range, Color.red, 1f);
+
         if (Physics.Raycast(ray, out rayHit, range))
         {
-            HealthSystem health = rayHit.collider.GetComponent<HealthSystem>();
+            HealthSystem health = rayHit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
             {
                 health.TakeDamage(totalDamage);
