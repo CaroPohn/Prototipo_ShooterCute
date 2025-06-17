@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class WinColliderTrigger : MonoBehaviour
 {
@@ -8,11 +7,13 @@ public class WinColliderTrigger : MonoBehaviour
 
     [SerializeField] private GameObject egg;
 
-    private void OnCollisionEnter(UnityEngine.Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.CompareTag("Egg"))
+        if (other.gameObject == egg)
         {
             OnWinningLevel?.Invoke();
+
+            Debug.Log("Entro");
         }
     }
 }

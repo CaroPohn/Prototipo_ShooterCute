@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6551171550524806076}
   - component: {fileID: 8318347592027246342}
   - component: {fileID: 8367665678656480853}
+  - component: {fileID: 5546055699972734807}
   m_Layer: 0
   m_Name: Electric_Pulse_Attack
   m_TagString: Untagged
@@ -114,3 +115,18 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5546055699972734807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3833049940863328319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0873bcdc74c4a647bcec416f9ca5f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 2
+  explosionRadius: 5
+  damage: 0.2
