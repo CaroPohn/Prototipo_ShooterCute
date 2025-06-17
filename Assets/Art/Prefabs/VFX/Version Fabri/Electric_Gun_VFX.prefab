@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayEffect: {fileID: 3059397719500064612}
-  muzzle: {fileID: 3285391741978713218}
+  chargeObject: {fileID: 5857167510156431459}
 --- !u!1001 &2111473386607696330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3518854724161226056, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
       propertyPath: m_InitialEventNameOverriden
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3700791668978065254, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -104,23 +104,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3796759416154335181, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5477963788494047657, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
       propertyPath: m_Name
       value: Electric_Charge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477963788494047657, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
---- !u!2083052967 &3285391741978713218 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 3518854724161226056, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
-  m_PrefabInstance: {fileID: 2111473386607696330}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3321034954142959276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3700791668978065254, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
+  m_PrefabInstance: {fileID: 2111473386607696330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5857167510156431459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5477963788494047657, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
   m_PrefabInstance: {fileID: 2111473386607696330}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6714938239244070606
