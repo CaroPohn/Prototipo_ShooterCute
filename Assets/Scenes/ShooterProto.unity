@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1226903901}
-  playerHealthSystem: {fileID: 1226903910}
+  playerHealthSystem: {fileID: 1226903917}
   playerSpawnPosition: {fileID: 705201474}
   chooseCanvas: {fileID: 1799533454}
   gamePlayCanvas: {fileID: 734849437}
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f0333bb6a577e48ac1951992649e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  egg: {fileID: 198226203}
+  egg: {fileID: 0}
 --- !u!65 &1199486737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3715,17 +3715,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 605415670055044970, guid: 00d856f844494924491df5915920a1b9, type: 3}
   m_PrefabInstance: {fileID: 6701507858275920829}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1226903910 stripped
+--- !u!114 &1226903917
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4484226004898455174, guid: 00d856f844494924491df5915920a1b9, type: 3}
-  m_PrefabInstance: {fileID: 6701507858275920829}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226903901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17494fd2a2b0a9a49b86215d62970fa5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4044323305a4f544ab7113797566624d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 200
+  health: 0
+  healthBarImage: {fileID: 1565158530}
 --- !u!1 &1250022445
 GameObject:
   m_ObjectHideFlags: 0
@@ -8281,7 +8285,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4484226004898455174, guid: 00d856f844494924491df5915920a1b9, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2878259413095727011, guid: 00d856f844494924491df5915920a1b9, type: 3}
     - {fileID: 1854943096187838796, guid: 00d856f844494924491df5915920a1b9, type: 3}
@@ -8300,6 +8305,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 796364765}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8984669081738162747, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1226903917}
     - targetCorrespondingSourceObject: {fileID: 2083992056861317168, guid: 00d856f844494924491df5915920a1b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2061698254}

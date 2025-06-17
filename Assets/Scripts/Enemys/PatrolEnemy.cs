@@ -33,7 +33,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        Debug.Log(distanceToPlayer);
+        //Debug.Log(distanceToPlayer);
 
         return distanceToPlayer <= followDistance;
     }

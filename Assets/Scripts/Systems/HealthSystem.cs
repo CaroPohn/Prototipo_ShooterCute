@@ -10,11 +10,14 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Image healthBarImage;
     [SerializeField] private HitEffectController effectControllerScript;
 
+    private int deathCounter;
+
     public Action onDeath;
 
     private void Start()
     {
         health = maxHealth;
+        deathCounter = 0;
     }
 
     private void Update()
@@ -36,6 +39,7 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
+            deathCounter++;
 
             Die();
         }
@@ -43,7 +47,11 @@ public class HealthSystem : MonoBehaviour
 
     protected void Die()
     {
-        onDeath?.Invoke();
+        if (deathCounter == 1) 
+        {
+            onDeath?.Invoke();
+        }
+        
         Destroy(gameObject);
     }
 

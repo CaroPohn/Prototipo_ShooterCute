@@ -5,7 +5,7 @@ public class LevelController : MonoBehaviour
     [Header("Player")]
 
     [SerializeField] private GameObject player;
-    [SerializeField] private HealthSystem playerHealthSystem;
+    [SerializeField] private PlayerHealthSystem playerHealthSystem;
     [SerializeField] private Transform playerSpawnPosition;
 
     [Header("Canvas")]

@@ -9,11 +9,12 @@ public class WinColliderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == egg)
+        EggInteraction eggInteraction = other.GetComponentInChildren<EggInteraction>();
+
+        if (eggInteraction != null && eggInteraction.gameObject == egg)
         {
             OnWinningLevel?.Invoke();
-
-            Debug.Log("Entro");
+            Debug.Log("¡Ganaste el nivel!");
         }
     }
 }

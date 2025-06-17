@@ -124,6 +124,8 @@ public class WaveManager : MonoBehaviour
     void OnEnemyDeath()
     {
         enemiesAlive--;
+
+        Debug.Log("murio");
     }
 }
 
