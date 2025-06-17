@@ -65,6 +65,8 @@ public class LevelController : MonoBehaviour
     private void WinLevel()
     {
         Time.timeScale = 0.0f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
 
         winCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);

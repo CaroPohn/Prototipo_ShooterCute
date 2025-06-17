@@ -8,7 +8,7 @@ public class DeathMapLimit : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            HealthSystem playerHealth = collision.transform.GetComponent<HealthSystem>();
+            PlayerHealthSystem playerHealth = collision.transform.GetComponent<PlayerHealthSystem>();
 
             if (playerHealth != null)
             {

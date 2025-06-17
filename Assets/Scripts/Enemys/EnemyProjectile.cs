@@ -51,7 +51,7 @@ public class EnemyProjectile : MonoBehaviour
 
             Destroy(gameObject);
 
-            HealthSystem healthSystem = collision.transform.GetComponent<HealthSystem>();
+            PlayerHealthSystem healthSystem = collision.transform.GetComponent<PlayerHealthSystem>();
 
             if (healthSystem != null)
             {
