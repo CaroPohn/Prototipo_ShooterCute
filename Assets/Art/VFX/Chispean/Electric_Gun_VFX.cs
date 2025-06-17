@@ -4,7 +4,8 @@ using UnityEngine.VFX;
 public class Electric_Gun_VFX : MonoBehaviour
 {
     [SerializeField] VisualEffect rayEffect;
-    [SerializeField] VisualEffect muzzle;
+    //[SerializeField] VisualEffect muzzle;
+    [SerializeField] GameObject chargeObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +15,7 @@ public class Electric_Gun_VFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //SimpleTestCase();
+        SimpleTestCase();
     }
     void SimpleTestCase()
     {
@@ -29,14 +30,16 @@ public class Electric_Gun_VFX : MonoBehaviour
     }
     public void Charge()
     {
-        muzzle.SendEvent("StartMuzzle");
+        chargeObject.SetActive(true);
+        //muzzle.SendEvent("StartMuzzle");
     }
     /// <summary>
     /// Shoots default Ray
     /// </summary>
     public void Release()
     {
-        muzzle.Stop();
+        //muzzle.Stop();
+        chargeObject.SetActive(false);
         PlayRay(36f,0.5f);
     }
     /// <summary>
@@ -44,12 +47,15 @@ public class Electric_Gun_VFX : MonoBehaviour
     /// </summary>
     public void Release(float hitDistance,float intensity)
     {
-        muzzle.Stop();
+        //muzzle.Stop();
+        chargeObject.SetActive(false);
         PlayRay(hitDistance,intensity);
     }
     public void Cancel()
     {
-        muzzle.Stop();
+        //muzzle.Stop();
+        chargeObject.SetActive(false);
+
     }
     void PlayRay(float hitDistance, float intensity)
     {
