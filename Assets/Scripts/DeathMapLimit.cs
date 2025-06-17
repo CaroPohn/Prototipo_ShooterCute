@@ -13,6 +13,7 @@ public class DeathMapLimit : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
+                playerHealth.SetDamageType(PlayerHealthSystem.DamageType.Lava);
             }
         }
     }
