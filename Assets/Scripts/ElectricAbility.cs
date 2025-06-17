@@ -9,7 +9,7 @@ public class ElectricAbility : MonoBehaviour
     public GameObject player;
     private WeaponChanger weaponChangerScript;
 
-    private bool hasAbilityBeenUsed;
+    public bool hasAbilityBeenUsed;
 
     private InputReader inputReader;
 
@@ -23,13 +23,13 @@ public class ElectricAbility : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         weaponChangerScript = player.GetComponent<WeaponChanger>();
-
-        hasAbilityBeenUsed = false;
     }
 
     private void OnEnable()
     {
         inputReader.OnShoot += AttemptLaunchProjectile;
+
+        hasAbilityBeenUsed = false;
     }
 
     private void OnDisable()
