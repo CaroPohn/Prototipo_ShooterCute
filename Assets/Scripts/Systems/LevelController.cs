@@ -14,16 +14,23 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Canvas gamePlayCanvas;
     [SerializeField] private Canvas winCanvas;
 
+    [SerializeField] private GameObject WinEggText;
+    [SerializeField] private GameObject StartWavesEggText;
+
     private void OnEnable()
     {
         PlayerWeaponChoose.OnAbilitySelected += PlayerChoose;
         WinColliderTrigger.OnWinningLevel += WinLevel;
+        WaveManager.OnWinningAllWaves += ActivateEggWinText;
+        EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
     }
 
     private void OnDisable()
     {
         PlayerWeaponChoose.OnAbilitySelected -= PlayerChoose;
         WinColliderTrigger.OnWinningLevel -= WinLevel;
+        WaveManager.OnWinningAllWaves -= ActivateEggWinText;
+        EggInteraction.OnInteractWithEgg -= DeactivateEggStartWavesText;
     }
 
     private void Start()
@@ -31,6 +38,7 @@ public class LevelController : MonoBehaviour
         chooseCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
         winCanvas.gameObject.SetActive(false);
+        WinEggText.SetActive(false);
 
         Time.timeScale = 0.0f;
     }
@@ -70,5 +78,15 @@ public class LevelController : MonoBehaviour
 
         winCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
+    }
+
+    private void ActivateEggWinText()
+    {
+        WinEggText.SetActive(true);
+    }
+
+    private void DeactivateEggStartWavesText()
+    {
+        StartWavesEggText.SetActive(false);
     }
 }
