@@ -55,17 +55,21 @@ public class ZapGun : Gun
         isHoldingShoot = true;
         shootHoldTime = 0f;
 
+        if (Time.time - lastShootTime < timeBetweenShots)
+            return;
+
         electric_Gun_VFX_Script.Charge();
     }
 
     private void ReleaseShoot()
-    {
-        electric_Gun_VFX_Script.Release();
+    { 
+        if (Time.time - lastShootTime < timeBetweenShots)
+            return;
 
         isHoldingShoot = false;
 
-        if (Time.time - lastShootTime < timeBetweenShots)
-            return;
+
+        electric_Gun_VFX_Script.Release();
 
         int damageToDeal = damageLevel1;
 
