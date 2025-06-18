@@ -38,18 +38,22 @@ public class PatrolEnemy : MonoBehaviour
         return distanceToPlayer <= followDistance;
     }
 
-    public void FollowPlayer()
+    public void SetTargetToFollow()
     {
-        enemyAnimator.SetFloat("Velocity", 0.5f);
+        agent.SetDestination(player.position);
+    }
 
-        if (player == null)
+    public void StopFollowingPlayer(bool doesEnemyhasToStop)
+    {
+        agent.isStopped = doesEnemyhasToStop;
+
+        if (!agent.isStopped)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            enemyAnimator.SetFloat("Velocity", 0.5f);
         }
-
-        if (agent != null)
+        else
         {
-            agent.SetDestination(player.position);
+            enemyAnimator.SetFloat("Velocity", 0.0f);
         }
     }
 

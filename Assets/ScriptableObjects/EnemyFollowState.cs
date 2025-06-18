@@ -6,6 +6,7 @@ public class EnemyFollowState : EnemyStates
     public override void Enter(PatrolEnemy patrolEnemy)
     {
         patrolEnemy.shootTimer = patrolEnemy.shootCoolDown;
+        patrolEnemy.SetTargetToFollow();
     }
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
@@ -14,10 +15,14 @@ public class EnemyFollowState : EnemyStates
 
         if (!patrolEnemy.IsPlayerOnRange())
         {
-            patrolEnemy.FollowPlayer();
+            patrolEnemy.StopFollowingPlayer(false);
         }
-        
-        patrolEnemy.SetLookAt();
+        else
+        {
+            patrolEnemy.StopFollowingPlayer(true);
+        }
+
+            patrolEnemy.SetLookAt();
 
         if (patrolEnemy.IsPlayerOnRange() == true && patrolEnemy.shootTimer <= 0.0f)
         {
