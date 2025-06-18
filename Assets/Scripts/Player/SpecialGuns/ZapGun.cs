@@ -68,7 +68,6 @@ public class ZapGun : Gun
 
         isHoldingShoot = false;
 
-
         electric_Gun_VFX_Script.Release();
 
         int damageToDeal = damageLevel1;
