@@ -32,8 +32,6 @@ public class DeathMapLimit : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            Debug.Log("Player salió del DeathMapLimit");
-
             PlayerHealthSystem playerHealth = collision.transform.GetComponent<PlayerHealthSystem>();
 
             if (playerHealth != null)
