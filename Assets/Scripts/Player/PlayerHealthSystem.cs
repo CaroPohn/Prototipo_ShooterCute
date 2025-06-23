@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using System.Collections.Generic;
 using System.Collections;
 
 public class PlayerHealthSystem : MonoBehaviour
@@ -28,6 +27,16 @@ public class PlayerHealthSystem : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+    }
+
+    private void OnEnable()
+    {
+        DeathMapLimit.OnExitingLava += ChangeLavaCameraEffect;
+    }
+
+    private void OnDisable()
+    {
+        DeathMapLimit.OnExitingLava -= ChangeLavaCameraEffect;
     }
 
     private void Update()
@@ -78,7 +87,6 @@ public class PlayerHealthSystem : MonoBehaviour
         else if (damageType == DamageType.Lava)
         {
             lavaDamageEffect.SetFloat("_Intensity", 1);
-            StartCoroutine(EffectCooldown());
         }
         else if (damageType == DamageType.Projectile)
         {
@@ -86,6 +94,11 @@ public class PlayerHealthSystem : MonoBehaviour
             StartCoroutine(EffectCooldown());
         }
     }
+
+    private void ChangeLavaCameraEffect()
+    {
+        damageType = DamageType.None;
+    }    
 
     private IEnumerator EffectCooldown()
     {

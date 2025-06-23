@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class DeathMapLimit : MonoBehaviour
     public float damageInterval = 0.1f;
 
     private float timeElapsedSinceExit;
+
+    public static event Action OnExitingLava;
 
     private void Update()
     {
@@ -50,7 +53,9 @@ public class DeathMapLimit : MonoBehaviour
             playerHealth.TakeDamage(damage);
             playerHealth.SetDamageType(PlayerHealthSystem.DamageType.Lava);
 
-            yield return new WaitForSeconds(damageInterval);
+            yield return new WaitForSeconds(damageInterval);     
         }
+
+        OnExitingLava?.Invoke();
     }
 }
