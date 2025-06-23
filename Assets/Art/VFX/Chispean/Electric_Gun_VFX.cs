@@ -25,6 +25,7 @@ public class Electric_Gun_VFX : MonoBehaviour
         //muzzle.Stop();
         chargeObject.SetActive(false);
         PlayRay(hitDistance,intensity);
+
     }
     public void Cancel()
     {
@@ -35,8 +36,10 @@ public class Electric_Gun_VFX : MonoBehaviour
 
     void PlayRay(float hitDistance, float intensity)
     {
-        rayEffect.SendEvent("PlayRay");
-        rayEffect.SetFloat("Hit distance", hitDistance);
-        rayEffect.SetFloat("Intensity", intensity);
+        VisualEffect rayInstance = Instantiate(rayEffect, transform.position, transform.rotation);
+
+        rayInstance.SendEvent("PlayRay");
+        rayInstance.SetFloat("Hit distance", hitDistance);
+        rayInstance.SetFloat("Intensity", intensity);
     }
 }
