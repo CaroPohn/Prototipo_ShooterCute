@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8584dd43dcf623f4eb5591b37c5873c2
+guid: f07e5f50e5016ea4eab20a2b366a13d6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Beast
+      name: Spawn
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 0
-      lastFrame: 36
+      lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -55,8 +55,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.42666665
-        functionName: AttackPoseReached
+      - time: 0.7916667
+        functionName: SpawnAnimationEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
