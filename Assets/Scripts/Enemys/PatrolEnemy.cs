@@ -33,8 +33,6 @@ public class PatrolEnemy : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        //Debug.Log(distanceToPlayer);
-
         return distanceToPlayer <= followDistance;
     }
 
@@ -46,6 +44,11 @@ public class PatrolEnemy : MonoBehaviour
     public void StopFollowingPlayer(bool doesEnemyhasToStop)
     {
         agent.isStopped = doesEnemyhasToStop;
+
+        if (!doesEnemyhasToStop)
+        {
+            SetTargetToFollow();
+        }
 
         if (!agent.isStopped)
         {
@@ -73,7 +76,6 @@ public class PatrolEnemy : MonoBehaviour
 
     public void Shoot()
     {
-        //enemyAnimator.SetFloat("Velocity", 0);
         enemyAnimator.SetTrigger("Attack");
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);

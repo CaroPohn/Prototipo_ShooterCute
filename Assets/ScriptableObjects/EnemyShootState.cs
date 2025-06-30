@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 [CreateAssetMenu(fileName = "EnemyShootState", menuName = "Scriptable Objects/EnemyShootState")]
 public class EnemyShootState : EnemyStates

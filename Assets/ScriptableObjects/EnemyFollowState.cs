@@ -22,7 +22,7 @@ public class EnemyFollowState : EnemyStates
             patrolEnemy.StopFollowingPlayer(true);
         }
 
-            patrolEnemy.SetLookAt();
+        patrolEnemy.SetLookAt();
 
         if (patrolEnemy.IsPlayerOnRange() == true && patrolEnemy.shootTimer <= 0.0f)
         {
