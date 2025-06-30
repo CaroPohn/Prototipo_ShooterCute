@@ -13,7 +13,7 @@ public class HealthPackSystem : MonoBehaviour
         {
             PlayerHealthSystem playerHealthSystem = other.GetComponent<PlayerHealthSystem>();
 
-            if (playerHealthSystem.health + healingNum < playerHealthSystem.maxHealth) 
+            if (playerHealthSystem.health + healingNum <= playerHealthSystem.maxHealth) 
             {
                 playerHealthSystem.health += healingNum;
                 OnGrabingHealthPack?.Invoke();
