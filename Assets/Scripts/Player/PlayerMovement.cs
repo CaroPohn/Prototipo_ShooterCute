@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -86,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 GetGroundNormal()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
         {
             return hit.normal;
         }
