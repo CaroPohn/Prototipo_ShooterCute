@@ -2825,6 +2825,7 @@ GameObject:
   - component: {fileID: 8819072511634744934}
   - component: {fileID: 7619817241942544988}
   - component: {fileID: 1633396269920017999}
+  - component: {fileID: 2740844829457810042}
   m_Layer: 0
   m_Name: Beast
   m_TagString: Untagged
@@ -2901,7 +2902,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 051e3b19b7040404b82adf645202bbc7, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -2910,6 +2911,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2740844829457810042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786525731138248178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e0dc5d199988d4aac0e6f4d7ef05e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4787247987393440484
 GameObject:
   m_ObjectHideFlags: 0
