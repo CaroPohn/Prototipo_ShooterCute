@@ -7,18 +7,20 @@ public class PlayerHealthSystem : MonoBehaviour
 {
     [SerializeField] private Material lavaDamageEffect;
     [SerializeField] private Material projectileDamageEffect;
+    [SerializeField] private Material healthEffect;
 
-    public enum DamageType
+    public enum EffectType
     { 
         None,
         Lava,
-        Projectile
+        Projectile,
+        Heal
     }
 
     public float maxHealth;
     public float health;
 
-    private DamageType damageType;
+    private EffectType effectType;
 
     [SerializeField] private Image healthBarImage;
 
@@ -72,37 +74,62 @@ public class PlayerHealthSystem : MonoBehaviour
         healthBarImage.fillAmount = health / maxHealth;
     }
 
-    public void SetDamageType(DamageType damageTypeToActivate)
+    public void SetEffectType(EffectType damageTypeToActivate)
     {
-        damageType = damageTypeToActivate;
+        effectType = damageTypeToActivate;
     }
 
     private void ManageScreenDamageEffect()
     {
-        if (damageType == DamageType.None)
+        if (effectType == EffectType.None)
         {
             lavaDamageEffect.SetFloat("_Intensity", 0);
             projectileDamageEffect.SetFloat("_Intensity", 0);
+            healthEffect.SetFloat("_Intensity", 0);
         }
-        else if (damageType == DamageType.Lava)
+        else if (effectType == EffectType.Lava)
         {
             lavaDamageEffect.SetFloat("_Intensity", 1);
         }
-        else if (damageType == DamageType.Projectile)
+        else if (effectType == EffectType.Projectile)
         {
             projectileDamageEffect.SetFloat("_Intensity", 1);
             StartCoroutine(EffectCooldown());
+        }
+        else if (effectType == EffectType.Heal)
+        {
+            healthEffect.SetFloat("_Intensity", 1);
+            StartCoroutine(HealEffectCooldown());
         }
     }
 
     private void ChangeLavaCameraEffect()
     {
-        damageType = DamageType.None;
+        effectType = EffectType.None;
     }    
 
     private IEnumerator EffectCooldown()
     {
         yield return new WaitForSeconds(1f);
-        damageType = DamageType.None;
+        effectType = EffectType.None;
+    }
+
+    private IEnumerator HealEffectCooldown()
+    {
+        float startValue = 0.8f;
+        float endValue = 0.0f;
+        float duration = 3.0f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float currentValue = Mathf.Lerp(startValue, endValue, elapsed / duration);
+            healthEffect.SetFloat("_Intensity", currentValue);
+            yield return null;
+        }
+
+        healthEffect.SetFloat("_Intensity", endValue);
+        effectType = EffectType.None;
     }
 }

@@ -16,11 +16,13 @@ public class HealthPackSystem : MonoBehaviour
             if (playerHealthSystem.health + healingNum <= playerHealthSystem.maxHealth) 
             {
                 playerHealthSystem.health += healingNum;
+                playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.Heal);
                 OnGrabingHealthPack?.Invoke();
             }
             else if (playerHealthSystem.health + healingNum > playerHealthSystem.maxHealth && playerHealthSystem.health != playerHealthSystem.maxHealth) 
             {
                 playerHealthSystem.health = playerHealthSystem.maxHealth;
+                playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.Heal);
                 OnGrabingHealthPack?.Invoke();
             }
         }

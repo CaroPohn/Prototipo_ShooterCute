@@ -26,7 +26,7 @@ public class DeathMapLimit : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
-                playerHealth.SetDamageType(PlayerHealthSystem.DamageType.Lava);
+                playerHealth.SetEffectType(PlayerHealthSystem.EffectType.Lava);
             }
         }
     }
@@ -51,7 +51,7 @@ public class DeathMapLimit : MonoBehaviour
         while (timeElapsedSinceExit < postExitDuration)
         {
             playerHealth.TakeDamage(damage);
-            playerHealth.SetDamageType(PlayerHealthSystem.DamageType.Lava);
+            playerHealth.SetEffectType(PlayerHealthSystem.EffectType.Lava);
 
             yield return new WaitForSeconds(damageInterval);     
         }
