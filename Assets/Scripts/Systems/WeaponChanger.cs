@@ -15,11 +15,29 @@ public class WeaponChanger : MonoBehaviour
 
     public float timer; 
 
-    public int weaponIndex = 1;
+    public int weaponIndex;
+
+    private string weaponName;
+    private string abilityName;
 
     [SerializeField] private PlayerWeaponChoose playerWeaponChooseScript;
 
     [SerializeField] private InputReader inputReader;
+
+    GameObject selectedGun;
+    GameObject selectedAbility;
+
+    private void Start()
+    {
+        weaponName = PlayerSelectionData.selectedWeapon;
+        abilityName = PlayerSelectionData.selectedAbility;
+
+        selectedGun = FindChildWithTag(gunHandler.transform, weaponName);
+        selectedAbility = GetAbilityPrefabByTag(abilityName);
+
+        weaponIndex = 1;
+        ChangeWeapon();
+    }
 
     private void OnEnable()
     {
@@ -52,9 +70,6 @@ public class WeaponChanger : MonoBehaviour
 
     public void ChangeWeapon()
     {
-        GameObject selectedGun = FindChildWithTag(gunHandler.transform, playerWeaponChooseScript.selectedWeaponName);
-        GameObject selectedAbility = GetAbilityPrefabByTag(playerWeaponChooseScript.selectedAbilityName);
-
         if (weaponIndex == 1)
         {
             if (selectedGun != null)

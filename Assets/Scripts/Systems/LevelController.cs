@@ -19,7 +19,6 @@ public class LevelController : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerWeaponChoose.OnAbilitySelected += PlayerChoose;
         WinColliderTrigger.OnWinningLevel += WinLevel;
         WaveManager.OnWinningAllWaves += ActivateEggWinText;
         EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
@@ -27,7 +26,6 @@ public class LevelController : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerWeaponChoose.OnAbilitySelected -= PlayerChoose;
         WinColliderTrigger.OnWinningLevel -= WinLevel;
         WaveManager.OnWinningAllWaves -= ActivateEggWinText;
         EggInteraction.OnInteractWithEgg -= DeactivateEggStartWavesText;
@@ -35,12 +33,12 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        chooseCanvas.gameObject.SetActive(true);
-        gamePlayCanvas.gameObject.SetActive(false);
+        gamePlayCanvas.gameObject.SetActive(true);
         winCanvas.gameObject.SetActive(false);
         WinEggText.SetActive(false);
 
-        Time.timeScale = 0.0f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -57,17 +55,6 @@ public class LevelController : MonoBehaviour
 
             player.transform.position = playerSpawnPosition.transform.position;
         }
-    }
-
-    private void PlayerChoose()
-    {
-        chooseCanvas.gameObject.SetActive(false);
-        gamePlayCanvas.gameObject.SetActive(true);
-
-        Time.timeScale = 1.0f;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private void WinLevel()

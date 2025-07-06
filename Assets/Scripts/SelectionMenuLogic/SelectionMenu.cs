@@ -1,13 +1,28 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SelectionMenu : MonoBehaviour
 {
-    public Sprite[] elementSprites;
+    [System.Serializable]
+    public struct SelectableLumming
+    {
+        public string weaponName;
+        public string abilityName;
+        public Sprite icon;
+    }
+
+    public SelectableLumming[] elements;
 
     public Image weaponDisplay;
     public Image abilityDisplay;
+
+    private string weaponName;
+    private string abilityName;
+
+    private int currentWeaponIndex = 0;
+    private int currentAbilityIndex = 1;
 
     public Button nextWeapon;
     public Button prevWeapon;
@@ -16,9 +31,6 @@ public class SelectionMenu : MonoBehaviour
     public Button prevAbility;
 
     public Button confirmButton;
-
-    private int currentWeaponIndex = 0;
-    private int currentAbilityIndex = 1;
 
     private void Awake()
     {
@@ -49,15 +61,15 @@ public class SelectionMenu : MonoBehaviour
 
     public void NextWeapon()
     {
-        currentWeaponIndex = (currentWeaponIndex + 1) % elementSprites.Length;
+        currentWeaponIndex = (currentWeaponIndex + 1) % elements.Length;
 
-        if (elementSprites.Length == 2)
+        if (elements.Length == 2)
         {
             currentAbilityIndex = 1 - currentWeaponIndex;
         }
         else if (currentWeaponIndex == currentAbilityIndex)
         {
-            currentWeaponIndex = (currentWeaponIndex + 1) % elementSprites.Length;
+            currentWeaponIndex = (currentWeaponIndex + 1) % elements.Length;
         }
 
         UpdateDisplays();
@@ -65,15 +77,15 @@ public class SelectionMenu : MonoBehaviour
 
     public void PrevWeapon()
     {
-        currentWeaponIndex = (currentWeaponIndex - 1 + elementSprites.Length) % elementSprites.Length;
+        currentWeaponIndex = (currentWeaponIndex - 1 + elements.Length) % elements.Length;
 
-        if (elementSprites.Length == 2)
+        if (elements.Length == 2)
         {
             currentAbilityIndex = 1 - currentWeaponIndex;
         }
         else if (currentWeaponIndex == currentAbilityIndex)
         {
-            currentWeaponIndex = (currentWeaponIndex - 1 + elementSprites.Length) % elementSprites.Length;
+            currentWeaponIndex = (currentWeaponIndex - 1 + elements.Length) % elements.Length;
         }
 
         UpdateDisplays();
@@ -81,15 +93,15 @@ public class SelectionMenu : MonoBehaviour
 
     public void NextAbility()
     {
-        currentAbilityIndex = (currentAbilityIndex + 1) % elementSprites.Length;
+        currentAbilityIndex = (currentAbilityIndex + 1) % elements.Length;
 
-        if (elementSprites.Length == 2)
+        if (elements.Length == 2)
         {
             currentWeaponIndex = 1 - currentAbilityIndex;
         }
         else if (currentAbilityIndex == currentWeaponIndex)
         {
-            currentAbilityIndex = (currentAbilityIndex + 1) % elementSprites.Length;
+            currentAbilityIndex = (currentAbilityIndex + 1) % elements.Length;
         }
 
         UpdateDisplays();
@@ -97,15 +109,15 @@ public class SelectionMenu : MonoBehaviour
 
     public void PrevAbility()
     {
-        currentAbilityIndex = (currentAbilityIndex - 1 + elementSprites.Length) % elementSprites.Length;
+        currentAbilityIndex = (currentAbilityIndex - 1 + elements.Length) % elements.Length;
 
-        if (elementSprites.Length == 2)
+        if (elements.Length == 2)
         {
             currentWeaponIndex = 1 - currentAbilityIndex;
         }
         else if (currentAbilityIndex == currentWeaponIndex)
         {
-            currentAbilityIndex = (currentAbilityIndex - 1 + elementSprites.Length) % elementSprites.Length;
+            currentAbilityIndex = (currentAbilityIndex - 1 + elements.Length) % elements.Length;
         }
 
         UpdateDisplays();
@@ -113,12 +125,18 @@ public class SelectionMenu : MonoBehaviour
 
     private void UpdateDisplays()
     {
-        weaponDisplay.sprite = elementSprites[currentWeaponIndex];
-        abilityDisplay.sprite = elementSprites[currentAbilityIndex];
+        weaponDisplay.sprite = elements[currentWeaponIndex].icon;
+        abilityDisplay.sprite = elements[currentAbilityIndex].icon;
+
+        weaponName = elements[currentWeaponIndex].weaponName;
+        abilityName = elements[currentAbilityIndex].abilityName;
     }
 
     private void StartPlayScene()
     {
+        PlayerSelectionData.selectedWeapon = weaponName;
+        PlayerSelectionData.selectedAbility = abilityName;
+
         SceneLoader.Instance.ChangeScene("ShooterProto");
     }
 }

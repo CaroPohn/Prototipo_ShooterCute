@@ -567,9 +567,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41f473eb6d563c44898eb2c6a7a9ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementSprites:
-  - {fileID: 21300000, guid: 27880b396d2378d41abef952f6bfc22b, type: 3}
-  - {fileID: 21300000, guid: 24173868018d9c04b8d320962eee743e, type: 3}
+  elements:
+  - weaponName: FireGun
+    abilityName: BombAbility
+    icon: {fileID: 21300000, guid: 27880b396d2378d41abef952f6bfc22b, type: 3}
+  - weaponName: ZapGun
+    abilityName: ElectricAbility
+    icon: {fileID: 21300000, guid: 24173868018d9c04b8d320962eee743e, type: 3}
   weaponDisplay: {fileID: 2072429634}
   abilityDisplay: {fileID: 2072429632}
   nextWeapon: {fileID: 2072429638}
