@@ -235,7 +235,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -404,6 +404,22 @@ PrefabInstance:
     - target: {fileID: 339479157248855885, guid: c53cb8d583ad71147be424908e378678, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449733753130268850, guid: c53cb8d583ad71147be424908e378678, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814009161796049014, guid: c53cb8d583ad71147be424908e378678, type: 3}
+      propertyPath: weight
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 814009161796049014, guid: c53cb8d583ad71147be424908e378678, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814009161796049014, guid: c53cb8d583ad71147be424908e378678, type: 3}
+      propertyPath: m_IsGlobal
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9221700724752596068, guid: c53cb8d583ad71147be424908e378678, type: 3}
       propertyPath: m_Name
