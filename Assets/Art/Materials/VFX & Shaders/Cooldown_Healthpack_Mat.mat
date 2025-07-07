@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cooldown_Healthpack_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: b13947b2705572641997be7536691306,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b13947b2705572641997be7536691306, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,6 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cooldown: 0
     - _Cooldown_Complete: 1
     - _QueueControl: 0
     - _QueueOffset: 0
