@@ -106,13 +106,24 @@ public class ZapGun : Gun
 
         Debug.DrawRay(ray.origin, ray.direction * range, Color.red, 1f);
 
-        if (Physics.Raycast(ray, out rayHit, range))
+        RaycastHit[] hits = Physics.RaycastAll(ray, range);
+
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        int ignoredLayer = LayerMask.NameToLayer("WinCollider");
+
+        foreach (RaycastHit hit in hits)
         {
-            HealthSystem health = rayHit.collider.GetComponentInParent<HealthSystem>();
+            if (hit.collider.gameObject.layer == ignoredLayer)
+                continue;
+
+            HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
             {
                 health.TakeDamage(totalDamage);
             }
+
+            break;
         }
 
         if (activeMuzzleEffect != null)
