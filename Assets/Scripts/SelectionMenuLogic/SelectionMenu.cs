@@ -11,6 +11,7 @@ public class SelectionMenu : MonoBehaviour
         public string weaponName;
         public string abilityName;
         public Sprite icon;
+        public GameObject lummingModel;
     }
 
     public SelectableLumming[] elements;
@@ -130,6 +131,14 @@ public class SelectionMenu : MonoBehaviour
 
         weaponName = elements[currentWeaponIndex].weaponName;
         abilityName = elements[currentAbilityIndex].abilityName;
+
+        for (int i = 0; i < elements.Length; i++)
+        {
+            if (elements[i].lummingModel != null)
+            {
+                elements[i].lummingModel.SetActive(i == currentWeaponIndex);
+            }
+        }
     }
 
     private void StartPlayScene()
