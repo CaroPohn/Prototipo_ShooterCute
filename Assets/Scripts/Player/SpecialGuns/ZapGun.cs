@@ -17,7 +17,7 @@ public class ZapGun : Gun
     private float lastShootTime;
     private bool isHoldingShoot;
 
-    public RaycastHit rayHit;
+    private float hitDistance;
 
     [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
 
@@ -70,8 +70,6 @@ public class ZapGun : Gun
 
         isHoldingShoot = false;
 
-        electric_Gun_VFX_Script.Release();
-
         int damageToDeal = damageLevel1;
 
         if (shootHoldTime >= 2f)
@@ -88,7 +86,11 @@ public class ZapGun : Gun
         }
 
         totalDamage = damageToDeal;
+
         Shoot();
+
+        electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
+
         lastShootTime = Time.time;
 
         if (activeMuzzleEffect != null)
@@ -120,6 +122,8 @@ public class ZapGun : Gun
         {
             if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == worldLayer)
                 continue;
+
+            hitDistance = Vector3.Distance(hit.point, shootPoint);
 
             Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
             hitPointEffect.Play();

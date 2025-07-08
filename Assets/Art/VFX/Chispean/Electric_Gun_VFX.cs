@@ -7,6 +7,8 @@ public class Electric_Gun_VFX : MonoBehaviour
     //[SerializeField] VisualEffect muzzle;
     [SerializeField] GameObject chargeObject;
 
+    static readonly int distancePropID = Shader.PropertyToID("Hit distance");
+
     public void Charge()
     {
         chargeObject.SetActive(true);
@@ -39,7 +41,7 @@ public class Electric_Gun_VFX : MonoBehaviour
         VisualEffect rayInstance = Instantiate(rayEffect, transform.position, transform.rotation);
 
         rayInstance.SendEvent("PlayRay");
-        rayInstance.SetFloat("Hit distance", hitDistance);
+        rayInstance.SetFloat(distancePropID, hitDistance);
         rayInstance.SetFloat("Intensity", intensity);
     }
 }

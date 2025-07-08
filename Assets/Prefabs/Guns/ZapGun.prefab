@@ -51,10 +51,9 @@ MonoBehaviour:
   range: 50
   reloadTime: 0
   timeBetweenShots: 0.5
-  muzzleEffect: {fileID: 5477963788494047657, guid: 365ab5a69eac97d42b894e3214f022f5, type: 3}
-  rayEffect: {fileID: 8611723687539211747, guid: 8a022fae1e58d164fb6170bc99d29ad7, type: 3}
+  electric_Gun_VFX_Script: {fileID: 0}
+  hitPointEffect: {fileID: 0}
   shootPivot: {fileID: 8496743880716301185}
-  lineRenderer: {fileID: 0}
   playerCamera: {fileID: 0}
   inputReader: {fileID: 0}
 --- !u!114 &6235007681987416415
@@ -231,16 +230,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -270,9 +281,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5591054923620989048, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7457431465238279847, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
       propertyPath: m_Name
       value: Tesla
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457431465238279847, guid: 807d58c8e2cda454182b88cf389858ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
