@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using static PlayerHealthSystem;
 
 public class HealthPackHolder : MonoBehaviour
 {
@@ -8,7 +10,11 @@ public class HealthPackHolder : MonoBehaviour
     private bool hasHealthPackBeenGrabbed;
 
     [SerializeField] private GameObject healthPack;
+    [SerializeField] private GameObject cooldownEffectGO;
+    [SerializeField] private Material cooldownEffectMat;
 
+    [SerializeField] private GameObject player;
+ 
     private void OnEnable()
     {
         HealthPackSystem.OnGrabingHealthPack += GrabHealthPack;
@@ -25,6 +31,7 @@ public class HealthPackHolder : MonoBehaviour
     {
         timer = 0;
         hasHealthPackBeenGrabbed = false;
+        cooldownEffectGO.SetActive(false);
     }
 
     private void Update()
@@ -35,11 +42,16 @@ public class HealthPackHolder : MonoBehaviour
         { 
             ReactivateHealthPack();
         }
+
+        transform.LookAt(player.transform);
     }
 
     private void GrabHealthPack()
     {
         healthPack.SetActive(false);
+        cooldownEffectGO.SetActive(true);
+        StartCoroutine(EffectCooldown());
+
         timer = 0;
     }
 
@@ -49,11 +61,30 @@ public class HealthPackHolder : MonoBehaviour
         {
             ChangeGrabbedBool();
             healthPack.SetActive(true);
+            cooldownEffectGO.SetActive(false);
         }
     }
 
     private void ChangeGrabbedBool()
     {
         hasHealthPackBeenGrabbed = !hasHealthPackBeenGrabbed;
+    }
+
+    private IEnumerator EffectCooldown()
+    {
+        float startValue = 0.0f;
+        float endValue = 1.0f;
+        float duration = cooldown;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float currentValue = Mathf.Lerp(startValue, endValue, elapsed / duration);
+            cooldownEffectMat.SetFloat("_Cooldown", currentValue);
+            yield return null;
+        }
+
+        cooldownEffectMat.SetFloat("_Cooldown", endValue);
     }
 }
