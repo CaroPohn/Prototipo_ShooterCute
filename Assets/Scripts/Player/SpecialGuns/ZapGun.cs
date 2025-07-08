@@ -21,6 +21,8 @@ public class ZapGun : Gun
 
     [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
 
+    [SerializeField] private VisualEffect hitPointEffect;
+
     [SerializeField] Transform shootPivot;
     [SerializeField] Camera playerCamera;
 
@@ -62,7 +64,7 @@ public class ZapGun : Gun
     }
 
     private void ReleaseShoot()
-    { 
+    {
         if (Time.time - lastShootTime < timeBetweenShots)
             return;
 
@@ -79,7 +81,7 @@ public class ZapGun : Gun
         else if (shootHoldTime >= 1f)
         {
             damageToDeal = damageLevel3;
-        } 
+        }
         else if (shootHoldTime >= 0.5f)
         {
             damageToDeal = damageLevel2;
@@ -92,7 +94,7 @@ public class ZapGun : Gun
         if (activeMuzzleEffect != null)
         {
             activeMuzzleEffect.Stop();
-            Destroy(activeMuzzleEffect.gameObject); 
+            Destroy(activeMuzzleEffect.gameObject);
             activeMuzzleEffect = null;
         }
     }
@@ -110,12 +112,17 @@ public class ZapGun : Gun
 
         System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
-        int ignoredLayer = LayerMask.NameToLayer("WinCollider");
+        int winLayer = LayerMask.NameToLayer("WinCollider");
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int worldLayer = LayerMask.NameToLayer("WorldCollider");
 
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.layer == ignoredLayer)
+            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == worldLayer)
                 continue;
+
+            Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            hitPointEffect.Play();
 
             HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
