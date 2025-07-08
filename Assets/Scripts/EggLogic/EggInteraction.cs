@@ -69,17 +69,17 @@ public class EggInteraction : MonoBehaviour
     {
         distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        if (!hasPlayerInteracted ) 
+        isPlayerCloseEnough = distanceToPlayer < minimumDistanceToInteract;
+
+        if (!hasPlayerInteracted) 
         {
-            if (distanceToPlayer < minimumDistanceToInteract)
+            if (isPlayerCloseEnough)
             {
-                isPlayerCloseEnough = true;
                 SpawnInteractText(isPlayerCloseEnough);
                 MakeTextFollowPlayer();
             }
             else
             {
-                isPlayerCloseEnough = false;
                 SpawnInteractText(isPlayerCloseEnough);
             }
         }
