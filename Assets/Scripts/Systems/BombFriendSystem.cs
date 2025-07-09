@@ -38,8 +38,6 @@ public class BombFriendSystem : MonoBehaviour
 
     private void Start()
     {
-        timer = 0;
-
         agent = GetComponent<NavMeshAgent>();
 
         agent.enabled = false;
@@ -70,6 +68,7 @@ public class BombFriendSystem : MonoBehaviour
     private void OnEnable()
     {
         inputReader.OnShoot += AttemptDropAndRun;
+        timer = 0;
     }
 
     private void OnDisable()
