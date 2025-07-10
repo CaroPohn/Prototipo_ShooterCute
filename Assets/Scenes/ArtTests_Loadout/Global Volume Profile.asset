@@ -21,10 +21,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.529
+    m_Value: 0.47
   smoothness:
-    m_OverrideState: 0
-    m_Value: 0.2
+    m_OverrideState: 1
+    m_Value: 0.103
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -45,8 +45,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 5
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 67
+    m_Value: 28
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,13 +89,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.8999914, y: 0.885965, z: 1, w: 0}
+    m_Value: {x: 0.99996287, y: 0.8740735, z: 1, w: 0}
   midtones:
     m_OverrideState: 0
     m_Value: {x: 0.8987428, y: 1, z: 0.97021306, w: 0}
   highlights:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 0.28836614, z: 0.9885689, w: -0.19264446}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -123,16 +123,16 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 50
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 400
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.5
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
     m_Value: 5.6
   focalLength:
     m_OverrideState: 1
-    m_Value: 78
+    m_Value: 103
   bladeCount:
     m_OverrideState: 0
     m_Value: 5
@@ -172,13 +172,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.21
+    m_Value: 0.3
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.3
   clamp:
     m_OverrideState: 0
     m_Value: 65472
