@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7508965146629275404
+--- !u!114 &-3238762110534671450
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,51 +20,47 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PSP_Mat1
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 2801da58e6234eb47ab260a376c0f9fa, type: 2}
-  m_ModifiedSerializedProperties: 2
-  m_ValidKeywords:
-  - _EMISSION
-  - _METALLICSPECGLOSSMAP
-  - _NORMALMAP
-  - _OCCLUSIONMAP
-  - _PARALLAXMAP
+  m_Name: Healthpack_Unlit_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: a45a1ddc1b2e7044ca9003e5babb01a3, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 47991c6113bf1574eac3b8dea19d1d7b, type: 3}
+    - _SampleTexture2D_10ba32fa712848fc9d40c75c4c325d0e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d495b9d2cd0a5474ab644ea8021eca29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 76ce6c0d91702b94e97359c6e6b7fb8b, type: 3}
+    - _SampleTexture2D_56f0386c8fc643ef99130da0ebc8c4ee_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 6aba1a00c3e0dc84e9d7867d9bd0cf16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 9813a89f2c426cf43878a2a68d0f1d13, type: 3}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 47991c6113bf1574eac3b8dea19d1d7b, type: 3}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 1
-    m_Colors:
-    - _BaseColor: {r: 1, g: 0.38616884, b: 0, a: 1}
-    - _Color: {r: 1, g: 0.38616878, b: 0, a: 1}
-    - _EmissionColor: {r: 69.40293, g: 13.822453, b: 0, a: 1}
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
