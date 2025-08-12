@@ -9,6 +9,8 @@ public class ElectricPulse : MonoBehaviour
 
     private Rigidbody rb;
 
+    private int count;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,12 +20,16 @@ public class ElectricPulse : MonoBehaviour
     private void OnEnable()
     {
         parentTransform = transform.parent;
+
+        count = 0;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (electricAbilityScript.hasAbilityBeenUsed)
+        if (electricAbilityScript.hasAbilityBeenUsed && count < 1)
         {
+            count++;
+
             Instantiate(impactAreaPrefab, transform.position, Quaternion.identity);
 
             transform.parent = parentTransform;
