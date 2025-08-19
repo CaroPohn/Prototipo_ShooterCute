@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class EnemyAnimationHandler : MonoBehaviour
 {
+    private PatrolEnemy patrolEnemy;
+
+    private void Start()
+    {
+        patrolEnemy = GetComponentInParent<PatrolEnemy>();
+    }
+
     //Called when the spawn animation is complete
     void SpawnAnimationEnd()
     {
@@ -12,5 +19,10 @@ public class EnemyAnimationHandler : MonoBehaviour
     void AttackPoseReached()
     {
         print("B");
+    }
+
+    public void OnFinishDeadAnimation()
+    {
+        patrolEnemy.stopDieAnimation = true;
     }
 }

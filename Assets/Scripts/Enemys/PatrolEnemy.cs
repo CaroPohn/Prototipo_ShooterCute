@@ -20,6 +20,8 @@ public class PatrolEnemy : MonoBehaviour
     public float damage;
     public float shootTimer;
 
+    public bool stopDieAnimation;
+
     private NavMeshAgent agent;
 
     private void Start()
@@ -27,6 +29,8 @@ public class PatrolEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         agent = GetComponent<NavMeshAgent>();
+
+        stopDieAnimation = false;
     }
 
     public bool IsPlayerOnRange()
@@ -94,5 +98,20 @@ public class PatrolEnemy : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, followDistance);
+    }
+
+    public void DieAnimationHandler()
+    {
+        StartCoroutine(DieCoroutine());
+    }
+
+    public IEnumerator DieCoroutine()
+    {
+        while (!stopDieAnimation)
+        {
+            enemyAnimator.SetTrigger("Die");
+
+            yield return null;
+        }
     }
 }

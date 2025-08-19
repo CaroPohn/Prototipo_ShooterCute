@@ -33,7 +33,7 @@ public class EnemyFollowState : EnemyStates
 
         if (healthSystem.health <= 0) 
         {
-            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[0]);
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[3]);
         }
     }
 }

@@ -12,17 +12,28 @@ public class HealthSystem : MonoBehaviour
 
     private int deathCounter;
 
+    private PatrolEnemy patrolEnemy;
+
     public Action onDeath;
 
     private void Start()
     {
         health = maxHealth;
         deathCounter = 0;
+
+        patrolEnemy = GetComponent<PatrolEnemy>();
     }
 
     private void Update()
     {
         UpdateHealthBar();
+
+        if (health <= 0)
+        {
+            health = 0;
+            
+            Die();
+        }
     }
 
     public void TakeDamage(float damage)
@@ -38,21 +49,21 @@ public class HealthSystem : MonoBehaviour
 
         if (health <= 0)
         {
-            health = 0;
             deathCounter++;
 
-            Die();
+            if (deathCounter == 1)
+            {
+                onDeath?.Invoke();
+            }
         }
     }
 
     protected void Die()
     {
-        if (deathCounter == 1) 
+        if (patrolEnemy.stopDieAnimation)
         {
-            onDeath?.Invoke();
-        }
-        
-        Destroy(gameObject);
+            Destroy(gameObject); 
+        }     
     }
 
     private void UpdateHealthBar()
