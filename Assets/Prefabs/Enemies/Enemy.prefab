@@ -216,6 +216,7 @@ MonoBehaviour:
   health: 0
   healthBarImage: {fileID: 4007798259406748218}
   effectControllerScript: {fileID: 6890306752894577945}
+  dieParticle: {fileID: 743157432706941736, guid: 43b740b82a46f674084561a4a90a98a5, type: 3}
 --- !u!114 &8978013461087401928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +236,7 @@ MonoBehaviour:
   shootCoolDown: 4
   damage: 50
   shootTimer: 0
+  stopDieAnimation: 0
 --- !u!195 &2034877262682976914
 NavMeshAgent:
   m_ObjectHideFlags: 0

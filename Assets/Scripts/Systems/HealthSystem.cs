@@ -14,6 +14,8 @@ public class HealthSystem : MonoBehaviour
 
     private PatrolEnemy patrolEnemy;
 
+    [SerializeField] private GameObject dieParticle;
+
     public Action onDeath;
 
     private void Start()
@@ -53,6 +55,7 @@ public class HealthSystem : MonoBehaviour
 
             if (deathCounter == 1)
             {
+                Instantiate(dieParticle, transform.position, Quaternion.identity);
                 onDeath?.Invoke();
             }
         }
@@ -62,6 +65,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (patrolEnemy.stopDieAnimation)
         {
+            
             Destroy(gameObject); 
         }     
     }
