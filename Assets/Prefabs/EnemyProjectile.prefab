@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 274084573723836416}
   - component: {fileID: 8690282354991487735}
   - component: {fileID: -1829707992573191657}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,9 +159,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9215985717985848578}
     m_Modifications:
+    - target: {fileID: 528315792263753755, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2306839588662600315, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
       propertyPath: m_Name
       value: Enemy_Fireball_Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306839588662600315, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249715267690547326, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5252788349532132878, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -202,6 +214,14 @@ PrefabInstance:
     - target: {fileID: 5252788349532132878, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732824954244040782, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539385210640967722, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

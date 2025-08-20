@@ -16,6 +16,8 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     [SerializeField] private GameObject projectilePrefab;
 
+    [SerializeField] private EnemyAnimationHandler enemyAnimationHandler;
+
     public float shootCoolDown;
     public float damage;
     public float shootTimer;
@@ -28,9 +30,35 @@ public class PatrolEnemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        enemyAnimationHandler = gameObject.GetComponentInChildren<EnemyAnimationHandler>();
+
         agent = GetComponent<NavMeshAgent>();
 
         stopDieAnimation = false;
+    }
+
+    private void OnEnable()
+    {
+        enemyAnimationHandler.OnEnemyShooting += ShootLogic;
+    }
+
+    private void OnDisable()
+    {
+        enemyAnimationHandler.OnEnemyShooting -= ShootLogic;
+    }
+
+    public void ShootLogic()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
+
+        Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
+
+        EnemyProjectile projScript = projectile.GetComponent<EnemyProjectile>();
+        if (projScript != null)
+        {
+            projScript.SetDamage(damage);
+            projScript.SetDirection(direction);
+        }
     }
 
     public bool IsPlayerOnRange()
@@ -78,20 +106,9 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public void ShootAnimationHandler()
     {
         enemyAnimator.SetTrigger("Attack");
-
-        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
-
-        Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
-
-        EnemyProjectile projScript = projectile.GetComponent<EnemyProjectile>();
-        if (projScript != null)
-        {
-            projScript.SetDamage(damage);
-            projScript.SetDirection(direction);
-        }
     }
 
     private void OnDrawGizmos()

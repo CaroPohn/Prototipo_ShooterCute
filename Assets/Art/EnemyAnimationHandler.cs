@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -5,20 +6,22 @@ public class EnemyAnimationHandler : MonoBehaviour
 {
     private PatrolEnemy patrolEnemy;
 
+    public event Action OnEnemyShooting;
+
     private void Start()
     {
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
     }
 
     //Called when the spawn animation is complete
-    void SpawnAnimationEnd()
+    //void SpawnAnimationEnd()
+    //{
+    //    print("A");
+    //}
+
+    public void AttackPoseReached()
     {
-        print("A");
-    }
-    //Called when the enemy is at the desired attack positon (for example, mouth open)
-    void AttackPoseReached()
-    {
-        print("B");
+        OnEnemyShooting?.Invoke();
     }
 
     public void OnFinishDeadAnimation()
