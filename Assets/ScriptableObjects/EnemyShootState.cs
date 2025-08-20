@@ -7,6 +7,8 @@ public class EnemyShootState : EnemyStates
     {
         patrolEnemy.ShootAnimationHandler();
 
+        patrolEnemy.SetLookAt();
+
         patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[1]);
     }
 }

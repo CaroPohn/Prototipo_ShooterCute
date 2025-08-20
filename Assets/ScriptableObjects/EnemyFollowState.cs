@@ -11,6 +11,8 @@ public class EnemyFollowState : EnemyStates
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
     {
+        HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();
+
         patrolEnemy.shootTimer -= Time.deltaTime;
 
         if (!patrolEnemy.IsPlayerOnRange())
@@ -20,16 +22,15 @@ public class EnemyFollowState : EnemyStates
         else
         {
             patrolEnemy.StopFollowingPlayer(true);
-        }
 
-        patrolEnemy.SetLookAt();
+            if (healthSystem.health > 0)
+                patrolEnemy.SetLookAt();
+        }
 
         if (patrolEnemy.IsPlayerOnRange() == true && patrolEnemy.shootTimer <= 0.0f)
         {
             patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
         }
-
-        HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();
 
         if (healthSystem.health <= 0) 
         {
