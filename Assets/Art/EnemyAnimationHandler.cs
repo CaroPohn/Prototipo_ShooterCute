@@ -13,12 +13,6 @@ public class EnemyAnimationHandler : MonoBehaviour
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
     }
 
-    //Called when the spawn animation is complete
-    //void SpawnAnimationEnd()
-    //{
-    //    print("A");
-    //}
-
     public void AttackPoseReached()
     {
         OnEnemyShooting?.Invoke();
@@ -27,5 +21,10 @@ public class EnemyAnimationHandler : MonoBehaviour
     public void OnFinishDeadAnimation()
     {
         patrolEnemy.stopDieAnimation = true;
+    }
+
+    public void OnFinishSpawnAnimation()
+    {
+        patrolEnemy.stopSpawnAnimation = true;
     }
 }

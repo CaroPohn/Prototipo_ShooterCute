@@ -238,6 +238,7 @@ MonoBehaviour:
   damage: 50
   shootTimer: 0
   stopDieAnimation: 0
+  stopSpawnAnimation: 0
 --- !u!195 &2034877262682976914
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   patrolEnemy: {fileID: 8978013461087401928}
   states:
   - {fileID: 11400000, guid: fa9ccf9b7db5fe446afe5746e7e46747, type: 2}
+  - {fileID: 11400000, guid: f980b39547edef447b2d1e509dd7b8e3, type: 2}
   - {fileID: 11400000, guid: 3eee7125ae3c0da449fd8d2be51a2133, type: 2}
   - {fileID: 11400000, guid: 51204bdb45cb2be459e8d079e3928944, type: 2}
   - {fileID: 11400000, guid: d28488cb868891c47b9afb6f346cd230, type: 2}

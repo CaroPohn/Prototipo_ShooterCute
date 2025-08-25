@@ -64,9 +64,8 @@ public class HealthSystem : MonoBehaviour
     protected void Die()
     {
         if (patrolEnemy.stopDieAnimation)
-        {
-            
-            Destroy(gameObject); 
+        {          
+            Destroy(gameObject);
         }     
     }
 

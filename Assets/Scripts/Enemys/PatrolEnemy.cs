@@ -23,6 +23,7 @@ public class PatrolEnemy : MonoBehaviour
     public float shootTimer;
 
     public bool stopDieAnimation;
+    public bool stopSpawnAnimation;
 
     private NavMeshAgent agent;
 
@@ -30,11 +31,10 @@ public class PatrolEnemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        enemyAnimationHandler = gameObject.GetComponentInChildren<EnemyAnimationHandler>();
-
         agent = GetComponent<NavMeshAgent>();
 
         stopDieAnimation = false;
+        stopSpawnAnimation = false;
     }
 
     private void OnEnable()
@@ -106,15 +106,19 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
+    public void SetHealthSystemActive(HealthSystem healthSystem, bool isActive)
+    {
+        healthSystem.enabled = isActive;
+    }
+
     public void ShootAnimationHandler()
     {
         enemyAnimator.SetTrigger("Attack");
     }
 
-    private void OnDrawGizmos()
+    public void SpawnAnimationHandler()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, followDistance);
+        StartCoroutine(SpawnCoroutine());
     }
 
     public void DieAnimationHandler()
@@ -130,5 +134,21 @@ public class PatrolEnemy : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public IEnumerator SpawnCoroutine()
+    {
+        while (!stopSpawnAnimation) 
+        {
+            enemyAnimator.SetTrigger("Spawn");
+
+            yield return null;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, followDistance);
     }
 }

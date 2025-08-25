@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewScriptableObjectScript", menuName = "Scriptable Objects/NewScriptableObjectScript")]
+[CreateAssetMenu(fileName = "EnemyDieState", menuName = "Scriptable Objects/EnemyDieState")]
 public class EnemyDieState : EnemyStates
 {
     public override void Enter(PatrolEnemy patrolEnemy)
@@ -8,7 +8,5 @@ public class EnemyDieState : EnemyStates
         patrolEnemy.StopFollowingPlayer(true);
 
         patrolEnemy.DieAnimationHandler();
-
-        patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[0]);
     }
 }

@@ -13,6 +13,8 @@ public class EnemyFollowState : EnemyStates
     {
         HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();
 
+        patrolEnemy.SetHealthSystemActive(healthSystem, true);
+
         patrolEnemy.shootTimer -= Time.deltaTime;
 
         if (!patrolEnemy.IsPlayerOnRange())
@@ -29,12 +31,12 @@ public class EnemyFollowState : EnemyStates
 
         if (patrolEnemy.IsPlayerOnRange() == true && patrolEnemy.shootTimer <= 0.0f)
         {
-            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[3]);
         }
 
         if (healthSystem.health <= 0) 
         {
-            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[3]);
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[4]);
         }
     }
 }
