@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -7,6 +8,12 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerHealthSystem playerHealthSystem;
     [SerializeField] private Transform playerSpawnPosition;
+    [SerializeField] private InputReader inputReader;
+
+    private bool isGamePaused;
+
+    static public event Action OnGamePaused;
+    static public event Action OnGameUnpaused;
 
     [Header("Canvas")]
 
@@ -19,9 +26,12 @@ public class LevelController : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 1.0f;
+
         WinColliderTrigger.OnWinningLevel += WinLevel;
         WaveManager.OnWinningAllWaves += ActivateEggWinText;
         EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
+        inputReader.OnPause += PauseGame;
     }
 
     private void OnDisable()
@@ -29,6 +39,7 @@ public class LevelController : MonoBehaviour
         WinColliderTrigger.OnWinningLevel -= WinLevel;
         WaveManager.OnWinningAllWaves -= ActivateEggWinText;
         EggInteraction.OnInteractWithEgg -= DeactivateEggStartWavesText;
+        inputReader.OnPause -= PauseGame;
     }
 
     private void Start()
@@ -39,6 +50,8 @@ public class LevelController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        isGamePaused = false;
     }
 
     private void Update()
@@ -75,5 +88,25 @@ public class LevelController : MonoBehaviour
     private void DeactivateEggStartWavesText()
     {
         StartWavesEggText.SetActive(false);
+    }
+
+    private void PauseGame()
+    {
+        isGamePaused = !isGamePaused;
+
+        if (isGamePaused)
+        {
+            Time.timeScale = 0f;
+            OnGamePaused?.Invoke();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            OnGameUnpaused?.Invoke();
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

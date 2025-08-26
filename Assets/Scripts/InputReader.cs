@@ -16,6 +16,7 @@ public class InputReader : MonoBehaviour
     public Action OnUseAbility;
     public Action OnChangeToWeapon;
     public Action OnInteraction;
+    public Action OnPause;
 
     private PlayerInput playerInput = null;
 
@@ -100,6 +101,14 @@ public class InputReader : MonoBehaviour
         if (context.started)
         {
             OnReload?.Invoke();
+        }
+    }
+
+    public void HandlePause(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            OnPause?.Invoke();
         }
     }
 }
