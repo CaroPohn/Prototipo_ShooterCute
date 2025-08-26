@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
     [Tooltip("Name of the scene to load at startup.")]
     [SerializeField] private string startingScene;
 
-    private string currentScene;
+    private string currentSceneName;
 
     private void Awake()
     {
@@ -36,9 +36,9 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator ChangingScene(string sceneName)
     {
-        if (currentScene != null)
+        if (currentSceneName != null)
         {
-            var unloadOperation = SceneManager.UnloadSceneAsync(currentScene);
+            var unloadOperation = SceneManager.UnloadSceneAsync(currentSceneName);
 
             while (!unloadOperation.isDone)
             {
@@ -54,6 +54,9 @@ public class SceneLoader : MonoBehaviour
         }
 
 
-        currentScene = sceneName;
+        currentSceneName = sceneName;
+
+        Scene currentScene = SceneManager.GetSceneByName(currentSceneName);
+        SceneManager.SetActiveScene(currentScene);
     }
 }
