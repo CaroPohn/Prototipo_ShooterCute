@@ -9,9 +9,7 @@ public class EnemySpawnState : EnemyStates
 
         patrolEnemy.SetHealthSystemActive(healthSystem, false);
 
-        patrolEnemy.SpawnAnimationHandler();
-
-        
+        patrolEnemy.SpawnAnimationHandler(); 
     }
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
