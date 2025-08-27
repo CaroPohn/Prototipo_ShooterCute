@@ -22,9 +22,4 @@ public class EnemyAnimationHandler : MonoBehaviour
     {
         patrolEnemy.stopDieAnimation = true;
     }
-
-    public void OnFinishSpawnAnimation()
-    {
-        patrolEnemy.stopSpawnAnimation = true;
-    }
 }

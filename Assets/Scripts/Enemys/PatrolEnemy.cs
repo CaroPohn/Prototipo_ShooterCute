@@ -23,7 +23,6 @@ public class PatrolEnemy : MonoBehaviour
     public float shootTimer;
 
     public bool stopDieAnimation;
-    public bool stopSpawnAnimation;
 
     private NavMeshAgent agent;
 
@@ -34,7 +33,6 @@ public class PatrolEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         stopDieAnimation = false;
-        stopSpawnAnimation = false;
     }
 
     private void OnEnable()
@@ -138,12 +136,10 @@ public class PatrolEnemy : MonoBehaviour
 
     public IEnumerator SpawnCoroutine()
     {
-        while (!stopSpawnAnimation) 
-        {
-            enemyAnimator.SetTrigger("Spawn");
+        enemyAnimator.SetTrigger("Spawn");
 
-            yield return null;
-        }
+        yield return null;
+
     }
 
     private void OnDrawGizmos()

@@ -8,12 +8,12 @@ public class EnemySpawnState : EnemyStates
         HealthSystem healthSystem = patrolEnemy.GetComponent<HealthSystem>();
 
         patrolEnemy.SetHealthSystemActive(healthSystem, false);
+
+        patrolEnemy.SpawnAnimationHandler();
     }
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
     {
-        patrolEnemy.SpawnAnimationHandler();
-
         patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
     }
 }
