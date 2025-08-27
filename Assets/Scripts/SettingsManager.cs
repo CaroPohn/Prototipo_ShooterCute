@@ -9,6 +9,8 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider sensSlider;
     [SerializeField] private Slider fovSlider;
 
+    [SerializeField] private float baseFOV;
+
     public event Action OnSensChange;
 
     private float sensValue;
@@ -16,7 +18,7 @@ public class SettingsManager : MonoBehaviour
     private void Start()
     {
         float savedSens = PlayerPrefs.GetFloat("Sensitivity", 20.0f);
-        float savedFov = PlayerPrefs.GetFloat("FOV", 60.0f);
+        float savedFov = PlayerPrefs.GetFloat("FOV", baseFOV);
 
         playerCamera.fieldOfView = savedFov;
         sensValue = savedSens;
