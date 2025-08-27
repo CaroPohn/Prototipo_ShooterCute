@@ -10,10 +10,17 @@ public class EnemySpawnState : EnemyStates
         patrolEnemy.SetHealthSystemActive(healthSystem, false);
 
         patrolEnemy.SpawnAnimationHandler();
+
+        
     }
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
     {
-        patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
+        patrolEnemy.StopFollowingPlayer(true);
+
+        if(patrolEnemy.stopSpawnAnimation)
+        {
+            patrolEnemy.GetComponent<FSM>().ChangeState(patrolEnemy.GetComponent<FSM>().states[2]);
+        }   
     }
 }

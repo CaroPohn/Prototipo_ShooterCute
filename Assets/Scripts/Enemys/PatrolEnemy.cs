@@ -23,6 +23,7 @@ public class PatrolEnemy : MonoBehaviour
     public float shootTimer;
 
     public bool stopDieAnimation;
+    public bool stopSpawnAnimation;
 
     private NavMeshAgent agent;
 
@@ -33,6 +34,7 @@ public class PatrolEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         stopDieAnimation = false;
+        stopSpawnAnimation = false;
     }
 
     private void OnEnable()
