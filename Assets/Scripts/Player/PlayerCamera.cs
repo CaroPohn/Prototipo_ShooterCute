@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    private float sensX;
+    private float sensY;
 
     public Transform orientation;
 
@@ -13,20 +13,24 @@ public class PlayerCamera : MonoBehaviour
     Vector2 mouse;
 
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private SettingsManager settingsManager;
 
     private void Start()
     {
-        
+        sensX = 20.0f;
+        sensY = 20.0f;
     }
 
     private void OnEnable()
     {
         inputReader.OnMoveCamera += AttemptCameraMove;
+        settingsManager.OnSensChange += ChangeSens;
     }
 
     private void OnDisable()
     {
         inputReader.OnMoveCamera -= AttemptCameraMove;
+        settingsManager.OnSensChange -= ChangeSens;
     }
 
     private void Update()
@@ -44,5 +48,11 @@ public class PlayerCamera : MonoBehaviour
     {
         mouse.x = dir.x * Time.deltaTime * sensX;
         mouse.y = dir.y * Time.deltaTime * sensY;
+    }
+
+    private void ChangeSens()
+    {
+        sensX = settingsManager.GetSensitivity();
+        sensY = settingsManager.GetSensitivity();
     }
 }
