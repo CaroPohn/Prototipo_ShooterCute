@@ -12,19 +12,20 @@ public class HealthPackHolder : MonoBehaviour
     [SerializeField] private GameObject healthPack;
     [SerializeField] private GameObject cooldownEffectGO;
     [SerializeField] private Material cooldownEffectMat;
+    [SerializeField] private HealthPackSystem healthPackSystem;
 
     [SerializeField] private GameObject player;
  
     private void OnEnable()
     {
-        HealthPackSystem.OnGrabingHealthPack += GrabHealthPack;
-        HealthPackSystem.OnGrabingHealthPack += ChangeGrabbedBool;
+        healthPackSystem.OnGrabingHealthPack += GrabHealthPack;
+        healthPackSystem.OnGrabingHealthPack += ChangeGrabbedBool;
     }
 
     private void OnDisable()
     {
-        HealthPackSystem.OnGrabingHealthPack -= GrabHealthPack;
-        HealthPackSystem.OnGrabingHealthPack -= ChangeGrabbedBool;
+        healthPackSystem.OnGrabingHealthPack -= GrabHealthPack;
+        healthPackSystem.OnGrabingHealthPack -= ChangeGrabbedBool;
     }
 
     private void Start()
