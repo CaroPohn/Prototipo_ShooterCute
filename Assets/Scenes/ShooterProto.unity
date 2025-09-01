@@ -462,6 +462,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112286596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 173415236264211850, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+  m_PrefabInstance: {fileID: 1619560296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0bbae18a2d70c4891c11e1d845a0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114751136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2838,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1896859721}
   m_Direction: 0
   m_MinValue: 60
-  m_MaxValue: 1000
+  m_MaxValue: 130
   m_WholeNumbers: 0
   m_Value: 90
   m_OnValueChanged:
@@ -4129,6 +4140,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4289111155337128284, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+      propertyPath: healthPackSystem
+      value: 
+      objectReference: {fileID: 1296723654}
     - target: {fileID: 6698279791058145745, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.63
@@ -6897,6 +6912,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135440634}
   m_CullTransparentMesh: 1
+--- !u!114 &1167792702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 173415236264211850, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+  m_PrefabInstance: {fileID: 8523632014530265172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0bbae18a2d70c4891c11e1d845a0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192446246
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,6 +7704,17 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1296723654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 173415236264211850, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+  m_PrefabInstance: {fileID: 567142052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0bbae18a2d70c4891c11e1d845a0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1299621709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9451,6 +9488,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4289111155337128284, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+      propertyPath: healthPackSystem
+      value: 
+      objectReference: {fileID: 112286596}
     - target: {fileID: 6698279791058145745, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.97
@@ -13861,6 +13902,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4289111155337128284, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
+      propertyPath: healthPackSystem
+      value: 
+      objectReference: {fileID: 1167792702}
     - target: {fileID: 6698279791058145745, guid: e73aa9b796865c34485eca22df8b8e16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.43

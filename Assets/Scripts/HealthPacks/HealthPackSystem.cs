@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HealthPackSystem : MonoBehaviour
 {
-    public static event Action OnGrabingHealthPack;
+    public event Action OnGrabingHealthPack;
 
     public float healingNum;
 
