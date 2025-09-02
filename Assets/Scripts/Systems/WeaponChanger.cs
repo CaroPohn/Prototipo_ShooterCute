@@ -1,6 +1,8 @@
 using AbilityProperties;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponChanger : MonoBehaviour 
 {
@@ -12,6 +14,8 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] private GameObject bombHolder;
     [SerializeField] private GameObject gunHandler;
+
+    [SerializeField] public Image FillAbilityImage;
 
     public float timer; 
 
@@ -54,6 +58,11 @@ public class WeaponChanger : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+
+        if (FillAbilityImage.fillAmount <= 1)
+        {
+            FillAbilityImage.fillAmount += (1f / 10f) * Time.deltaTime;
+        }
     }
 
     private void ChangeToWeapon()

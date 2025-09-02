@@ -63,6 +63,7 @@ public class ElectricAbility : MonoBehaviour
 
         transform.parent = null;
 
+        weaponChangerScript.FillAbilityImage.fillAmount = 0;
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
 

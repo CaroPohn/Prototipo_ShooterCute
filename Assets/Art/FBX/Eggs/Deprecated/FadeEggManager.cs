@@ -1,10 +1,11 @@
-using System.Drawing;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FadeEggManager : MonoBehaviour
 {
-    [SerializeField] Renderer corruptedEggRenderer;
+    [SerializeField] List<Renderer> corruptedEggRenderer;
     private MaterialPropertyBlock block;
+
     private void Start()
     {
         block = new MaterialPropertyBlock();
@@ -12,8 +13,13 @@ public class FadeEggManager : MonoBehaviour
     
     public void UpdateEggFadeProgress(float progress)
     {
-        corruptedEggRenderer.GetPropertyBlock(block);
-        block.SetFloat("_Fade_Progress", progress);
-        corruptedEggRenderer.SetPropertyBlock(block);
+        foreach (var i in corruptedEggRenderer)
+        {
+            Debug.Log("LLAMADA   " + i);
+
+            i.GetPropertyBlock(block);
+            block.SetFloat("_Desintegration", progress);
+            i.SetPropertyBlock(block);
+        }
     }
 }

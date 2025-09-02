@@ -21,8 +21,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Canvas gamePlayCanvas;
     [SerializeField] private Canvas winCanvas;
 
-    [SerializeField] private GameObject WinEggText;
-    [SerializeField] private GameObject StartWavesEggText;
+    //[SerializeField] private GameObject WinEggText;
+    //[SerializeField] private GameObject StartWavesEggText;
 
     private void OnEnable()
     {
@@ -46,7 +46,7 @@ public class LevelController : MonoBehaviour
     {
         gamePlayCanvas.gameObject.SetActive(true);
         winCanvas.gameObject.SetActive(false);
-        WinEggText.SetActive(false);
+        //WinEggText.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -82,12 +82,12 @@ public class LevelController : MonoBehaviour
 
     private void ActivateEggWinText()
     {
-        WinEggText.SetActive(true);
+        //WinEggText.SetActive(true);
     }
 
     private void DeactivateEggStartWavesText()
     {
-        StartWavesEggText.SetActive(false);
+        //StartWavesEggText.SetActive(false);
     }
 
     private void PauseGame()

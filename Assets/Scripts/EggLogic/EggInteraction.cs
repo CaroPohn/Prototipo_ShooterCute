@@ -7,6 +7,9 @@ public class EggInteraction : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform eggHoldingSpot;
 
+    [SerializeField] private GameObject eggShield;
+    [SerializeField] private GameObject corruptedEgg;
+
     private FadeEggManager fadeEggManagerScript;
 
     [SerializeField] private GameObject interactText;
@@ -28,6 +31,9 @@ public class EggInteraction : MonoBehaviour
         isPlayerCloseEnough = false;
         hasPlayerInteracted = false;
         canPlayerGrabEgg = false;
+
+        corruptedEgg.gameObject.SetActive(false);
+        eggShield.gameObject.SetActive(false);
 
         fadeEggManagerScript = GetComponent<FadeEggManager>();
     }
@@ -90,6 +96,10 @@ public class EggInteraction : MonoBehaviour
         if (isPlayerCloseEnough) 
         { 
             OnInteractWithEgg?.Invoke();
+
+            corruptedEgg.gameObject.SetActive(true);
+            eggShield.gameObject.SetActive(true);
+
             hasPlayerInteracted = true;
         }
     }
