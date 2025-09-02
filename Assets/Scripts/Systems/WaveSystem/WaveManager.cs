@@ -63,15 +63,6 @@ public class WaveManager : MonoBehaviour
         OnNewWave?.Invoke();
 
         spawningWave = true;
-        
-        if(currentWaveIndex == 5)
-        {
-            waveText.text = "¡¡¡Final Wave Incoming!!!";
-        }
-        else
-        {
-            waveText.text = "¡¡¡Wave " + (currentWaveIndex + 1) + " Incoming!!!";
-        }
 
         waveText.gameObject.SetActive(true);
 
