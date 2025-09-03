@@ -15,8 +15,6 @@ public class FadeEggManager : MonoBehaviour
     {
         foreach (var i in corruptedEggRenderer)
         {
-            Debug.Log("LLAMADA   " + i);
-
             i.GetPropertyBlock(block);
             block.SetFloat("_Desintegration", progress);
             i.SetPropertyBlock(block);
