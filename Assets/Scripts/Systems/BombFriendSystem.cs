@@ -110,6 +110,7 @@ public class BombFriendSystem : MonoBehaviour
     {
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
+        weaponChangerScript.FillAbilityImage.fillAmount = 0;
 
         weaponChangerScript.ChangeWeapon();
 

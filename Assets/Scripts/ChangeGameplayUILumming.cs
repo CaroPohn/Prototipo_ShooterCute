@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,18 +11,33 @@ public class ChangeGameplayUILumming : MonoBehaviour
     [SerializeField] private Sprite fireLumming;
     [SerializeField] private Sprite zapLumming;
 
+    private string abilityName;
+
+    private void Start()
+    {
+        abilityName = PlayerSelectionData.selectedAbility;
+    }
+
+    //private void OnEnable()
+    //{
+    //    PlayerWeaponChoose.OnAbilitySelected += SetAbilityUI;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    PlayerWeaponChoose.OnAbilitySelected -= SetAbilityUI;
+    //}
+
     private void Update()
     {
-        if (PlayerSelectionData.selectedAbility == "FireGun")
+        if (abilityName == "BombAbility")
         {
+            Debug.Log("playerChooseFireAbility");
             lummingGameplayUI.sprite = fireLumming;
         }
-        else if (PlayerSelectionData.selectedAbility == "ZapGun")
+        else if (abilityName == "ElectricAbility")
         {
-            lummingGameplayUI.sprite = zapLumming;
-        }
-        else
-        {
+            Debug.Log("playerChooseZapAbility");
             lummingGameplayUI.sprite = zapLumming;
         }
     }
