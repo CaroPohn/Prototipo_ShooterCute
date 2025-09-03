@@ -32,12 +32,10 @@ public class ChangeGameplayUILumming : MonoBehaviour
     {
         if (abilityName == "BombAbility")
         {
-            Debug.Log("playerChooseFireAbility");
             lummingGameplayUI.sprite = fireLumming;
         }
         else if (abilityName == "ElectricAbility")
         {
-            Debug.Log("playerChooseZapAbility");
             lummingGameplayUI.sprite = zapLumming;
         }
     }
