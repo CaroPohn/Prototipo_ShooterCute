@@ -44,18 +44,7 @@ public class EggShield : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetHit();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Appear();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Desintegrate();
-        }
+        
     }
     public void Desintegrate()
     {
