@@ -16,11 +16,19 @@ public class EggShield : MonoBehaviour
     Coroutine eggGetHitCoroutine;
     private MaterialPropertyBlock block;
 
+    private void OnEnable()
+    {
+        EnemySoul.OnParticleDeath += GetHit;
+    }
+    private void OnDisable()
+    {
+        EnemySoul.OnParticleDeath -= GetHit;
+    }
     private void Start()
     {
         block = new MaterialPropertyBlock();
     }
-
+    
     void UpdateRenderersPropertyValue(List<Renderer> renderersList,float value, string propertyName)
     {
         foreach (Renderer renderer in renderersList)
