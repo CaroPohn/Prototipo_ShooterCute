@@ -6,7 +6,7 @@ public class ZapGun : Gun
     public float spread;
     public float range;
     public float reloadTime;
-    public float timeBetweenShots = 0.5f;
+    public float timeBetweenShots = 0f;
 
     private int damageLevel1 = 25;
     private int damageLevel2 = 40;
@@ -54,13 +54,13 @@ public class ZapGun : Gun
 
     private void StartHoldingShoot()
     {
-        isHoldingShoot = true;
-        shootHoldTime = 0f;
+        if (Time.time - lastShootTime >= timeBetweenShots)
+        {
+            isHoldingShoot = true;
+            shootHoldTime = 0f;
 
-        if (Time.time - lastShootTime < timeBetweenShots)
-            return;
-
-        electric_Gun_VFX_Script.Charge();
+            electric_Gun_VFX_Script.Charge();
+        }
     }
 
     private void ReleaseShoot()
@@ -92,13 +92,6 @@ public class ZapGun : Gun
         electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
         lastShootTime = Time.time;
-
-        if (activeMuzzleEffect != null)
-        {
-            activeMuzzleEffect.Stop();
-            Destroy(activeMuzzleEffect.gameObject);
-            activeMuzzleEffect = null;
-        }
     }
 
     public override void Shoot()

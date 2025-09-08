@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +16,8 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
 
     [SerializeField] private EnemyAnimationHandler enemyAnimationHandler;
+
+    [SerializeField] private GameObject spawnVFX;
 
     public float shootCoolDown;
     public float damage;
@@ -119,6 +120,8 @@ public class PatrolEnemy : MonoBehaviour
     public void SpawnAnimationHandler()
     {
         StartCoroutine(SpawnCoroutine());
+
+        Instantiate(spawnVFX, transform.position, transform.rotation);
     }
 
     public void DieAnimationHandler()

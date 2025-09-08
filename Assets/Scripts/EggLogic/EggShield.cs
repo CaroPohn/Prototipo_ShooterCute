@@ -49,15 +49,11 @@ public class EggShield : MonoBehaviour
         UpdateRenderersPropertyValue(corruptedEggRenderers, damage, "_Blend_Color_Opacity");
     }
 
-
-    void Update()
-    {
-        
-    }
     public void Desintegrate()
     {
         StartCoroutine("DesintegrateCoroutine");
     }
+
     public void Appear()
     {
         StartCoroutine("AppearCoroutine");

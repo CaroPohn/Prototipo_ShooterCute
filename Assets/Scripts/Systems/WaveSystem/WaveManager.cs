@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
     private bool hasEggInteractedToStartWaves;
 
     public static event Action OnWinningAllWaves;
-    public static event Action OnNewWave;
+    //public static event Action OnNewWave;
 
     private void Start()
     {
@@ -60,7 +60,7 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator StartNextWave()
     {
-        OnNewWave?.Invoke();
+        //OnNewWave?.Invoke();
 
         spawningWave = true;
 

@@ -8,9 +8,10 @@ public class EggInteraction : MonoBehaviour
     [SerializeField] private Transform eggHoldingSpot;
 
     [SerializeField] private GameObject eggShield;
-    [SerializeField] private GameObject corruptedEgg;
 
-    private FadeEggManager fadeEggManagerScript;
+    [SerializeField] private EggShield eggShieldScript;
+
+    //private FadeEggManager fadeEggManagerScript;
 
     [SerializeField] private GameObject interactText;
 
@@ -24,7 +25,7 @@ public class EggInteraction : MonoBehaviour
     private bool hasPlayerInteracted;
     private bool canPlayerGrabEgg;
 
-    private float corruptionFloat;
+    //private float corruptionFloat;
 
     private void Start()
     {
@@ -32,10 +33,9 @@ public class EggInteraction : MonoBehaviour
         hasPlayerInteracted = false;
         canPlayerGrabEgg = false;
 
-        corruptedEgg.gameObject.SetActive(false);
         eggShield.gameObject.SetActive(false);
 
-        fadeEggManagerScript = GetComponent<FadeEggManager>();
+        //fadeEggManagerScript = GetComponent<FadeEggManager>();
     }
 
     private void OnEnable()
@@ -43,7 +43,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction += AttemtInteraction;
         inputReader.OnInteraction += AttemptGivingEgg;
         WaveManager.OnWinningAllWaves += LetPlayerGrabEgg;
-        WaveManager.OnNewWave += CorruptionEggEffectManager;
+        //WaveManager.OnNewWave += CorruptionEggEffectManager;
     }
 
     private void OnDisable()
@@ -51,7 +51,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction -= AttemtInteraction;
         inputReader.OnInteraction -= AttemptGivingEgg;
         WaveManager.OnWinningAllWaves -= LetPlayerGrabEgg;
-        WaveManager.OnNewWave -= CorruptionEggEffectManager;
+        //WaveManager.OnNewWave -= CorruptionEggEffectManager;
     }
 
     private void Update()
@@ -64,12 +64,12 @@ public class EggInteraction : MonoBehaviour
         }
     }
 
-    private void CorruptionEggEffectManager()
-    {
-        corruptionFloat += 0.18f;
+    //private void CorruptionEggEffectManager()
+    //{
+    //    corruptionFloat += 0.18f;
 
-        fadeEggManagerScript.UpdateEggFadeProgress(corruptionFloat);
-    }
+    //    fadeEggManagerScript.UpdateEggFadeProgress(corruptionFloat);
+    //}
 
     private void CalculateDistanceToPlayer()
     {
@@ -97,8 +97,9 @@ public class EggInteraction : MonoBehaviour
         { 
             OnInteractWithEgg?.Invoke();
 
-            corruptedEgg.gameObject.SetActive(true);
             eggShield.gameObject.SetActive(true);
+
+            eggShieldScript.Appear();
 
             hasPlayerInteracted = true;
         }
@@ -117,6 +118,8 @@ public class EggInteraction : MonoBehaviour
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
+
+        eggShieldScript.Desintegrate();
     }
 
     private void AttemptGivingEgg()
