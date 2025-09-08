@@ -7,30 +7,49 @@ public class GamePause : MonoBehaviour
 
     [SerializeField] private Button restartButton;
 
+    [SerializeField] private Canvas settingsCanvas;
+    [SerializeField] private Canvas pauseCanvas;
+
     private void Start()
     {
-        LevelController.OnGamePaused += Show;
-        LevelController.OnGameUnpaused += Hide;
+        LevelController.OnGamePaused += ShowPause;
+        LevelController.OnGameUnpaused += HidePause;
+
+        settingsCanvas.gameObject.SetActive(false);
+        pauseCanvas.gameObject.SetActive(false);
 
         restartButton.onClick.AddListener(Restart);
 
-        Hide();
+        HidePause();
     }
 
     private void OnDestroy()
     {
-        LevelController.OnGamePaused -= Show;
-        LevelController.OnGameUnpaused -= Hide;
+        LevelController.OnGamePaused -= ShowPause;
+        LevelController.OnGameUnpaused -= HidePause;
     }
 
-    void Hide()
+    public void ShowSettingsCanvas()
     {
-        gameObject.SetActive(false);
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(true);
     }
 
-    void Show()
+    public void HideSettingsCanvas()
     {
-        gameObject.SetActive(true);
+        pauseCanvas.gameObject.SetActive(true);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    void HidePause()
+    {
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    void ShowPause()
+    {
+        pauseCanvas.gameObject.SetActive(true);
     }
 
     void Restart()
