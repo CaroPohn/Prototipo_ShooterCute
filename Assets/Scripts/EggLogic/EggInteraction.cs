@@ -93,8 +93,10 @@ public class EggInteraction : MonoBehaviour
 
     private void AttemtInteraction()
     {
-        if (isPlayerCloseEnough) 
-        { 
+        if (isPlayerCloseEnough && !hasPlayerInteracted) 
+        {
+            Debug.Log("AAA");
+
             OnInteractWithEgg?.Invoke();
 
             eggShield.gameObject.SetActive(true);
