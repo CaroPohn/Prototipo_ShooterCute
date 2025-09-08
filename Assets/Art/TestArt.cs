@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class TestArt : MonoBehaviour
 {
-    [SerializeField] Animator anim;
+    [SerializeField] float initialGlow;
+    [SerializeField] EggGlowManager eggGlow;
+    bool turnOn = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,15 +16,10 @@ public class TestArt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetBool("isAttacking",!anim.GetBool("isAttacking"));
-        }
-        if(Input.GetKeyDown(KeyCode.A)) 
-        {
-            anim.SetTrigger("Happy");
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            anim.SetTrigger("Get_Hit");
+            turnOn = !turnOn;
+            if(turnOn) eggGlow.TurnOnEggGlow();
+            else eggGlow.TurnOffEggGlow();
+
         }
     }
 }
