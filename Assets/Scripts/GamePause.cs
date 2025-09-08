@@ -7,6 +7,7 @@ public class GamePause : MonoBehaviour
 
     [SerializeField] private Button restartButton;
     [SerializeField] private Button resumeButton;
+    [SerializeField] private Button exitButton;
 
     [SerializeField] private Canvas settingsCanvas;
     [SerializeField] private Canvas pauseCanvas;
@@ -65,5 +66,10 @@ public class GamePause : MonoBehaviour
     void Restart()
     {
         SceneLoader.Instance.ChangeScene("SelectionMenu");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
