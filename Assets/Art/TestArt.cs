@@ -4,6 +4,7 @@ public class TestArt : MonoBehaviour
 {
     [SerializeField] float initialGlow;
     [SerializeField] EggGlowManager eggGlow;
+    bool turnOn = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,8 +16,9 @@ public class TestArt : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            initialGlow += 0.2f;
-            eggGlow.GlowIntensity = initialGlow;
+            turnOn = !turnOn;
+            if(turnOn) eggGlow.TurnOnEggGlow();
+            else eggGlow.TurnOffEggGlow();
 
         }
     }
