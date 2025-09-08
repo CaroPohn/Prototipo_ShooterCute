@@ -6,9 +6,12 @@ public class GamePause : MonoBehaviour
     [SerializeField] private InputReader inputReader;
 
     [SerializeField] private Button restartButton;
+    [SerializeField] private Button resumeButton;
 
     [SerializeField] private Canvas settingsCanvas;
     [SerializeField] private Canvas pauseCanvas;
+
+    [SerializeField] private LevelController levelController;
 
     private void Start()
     {
@@ -19,14 +22,14 @@ public class GamePause : MonoBehaviour
         pauseCanvas.gameObject.SetActive(false);
 
         restartButton.onClick.AddListener(Restart);
-
-        HidePause();
     }
 
     private void OnDestroy()
     {
         LevelController.OnGamePaused -= ShowPause;
         LevelController.OnGameUnpaused -= HidePause;
+
+        restartButton.onClick.RemoveListener(Restart);
     }
 
     public void ShowSettingsCanvas()
@@ -41,8 +44,15 @@ public class GamePause : MonoBehaviour
         settingsCanvas.gameObject.SetActive(false);
     }
 
-    void HidePause()
+    public void HidePause()
     {
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    public void HidePauseButton()
+    {
+        levelController.PauseGame();
         pauseCanvas.gameObject.SetActive(false);
         settingsCanvas.gameObject.SetActive(false);
     }
