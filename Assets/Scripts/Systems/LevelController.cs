@@ -90,9 +90,11 @@ public class LevelController : MonoBehaviour
         //StartWavesEggText.SetActive(false);
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
         isGamePaused = !isGamePaused;
+
+        Debug.Log(isGamePaused);
 
         if (isGamePaused)
         {

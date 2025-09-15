@@ -6,35 +6,70 @@ public class GamePause : MonoBehaviour
     [SerializeField] private InputReader inputReader;
 
     [SerializeField] private Button restartButton;
+    [SerializeField] private Button resumeButton;
+    [SerializeField] private Button exitButton;
+
+    [SerializeField] private Canvas settingsCanvas;
+    [SerializeField] private Canvas pauseCanvas;
+
+    [SerializeField] private LevelController levelController;
 
     private void Start()
     {
-        LevelController.OnGamePaused += Show;
-        LevelController.OnGameUnpaused += Hide;
+        LevelController.OnGamePaused += ShowPause;
+        LevelController.OnGameUnpaused += HidePause;
+
+        settingsCanvas.gameObject.SetActive(false);
+        pauseCanvas.gameObject.SetActive(false);
 
         restartButton.onClick.AddListener(Restart);
-
-        Hide();
     }
 
     private void OnDestroy()
     {
-        LevelController.OnGamePaused -= Show;
-        LevelController.OnGameUnpaused -= Hide;
+        LevelController.OnGamePaused -= ShowPause;
+        LevelController.OnGameUnpaused -= HidePause;
+
+        restartButton.onClick.RemoveListener(Restart);
     }
 
-    void Hide()
+    public void ShowSettingsCanvas()
     {
-        gameObject.SetActive(false);
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(true);
     }
 
-    void Show()
+    public void HideSettingsCanvas()
     {
-        gameObject.SetActive(true);
+        pauseCanvas.gameObject.SetActive(true);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    public void HidePause()
+    {
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    public void HidePauseButton()
+    {
+        levelController.PauseGame();
+        pauseCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);
+    }
+
+    void ShowPause()
+    {
+        pauseCanvas.gameObject.SetActive(true);
     }
 
     void Restart()
     {
         SceneLoader.Instance.ChangeScene("SelectionMenu");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

@@ -44,6 +44,12 @@ public class SelectionMenu : MonoBehaviour
         prevAbility.onClick.AddListener(PrevAbility);
     }
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     private void OnDestroy()
     {
         confirmButton.onClick.RemoveListener(StartPlayScene);
