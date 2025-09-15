@@ -94,8 +94,6 @@ public class LevelController : MonoBehaviour
     {
         isGamePaused = !isGamePaused;
 
-        Debug.Log(isGamePaused);
-
         if (isGamePaused)
         {
             Time.timeScale = 0f;
