@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41653921}
   - component: {fileID: 41653922}
+  - component: {fileID: 41653923}
   m_Layer: 13
   m_Name: Collider1 (14)
   m_TagString: Untagged
@@ -172,6 +173,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5066795, y: 11.600684, z: 8.114464}
   m_Center: {x: 0, y: 5.000342, z: 0}
+--- !u!114 &41653923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41653920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 44e89f07f2f840f4f869fb1d912f883f, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &50124328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4599281762094756462, guid: 424b583ec833e09429e07f42086d9985, type: 3}
@@ -305,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89590278}
   - component: {fileID: 89590279}
+  - component: {fileID: 89590280}
   m_Layer: 13
   m_Name: Collider1 (21)
   m_TagString: Untagged
@@ -348,6 +382,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.023714, y: 11.600684, z: 13.894564}
   m_Center: {x: -1.7585173, y: 5.000342, z: -0.54650784}
+--- !u!114 &89590280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89590277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 2a7f1ac430f943c42a99586bb787a84e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &94163243
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161970927}
   - component: {fileID: 161970928}
+  - component: {fileID: 161970929}
   m_Layer: 13
   m_Name: Collider1 (13)
   m_TagString: Untagged
@@ -705,6 +772,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.876541, y: 11.600684, z: 8.114464}
   m_Center: {x: -4.184931, y: 5.000342, z: 0}
+--- !u!114 &161970929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161970926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 239caafb9fdb4354cae1391e6d066d0f, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &166299812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,6 +900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184185925}
   - component: {fileID: 184185926}
+  - component: {fileID: 184185927}
   m_Layer: 13
   m_Name: Collider1 (32)
   m_TagString: Untagged
@@ -844,6 +944,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.781749, y: 11.600684, z: 17.179413}
   m_Center: {x: 1.1395364, y: 5.000342, z: -2.1889324}
+--- !u!114 &184185927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184185924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f3bc5b70670944e40b594dc2cea71d4b, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &200610470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2210,6 +2342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341635635}
   - component: {fileID: 341635636}
+  - component: {fileID: 341635637}
   m_Layer: 13
   m_Name: Collider1 (9)
   m_TagString: Untagged
@@ -2253,6 +2386,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.181717, y: 3.5354815, z: 4.1381474}
   m_Center: {x: -1.6189423, y: 1.2677407, z: -1.5690742}
+--- !u!114 &341635637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341635634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 4f1e3b4fd6107d1499de329503d0e764, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &353303193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419627569}
   - component: {fileID: 419627570}
+  - component: {fileID: 419627571}
   m_Layer: 13
   m_Name: Collider1 (11)
   m_TagString: Untagged
@@ -2522,6 +2688,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5066795, y: 11.600684, z: 8.114464}
   m_Center: {x: 0, y: 5.000342, z: 0}
+--- !u!114 &419627571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419627568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 8cfe6673cadce3e45bb17fe5bdc7796b, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &428503636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,6 +3110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452431994}
   - component: {fileID: 452431995}
+  - component: {fileID: 452431996}
   m_Layer: 13
   m_Name: StoneCollider (3)
   m_TagString: Untagged
@@ -2955,6 +3154,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2133904, y: 1.6090946, z: 3.1265793}
   m_Center: {x: 0.6066952, y: 0.3045473, z: -1.0632896}
+--- !u!114 &452431996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452431993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 4b7373934170bc94f80cd657e93d7fc8, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &484639121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3066,6 +3297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493926025}
   - component: {fileID: 493926026}
+  - component: {fileID: 493926027}
   m_Layer: 13
   m_Name: Collider1 (31)
   m_TagString: Untagged
@@ -3109,6 +3341,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.781749, y: 11.600684, z: 17.179413}
   m_Center: {x: 1.1395364, y: 5.000342, z: -2.1889324}
+--- !u!114 &493926027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493926024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6f9834d8558df204294089f9f6fe7c8b, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!23 &529816584 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8218837319246684379, guid: 18586e5d89b6a9446b3b429a7faa7c6c, type: 3}
@@ -3186,6 +3450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552166872}
   - component: {fileID: 552166873}
+  - component: {fileID: 552166874}
   m_Layer: 13
   m_Name: Collider1 (23)
   m_TagString: Untagged
@@ -3229,6 +3494,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 13.894564}
   m_Center: {x: -0.11998129, y: 5.000342, z: -0.54650784}
+--- !u!114 &552166874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552166871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 269a35bf50b68da44b1721bb11f06cf1, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &553437357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,6 +3536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553437358}
   - component: {fileID: 553437359}
+  - component: {fileID: 553437360}
   m_Layer: 13
   m_Name: Collider1 (12)
   m_TagString: Untagged
@@ -3282,6 +3580,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5066795, y: 11.600684, z: 8.114464}
   m_Center: {x: 0, y: 5.000342, z: 0}
+--- !u!114 &553437360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553437357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 3d544a1859363094eac895ea4f3611c0, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &561453627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561453628}
   - component: {fileID: 561453629}
+  - component: {fileID: 561453630}
   m_Layer: 13
   m_Name: Collider1 (5)
   m_TagString: Untagged
@@ -3335,6 +3666,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.950027, y: 4.7502627, z: 11.916367}
   m_Center: {x: 0.77408874, y: 0.39795893, z: 2.9535732}
+--- !u!114 &561453630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561453627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 762762a9c05195a439d8648003e37c3d, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &567142052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3435,6 +3798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595472529}
   - component: {fileID: 595472530}
+  - component: {fileID: 595472531}
   m_Layer: 13
   m_Name: Collider1 (20)
   m_TagString: Untagged
@@ -3478,6 +3842,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 30.571753, y: 11.600684, z: 12.314611}
   m_Center: {x: 8.515502, y: 5.000342, z: 0.24346828}
+--- !u!114 &595472531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595472528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: abe3faeacf2509f41bb233954a1df034, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &609912839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,6 +3884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609912840}
   - component: {fileID: 609912841}
+  - component: {fileID: 609912842}
   m_Layer: 13
   m_Name: Collider1 (27)
   m_TagString: Untagged
@@ -3531,6 +3928,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.973595, y: 11.600684, z: 17.179413}
   m_Center: {x: -0.95638657, y: 5.000342, z: -2.1889324}
+--- !u!114 &609912842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609912839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 86af277b9f73cd546bab70f0dc89d826, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &620138775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620138776}
   - component: {fileID: 620138777}
+  - component: {fileID: 620138778}
   m_Layer: 13
   m_Name: Collider1 (34)
   m_TagString: Untagged
@@ -3584,6 +4014,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 6.274763}
   m_Center: {x: -0.11998129, y: 5.000342, z: -4.611285}
+--- !u!114 &620138778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620138775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f0383bbe6b82e434f889bbde96462838, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &647162547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 756422714}
   - component: {fileID: 756422715}
+  - component: {fileID: 756422716}
   m_Layer: 13
   m_Name: Collider1 (25)
   m_TagString: Untagged
@@ -4162,6 +4625,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 17.179413}
   m_Center: {x: -0.11998129, y: 5.000342, z: -2.188932}
+--- !u!114 &756422716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756422713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: e1cdd6d816b698c43a6568088e7bd0a4, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &784718218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797100187}
   - component: {fileID: 797100188}
+  - component: {fileID: 797100189}
   m_Layer: 13
   m_Name: Collider1 (15)
   m_TagString: Untagged
@@ -4256,6 +4752,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.743965, y: 11.600684, z: 9.971069}
   m_Center: {x: -4.118643, y: 5.000342, z: -0.92830276}
+--- !u!114 &797100189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797100186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c4bfb0720e2d24c4e96b71e7ba2325ee, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &814163700
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,6 +4794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814163701}
   - component: {fileID: 814163702}
+  - component: {fileID: 814163703}
   m_Layer: 13
   m_Name: Collider1 (22)
   m_TagString: Untagged
@@ -4309,6 +4838,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 13.894564}
   m_Center: {x: -0.11998129, y: 5.000342, z: -0.54650784}
+--- !u!114 &814163703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814163700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: cb10cb7a0420d184fa30006529c58739, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &846350991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,6 +5137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893162120}
   - component: {fileID: 893162121}
+  - component: {fileID: 893162122}
   m_Layer: 13
   m_Name: Collider1 (30)
   m_TagString: Untagged
@@ -4619,6 +5181,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20.607718, y: 11.600684, z: 17.179413}
   m_Center: {x: -3.773448, y: 5.000342, z: -2.1889324}
+--- !u!114 &893162122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893162119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 67c173d6a415f2842a322b933ad679d1, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &899281336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +5223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899281337}
   - component: {fileID: 899281338}
+  - component: {fileID: 899281339}
   m_Layer: 13
   m_Name: StoneCollider (1)
   m_TagString: Untagged
@@ -4672,6 +5267,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2133904, y: 1.6090946, z: 3.1265793}
   m_Center: {x: 0.6066952, y: 0.3045473, z: -1.0632896}
+--- !u!114 &899281339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899281336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 17cf109eb1ec24a44afe06883a56d762, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &903994497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,6 +5309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903994498}
   - component: {fileID: 903994499}
+  - component: {fileID: 903994500}
   m_Layer: 13
   m_Name: StoneCollider
   m_TagString: Untagged
@@ -4725,6 +5353,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2133904, y: 1.6090946, z: 3.1265793}
   m_Center: {x: 0.6066952, y: 0.3045473, z: -1.0632896}
+--- !u!114 &903994500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903994497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 95c70702321d53d4b9b658fe22a5077e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &947096646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5398350280083653246, guid: 893ccdcbbbcdad046ad3687028d3d7fb, type: 3}
@@ -4756,6 +5416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 973567275}
   - component: {fileID: 973567276}
+  - component: {fileID: 973567277}
   m_Layer: 13
   m_Name: Collider1
   m_TagString: Untagged
@@ -4799,6 +5460,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.8522015, y: 3.3766613, z: 4.1381474}
   m_Center: {x: -1.4261007, y: 1.1883309, z: -1.5690742}
+--- !u!114 &973567277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973567274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 2fc7bb8d41d2fa5458d39b5238de3331, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &995261093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4898,6 +5591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007074810}
   - component: {fileID: 1007074811}
+  - component: {fileID: 1007074812}
   m_Layer: 13
   m_Name: Collider1 (28)
   m_TagString: Untagged
@@ -4941,6 +5635,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.9307675, y: 11.600684, z: 17.179413}
   m_Center: {x: 3.065027, y: 5.000342, z: -2.1889324}
+--- !u!114 &1007074812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007074809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 84e5a674e9b069e40a90e217cb8bec8a, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1021583036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5052,6 +5778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025734043}
   - component: {fileID: 1025734044}
+  - component: {fileID: 1025734045}
   m_Layer: 13
   m_Name: Collider1 (24)
   m_TagString: Untagged
@@ -5095,6 +5822,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 13.894564}
   m_Center: {x: -0.11998129, y: 5.000342, z: -0.54650784}
+--- !u!114 &1025734045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025734042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c3a9226c05af23e448cecb69e248ac3c, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1039906084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5353,6 +6112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097531790}
   - component: {fileID: 1097531791}
+  - component: {fileID: 1097531792}
   m_Layer: 13
   m_Name: Collider1 (18)
   m_TagString: Untagged
@@ -5396,6 +6156,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.023714, y: 11.600684, z: 12.314611}
   m_Center: {x: -1.7585173, y: 5.000342, z: 0.24346828}
+--- !u!114 &1097531792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097531789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: b01d313bde46dd84da76c1d31e40e065, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1107146199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6775712098167243534, guid: 94b9a4d1b2c68d945af7b854ee5cb9e0, type: 3}
@@ -5530,6 +6322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192446247}
   - component: {fileID: 1192446248}
+  - component: {fileID: 1192446249}
   m_Layer: 13
   m_Name: Collider1 (10)
   m_TagString: Untagged
@@ -5573,6 +6366,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 32.734856, y: 11.600684, z: 8.114464}
   m_Center: {x: 1.399437, y: 5.300342, z: -1.1242523}
+--- !u!114 &1192446249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192446246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: acbda0e17a58bdf4595cf524c8181768, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1199486735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,6 +6582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213345526}
   - component: {fileID: 1213345527}
+  - component: {fileID: 1213345528}
   m_Layer: 13
   m_Name: Collider1 (19)
   m_TagString: Untagged
@@ -5800,6 +6626,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.023714, y: 11.600684, z: 12.314611}
   m_Center: {x: -1.7585173, y: 5.000342, z: 0.24346828}
+--- !u!114 &1213345528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213345525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 8a0e7aa244826c843899a2239a2ca164, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1223636432
 GameObject:
   m_ObjectHideFlags: 0
@@ -6646,6 +7504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1337052755}
   - component: {fileID: 1337052756}
+  - component: {fileID: 1337052757}
   m_Layer: 13
   m_Name: StoneCollider (2)
   m_TagString: Untagged
@@ -6689,6 +7548,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2133904, y: 1.6090946, z: 3.1265793}
   m_Center: {x: 0.6066952, y: 0.3045473, z: -1.0632896}
+--- !u!114 &1337052757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337052754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 0080a4ba5d647c34abeea40530c2f0a7, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1337211163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7138,6 +8029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388953395}
   - component: {fileID: 1388953396}
+  - component: {fileID: 1388953397}
   m_Layer: 13
   m_Name: Collider1 (6)
   m_TagString: Untagged
@@ -7181,6 +8073,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.5049117, y: 5.163983, z: 3.420916}
   m_Center: {x: -1.1677026, y: 0.60488105, z: -1.927685}
+--- !u!114 &1388953397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388953394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f42ee45f4060e33449d42470b7fc3e59, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1392522024
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,6 +8248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419521855}
   - component: {fileID: 1419521856}
+  - component: {fileID: 1419521857}
   m_Layer: 13
   m_Name: Collider1 (33)
   m_TagString: Untagged
@@ -7367,6 +8292,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.300786, y: 11.600684, z: 6.274763}
   m_Center: {x: -0.11998129, y: 5.000342, z: -4.611285}
+--- !u!114 &1419521857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419521854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 5ce9f09bc2a45c74081d417065442d91, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1437741758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7483,7 +8440,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2498ae47621b6de418bc43e5d8745fd9, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ca1d3f28eeb545a4aa74527b5b2ff19e, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1491082705
 Transform:
@@ -7531,6 +8488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532482315}
   - component: {fileID: 1532482316}
+  - component: {fileID: 1532482317}
   m_Layer: 13
   m_Name: Collider1 (4)
   m_TagString: Untagged
@@ -7574,6 +8532,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.950027, y: 4.583481, z: 10.179377}
   m_Center: {x: 0.77409196, y: 0.31462908, z: 2.0850706}
+--- !u!114 &1532482317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532482314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 3b4428d4f6aed674e8c1cdca88c22340, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1558322100
 GameObject:
   m_ObjectHideFlags: 0
@@ -8150,6 +9140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703390554}
   - component: {fileID: 1703390555}
+  - component: {fileID: 1703390556}
   m_Layer: 13
   m_Name: Collider1 (29)
   m_TagString: Untagged
@@ -8193,6 +9184,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.781749, y: 11.600684, z: 17.179413}
   m_Center: {x: 1.1395364, y: 5.000342, z: -2.1889324}
+--- !u!114 &1703390556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703390553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 2a76a3b891b42704091a30f1b0cf08bf, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1722116598
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,6 +9226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1722116599}
   - component: {fileID: 1722116600}
+  - component: {fileID: 1722116601}
   m_Layer: 13
   m_Name: Collider1 (2)
   m_TagString: Untagged
@@ -8246,6 +9270,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.0383, y: 4.8384295, z: 3.420916}
   m_Center: {x: -4.0191298, y: 0.4421034, z: -1.9276868}
+--- !u!114 &1722116601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722116598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c4a541e07a11ed44799304b323a7a36e, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1723587764
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,6 +9505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751275273}
   - component: {fileID: 1751275274}
+  - component: {fileID: 1751275275}
   m_Layer: 13
   m_Name: Collider1 (8)
   m_TagString: Untagged
@@ -8492,6 +9549,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.950027, y: 4.3905044, z: 17.98649}
   m_Center: {x: 0.77409905, y: 0.21813989, z: -3.0394542}
+--- !u!114 &1751275275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751275272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: b445a20d8fd7adc4d9c9a1e38a1aabcc, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1759268807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 885441393605692917, guid: 94b9a4d1b2c68d945af7b854ee5cb9e0, type: 3}
@@ -9274,6 +10363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965268642}
   - component: {fileID: 1965268643}
+  - component: {fileID: 1965268644}
   m_Layer: 13
   m_Name: Collider1 (26)
   m_TagString: Untagged
@@ -9317,6 +10407,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.973595, y: 11.600684, z: 17.179413}
   m_Center: {x: -0.95638657, y: 5.000342, z: -2.1889324}
+--- !u!114 &1965268644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965268641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: bff8ee969db39c3478ba615605e99394, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1975493865 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3586936823951718893, guid: 424b583ec833e09429e07f42086d9985, type: 3}
@@ -9352,6 +10474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987834167}
   - component: {fileID: 1987834168}
+  - component: {fileID: 1987834169}
   m_Layer: 13
   m_Name: Collider1 (16)
   m_TagString: Untagged
@@ -9395,6 +10518,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.023714, y: 11.600684, z: 12.314611}
   m_Center: {x: -1.7585173, y: 5.000342, z: 0.24346828}
+--- !u!114 &1987834169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987834166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 08c3f72932725de4caa44158e2debe1f, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &2003385960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9491,6 +10646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012083705}
   - component: {fileID: 2012083706}
+  - component: {fileID: 2012083707}
   m_Layer: 13
   m_Name: Collider1 (1)
   m_TagString: Untagged
@@ -9534,6 +10690,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.655096, y: 4.0535975, z: 3.420916}
   m_Center: {x: -2.327548, y: 0.049686432, z: -1.9276898}
+--- !u!114 &2012083707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012083704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f17cce033ccdb4646b0264a2dbdbaece, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &2014675710
 GameObject:
   m_ObjectHideFlags: 0
@@ -9544,6 +10732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014675711}
   - component: {fileID: 2014675712}
+  - component: {fileID: 2014675713}
   m_Layer: 13
   m_Name: Collider1 (7)
   m_TagString: Untagged
@@ -9587,6 +10776,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.364917, y: 5.2538686, z: 3.8883343}
   m_Center: {x: -0.73771185, y: 0.6498234, z: -1.6939759}
+--- !u!114 &2014675713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014675710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: f8f8b3fdc5d60e4429ca041e2ab08441, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &2030762039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4135703250046091885, guid: 60ef408d39aac214891f17a5d4216cd4, type: 3}
@@ -10427,6 +11648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085694600}
   - component: {fileID: 2085694601}
+  - component: {fileID: 2085694602}
   m_Layer: 13
   m_Name: Collider1 (17)
   m_TagString: Untagged
@@ -10470,6 +11692,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.023714, y: 11.600684, z: 12.314611}
   m_Center: {x: -1.7585173, y: 5.000342, z: 0.24346828}
+--- !u!114 &2085694602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085694599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 886e674413a15214592a9317acaea8da, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &2098210163
 GameObject:
   m_ObjectHideFlags: 0
@@ -10480,6 +11734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098210164}
   - component: {fileID: 2098210165}
+  - component: {fileID: 2098210166}
   m_Layer: 13
   m_Name: Collider1 (3)
   m_TagString: Untagged
@@ -10523,6 +11778,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.549123, y: 4.5094843, z: 3.420916}
   m_Center: {x: -0.645597, y: 0.27762985, z: -1.927685}
+--- !u!114 &2098210166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098210163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 4a4aea885aaa7174a97d77e1fccd4a43, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &2108077508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6362715535592001256, guid: 94b9a4d1b2c68d945af7b854ee5cb9e0, type: 3}
