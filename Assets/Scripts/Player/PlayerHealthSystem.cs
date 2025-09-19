@@ -9,8 +9,14 @@ public class PlayerHealthSystem : MonoBehaviour
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
+    private float damage = 0.2f;
+    private float postExitDuration = 3f;
+    private float damageInterval = 0.1f;
+
+    private float timeElapsedSinceExit;
+
     public enum EffectType
-    { 
+    {
         None,
         Lava,
         Projectile,
@@ -33,18 +39,20 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        DeathMapLimit.OnExitingLava += ChangeLavaCameraEffect;
+        DeathMapLimit.OnExitLava += StartLavaExitDamageCorroutine;
     }
 
     private void OnDisable()
     {
-        DeathMapLimit.OnExitingLava -= ChangeLavaCameraEffect;
+        DeathMapLimit.OnExitLava -= StartLavaExitDamageCorroutine;
     }
 
     private void Update()
     {
         UpdateHealthBar();
         ManageScreenDamageEffect();
+
+        timeElapsedSinceExit += Time.deltaTime;
     }
 
     public void TakeDamage(float damage)
@@ -98,15 +106,18 @@ public class PlayerHealthSystem : MonoBehaviour
         }
         else if (effectType == EffectType.Heal)
         {
+            lavaDamageEffect.SetFloat("_Intensity", 0);
             healthEffect.SetFloat("_Intensity", 1);
             StartCoroutine(HealEffectCooldown());
+
+            StopCoroutine(LavaDamageOverTimeAfterExit());
         }
     }
 
-    private void ChangeLavaCameraEffect()
+    private void StartLavaExitDamageCorroutine()
     {
-        effectType = EffectType.None;
-    }    
+        StartCoroutine(LavaDamageOverTimeAfterExit());
+    }
 
     private IEnumerator EffectCooldown()
     {
@@ -130,6 +141,26 @@ public class PlayerHealthSystem : MonoBehaviour
         }
 
         healthEffect.SetFloat("_Intensity", endValue);
+        effectType = EffectType.None;
+    }
+
+    private IEnumerator LavaDamageOverTimeAfterExit()
+    {
+        timeElapsedSinceExit = 0;
+
+        while (timeElapsedSinceExit < postExitDuration)
+        {
+            if (effectType == EffectType.Heal)
+            {
+                yield break;
+            }
+
+            TakeDamage(damage);
+            SetEffectType(EffectType.Lava);
+
+            yield return new WaitForSeconds(damageInterval);
+        }
+
         effectType = EffectType.None;
     }
 }

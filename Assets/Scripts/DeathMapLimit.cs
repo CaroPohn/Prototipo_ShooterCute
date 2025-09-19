@@ -8,14 +8,7 @@ public class DeathMapLimit : MonoBehaviour
     public float postExitDuration = 3f;
     public float damageInterval = 0.1f;
 
-    private float timeElapsedSinceExit;
-
-    public static event Action OnExitingLava;
-
-    private void Update()
-    {
-        timeElapsedSinceExit += Time.deltaTime;
-    }
+    public static event Action OnExitLava;
 
     private void OnCollisionStay(Collision collision)
     {
@@ -39,23 +32,8 @@ public class DeathMapLimit : MonoBehaviour
 
             if (playerHealth != null)
             {
-                StartCoroutine(DamageOverTimeAfterExit(playerHealth));
+                OnExitLava?.Invoke();
             }
         }
-    }
-
-    private IEnumerator DamageOverTimeAfterExit(PlayerHealthSystem playerHealth)
-    {
-        timeElapsedSinceExit = 0;
-
-        while (timeElapsedSinceExit < postExitDuration)
-        {
-            playerHealth.TakeDamage(damage);
-            playerHealth.SetEffectType(PlayerHealthSystem.EffectType.Lava);
-
-            yield return new WaitForSeconds(damageInterval);     
-        }
-
-        OnExitingLava?.Invoke();
     }
 }

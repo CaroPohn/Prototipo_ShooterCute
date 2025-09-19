@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static PlayerHealthSystem;
 
 public class HealthPackHolder : MonoBehaviour
 {
