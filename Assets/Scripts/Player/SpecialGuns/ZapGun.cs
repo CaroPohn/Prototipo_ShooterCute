@@ -32,6 +32,8 @@ public class ZapGun : Gun
 
     [SerializeField] InputReader inputReader;
 
+    [SerializeField] private LevelController levelController;
+
     private int totalDamage;
 
     private VisualEffect activeMuzzleEffect;
@@ -58,48 +60,54 @@ public class ZapGun : Gun
 
     private void StartHoldingShoot()
     {
-        if (Time.time - lastShootTime >= timeBetweenShots)
+        if (!levelController.isGamePaused)
         {
-            isHoldingShoot = true;
-            shootHoldTime = 0f;
+            if (Time.time - lastShootTime >= timeBetweenShots)
+            {
+                isHoldingShoot = true;
+                shootHoldTime = 0f;
 
-            electric_Gun_VFX_Script.Charge();
+                electric_Gun_VFX_Script.Charge();
 
-            armsAnimator.SetBool(armsAnimationName, true);
+                armsAnimator.SetBool(armsAnimationName, true);
+            }
         }
     }
 
     private void ReleaseShoot()
     {
-        if (Time.time - lastShootTime < timeBetweenShots)
-            return;
-
-        isHoldingShoot = false;
-
-        int damageToDeal = damageLevel1;
-
-        if (shootHoldTime >= 2f)
+        if (!levelController.isGamePaused)
         {
-            damageToDeal = damageLevel4;
+            if (Time.time - lastShootTime < timeBetweenShots)
+                return;
+
+            isHoldingShoot = false;
+
+            int damageToDeal = damageLevel1;
+
+            if (shootHoldTime >= 2f)
+            {
+                damageToDeal = damageLevel4;
+            }
+            else if (shootHoldTime >= 1f)
+            {
+                damageToDeal = damageLevel3;
+            }
+            else if (shootHoldTime >= 0.5f)
+            {
+                damageToDeal = damageLevel2;
+            }
+
+            totalDamage = damageToDeal;
+
+            Shoot();
+
+            armsAnimator.SetBool(armsAnimationName, false);
+
+            electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
+
+            lastShootTime = Time.time;
         }
-        else if (shootHoldTime >= 1f)
-        {
-            damageToDeal = damageLevel3;
-        }
-        else if (shootHoldTime >= 0.5f)
-        {
-            damageToDeal = damageLevel2;
-        }
-
-        totalDamage = damageToDeal;
-
-        Shoot();
-
-        armsAnimator.SetBool(armsAnimationName, false);
-
-        electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
-
-        lastShootTime = Time.time;
     }
 
     public override void Shoot()

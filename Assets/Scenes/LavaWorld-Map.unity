@@ -282,6 +282,7 @@ MonoBehaviour:
   playerHealthSystem: {fileID: 1226903917}
   playerSpawnPosition: {fileID: 705201474}
   inputReader: {fileID: 200610471}
+  isGamePaused: 0
   chooseCanvas: {fileID: 0}
   gamePlayCanvas: {fileID: 731745798}
   winCanvas: {fileID: 2044466206}
@@ -6016,6 +6017,10 @@ PrefabInstance:
       propertyPath: armsAnimation
       value: 
       objectReference: {fileID: 1878606546}
+    - target: {fileID: 5839489268998485584, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 142447410}
     - target: {fileID: 5868081274072364262, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6323,6 +6328,10 @@ PrefabInstance:
       propertyPath: hitPonintEffect
       value: 
       objectReference: {fileID: 8926484042661614526, guid: 61eb89479de9bfc41a610b3b3f5c2d34, type: 3}
+    - target: {fileID: 1841301313821162121, guid: 7b48000552828bf428591902e62913aa, type: 3}
+      propertyPath: levelController
+      value: 
+      objectReference: {fileID: 142447410}
     - target: {fileID: 1841301313821162121, guid: 7b48000552828bf428591902e62913aa, type: 3}
       propertyPath: timeBetweenShots
       value: 0

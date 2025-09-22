@@ -11,6 +11,8 @@ public class FireGun : Gun
     [SerializeField] private Camera playerCamera;
 
     [SerializeField] private GameObject muzzleFlash;
+
+    [SerializeField] private LevelController levelController;
     
     public float damage;
     public float timeBetweenShots;
@@ -43,7 +45,10 @@ public class FireGun : Gun
     {
         if (timer >= timeBetweenShots)
         {
-            Shoot();
+            if (!levelController.isGamePaused)
+            {
+                Shoot();
+            }
         }
     }
 
