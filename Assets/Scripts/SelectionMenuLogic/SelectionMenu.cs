@@ -33,6 +33,8 @@ public class SelectionMenu : MonoBehaviour
 
     public Button confirmButton;
 
+    public string sceneName;
+
     private void Awake()
     {
         confirmButton.onClick.AddListener(StartPlayScene);
@@ -152,6 +154,6 @@ public class SelectionMenu : MonoBehaviour
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
 
-        SceneLoader.Instance.ChangeScene("ShooterProto");
+        SceneLoader.Instance.ChangeScene(sceneName);
     }
 }

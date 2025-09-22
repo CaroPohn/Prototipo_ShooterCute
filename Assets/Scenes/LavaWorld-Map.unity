@@ -3378,7 +3378,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.35983133, z: -0, w: 0.93301743}
   m_LocalPosition: {x: -25.19, y: 9.06, z: 33.22}
-  m_LocalScale: {x: 3.3100336, y: 9.001411, z: 19.947172}
+  m_LocalScale: {x: 3.3100336, y: 11.635224, z: 44.386448}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3659,6 +3659,43 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1887443467379316242, guid: de1a11e695b7122468ec7852eec27876, type: 3}
+--- !u!1 &1281080408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7798020675118612576, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+  m_PrefabInstance: {fileID: 1467930312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1281080409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281080408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 1
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1 &1292454203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8480765812153886501, guid: a17ddea0ee19ec14fb72b22b1f2954bb, type: 3}
@@ -4818,6 +4855,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7950327596793140017, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1467930322}
+    - targetCorrespondingSourceObject: {fileID: 7798020675118612576, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1281080409}
     - targetCorrespondingSourceObject: {fileID: 403234815983898954, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 999768339}
