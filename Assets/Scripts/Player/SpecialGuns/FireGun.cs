@@ -6,6 +6,8 @@ public class FireGun : Gun
     [SerializeField] private Transform shootPoint;
     [SerializeField] GameObject projectilePrefab;
 
+    [SerializeField] private Animator armsAnimation;
+
     [SerializeField] private Camera playerCamera;
 
     [SerializeField] private GameObject muzzleFlash;
@@ -52,6 +54,8 @@ public class FireGun : Gun
         Instantiate(muzzleFlash, shootPoint);
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
+
+        armsAnimation.SetTrigger("Shoot");
 
         Vector3 direction = playerCamera.transform.forward;
 

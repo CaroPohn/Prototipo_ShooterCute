@@ -19,7 +19,11 @@ public class ZapGun : Gun
 
     private float hitDistance;
 
+    private string armsAnimationName = "Charging";
+
     [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
+
+    [SerializeField] private Animator armsAnimator;
 
     [SerializeField] private VisualEffect hitPointEffect;
 
@@ -60,6 +64,8 @@ public class ZapGun : Gun
             shootHoldTime = 0f;
 
             electric_Gun_VFX_Script.Charge();
+
+            armsAnimator.SetBool(armsAnimationName, true);
         }
     }
 
@@ -88,6 +94,8 @@ public class ZapGun : Gun
         totalDamage = damageToDeal;
 
         Shoot();
+
+        armsAnimator.SetBool(armsAnimationName, false);
 
         electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
