@@ -7,6 +7,8 @@ public class EnemyFollowState : EnemyStates
     {
         patrolEnemy.shootTimer = patrolEnemy.shootCoolDown;
         patrolEnemy.SetTargetToFollow();
+
+        Debug.Log("enter del follow");
     }
 
     public override void UpdateState(PatrolEnemy patrolEnemy)
@@ -20,10 +22,14 @@ public class EnemyFollowState : EnemyStates
         if (!patrolEnemy.IsPlayerOnRange())
         {
             patrolEnemy.StopFollowingPlayer(false);
+
+            Debug.Log("no llego al player");
         }
         else
         {
             patrolEnemy.StopFollowingPlayer(true);
+
+            Debug.Log("Llego al player");
 
             if (healthSystem.health > 0)
                 patrolEnemy.SetLookAt();
