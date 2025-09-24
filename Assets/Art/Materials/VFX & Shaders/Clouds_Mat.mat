@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-698566561082707545
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clouds_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 59b28cf7c4b4f2c49bf0da800e23e469, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ParallaxMapping_213eb28a6a72460f954808511e751ad2_Heightmap_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: a416921435f74cd4bb414003bb9f9834, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0d65030fa6014b548c896a494cc865bb_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: dc50b357042b5ab41916de245411bf2b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Clouds_Density: 1.15
+    - _Clouds_Power: 1.42
+    - _Clouds_Scale: 2
+    - _Clouds_Speed: 0.45
+    - _Clouds_Substract: 2.42
+    - _Density: 1.3
+    - _Float: 1.1
+    - _Float_1: 0.01
+    - _Highlight: 1.07
+    - _Power: 0.64
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Clouds_Color: {r: 1, g: 0.29216224, b: 0.08962262, a: 1}
+    - _Clouds_Movement: {r: 2, g: -0.4, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

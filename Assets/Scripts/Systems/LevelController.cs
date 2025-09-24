@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Transform playerSpawnPosition;
     [SerializeField] private InputReader inputReader;
 
-    private bool isGamePaused;
+    public bool isGamePaused;
 
     static public event Action OnGamePaused;
     static public event Action OnGameUnpaused;
@@ -44,6 +44,8 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 144;
+
         gamePlayCanvas.gameObject.SetActive(true);
         winCanvas.gameObject.SetActive(false);
         //WinEggText.SetActive(false);
