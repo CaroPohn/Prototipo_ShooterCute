@@ -14,6 +14,11 @@ public class HitEffectController : MonoBehaviour
     [ColorUsageAttribute(true, true)] [SerializeField] Color originalColor;
     bool colorWasChanged = false;
 
+    string hitParameter = "_Hit_Amount";
+    string dissolveParameter = "_Dissolve";
+    [SerializeField] float dissolveDuration = 1f;
+
+
     void Start()
     {
         //rend = GetComponent<Renderer>();
@@ -22,15 +27,16 @@ public class HitEffectController : MonoBehaviour
         //UpdateHitAmount();
     }
 
-    void UpdateHitAmount()
+    void UpdatePropertyAmmount(string property, float amount)
     {
         foreach (Renderer rend in renderers) 
         {
             rend.GetPropertyBlock(block);
-            block.SetFloat("_HitAmount", hitAmount);
+            block.SetFloat(property, amount);
             rend.SetPropertyBlock(block);
         }
     }
+
 
     void Update()
     {
@@ -50,6 +56,7 @@ public class HitEffectController : MonoBehaviour
         colorWasChanged = true;
         GetHit();
     }
+    
     void ChangeRenderersColors(Color color)
     {
         foreach (Renderer rend in renderers)
@@ -62,20 +69,41 @@ public class HitEffectController : MonoBehaviour
     IEnumerator HitEffect()
     {
         hitAmount = 1f;
-        UpdateHitAmount();
+        UpdatePropertyAmmount(hitParameter, hitAmount);
         float timer = 0f;
 
         while (timer < effectDuration)
         {
             timer += Time.deltaTime;
             hitAmount = Mathf.Lerp(1f, 0f, timer / effectDuration);
-            UpdateHitAmount();
+            UpdatePropertyAmmount(hitParameter, hitAmount);
             yield return null;
         }
 
         hitAmount = 0f;
-        UpdateHitAmount();
+        UpdatePropertyAmmount(hitParameter, hitAmount);
         if (colorWasChanged) ChangeRenderersColors(originalColor);
     }
 
+    public void Dissolve()
+    {
+        StartCoroutine(DissolveRoutine());
+    }
+    IEnumerator DissolveRoutine()
+    {
+        float dissolveAmount = 0f;
+        UpdatePropertyAmmount(dissolveParameter, dissolveAmount);
+        float timer = 0f;
+
+        while (timer < dissolveDuration)
+        {
+            timer += Time.deltaTime;
+            dissolveAmount = Mathf.Lerp(1f, 0f, 1-(timer / dissolveDuration));
+            UpdatePropertyAmmount(dissolveParameter, dissolveAmount);
+            yield return null;
+        }
+
+        dissolveAmount = 1f;
+        UpdatePropertyAmmount(dissolveParameter, dissolveAmount);
+    }
 }
