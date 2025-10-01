@@ -112,8 +112,6 @@ public class HitEffectController : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("Desintegrado");
-
         dissolveAmount = 1f;
         UpdatePropertyAmmount(dissolveParameter, dissolveAmount);
 
