@@ -6,6 +6,8 @@ public class HitEffectController : MonoBehaviour
 {
     private GameObject enemy;
 
+    [SerializeField] private GameObject particleDesintegrateVFX;
+
     //[Range(0f, 1f)]
     float hitAmount = 0f;
 
@@ -96,6 +98,8 @@ public class HitEffectController : MonoBehaviour
 
     public IEnumerator DissolveRoutine()
     {
+        particleDesintegrateVFX.gameObject.SetActive(true);
+
         float dissolveAmount = 0f;
         UpdatePropertyAmmount(dissolveParameter, dissolveAmount);
         float timer = 0f;
