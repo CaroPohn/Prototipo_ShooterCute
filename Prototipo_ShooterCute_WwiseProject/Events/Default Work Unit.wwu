@@ -19,14 +19,44 @@
 					<ChildrenList>
 						<Event Name="Player_Footstep" ID="{0EB49463-85D3-4425-A97B-6BC92274A370}"/>
 						<Event Name="Player_Shoot_Basic" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}"/>
-						<Event Name="Player_Hit_BasicProjectile" ID="{932A8F52-8A6D-4A0B-8D60-1FFA503575D5}"/>
 						<Event Name="Player_ShootCharge_Electric" ID="{84768FD9-4248-43E5-9833-69D4D2280890}"/>
 						<Event Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}"/>
+						<Event Name="Player_Burn_Start" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}"/>
+						<Event Name="Player_Burn_End" ID="{9E95A55F-4091-47C4-880F-8994F6962664}"/>
+						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}"/>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Lumming" ID="{94890852-4F9B-43E8-BA4C-9E5A20140015}" ShortID="325554119"/>
-				<Folder Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" ShortID="753824209"/>
-				<Folder Name="Enemy" ID="{B4F7FB49-4CC7-402A-8068-6876465C9C75}" ShortID="667240271"/>
+				<Folder Name="Lumming" ID="{94890852-4F9B-43E8-BA4C-9E5A20140015}" ShortID="325554119">
+					<ChildrenList>
+						<Event Name="Lumming_Heal" ID="{08E1FB78-8A3A-4ECA-8DE1-4B04DFD61079}"/>
+						<Event Name="Lumming_Levitate" ID="{8D18B643-3ADE-4C77-A1B0-21F56F2A1084}"/>
+						<Event Name="Lumming_Idle_FireInteraction" ID="{C378DE83-0AA9-4198-B013-3DE861278702}"/>
+						<Event Name="Lumming_Idle_ElectricInteraction" ID="{51F1768D-29FC-4325-9410-E7580728FA10}"/>
+						<Event Name="Lumming_Ability_Fire_Start" ID="{7EFF0B72-D253-4833-8E94-D1AF3C3E7650}"/>
+						<Event Name="Lumming_Ability_Fire_Impact" ID="{4B39072A-FBA8-497A-9ABD-F3879B0D59A4}"/>
+						<Event Name="Lumming_Ability_Electric_Start" ID="{8D90FE84-A906-4DC2-919F-FAA13FE46797}"/>
+						<Event Name="Lumming_Ability_Electric_Impact" ID="{7FA934BB-7197-48FF-ACBF-468F9AC31460}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" ShortID="753824209">
+					<ChildrenList>
+						<Event Name="Egg_Levitate" ID="{86CEEACD-B2E3-4BB2-AC46-554026C847F3}"/>
+						<Event Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}"/>
+						<Event Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}"/>
+						<Event Name="Egg_EnergyOrb_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{B4F7FB49-4CC7-402A-8068-6876465C9C75}" ShortID="667240271">
+					<ChildrenList>
+						<Event Name="Enemy_Spawn_Adult" ID="{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}"/>
+						<Event Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}"/>
+						<Event Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}"/>
+						<Event Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}"/>
+						<Event Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}"/>
+						<Event Name="Enemy_TakeDamage" ID="{30A93EC0-31F0-4DDE-BFCE-510D1297C630}"/>
+						<Event Name="Enemy_Death" ID="{C87E5E1B-B10A-496F-B556-26AEDA087099}"/>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" ShortID="459971135">
 					<ChildrenList>
 						<Event Name="Ambient_Lava" ID="{08ED279A-8209-4CE9-8C53-94ACA939ABAB}"/>
@@ -35,7 +65,20 @@
 						<Event Name="Ambient_Collapse" ID="{D63FA170-E634-428D-A49C-1FEEED4E94DC}"/>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" ShortID="952974412"/>
+				<Folder Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" ShortID="952974412">
+					<ChildrenList>
+						<Event Name="UI_Button_Normal" ID="{8A68EB02-E0A1-4E78-9137-4EDEDD136A5B}"/>
+						<Event Name="UI_Button_Special" ID="{EB428E82-5A3C-473D-96E5-76937AC605AF}"/>
+						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" ShortID="666977553">
+					<ChildrenList>
+						<Event Name="Projectile_Hit_BasicProjectile" ID="{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}"/>
+						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
+						<Event Name="Projectile_EnergyOrb_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
