@@ -60,6 +60,22 @@ namespace AK
         static const AkUniqueID UI_SLIDER = 3987036369U;
     } // namespace EVENTS
 
+    namespace SWITCHES
+    {
+        namespace FOOTSTEP_SURFACE
+        {
+            static const AkUniqueID GROUP = 1833605183U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID LAVA = 540301611U;
+                static const AkUniqueID SPAWN = 71202558U;
+                static const AkUniqueID STONE = 1216965916U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEP_SURFACE
+
+    } // namespace SWITCHES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
