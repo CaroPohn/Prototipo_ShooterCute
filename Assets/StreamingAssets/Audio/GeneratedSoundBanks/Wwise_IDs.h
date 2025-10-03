@@ -11,6 +11,55 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID AMBIENT_COLLAPSE = 941448663U;
+        static const AkUniqueID AMBIENT_DISTANTIMPACTS = 269417926U;
+        static const AkUniqueID AMBIENT_LAVA = 4275106484U;
+        static const AkUniqueID AMBIENT_WIND = 1410046624U;
+        static const AkUniqueID EGG_ENERGYORB_IMPACT = 1380174867U;
+        static const AkUniqueID EGG_LEVITATE = 1242907925U;
+        static const AkUniqueID EGG_SHIELDACTIVATE = 16747207U;
+        static const AkUniqueID EGG_SHIELDDESTROY = 1126770210U;
+        static const AkUniqueID ENEMY_DEATH = 1205999388U;
+        static const AkUniqueID ENEMY_FOOTSTEP_ADULT = 3521032401U;
+        static const AkUniqueID ENEMY_FOOTSTEP_BABY = 1530017751U;
+        static const AkUniqueID ENEMY_SHOOT_BASIC = 3691532132U;
+        static const AkUniqueID ENEMY_SPAWN_ADULT = 1388907814U;
+        static const AkUniqueID ENEMY_SPAWN_BABY = 1815360318U;
+        static const AkUniqueID ENEMY_TAKEDAMAGE = 842135496U;
+        static const AkUniqueID LUMMING_ABILITY_ELECTRIC_IMPACT = 4213470894U;
+        static const AkUniqueID LUMMING_ABILITY_ELECTRIC_START = 768425324U;
+        static const AkUniqueID LUMMING_ABILITY_FIRE_IMPACT = 2208495489U;
+        static const AkUniqueID LUMMING_ABILITY_FIRE_START = 1749973457U;
+        static const AkUniqueID LUMMING_HEAL = 2851111675U;
+        static const AkUniqueID LUMMING_IDLE_ELECTRICINTERACTION = 1703828721U;
+        static const AkUniqueID LUMMING_IDLE_FIREINTERACTION = 1512820010U;
+        static const AkUniqueID LUMMING_LEVITATE = 3986156551U;
+        static const AkUniqueID MUSIC_GAMEPLAY_COLLAPSE = 3966329825U;
+        static const AkUniqueID MUSIC_GAMEPLAY_REST = 3112455934U;
+        static const AkUniqueID MUSIC_GAMEPLAY_STAGE1 = 4066633163U;
+        static const AkUniqueID MUSIC_GAMEPLAY_STAGE2 = 4066633160U;
+        static const AkUniqueID MUSIC_GAMEPLAY_STAGE3 = 4066633161U;
+        static const AkUniqueID MUSIC_MENU = 1598298728U;
+        static const AkUniqueID MUSIC_STINGER_DEFEAT = 1479913785U;
+        static const AkUniqueID MUSIC_STINGER_VICTORY = 4254684058U;
+        static const AkUniqueID PLAYER_BURN_END = 2460254372U;
+        static const AkUniqueID PLAYER_BURN_START = 3765143639U;
+        static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
+        static const AkUniqueID PLAYER_JUMP = 1305133589U;
+        static const AkUniqueID PLAYER_SHOOT_BASIC = 1403130241U;
+        static const AkUniqueID PLAYER_SHOOT_ELECTRIC = 2855950240U;
+        static const AkUniqueID PLAYER_SHOOTCHARGE_ELECTRIC = 3840296224U;
+        static const AkUniqueID PLAYER_TAKEDAMAGE_GENERIC = 3727341601U;
+        static const AkUniqueID PROJECTILE_ENERGYORB_DEPLOY = 4087982520U;
+        static const AkUniqueID PROJECTILE_HIT_BASICPROJECTILE = 950925848U;
+        static const AkUniqueID PROJECTILE_HIT_ELECTRICPROJECTILE = 3600532549U;
+        static const AkUniqueID UI_BUTTON_NORMAL = 3345914708U;
+        static const AkUniqueID UI_BUTTON_SPECIAL = 3115620430U;
+        static const AkUniqueID UI_SLIDER = 3987036369U;
+    } // namespace EVENTS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
