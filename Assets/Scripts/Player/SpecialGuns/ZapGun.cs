@@ -34,6 +34,8 @@ public class ZapGun : Gun
 
     [SerializeField] private LevelController levelController;
 
+    [SerializeField] private Animator zapAnimator;
+
     private int totalDamage;
 
     private VisualEffect activeMuzzleEffect;
@@ -64,6 +66,8 @@ public class ZapGun : Gun
         {
             if (Time.time - lastShootTime >= timeBetweenShots)
             {
+                zapAnimator.SetBool("Charging", true);
+
                 isHoldingShoot = true;
                 shootHoldTime = 0f;
 
@@ -80,6 +84,8 @@ public class ZapGun : Gun
         {
             if (Time.time - lastShootTime < timeBetweenShots)
                 return;
+
+            zapAnimator.SetBool("Charging", false);
 
             isHoldingShoot = false;
 

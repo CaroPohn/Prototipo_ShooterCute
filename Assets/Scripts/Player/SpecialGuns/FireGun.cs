@@ -7,6 +7,7 @@ public class FireGun : Gun
     [SerializeField] GameObject projectilePrefab;
 
     [SerializeField] private Animator armsAnimation;
+    [SerializeField] private Animator bombAnimator;
 
     [SerializeField] private Camera playerCamera;
 
@@ -57,6 +58,8 @@ public class FireGun : Gun
         timer = 0;
 
         Instantiate(muzzleFlash, shootPoint);
+
+        bombAnimator.SetTrigger("Shot");
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
