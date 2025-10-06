@@ -9,9 +9,17 @@ public class WinColliderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
+
         if (other.GetComponentInChildren<EggInteraction>() != null)
         {
+            Debug.Log("Entró el player al win collider");
             OnWinningLevel?.Invoke();
         }
+        else
+        {
+            Debug.Log("No encuentra el egg interaction");
+        }
+
     }
 }

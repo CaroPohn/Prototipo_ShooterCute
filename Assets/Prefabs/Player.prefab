@@ -153,14 +153,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083992056861317168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.4469996, z: 0.869001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2263356389445958820}
   - {fileID: 5303032242209904579}
-  m_Father: {fileID: 605415670055044970}
+  m_Father: {fileID: 6029833100958539551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &544024984499392276
 MonoBehaviour:
@@ -233,12 +233,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3251339647893710720}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.148, z: 1.12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.39900023, z: 0.9889993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 605415670055044970}
+  m_Father: {fileID: 6029833100958539551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7586435349509665732
 GameObject:
@@ -453,6 +453,8 @@ Transform:
   - {fileID: 8795941103982905132}
   - {fileID: 7663539717267782612}
   - {fileID: 6772976315070107223}
+  - {fileID: 6215059590558575989}
+  - {fileID: 1525260912161330089}
   m_Father: {fileID: 605415670055044970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3090615952412589515
@@ -611,8 +613,6 @@ Transform:
   m_Children:
   - {fileID: 6029833100958539551}
   - {fileID: 5888065150487585011}
-  - {fileID: 6215059590558575989}
-  - {fileID: 1525260912161330089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &2314172333514594475
@@ -737,6 +737,7 @@ MonoBehaviour:
   jumpForce: 18
   jumpCooldown: 0.5
   airMultiplier: 0.2
+  armsAnimator: {fileID: 0}
   playerHeight: 2
   orientation: {fileID: 5888065150487585011}
   cameraOrientation: {fileID: 6029833100958539551}
