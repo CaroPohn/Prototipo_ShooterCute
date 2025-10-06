@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EggShield_Mat_Desintegration_Spikes
+  m_Name: Station_Mat_Desintegration
   m_Shader: {fileID: -6465566751694194690, guid: b3286a1491f08c44b8bccfef7f90ba05, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 00025f0ee2c82894ebca521b98f95307, type: 3}
+        m_Texture: {fileID: 2800000, guid: e7910baa91408dc4ea442ea386ef855b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ambien_occlussion:
-        m_Texture: {fileID: 2800000, guid: 17001a31387ec8a44aefcb8b735a61aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3877961f1deafe240ab386eb2b85df9c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -78,11 +78,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Smoothness:
-        m_Texture: {fileID: 2800000, guid: 4597fb264c96afb4bbc3a76525abe015, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f50c6dd0ec693145bb630ee6bb08bab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: ed927e885c216334c9628b95d60afa86, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61f41e312bb00684aaf6c3598f749dfe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -124,16 +124,16 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Desintegration: 1
-    - _Desintegration_Border_Size: 0
+    - _Desintegration: 0
+    - _Desintegration_Border_Size: -0.12
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Distance_between_transparent_and_white: 0.1
+    - _Distance_between_transparent_and_white: 0.15
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Fase_Color_progress: 0
-    - _Fresnel_Intensity: 0.9
+    - _Fresnel_Intensity: 0.95
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -155,9 +155,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Blend_Color: {r: 4.882237, g: 9.68809, b: 11.896944, a: 0}
+    - _Blend_Color: {r: 6.576551, g: 20.146069, b: 30.637104, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Desintegration_Color: {r: 16, g: 1.1250004, b: 0, a: 0}
+    - _Desintegration_Color: {r: 16, g: 1.0890052, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
