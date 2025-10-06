@@ -9,6 +9,8 @@ public class WaveManager : MonoBehaviour
     public List<Transform> spawnPoints;
     public List<Wave> waves;
 
+    [SerializeField] private StationWithEggEffects stationEffectsScript;
+
     [SerializeField] private TextMeshProUGUI waveText;
 
     private int currentWaveIndex = 0;
@@ -48,6 +50,8 @@ public class WaveManager : MonoBehaviour
     private void InteractedWithEgg()
     {
         hasEggInteractedToStartWaves = true;
+
+        stationEffectsScript.Close();
     }
 
     private void CheckIfPlayerHasWinAllWaves()
@@ -55,6 +59,8 @@ public class WaveManager : MonoBehaviour
         if (enemiesAlive == 0 && currentWaveIndex == 6) 
         { 
             OnWinningAllWaves?.Invoke();
+
+            stationEffectsScript.Die();
         }
     }
 
