@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class TestArt : MonoBehaviour
 {
-    [SerializeField] EggShield eggShield;
+    [SerializeField] StationWithEggEffects stationWithEggEffects;
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.C))
         {
-            eggShield.Appear();
+            stationWithEggEffects.Close();
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
-            eggShield.Desintegrate();
+            stationWithEggEffects.Die();
         }
-        else if (Input.GetKeyUp(KeyCode.G))
-        {
-            eggShield.GetHit();
-        }
+        
     }
 }
