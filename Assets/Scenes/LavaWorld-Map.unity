@@ -7525,6 +7525,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1248233237083301573, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248233237083301573, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248233237083301573, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248233237083301573, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2083992056861317168, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: m_Name
       value: AbilityHolder
@@ -7586,6 +7602,14 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6941485616889890597, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: jumpForce
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941485616889890597, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941485616889890597, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: moveSpeed
       value: 15
       objectReference: {fileID: 0}
@@ -7593,6 +7617,14 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 200610471}
+    - target: {fileID: 6941485616889890597, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: jumpCooldown
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941485616889890597, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: customGravity.y
+      value: -1700
+      objectReference: {fileID: 0}
     - target: {fileID: 7143203567888084827, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: Gun1
       value: 
@@ -7694,8 +7726,7 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4484226004898455174, guid: 00d856f844494924491df5915920a1b9, type: 3}
-    - {fileID: 5054769130118231070, guid: 00d856f844494924491df5915920a1b9, type: 3}
+    - {fileID: 0}
     - {fileID: 6706109753939980688, guid: 00d856f844494924491df5915920a1b9, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2878259413095727011, guid: 00d856f844494924491df5915920a1b9, type: 3}
