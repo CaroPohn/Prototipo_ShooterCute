@@ -24,7 +24,17 @@
 						<Event Name="Player_Burn_Start" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}"/>
 						<Event Name="Player_Burn_End" ID="{9E95A55F-4091-47C4-880F-8994F6962664}"/>
 						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}"/>
-						<Event Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}"/>
+						<Event Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}">
+							<ChildrenList>
+								<Action Name="" ID="{C57B8240-86FB-466A-B9BA-35CEC0D6CB0B}" ShortID="51812891">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Jump" ID="{ECB4B163-E914-41CC-890E-27F6BA78709D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Lumming" ID="{94890852-4F9B-43E8-BA4C-9E5A20140015}" ShortID="325554119">

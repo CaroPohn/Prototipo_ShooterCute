@@ -10,10 +10,52 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{23509040-80F1-A03D-2E86-76EA3938875D}",
+    "Hash": "{4D73E198-4D81-40FD-1933-A55A41A1567F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "46972610",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump_Female_3.wav",
+      "CachePath": "D2/{D2958767-49DC-7D84-DB70-CCFFAB22279C}.wem"
+     },
+     {
+      "Id": "186764387",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump_Female_1.wav",
+      "CachePath": "9A/{9A9A8563-6C7B-A325-7554-EF136484BF55}.wem"
+     },
+     {
+      "Id": "350513898",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump_Female_2.wav",
+      "CachePath": "48/{48F3D9A8-80B5-4639-4A52-7951E28AD322}.wem"
+     },
+     {
+      "Id": "430104771",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump_Female_4.wav",
+      "CachePath": "9C/{9CD00CFD-E49B-0441-AEEE-D4DBFFB27CB2}.wem"
+     },
+     {
+      "Id": "593695515",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump_Female_5.wav",
+      "CachePath": "FA/{FA16A6CC-88A0-22AC-538B-A27AECE51FB4}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "941448663",
@@ -360,10 +402,26 @@
       "Name": "Player_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Jump",
       "GUID": "{DACBE424-C116-42DD-8719-8E2F19AEA4DA}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.2513509",
+      "DurationMax": "0.32888097",
+      "MediaRefs": [
+       {
+        "Id": "46972610"
+       },
+       {
+        "Id": "186764387"
+       },
+       {
+        "Id": "350513898"
+       },
+       {
+        "Id": "430104771"
+       },
+       {
+        "Id": "593695515"
+       }
+      ]
      },
      {
       "Id": "1403130241",
@@ -468,6 +526,6 @@
     ]
    }
   ],
-  "FileHash": "{EBA9BB5C-3E64-F417-4ACD-5B5CA06F54BD}"
+  "FileHash": "{D855C65E-DCCA-F89D-ED29-DFBCC1ABD8E0}"
  }
 }
