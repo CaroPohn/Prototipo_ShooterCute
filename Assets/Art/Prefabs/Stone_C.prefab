@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 384578000951310221}
   - component: {fileID: 2500268476035302215}
   - component: {fileID: 485369343986472830}
-  - component: {fileID: 1099903638749364038}
   m_Layer: 0
   m_Name: Stone_C_low_0.1
   m_TagString: Untagged
@@ -110,22 +109,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1695621341728418698, guid: 923f54aa9d701774c9c76d510d917dd7, type: 3}
---- !u!208 &1099903638749364038
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4157456456110482066}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 50.282, y: 80.134, z: 59.855003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.53900003, y: 80.118004, z: 0.231}
-  m_TimeToStationary: 0.5
 --- !u!1 &5653647094012189798
 GameObject:
   m_ObjectHideFlags: 0
