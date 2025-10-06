@@ -3895,6 +3895,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.59
       objectReference: {fileID: 0}
+    - target: {fileID: 2558276904084945238, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558276904084945238, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 8bccf3fac1c0ad647b061edbbb061115, type: 2}
     - target: {fileID: 3241368811373624330, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.1809635
@@ -3935,6 +3943,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3811918827468860809, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811918827468860809, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 6948ae3ef750eb741a5572939e06f8cd, type: 2}
+    - target: {fileID: 4365256128592378252, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5308951067996043125, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
       propertyPath: m_Name
       value: New Terrain
@@ -3947,12 +3967,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -13.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7798020675118612576, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950327596793140017, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5027141528293133252, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     - {fileID: 41093271044588111, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     - {fileID: 5415793873927327642, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     - {fileID: 7435472661557020749, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     - {fileID: 5358136658609173995, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+    - {fileID: 3811918827468860809, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
+    - {fileID: 2558276904084945238, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6029526287030337758, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     - {fileID: 7590080588738974678, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
@@ -4135,7 +4165,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 65535
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -7266,7 +7296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3090615952412589515, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 32639
+      value: 98175
       objectReference: {fileID: 0}
     - target: {fileID: 3318030988092303165, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: near clip plane
