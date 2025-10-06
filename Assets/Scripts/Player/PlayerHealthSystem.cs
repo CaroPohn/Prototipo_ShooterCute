@@ -9,6 +9,8 @@ public class PlayerHealthSystem : MonoBehaviour
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
+    [SerializeField] private Transform spawnPoint;
+
     private float damage = 0.2f;
     private float postExitDuration = 3f;
     private float damageInterval = 0.1f;
@@ -75,6 +77,7 @@ public class PlayerHealthSystem : MonoBehaviour
     private void playerDeath()
     {
         gameObject.SetActive(false);
+        gameObject.transform.position = spawnPoint.position;
     }
 
     private void UpdateHealthBar()
