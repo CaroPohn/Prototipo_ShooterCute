@@ -103,8 +103,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        //WalkAnimationHandler();
-
         moveDirection = orientation.forward * inputDir.y + orientation.right * inputDir.x;
 
         Vector3 groundNormal = GetGroundNormal();

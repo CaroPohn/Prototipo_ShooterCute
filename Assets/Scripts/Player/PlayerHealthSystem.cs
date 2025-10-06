@@ -70,11 +70,11 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             health = 0;
 
-            playerDeath();
+            PlayerDeath();
         }
     }
 
-    private void playerDeath()
+    private void PlayerDeath()
     {
         gameObject.SetActive(false);
         gameObject.transform.position = spawnPoint.position;

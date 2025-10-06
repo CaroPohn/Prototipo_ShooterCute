@@ -64,11 +64,11 @@ public class LevelController : MonoBehaviour
 
             Rigidbody rb = player.GetComponent<Rigidbody>();
 
-            rb.AddForce(0, 0, 0);
-
             player.SetActive(true);
 
-            player.transform.position = playerSpawnPosition.transform.position;
+            playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
+
+            rb.AddForce(0, 0, 0);
         }
     }
 
