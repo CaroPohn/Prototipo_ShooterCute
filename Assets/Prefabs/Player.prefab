@@ -589,7 +589,6 @@ GameObject:
   - component: {fileID: 8876607803698844640}
   - component: {fileID: 6941485616889890597}
   - component: {fileID: 7143203567888084827}
-  - component: {fileID: 5054769130118231070}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -765,24 +764,6 @@ MonoBehaviour:
   weaponIndex: 0
   playerWeaponChooseScript: {fileID: 0}
   inputReader: {fileID: 0}
---- !u!114 &5054769130118231070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8984669081738162747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4044323305a4f544ab7113797566624d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lavaDamageEffect: {fileID: 2100000, guid: 7183b76dc736e6e42b1671ea2867cd4e, type: 2}
-  projectileDamageEffect: {fileID: 2100000, guid: 2d86d0720ab2218448f1f90b7bda6f36, type: 2}
-  healthEffect: {fileID: 2100000, guid: 7a6c36e41b40d5a41af283e281ca271e, type: 2}
-  maxHealth: 200
-  health: 0
-  healthBarImage: {fileID: 0}
 --- !u!1 &9020958556680679936
 GameObject:
   m_ObjectHideFlags: 0
