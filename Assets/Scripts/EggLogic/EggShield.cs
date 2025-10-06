@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 using UnityEngine.Rendering;
+using UnityEngine.VFX;
 
 public class EggShield : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EggShield : MonoBehaviour
     [SerializeField] float timeToAppear;
     [SerializeField] float maxGlowWhenHit;
     [SerializeField] float timeForGlowToFadeOut;
+    [SerializeField] VisualEffect vfx;
     Coroutine eggGetHitCoroutine;
     private MaterialPropertyBlock block;
 
@@ -52,11 +54,13 @@ public class EggShield : MonoBehaviour
     public void Desintegrate()
     {
         StartCoroutine("DesintegrateCoroutine");
+        vfx.Stop();
     }
 
     public void Appear()
     {
         StartCoroutine("AppearCoroutine");
+        vfx.Play();
     }
 
     public void GetHit()
