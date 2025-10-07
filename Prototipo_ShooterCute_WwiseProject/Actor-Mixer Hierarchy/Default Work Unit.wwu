@@ -569,6 +569,108 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{5441150D-5FE2-4A22-B873-F9292A6399BF}" ShortID="888078412">
+					<ChildrenList>
+						<Sound Name="UI_Button_Normal" ID="{53B92A31-78B6-4974-8F4D-4ACD1D2B2E48}" ShortID="952060930">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Normal" ID="{AA6890E6-9C9C-4EED-AF4F-461075BAD8E3}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Normal.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="69972425"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Normal" ID="{AA6890E6-9C9C-4EED-AF4F-461075BAD8E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Button_Special" ID="{5017CE95-0ADF-46ED-874B-C3F79146CC94}" ShortID="563087847">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Special" ID="{56022795-00D8-46FD-B38B-E5942F99C0C8}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Special.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="472405016"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Special" ID="{56022795-00D8-46FD-B38B-E5942F99C0C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{5AA18C35-3A0D-49D7-B4B7-EA3E62425E32}" ShortID="352447747">
+					<ChildrenList>
+						<Sound Name="Ambient_Wind" ID="{75CE978D-40FA-4FF3-B1E0-072AC11D25FF}" ShortID="15551451">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Wind" ID="{12546B3E-114A-4EF6-968F-287CD44C6DF7}">
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Wind.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="893337246"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Wind" ID="{12546B3E-114A-4EF6-968F-287CD44C6DF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambient_Lava" ID="{30B3363E-B2D3-4C08-A7AA-F32FB1E55036}" ShortID="95699721">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Lava" ID="{6A16E195-280D-4057-88F4-8B293DCA8C58}">
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Lava.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="746078826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Lava" ID="{6A16E195-280D-4057-88F4-8B293DCA8C58}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
