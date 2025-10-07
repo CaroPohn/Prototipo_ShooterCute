@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID AMBIENT_WIND = 1410046624U;
         static const AkUniqueID EGG_ENERGYORB_IMPACT = 1380174867U;
         static const AkUniqueID EGG_LEVITATE = 1242907925U;
+        static const AkUniqueID EGG_PICKUP = 1485126323U;
         static const AkUniqueID EGG_SHIELDACTIVATE = 16747207U;
         static const AkUniqueID EGG_SHIELDDESTROY = 1126770210U;
         static const AkUniqueID ENEMY_DEATH = 1205999388U;
@@ -60,6 +61,22 @@ namespace AK
         static const AkUniqueID UI_SLIDER = 3987036369U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace PLAYER_BURN
+        {
+            static const AkUniqueID GROUP = 3890490206U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BURNING = 3518279182U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID NOT_BURNING = 4104232280U;
+            } // namespace STATE
+        } // namespace PLAYER_BURN
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace FOOTSTEP_SURFACE
@@ -75,6 +92,11 @@ namespace AK
         } // namespace FOOTSTEP_SURFACE
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID CROSSFADE = 1369808713U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

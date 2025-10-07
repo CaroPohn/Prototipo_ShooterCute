@@ -14,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1403130241	Player_Shoot_Basic			\Default Work Unit\Player\Player_Shoot_Basic	
 	1410046624	Ambient_Wind			\Default Work Unit\Ambient\Ambient_Wind	
 	1479913785	Music_Stinger_Defeat			\Default Work Unit\Music\Music_Stinger_Defeat	
+	1485126323	Egg_PickUp			\Default Work Unit\Egg\Egg_PickUp	
 	1512820010	Lumming_Idle_FireInteraction			\Default Work Unit\Lumming\Lumming_Idle_FireInteraction	
 	1530017751	Enemy_Footstep_Baby			\Default Work Unit\Enemy\Enemy_Footstep_Baby	
 	1598298728	Music_Menu			\Default Work Unit\Music\Music_Menu	
@@ -46,14 +47,21 @@ Event	ID	Name			Wwise Object Path	Notes
 	4275106484	Ambient_Lava			\Default Work Unit\Ambient\Ambient_Lava	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	46972610	Jump_Female_3	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\D2\{D2958767-49DC-7D84-DB70-CCFFAB22279C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_3		50492
-	186764387	Jump_Female_1	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\9A\{9A9A8563-6C7B-A325-7554-EF136484BF55}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_1		60564
-	256724536	Egg_Levitate_Loop	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\05\{05501B35-7B55-36FF-2076-FA2DC7102817}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_Levitate_Loop		941868
-	350513898	Jump_Female_2	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\48\{48F3D9A8-80B5-4639-4A52-7951E28AD322}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_2		59360
-	414879116	Player_Burn_Start	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\2F\{2F3129C6-DBB9-B3B4-12C2-70911D8DCEA3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Burn_Start		696112
-	430104771	Jump_Female_4	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\9C\{9CD00CFD-E49B-0441-AEEE-D4DBFFB27CB2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_4		50624
-	593695515	Jump_Female_5	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\FA\{FA16A6CC-88A0-22AC-538B-A27AECE51FB4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_5		59188
-	642849261	Player_Burn_End	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\12\{128FA1E6-EBEF-49BA-D864-00241ED3FF13}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Burn_End		587644
-	662917913	Egg_ShieldActivate	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\84\{84E34095-26CE-A387-9DF3-1CAFF96161E1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_ShieldActivate		348944
-	713406130	Egg_Levitate_Stop	Y:\Documents\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C6\{C68B64B9-A01B-93AB-AC6D-0D04B6B1E1D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_Levitate_Stop		836308
+	46972610	Jump_Female_3	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\D2\{D2958767-49DC-7D84-DB70-CCFFAB22279C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_3		50492
+	69972425	UI_Button_Normal	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\50\{50002628-A277-EDDB-B485-C2C8CF1EA460}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Button_Normal		82680
+	186764387	Jump_Female_1	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\9A\{9A9A8563-6C7B-A325-7554-EF136484BF55}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_1		60564
+	256724536	Egg_Levitate	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\E9\{E951B9C8-5473-1649-0BD7-7D307C00EE35}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_Levitate		941868
+	350513898	Jump_Female_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\48\{48F3D9A8-80B5-4639-4A52-7951E28AD322}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_2		59360
+	414879116	Player_Burn_Start	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\88\{880AAAC1-41D4-47CE-260D-A5516E6F225E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Burn_Start		696112
+	430104771	Jump_Female_4	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\9C\{9CD00CFD-E49B-0441-AEEE-D4DBFFB27CB2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_4		50624
+	472405016	UI_Button_Special	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\D4\{D4FDACC7-303F-4CDD-870F-334B2DDF6CA0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Button_Special		23800
+	507842327	Lumming_Levitate	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\0B\{0B5FF4E4-A563-ECD3-A2B3-98C6CE6E6B89}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lumming\Lumming_Levitate		548084
+	593695515	Jump_Female_5	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\FA\{FA16A6CC-88A0-22AC-538B-A27AECE51FB4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Jump_Female_5		59188
+	642849261	Player_Burn_End	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C5\{C5AEDCED-824E-0AB5-9C5E-FB5FEFCABE8D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Burn_End		587644
+	662917913	Egg_ShieldActivate	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\84\{84E34095-26CE-A387-9DF3-1CAFF96161E1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_ShieldActivate		348944
+	713406130	Egg_PickUp	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C6\{C68B64B9-A01B-93AB-AC6D-0D04B6B1E1D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_PickUp		836308
+	746078826	Ambient_Lava	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\ED\{ED59F7DD-2AE6-40A7-0130-27B0BFC72192}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ambient_Lava		11424272
+	780748996	Lumming_Heal	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\0F\{0FAA7CA3-836A-DE47-3D67-36DBDEDB2FD6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lumming\Lumming_Heal		462096
+	785818676	Player_Shoot_Basic	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C4\{C4E6D90D-A75E-D408-3B8C-D957B8178DFE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Basic		112660
+	893337246	Ambient_Wind	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\5A\{5A7D0016-0F90-4E3A-3618-74E1255F78DE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ambient_Wind		11328096
 

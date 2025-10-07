@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{E8C73C05-9AC5-A17E-EA11-491BBCB2A45E}",
+    "Hash": "{352463BC-F1D1-B034-D12E-E1BC2872442C}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -40,6 +40,42 @@
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1369808713",
+      "Name": "Crossfade",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Crossfade",
+      "GUID": "{619A51BF-E357-4C71-AF72-E0B3F376A6A6}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3890490206",
+      "Name": "Player_Burn",
+      "ObjectPath": "\\States\\Default Work Unit\\Player_Burn",
+      "GUID": "{23C13519-1B8E-4316-8173-09451ABD9196}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\None",
+        "GUID": "{969935EA-A88C-4E42-98FE-FB63A559FF5D}"
+       },
+       {
+        "Id": "3518279182",
+        "Name": "Burning",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Burning",
+        "GUID": "{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"
+       },
+       {
+        "Id": "4104232280",
+        "Name": "Not_Burning",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Not_Burning",
+        "GUID": "{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
@@ -72,6 +108,6 @@
     ]
    }
   ],
-  "FileHash": "{6CE2BB32-2FA4-36D5-D78C-5FD91C2E815E}"
+  "FileHash": "{40BE7C99-3888-FD71-A730-9DB361D7479C}"
  }
 }
