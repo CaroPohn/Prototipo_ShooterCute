@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{7D1E5115-D4F0-4D7B-7EB2-9CEB63239C80}",
+    "Hash": "{1B44CE83-487F-9080-C114-B267F2BA33C9}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -198,16 +198,6 @@
       ]
      },
      {
-      "Id": "1380174867",
-      "Name": "Egg_EnergyOrb_Impact",
-      "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_EnergyOrb_Impact",
-      "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
       "Id": "1242907925",
       "Name": "Egg_Levitate",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Levitate",
@@ -255,6 +245,16 @@
       "Name": "Egg_ShieldDestroy",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldDestroy",
       "GUID": "{87296857-A859-4A3B-87B2-F20E2D2D9FC4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3220447791",
+      "Name": "Egg_Soul_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
+      "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -603,16 +603,6 @@
       "DurationMax": "0"
      },
      {
-      "Id": "4087982520",
-      "Name": "Projectile_EnergyOrb_Deploy",
-      "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_EnergyOrb_Deploy",
-      "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
       "Id": "950925848",
       "Name": "Projectile_Hit_BasicProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_BasicProjectile",
@@ -627,6 +617,16 @@
       "Name": "Projectile_Hit_ElectricProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_ElectricProjectile",
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2994932292",
+      "Name": "Projectile_Soul_Deploy",
+      "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Soul_Deploy",
+      "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -673,6 +673,6 @@
     ]
    }
   ],
-  "FileHash": "{87787526-BED2-065D-EA37-929F65383035}"
+  "FileHash": "{4A3247E4-D5DD-DD2E-E936-439AD7ABE345}"
  }
 }
