@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5E1CFD9D-6454-49E8-A283-806F46A94016}" SchemaVersion="123">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{5E1CFD9D-6454-49E8-A283-806F46A94016}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5E1CFD9D-6454-49E8-A283-806F46A94016}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Player_Burn" ID="{23C13519-1B8E-4316-8173-09451ABD9196}">
+					<ChildrenList>
+						<State Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
+						<State Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
+							<EndState Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

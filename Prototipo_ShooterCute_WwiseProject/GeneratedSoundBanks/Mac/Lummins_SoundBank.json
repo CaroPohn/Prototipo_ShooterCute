@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{4D73E198-4D81-40FD-1933-A55A41A1567F}",
+    "Hash": "{94C95400-D969-184D-CC18-81B0CC92FA49}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -32,12 +32,28 @@
       "CachePath": "9A/{9A9A8563-6C7B-A325-7554-EF136484BF55}.wem"
      },
      {
+      "Id": "256724536",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Egg_Levitate_Loop.wav",
+      "CachePath": "05/{05501B35-7B55-36FF-2076-FA2DC7102817}.wem"
+     },
+     {
       "Id": "350513898",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Jump_Female_2.wav",
       "CachePath": "48/{48F3D9A8-80B5-4639-4A52-7951E28AD322}.wem"
+     },
+     {
+      "Id": "414879116",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Burn_Start.wav",
+      "CachePath": "2F/{2F3129C6-DBB9-B3B4-12C2-70911D8DCEA3}.wem"
      },
      {
       "Id": "430104771",
@@ -54,6 +70,30 @@
       "Location": "Memory",
       "ShortName": "Jump_Female_5.wav",
       "CachePath": "FA/{FA16A6CC-88A0-22AC-538B-A27AECE51FB4}.wem"
+     },
+     {
+      "Id": "642849261",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Burn_End.wav",
+      "CachePath": "12/{128FA1E6-EBEF-49BA-D864-00241ED3FF13}.wem"
+     },
+     {
+      "Id": "662917913",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Egg_ShieldActivate.wav",
+      "CachePath": "84/{84E34095-26CE-A387-9DF3-1CAFF96161E1}.wem"
+     },
+     {
+      "Id": "713406130",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Egg_Levitate_Stop.wav",
+      "CachePath": "C6/{C68B64B9-A01B-93AB-AC6D-0D04B6B1E1D9}.wem"
      }
     ],
     "Events": [
@@ -112,20 +152,29 @@
       "Name": "Egg_Levitate",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Levitate",
       "GUID": "{86CEEACD-B2E3-4BB2-AC46-554026C847F3}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "256724536"
+       }
+      ]
      },
      {
       "Id": "16747207",
       "Name": "Egg_ShieldActivate",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldActivate",
       "GUID": "{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "4.355271",
+      "DurationMax": "4.355271",
+      "MediaRefs": [
+       {
+        "Id": "662917913"
+       },
+       {
+        "Id": "713406130"
+       }
+      ]
      },
      {
       "Id": "1126770210",
@@ -372,20 +421,26 @@
       "Name": "Player_Burn_End",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn_End",
       "GUID": "{9E95A55F-4091-47C4-880F-8994F6962664}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "3.0601459",
+      "DurationMax": "3.0601459",
+      "MediaRefs": [
+       {
+        "Id": "642849261"
+       }
+      ]
      },
      {
       "Id": "3765143639",
       "Name": "Player_Burn_Start",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn_Start",
       "GUID": "{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "414879116"
+       }
+      ]
      },
      {
       "Id": "2453392179",
@@ -526,6 +581,6 @@
     ]
    }
   ],
-  "FileHash": "{D855C65E-DCCA-F89D-ED29-DFBCC1ABD8E0}"
+  "FileHash": "{81C2BEEB-54AA-5327-12D7-D81835975653}"
  }
 }
