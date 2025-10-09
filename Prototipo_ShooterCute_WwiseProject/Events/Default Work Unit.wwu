@@ -31,34 +31,12 @@
 						</Event>
 						<Event Name="Player_ShootCharge_Electric" ID="{84768FD9-4248-43E5-9833-69D4D2280890}"/>
 						<Event Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}"/>
-						<Event Name="Player_Burn_Start" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}">
+						<Event Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}">
 							<ChildrenList>
-								<Action Name="" ID="{BC429E9C-58C5-405B-81C4-0414CE38C0AB}" ShortID="812302024">
+								<Action Name="" ID="{9F8EFD7E-0A27-4D69-89CA-317EE5F47776}" ShortID="210706161">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Player_Burn_End" ID="{9E95A55F-4091-47C4-880F-8994F6962664}">
-							<ChildrenList>
-								<Action Name="" ID="{249D53B2-BA9F-4C27-A846-FD3C542A2A88}" ShortID="297896665">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{5208B434-F122-4FCD-83D9-37317A697AA5}" ShortID="159109920">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -136,28 +114,10 @@
 						</Event>
 						<Event Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}">
 							<ChildrenList>
-								<Action Name="" ID="{D1405B07-70E4-4205-A101-59D271B2BAEC}" ShortID="771140278">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Egg_Levitate" ID="{6D01CEF8-2AAA-4865-99A1-B12F8647EE5E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{78EF98E5-A84B-4F64-A3A0-60CC5A062BC0}" ShortID="1033925054">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Egg_ShieldActivate" ID="{4FC27C1B-0F30-4AF5-8039-B64D177E1D57}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{2EBB3061-0F8A-4065-B90D-061791576B3D}" ShortID="1036281940">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Egg_PickUp" ID="{46406A73-3B6F-43EB-9F56-13E11A462D30}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -170,7 +130,22 @@
 								<Action Name="" ID="{E98E7AD4-655A-495B-AFAC-E24D3279765E}" ShortID="375717160">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Egg_PickUp" ID="{46406A73-3B6F-43EB-9F56-13E11A462D30}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Egg_Pickup" ID="{8EAD8189-E174-4E35-BD52-623811063845}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CEF44857-245C-4268-B886-39A50DA1B1C1}" ShortID="905968191">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Egg_Levitate" ID="{6D01CEF8-2AAA-4865-99A1-B12F8647EE5E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -246,7 +221,27 @@
 				</Folder>
 				<Folder Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" ShortID="666977553">
 					<ChildrenList>
-						<Event Name="Projectile_Hit_BasicProjectile" ID="{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}"/>
+						<Event Name="Projectile_Hit_BasicProjectile" ID="{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}">
+							<ChildrenList>
+								<Action Name="" ID="{BC864246-3BF2-4817-8EB2-A30A9BECB15D}" ShortID="1000969021">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Projectile_Hit_BasicProjectile" ID="{A545B015-0BC7-4C71-9F82-0D8B76DF95F6}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D8D2AAEB-7041-40E4-B640-181CFFFF2547}" ShortID="153596884">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
 						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}"/>
 					</ChildrenList>

@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{5E1CFD9D-6454-49E8-A283-806F46A94016}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="Player_Burn" ID="{23C13519-1B8E-4316-8173-09451ABD9196}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
 						<State Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
@@ -12,7 +15,7 @@
 					<TransitionList>
 						<Transition>
 							<StartState Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
-							<EndState Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
+							<EndState Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
 							<Time>1</Time>
 							<IsShared>false</IsShared>
 						</Transition>
