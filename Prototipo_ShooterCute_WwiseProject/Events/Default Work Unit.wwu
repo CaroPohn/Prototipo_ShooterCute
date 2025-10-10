@@ -30,7 +30,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_ShootCharge_Electric" ID="{84768FD9-4248-43E5-9833-69D4D2280890}"/>
-						<Event Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}"/>
+						<Event Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}">
+							<ChildrenList>
+								<Action Name="" ID="{1A896F95-3B3F-43BB-B6E1-CEABCC329F11}" ShortID="430272386">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}">
 							<ChildrenList>
 								<Action Name="" ID="{9F8EFD7E-0A27-4D69-89CA-317EE5F47776}" ShortID="210706161">
@@ -242,7 +252,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
+						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}">
+							<ChildrenList>
+								<Action Name="" ID="{C516AD1B-69FF-4E90-9FB0-8A18149FB817}" ShortID="513621292">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Projectile_Hit_ElectricProjectile" ID="{1263374B-9248-4DE4-A9BF-7D6DB8AF7FE6}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{998798F3-A0D2-4D5F-99FF-3974660D9391}" ShortID="342676911">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}"/>
 					</ChildrenList>
 				</Folder>

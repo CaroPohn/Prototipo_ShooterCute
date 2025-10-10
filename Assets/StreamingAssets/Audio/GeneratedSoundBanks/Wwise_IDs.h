@@ -45,8 +45,7 @@ namespace AK
         static const AkUniqueID MUSIC_MENU = 1598298728U;
         static const AkUniqueID MUSIC_STINGER_DEFEAT = 1479913785U;
         static const AkUniqueID MUSIC_STINGER_VICTORY = 4254684058U;
-        static const AkUniqueID PLAYER_BURN_END = 2460254372U;
-        static const AkUniqueID PLAYER_BURN_START = 3765143639U;
+        static const AkUniqueID PLAYER_BURN = 3890490206U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_SHOOT_BASIC = 1403130241U;

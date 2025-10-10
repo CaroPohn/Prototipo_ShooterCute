@@ -42,8 +42,16 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -53,7 +61,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
+						<CurrentStateRef Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

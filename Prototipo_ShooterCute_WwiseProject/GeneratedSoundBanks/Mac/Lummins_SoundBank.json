@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{1B44CE83-487F-9080-C114-B267F2BA33C9}",
+    "Hash": "{BEBDF084-FBDC-1BAF-2CA8-CFD0A426E054}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -40,12 +40,28 @@
       "CachePath": "9A/{9A9A8563-6C7B-A325-7554-EF136484BF55}.wem"
      },
      {
+      "Id": "225716251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Shoot_Electric.wav",
+      "CachePath": "4F/{4F2F61AB-5C5F-079B-37CD-412FF2B99E6C}.wem"
+     },
+     {
       "Id": "256724536",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_Levitate_Loop.wav",
       "CachePath": "E9/{E951B9C8-5473-1649-0BD7-7D307C00EE35}.wem"
+     },
+     {
+      "Id": "327166184",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_ElectricProjectile.wav",
+      "CachePath": "A7/{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem"
      },
      {
       "Id": "350513898",
@@ -62,6 +78,14 @@
       "Location": "Memory",
       "ShortName": "Player_Burn_Start.wav",
       "CachePath": "88/{880AAAC1-41D4-47CE-260D-A5516E6F225E}.wem"
+     },
+     {
+      "Id": "426256890",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Shoot_Electric2.wav",
+      "CachePath": "2E/{2E574D82-C9D0-58F1-2399-9271339995E8}.wem"
      },
      {
       "Id": "430104771",
@@ -88,6 +112,22 @@
       "CachePath": "0B/{0B5FF4E4-A563-ECD3-A2B3-98C6CE6E6B89}.wem"
      },
      {
+      "Id": "538417311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_BasicProjectile.wav",
+      "CachePath": "98/{989EDC40-6280-C954-EC90-E1276D5269D8}.wem"
+     },
+     {
+      "Id": "541912967",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Egg_Pickup.wav",
+      "CachePath": "41/{41F572B5-4234-8E3D-8370-CF0B68793326}.wem"
+     },
+     {
       "Id": "593695515",
       "Language": "SFX",
       "Streaming": "false",
@@ -112,12 +152,12 @@
       "CachePath": "84/{84E34095-26CE-A387-9DF3-1CAFF96161E1}.wem"
      },
      {
-      "Id": "713406130",
+      "Id": "673550933",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Egg_Levitate_Stop.wav",
-      "CachePath": "C6/{C68B64B9-A01B-93AB-AC6D-0D04B6B1E1D9}.wem"
+      "ShortName": "Projectile_Hit_ElectricProjectile2.wav",
+      "CachePath": "EC/{EC22A23E-2203-169C-95AC-CF6A5433E158}.wem"
      },
      {
       "Id": "746078826",
@@ -150,6 +190,14 @@
       "Location": "Memory",
       "ShortName": "Ambient_Wind.wav",
       "CachePath": "5A/{5A7D0016-0F90-4E3A-3618-74E1255F78DE}.wem"
+     },
+     {
+      "Id": "937047025",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_BasicProjectile2.wav",
+      "CachePath": "42/{42F89C5D-71B8-77F8-1804-865BCBC65F52}.wem"
      }
     ],
     "Events": [
@@ -215,11 +263,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_PickUp",
       "GUID": "{597FB879-0D5F-49DA-9FF4-C30590A92459}",
       "DurationType": "OneShot",
-      "DurationMin": "4.355271",
-      "DurationMax": "4.355271",
+      "DurationMin": "6.386098",
+      "DurationMax": "6.386098",
       "MediaRefs": [
        {
-        "Id": "713406130"
+        "Id": "541912967"
        }
       ]
      },
@@ -229,14 +277,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldActivate",
       "GUID": "{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}",
       "DurationType": "OneShot",
-      "DurationMin": "4.355271",
-      "DurationMax": "4.355271",
+      "DurationMin": "1.8169167",
+      "DurationMax": "1.8169167",
       "MediaRefs": [
        {
         "Id": "662917913"
-       },
-       {
-        "Id": "713406130"
        }
       ]
      },
@@ -497,28 +542,37 @@
       "DurationMax": "0"
      },
      {
-      "Id": "2460254372",
-      "Name": "Player_Burn_End",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn_End",
-      "GUID": "{9E95A55F-4091-47C4-880F-8994F6962664}",
-      "DurationType": "OneShot",
-      "DurationMin": "3.0601459",
-      "DurationMax": "3.0601459",
-      "MediaRefs": [
-       {
-        "Id": "642849261"
-       }
-      ]
-     },
-     {
-      "Id": "3765143639",
-      "Name": "Player_Burn_Start",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn_Start",
+      "Id": "3890490206",
+      "Name": "Player_Burn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn",
       "GUID": "{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}",
       "DurationType": "Infinite",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "414879116"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3890490206",
+         "Id": "4104232280",
+         "GUID": "{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "642849261"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3890490206",
+         "Id": "3518279182",
+         "GUID": "{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "414879116"
+         }
+        ]
        }
       ]
      },
@@ -577,10 +631,17 @@
       "Name": "Player_Shoot_Electric",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Shoot_Electric",
       "GUID": "{DFF5F983-0297-41A1-87F3-D82108E3F654}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.9808313",
+      "DurationMax": "1.4656179",
+      "MediaRefs": [
+       {
+        "Id": "225716251"
+       },
+       {
+        "Id": "426256890"
+       }
+      ]
      },
      {
       "Id": "3840296224",
@@ -607,20 +668,34 @@
       "Name": "Projectile_Hit_BasicProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_BasicProjectile",
       "GUID": "{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.0426576",
+      "DurationMax": "1.2776903",
+      "MediaRefs": [
+       {
+        "Id": "538417311"
+       },
+       {
+        "Id": "937047025"
+       }
+      ]
      },
      {
       "Id": "3600532549",
       "Name": "Projectile_Hit_ElectricProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_ElectricProjectile",
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.640625",
+      "DurationMax": "2.640625",
+      "MediaRefs": [
+       {
+        "Id": "327166184"
+       },
+       {
+        "Id": "673550933"
+       }
+      ]
      },
      {
       "Id": "2994932292",
@@ -670,9 +745,37 @@
       "DurationMin": "0",
       "DurationMax": "0"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3890490206",
+      "Name": "Player_Burn",
+      "ObjectPath": "\\States\\Default Work Unit\\Player_Burn",
+      "GUID": "{23C13519-1B8E-4316-8173-09451ABD9196}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\None",
+        "GUID": "{969935EA-A88C-4E42-98FE-FB63A559FF5D}"
+       },
+       {
+        "Id": "3518279182",
+        "Name": "Burning",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Burning",
+        "GUID": "{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"
+       },
+       {
+        "Id": "4104232280",
+        "Name": "Not_Burning",
+        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Not_Burning",
+        "GUID": "{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{263D1D86-7BEE-3333-90A3-10358B62A021}"
+  "FileHash": "{B4A9C7E4-FAD1-86D5-C70B-90AA349B070D}"
  }
 }
