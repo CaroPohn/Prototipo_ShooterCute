@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,6 +15,8 @@ public class PatrolEnemy : MonoBehaviour
     [Header("Shoot")]
     [SerializeField] private Transform shootPoint;
     [SerializeField] private GameObject projectilePrefab;
+
+    private List<Collider> enemyColliders;
 
     [SerializeField] private EnemyAnimationHandler enemyAnimationHandler;
 
@@ -31,6 +34,8 @@ public class PatrolEnemy : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -59,6 +64,14 @@ public class PatrolEnemy : MonoBehaviour
         {
             projScript.SetDamage(damage);
             projScript.SetDirection(direction);
+        }
+    }
+
+    public void DeactivateColliders()
+    {
+        foreach (Collider collider in enemyColliders)
+        {
+            collider.enabled = false;
         }
     }
 
