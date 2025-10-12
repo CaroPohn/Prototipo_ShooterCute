@@ -140,15 +140,18 @@ public class ZapGun : Gun
         int winLayer = LayerMask.NameToLayer("WinCollider");
         int playerLayer = LayerMask.NameToLayer("Player");
 
+        bool hitSomething = false;
+
         foreach (RaycastHit hit in hits)
         {
             if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer)
                 continue;
 
+            hitSomething = true;
             hitDistance = Vector3.Distance(hit.point, shootPoint);
 
-            Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            hitPointEffect.Play();
+            VisualEffect newHitVFX = Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            newHitVFX.Play();
 
             HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
@@ -157,6 +160,15 @@ public class ZapGun : Gun
             }
 
             break;
+        }
+
+        if (!hitSomething)
+        {
+            Vector3 endPoint = ray.origin + ray.direction * range;
+            hitDistance = range;
+
+            VisualEffect newHitVFX = Instantiate(hitPointEffect, endPoint, Quaternion.LookRotation(-ray.direction));
+            newHitVFX.Play();
         }
 
         if (activeMuzzleEffect != null)
