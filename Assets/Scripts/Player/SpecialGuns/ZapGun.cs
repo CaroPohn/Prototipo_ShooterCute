@@ -110,6 +110,7 @@ public class ZapGun : Gun
 
             armsAnimator.SetBool(armsAnimationName, false);
 
+            Debug.Log("Release");
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
             lastShootTime = Time.time;
@@ -123,19 +124,16 @@ public class ZapGun : Gun
 
         Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 
-        Debug.DrawRay(ray.origin, ray.direction * range, Color.red, 1f);
-
         RaycastHit[] hits = Physics.RaycastAll(ray, range);
 
         System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
         int winLayer = LayerMask.NameToLayer("WinCollider");
         int playerLayer = LayerMask.NameToLayer("Player");
-        int worldLayer = LayerMask.NameToLayer("WorldCollider");
 
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == worldLayer)
+            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer)
                 continue;
 
             hitDistance = Vector3.Distance(hit.point, shootPoint);
