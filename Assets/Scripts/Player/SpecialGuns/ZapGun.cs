@@ -118,7 +118,6 @@ public class ZapGun : Gun
 
             Shoot();
 
-            Debug.Log("Release");
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
             lastShootTime = Time.time;

@@ -26,6 +26,8 @@ public class BombFriendSystem : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private Collider bombCollider;
+
     private GameObject playerGO;
     private WeaponChanger weaponChangerScript;
 
@@ -39,15 +41,20 @@ public class BombFriendSystem : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        bombCollider = GetComponent<Collider>();
 
         agent.enabled = false;
+        bombCollider.enabled = false;
 
         playerGO = GameObject.FindGameObjectWithTag("Player");
         weaponChangerScript = playerGO.GetComponent<WeaponChanger>();
 
         player = transform.parent;
 
+        Debug.Log(transform.parent.name);
+
         parentTransform = transform.parent;
+        transform.position = transform.parent.position;
 
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
@@ -80,6 +87,8 @@ public class BombFriendSystem : MonoBehaviour
     {
         if (isRunning)
         {
+            bombCollider.enabled = true;
+
             transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
 
             timer += Time.deltaTime;
