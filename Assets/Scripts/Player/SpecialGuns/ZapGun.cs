@@ -64,8 +64,11 @@ public class ZapGun : Gun
     {
         if (!levelController.isGamePaused)
         {
-            if (Time.time - lastShootTime >= timeBetweenShots)
-            {
+            //if (Time.time - lastShootTime >= timeBetweenShots)
+            //{
+            if (isHoldingShoot)
+                return;
+
                 zapAnimator.SetBool("Charging", true);
 
                 isHoldingShoot = true;
@@ -74,7 +77,7 @@ public class ZapGun : Gun
                 electric_Gun_VFX_Script.Charge();
 
                 armsAnimator.SetBool(armsAnimationName, true);
-            }
+            //}
         }
     }
 
@@ -82,12 +85,19 @@ public class ZapGun : Gun
     {
         if (!levelController.isGamePaused)
         {
-            if (Time.time - lastShootTime < timeBetweenShots)
+            if (!isHoldingShoot)
                 return;
 
-            zapAnimator.SetBool("Charging", false);
-
             isHoldingShoot = false;
+            zapAnimator.SetBool("Charging", false);
+            armsAnimator.SetBool(armsAnimationName, false);
+
+            if (Time.time - lastShootTime < timeBetweenShots)
+            {
+                electric_Gun_VFX_Script.Release(0, 0);
+                shootHoldTime = 0f;
+                return;
+            }
 
             int damageToDeal = damageLevel1;
 
@@ -108,12 +118,11 @@ public class ZapGun : Gun
 
             Shoot();
 
-            armsAnimator.SetBool(armsAnimationName, false);
-
             Debug.Log("Release");
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
             lastShootTime = Time.time;
+            shootHoldTime = 0f;
         }
     }
 
