@@ -32,6 +32,7 @@ public class LevelController : MonoBehaviour
         WaveManager.OnWinningAllWaves += ActivateEggWinText;
         EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
         inputReader.OnPause += PauseGame;
+        playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
     }
 
     private void OnDisable()

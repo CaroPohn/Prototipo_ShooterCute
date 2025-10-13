@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting.InputSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +15,8 @@ public class GamePause : MonoBehaviour
     [SerializeField] private Canvas pauseCanvas;
 
     [SerializeField] private LevelController levelController;
+
+    public static event Action OnRestartLevel;
 
     private void Start()
     {
@@ -65,6 +69,7 @@ public class GamePause : MonoBehaviour
 
     void Restart()
     {
+        OnRestartLevel?.Invoke();
         SceneLoader.Instance.ChangeScene("SelectionMenu");
     }
 
