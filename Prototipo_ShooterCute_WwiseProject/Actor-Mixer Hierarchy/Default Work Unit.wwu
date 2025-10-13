@@ -978,6 +978,101 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Projectile_Soul_Deploy" ID="{0400C974-2252-4CF5-B219-FB361902EECE}" ShortID="449005521">
+							<PropertyList>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Projectile_Soul_Deploy_End" ID="{7593DF49-DBF5-4A22-8D1D-6F0876DE431E}" ShortID="839305034">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Soul_Deploy_End" ID="{29658F23-593C-4D4C-9F17-1075AB24D975}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Soul_Deploy_End.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059247180"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Soul_Deploy_End" ID="{29658F23-593C-4D4C-9F17-1075AB24D975}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Projectile_Soul_Deploy_Loop" ID="{39B7B2B0-448F-42EF-853C-511423DBADF0}" ShortID="461932434">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Soul_Deploy_Loop" ID="{636D3089-9126-4E46-B384-D1B83137E407}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Soul_Deploy_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="469117519"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Soul_Deploy_Loop" ID="{636D3089-9126-4E46-B384-D1B83137E407}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Projectile_Soul_Deploy_Start" ID="{3CBA5523-338A-4CC6-83F2-3E99BC41CD2C}" ShortID="853943727">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Soul_Deploy_Start" ID="{020B2767-1B26-4873-957E-B87BAC4C6666}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Soul_Deploy_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="532381909"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Soul_Deploy_Start" ID="{020B2767-1B26-4873-957E-B87BAC4C6666}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Projectile_Soul_Deploy_Start" ID="{3CBA5523-338A-4CC6-83F2-3E99BC41CD2C}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Projectile_Soul_Deploy_Loop" ID="{39B7B2B0-448F-42EF-853C-511423DBADF0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Projectile_Soul_Deploy_End" ID="{7593DF49-DBF5-4A22-8D1D-6F0876DE431E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
