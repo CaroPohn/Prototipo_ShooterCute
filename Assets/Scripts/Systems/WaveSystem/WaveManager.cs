@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     public List<Wave> waves;
 
     [SerializeField] private StationWithEggEffects stationEffectsScript;
+    [SerializeField] private Collider stationCollider;
 
     [SerializeField] private TextMeshProUGUI waveText;
 
@@ -60,6 +61,7 @@ public class WaveManager : MonoBehaviour
         { 
             OnWinningAllWaves?.Invoke();
 
+            stationCollider.enabled = false;
             stationEffectsScript.Die();
         }
     }
