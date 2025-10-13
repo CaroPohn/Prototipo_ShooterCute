@@ -10,6 +10,8 @@ public class TestArt : MonoBehaviour
     bool onCooldown = false;
     float timer = 0;
 
+    [SerializeField] ObjectiveUI objectiveUIScript;
+
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space))
@@ -33,5 +35,21 @@ public class TestArt : MonoBehaviour
             fill = timer/cooldown;
         }
         image.fillAmount = Mathf.Clamp(fill,0,1);
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            objectiveUIScript.ShowNewMission("FIND THE EGG", "Locate the endangered Lumming egg");
+
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            objectiveUIScript.ShowNewMission("SURVIVE", "Defend yourself against the Gnutorrs!");
+
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            objectiveUIScript.HideMissionNotification();
+
+        }
     }
 }

@@ -8,15 +8,17 @@ using UnityEngine.Rendering.Universal;
 public class TextWriter : MonoBehaviour
 {
     char fullBlockChar = '\u2588';
-    [SerializeField] string stringToShow = "";
-    [SerializeField] TextMeshProUGUI textMP;
+    public string description;
+    public string title;
+    [SerializeField] TextMeshProUGUI descriptionTMP;
+    [SerializeField] TextMeshProUGUI titleTMP;
     [SerializeField] UnityEngine.Color blockTextColor = UnityEngine.Color.cyan;
     [SerializeField] UnityEngine.Color textColor = UnityEngine.Color.white;
     [SerializeField] float timeToShowText = 0.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //StartCoroutine("WriteDescriptionCoroutine");
+        
     }
 
 
@@ -29,23 +31,29 @@ public class TextWriter : MonoBehaviour
         return "<color=#" + blockTextColor.ToHexString() + ">";
     }
 
-    IEnumerator WriteDescriptionCoroutine()
+    void UpdateTexts()
     {
-        float timeForEachCharacter = (timeToShowText / stringToShow.Length)/2f;
-        int stringLength = stringToShow.Length;
+        StartCoroutine(WriteCoroutine(description, descriptionTMP));
+        StartCoroutine(WriteCoroutine(title, titleTMP));
+    }
+
+    IEnumerator WriteCoroutine(string textToShow, TextMeshProUGUI tmpToWriteTo)
+    {
+        float timeForEachCharacter = (timeToShowText / textToShow.Length)/2f;
+        int stringLength = textToShow.Length;
         string blockString = string.Empty;
         for (int i = 0; i < stringLength; i++)
         {
             blockString += fullBlockChar;
-            textMP.text = blockTextColorToString() + blockString;
+            tmpToWriteTo.text = blockTextColorToString() + blockString;
             yield return new WaitForSeconds(timeForEachCharacter);
         }
-        string descriptionString = string.Empty;
+        string newTextString = string.Empty;
         for (int i = 0; i < stringLength; i++)
         {
             blockString = blockString.Remove(blockString.Length - 1);
-            descriptionString += stringToShow[i];
-            textMP.text = TextColorToString() + descriptionString + blockTextColorToString() + blockString;
+            newTextString += textToShow[i];
+            tmpToWriteTo.text = TextColorToString() + newTextString + blockTextColorToString() + blockString;
             yield return new WaitForSeconds(timeForEachCharacter);
         }
     }
