@@ -9,6 +9,8 @@ public class ElectricAbility : MonoBehaviour
     public GameObject player;
     private WeaponChanger weaponChangerScript;
 
+    private Collider zapCollider;
+
     public bool hasAbilityBeenUsed;
 
     private InputReader inputReader;
@@ -23,6 +25,7 @@ public class ElectricAbility : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         weaponChangerScript = player.GetComponent<WeaponChanger>();
+        EnsureComponents();
     }
 
     private void OnEnable()
@@ -30,11 +33,23 @@ public class ElectricAbility : MonoBehaviour
         inputReader.OnShoot += AttemptLaunchProjectile;
 
         hasAbilityBeenUsed = false;
+
+        EnsureComponents();
+
+        zapCollider.enabled = false;
     }
 
     private void OnDisable()
     {
         inputReader.OnShoot -= AttemptLaunchProjectile;
+    }
+
+    private void EnsureComponents()
+    {
+        if (zapCollider == null)
+        {
+            zapCollider = GetComponent<Collider>();
+        }
     }
 
     private void AttemptLaunchProjectile()
@@ -48,6 +63,7 @@ public class ElectricAbility : MonoBehaviour
     private void LaunchProjectile()
     {
         hasAbilityBeenUsed = true;
+        zapCollider.enabled = true;
 
         Rigidbody rb = GetComponent<Rigidbody>();
 
