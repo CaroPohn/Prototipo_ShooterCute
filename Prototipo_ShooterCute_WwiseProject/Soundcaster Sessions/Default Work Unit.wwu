@@ -22,10 +22,6 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
-							<Position X="0" Y="4"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -51,6 +47,10 @@
 						</Module>
 						<Module>
 							<ObjectRef Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
@@ -65,7 +65,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
+						<CurrentStateRef Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

@@ -133,14 +133,24 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}"/>
+						<Event Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}">
+							<ChildrenList>
+								<Action Name="" ID="{214D7B65-05EE-44B5-A587-211A23EFDC3F}" ShortID="942343375">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}"/>
 						<Event Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}">
 							<ChildrenList>
 								<Action Name="" ID="{E98E7AD4-655A-495B-AFAC-E24D3279765E}" ShortID="375717160">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Egg_Pickup" ID="{8EAD8189-E174-4E35-BD52-623811063845}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Egg_Pickup" ID="{F460D24C-0706-48AA-849B-F66A10ED91E9}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
