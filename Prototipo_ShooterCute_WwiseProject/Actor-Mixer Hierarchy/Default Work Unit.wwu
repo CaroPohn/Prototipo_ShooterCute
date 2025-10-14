@@ -903,6 +903,36 @@
 								<ActiveSource Name="Ambient_DistantImpacts" ID="{2813E4D1-9827-4329-A1CD-C61A6A559581}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Ambient_Collapse" ID="{E0746827-F003-430A-986D-DD477216DBCD}" ShortID="590881798">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Collapse" ID="{260B5EB4-BFB3-4AA6-8029-AA83544B7638}">
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Collapse.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="184096320"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Collapse" ID="{260B5EB4-BFB3-4AA6-8029-AA83544B7638}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Projectile" ID="{0E720DD8-BA51-4423-B66D-F49A6AAFE95A}" ShortID="62019152">

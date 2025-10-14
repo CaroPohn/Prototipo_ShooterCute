@@ -219,7 +219,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Ambient_Collapse" ID="{D63FA170-E634-428D-A49C-1FEEED4E94DC}"/>
+						<Event Name="Ambient_Collapse" ID="{D63FA170-E634-428D-A49C-1FEEED4E94DC}">
+							<ChildrenList>
+								<Action Name="" ID="{B8450105-2DD1-41FE-996A-AFEBEBF0DF65}" ShortID="254581468">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient_Collapse" ID="{E0746827-F003-430A-986D-DD477216DBCD}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" ShortID="952974412">

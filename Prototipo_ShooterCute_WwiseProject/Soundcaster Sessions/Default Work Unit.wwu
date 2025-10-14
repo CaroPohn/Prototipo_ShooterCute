@@ -22,6 +22,10 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -38,7 +42,7 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<ObjectRef Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
@@ -50,7 +54,7 @@
 							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<ObjectRef Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
@@ -58,7 +62,7 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<ObjectRef Name="Ambient_Collapse" ID="{D63FA170-E634-428D-A49C-1FEEED4E94DC}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
 							<Position X="3" Y="3"/>
 						</Module>
 					</ModuleList>
