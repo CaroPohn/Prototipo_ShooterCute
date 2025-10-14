@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponChanger : MonoBehaviour 
+public class WeaponChanger : MonoBehaviour
 {
     [SerializeField] private GameObject arms;
 
@@ -13,7 +13,7 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] public Image FillAbilityImage;
 
-    public float timer; 
+    public float timer;
 
     public int weaponIndex;
 
@@ -21,6 +21,8 @@ public class WeaponChanger : MonoBehaviour
     private string abilityName;
 
     [SerializeField] private PlayerWeaponChoose playerWeaponChooseScript;
+
+    [SerializeField] private Animator abilityUIAnim;
 
     [SerializeField] private InputReader inputReader;
 
@@ -58,6 +60,15 @@ public class WeaponChanger : MonoBehaviour
         if (FillAbilityImage.fillAmount <= 1)
         {
             FillAbilityImage.fillAmount += (1f / 10f) * Time.deltaTime;
+        }
+
+        if (timer >= 10.0f)
+        {
+            abilityUIAnim.SetBool("isReady", true);
+        }
+        else
+        {
+            abilityUIAnim.SetBool("isReady", false);
         }
     }
 

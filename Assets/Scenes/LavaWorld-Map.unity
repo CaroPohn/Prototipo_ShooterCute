@@ -13522,6 +13522,11 @@ MonoBehaviour:
   lummingGameplayUI: {fileID: 1643189361}
   fireLumming: {fileID: 21300000, guid: fae81a51b15bb4c40b0f3330916dcaa8, type: 3}
   zapLumming: {fileID: 21300000, guid: 1f8c243afd2b14340ba4b56473481222, type: 3}
+--- !u!95 &1643189364 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 192265519424768931, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
+  m_PrefabInstance: {fileID: 1643189359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1644639629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16125,6 +16130,10 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 200610471}
+    - target: {fileID: 7143203567888084827, guid: 00d856f844494924491df5915920a1b9, type: 3}
+      propertyPath: abilityUIAnim
+      value: 
+      objectReference: {fileID: 1643189364}
     - target: {fileID: 7143203567888084827, guid: 00d856f844494924491df5915920a1b9, type: 3}
       propertyPath: FillAbilityImage
       value: 
