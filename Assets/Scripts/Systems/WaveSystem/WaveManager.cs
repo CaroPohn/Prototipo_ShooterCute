@@ -12,7 +12,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private StationWithEggEffects stationEffectsScript;
     [SerializeField] private Collider stationCollider;
 
-    [SerializeField] private TextMeshProUGUI waveText;
+    [SerializeField] private ObjectiveUI objectiveUI;
 
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
@@ -21,16 +21,17 @@ public class WaveManager : MonoBehaviour
     private bool hasEggInteractedToStartWaves;
 
     public static event Action OnWinningAllWaves;
-    //public static event Action OnNewWave;
 
     private void Start()
     {
         hasEggInteractedToStartWaves = false;
+
+        objectiveUI.ShowNewMission("FIND THE EGG", "Locate the endangered Lumming egg");
     }
 
     private void OnEnable()
     {
-        EggInteraction.OnInteractWithEgg += InteractedWithEgg;
+        EggInteraction.OnInteractWithEgg += InteractedWithEgg; 
     }
 
     private void OnDisable()
@@ -41,16 +42,25 @@ public class WaveManager : MonoBehaviour
     void Update()
     {
         if (!spawningWave && enemiesAlive == 0 && currentWaveIndex < waves.Count && hasEggInteractedToStartWaves)
-        {
+        {        
             StartCoroutine(StartNextWave());
         }
 
         CheckIfPlayerHasWinAllWaves();
     }
 
+    private void ShowSurviveMissionText()
+    {
+        objectiveUI.ShowNewMission("SURVIVE", "Defend yourself against the Gnutorrs!");
+    }
+
     private void InteractedWithEgg()
     {
         hasEggInteractedToStartWaves = true;
+
+        objectiveUI.HideMissionNotification();
+
+        Invoke(nameof(ShowSurviveMissionText), 2f);
 
         stationEffectsScript.Close();
     }
@@ -68,18 +78,9 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator StartNextWave()
     {
-        //OnNewWave?.Invoke();
-
         spawningWave = true;
 
-        waveText.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(2f); 
-
-        waveText.gameObject.SetActive(false);
-
-        yield return new WaitForSeconds(2f); 
-
+        yield return new WaitForSeconds(2f);
 
         Wave wave = waves[currentWaveIndex];
 
