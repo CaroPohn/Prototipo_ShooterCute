@@ -64,8 +64,8 @@ public class HealthSystem : MonoBehaviour
     protected void Die()
     {
         if (patrolEnemy.stopDieAnimation)
-        {          
-            Destroy(gameObject);
+        {
+            effectControllerScript.Dissolve();
         }     
     }
 

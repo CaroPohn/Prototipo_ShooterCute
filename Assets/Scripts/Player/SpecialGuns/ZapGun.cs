@@ -34,6 +34,8 @@ public class ZapGun : Gun
 
     [SerializeField] private LevelController levelController;
 
+    [SerializeField] private Animator zapAnimator;
+
     private int totalDamage;
 
     private VisualEffect activeMuzzleEffect;
@@ -62,15 +64,20 @@ public class ZapGun : Gun
     {
         if (!levelController.isGamePaused)
         {
-            if (Time.time - lastShootTime >= timeBetweenShots)
-            {
+            //if (Time.time - lastShootTime >= timeBetweenShots)
+            //{
+            if (isHoldingShoot)
+                return;
+
+                zapAnimator.SetBool("Charging", true);
+
                 isHoldingShoot = true;
                 shootHoldTime = 0f;
 
                 electric_Gun_VFX_Script.Charge();
 
                 armsAnimator.SetBool(armsAnimationName, true);
-            }
+            //}
         }
     }
 
@@ -78,10 +85,19 @@ public class ZapGun : Gun
     {
         if (!levelController.isGamePaused)
         {
-            if (Time.time - lastShootTime < timeBetweenShots)
+            if (!isHoldingShoot)
                 return;
 
             isHoldingShoot = false;
+            zapAnimator.SetBool("Charging", false);
+            armsAnimator.SetBool(armsAnimationName, false);
+
+            if (Time.time - lastShootTime < timeBetweenShots)
+            {
+                electric_Gun_VFX_Script.Release(0, 0);
+                shootHoldTime = 0f;
+                return;
+            }
 
             int damageToDeal = damageLevel1;
 
@@ -102,11 +118,10 @@ public class ZapGun : Gun
 
             Shoot();
 
-            armsAnimator.SetBool(armsAnimationName, false);
-
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
 
             lastShootTime = Time.time;
+            shootHoldTime = 0f;
         }
     }
 
@@ -117,25 +132,25 @@ public class ZapGun : Gun
 
         Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 
-        Debug.DrawRay(ray.origin, ray.direction * range, Color.red, 1f);
-
         RaycastHit[] hits = Physics.RaycastAll(ray, range);
 
         System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
         int winLayer = LayerMask.NameToLayer("WinCollider");
         int playerLayer = LayerMask.NameToLayer("Player");
-        int worldLayer = LayerMask.NameToLayer("WorldCollider");
+
+        bool hitSomething = false;
 
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == worldLayer)
+            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer)
                 continue;
 
+            hitSomething = true;
             hitDistance = Vector3.Distance(hit.point, shootPoint);
 
-            Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            hitPointEffect.Play();
+            VisualEffect newHitVFX = Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            newHitVFX.Play();
 
             HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
@@ -144,6 +159,15 @@ public class ZapGun : Gun
             }
 
             break;
+        }
+
+        if (!hitSomething)
+        {
+            Vector3 endPoint = ray.origin + ray.direction * range;
+            hitDistance = range;
+
+            VisualEffect newHitVFX = Instantiate(hitPointEffect, endPoint, Quaternion.LookRotation(-ray.direction));
+            newHitVFX.Play();
         }
 
         if (activeMuzzleEffect != null)

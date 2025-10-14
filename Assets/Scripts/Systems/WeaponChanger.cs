@@ -3,8 +3,7 @@ using UnityEngine.UI;
 
 public class WeaponChanger : MonoBehaviour 
 {
-    [SerializeField] GameObject Gun1;
-    [SerializeField] GameObject Gun2;
+    [SerializeField] private GameObject arms;
 
     [SerializeField] private GameObject bomb;
     [SerializeField] private GameObject electric;
@@ -80,10 +79,13 @@ public class WeaponChanger : MonoBehaviour
         {
             if (selectedGun != null)
                 selectedGun.SetActive(true);
+
+            arms.SetActive(true);
         }
         else if (weaponIndex == 2 && timer >= 10.0f)
         {
             selectedGun.SetActive(false);
+            arms.SetActive(false);
         
             if (selectedAbility != null)
             {

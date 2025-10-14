@@ -9,6 +9,8 @@ public class PlayerHealthSystem : MonoBehaviour
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
+    [SerializeField] private Transform spawnPoint;
+
     private float damage = 0.2f;
     private float postExitDuration = 3f;
     private float damageInterval = 0.1f;
@@ -40,11 +42,13 @@ public class PlayerHealthSystem : MonoBehaviour
     private void OnEnable()
     {
         DeathMapLimit.OnExitLava += StartLavaExitDamageCorroutine;
+        GamePause.OnRestartLevel += ResetPlayer;
     }
 
     private void OnDisable()
     {
         DeathMapLimit.OnExitLava -= StartLavaExitDamageCorroutine;
+        GamePause.OnRestartLevel -= ResetPlayer;
     }
 
     private void Update()
@@ -68,13 +72,20 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             health = 0;
 
-            playerDeath();
+            PlayerDeath();
         }
     }
 
-    private void playerDeath()
+    private void ResetPlayer()
+    {
+        healthEffect.SetFloat("_Intensity", 0);
+        effectType = EffectType.None;
+    }
+
+    private void PlayerDeath()
     {
         gameObject.SetActive(false);
+        gameObject.transform.position = spawnPoint.position;
     }
 
     private void UpdateHealthBar()

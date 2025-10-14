@@ -32,6 +32,7 @@ public class LevelController : MonoBehaviour
         WaveManager.OnWinningAllWaves += ActivateEggWinText;
         EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
         inputReader.OnPause += PauseGame;
+        playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
     }
 
     private void OnDisable()
@@ -64,11 +65,11 @@ public class LevelController : MonoBehaviour
 
             Rigidbody rb = player.GetComponent<Rigidbody>();
 
-            rb.AddForce(0, 0, 0);
-
             player.SetActive(true);
 
-            player.transform.position = playerSpawnPosition.transform.position;
+            playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
+
+            rb.AddForce(0, 0, 0);
         }
     }
 
