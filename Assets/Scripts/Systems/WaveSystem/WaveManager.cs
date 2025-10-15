@@ -14,6 +14,8 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] private ObjectiveUI objectiveUI;
 
+    [SerializeField] private EggInteraction eggInteracionScript;
+
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private bool spawningWave = false;
@@ -32,26 +34,26 @@ public class WaveManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EggInteraction.OnInteractWithEgg += InteractedWithEgg;
-        EggInteraction.OnGrabbingEgg += ShowBackToShipText;
+        eggInteracionScript.OnInteractWithEgg += InteractedWithEgg;
+        eggInteracionScript.OnGrabbingEgg += ShowShipText;
+        OnWinningAllWaves += RescueTextHandler;
     }
 
     private void OnDisable()
     {
-        EggInteraction.OnInteractWithEgg -= InteractedWithEgg;
-        EggInteraction.OnGrabbingEgg -= ShowBackToShipText;
+        eggInteracionScript.OnInteractWithEgg -= InteractedWithEgg;
+        eggInteracionScript.OnGrabbingEgg -= ShowShipText;
+        OnWinningAllWaves -= RescueTextHandler;
     }
 
     void Update()
     {
         if (!spawningWave && enemiesAlive == 0 && currentWaveIndex < waves.Count && hasEggInteractedToStartWaves)
-        {        
+        {
             StartCoroutine(StartNextWave());
         }
 
         CheckIfPlayerHasWinAllWaves();
-
-        RescueTextHandler();
     }
 
     private void InteractedWithEgg()
@@ -67,10 +69,8 @@ public class WaveManager : MonoBehaviour
 
     private void CheckIfPlayerHasWinAllWaves()
     {
-        int count = 0;
-
-        if (enemiesAlive == 0 && currentWaveIndex == 6 && count == 0) 
-        { 
+        if (enemiesAlive == 0 && currentWaveIndex == 6 && !hasRescueTextShow)
+        {
             OnWinningAllWaves?.Invoke();
 
             hasRescueTextShow = true;
@@ -79,25 +79,13 @@ public class WaveManager : MonoBehaviour
 
             stationCollider.enabled = false;
             stationEffectsScript.Die();
-
-            count++;
         }
     }
 
     private void RescueTextHandler()
     {
-        if (hasRescueTextShow)
-        {
-            objectiveUI.HideMissionNotification();
-            Invoke(nameof(ShowRecueText), 2f);
-
-            Invoke(nameof(ChangeRescueBool), 4f);
-        }
-    }
-
-    private void ChangeRescueBool()
-    {
-        hasRescueTextShow = false;
+        objectiveUI.HideMissionNotification();
+        Invoke(nameof(ShowRescueText), 2f);
     }
 
     private void ShowSurviveMissionText()
@@ -105,17 +93,19 @@ public class WaveManager : MonoBehaviour
         objectiveUI.ShowNewMission("DEFEND YOURSELF!", "Defeat all enemies");
     }
 
-    private void ShowRecueText()
+    private void ShowRescueText()
     {
-
-
         objectiveUI.ShowNewMission("RESCUE THE EGG", "Handle with care");
+    }
+
+    private void ShowShipText()
+    {
+        objectiveUI.HideMissionNotification();
+        Invoke(nameof(ShowBackToShipText), 2f);
     }
 
     private void ShowBackToShipText()
     {
-        objectiveUI.HideMissionNotification();
-
         objectiveUI.ShowNewMission("ESCAPE!", "Get back to the ship");
     }
     IEnumerator StartNextWave()

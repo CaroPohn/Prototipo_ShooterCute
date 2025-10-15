@@ -11,9 +11,9 @@ public class EggInteraction : MonoBehaviour
 
     [SerializeField] private StationAnimationHandler stationAnimationHandler;
 
-    public static event Action OnInteractWithEgg;
+    public event Action OnInteractWithEgg;
 
-    public static event Action OnGrabbingEgg;
+    public event Action OnGrabbingEgg;
 
     public float minimumDistanceToInteract;
 
@@ -107,7 +107,6 @@ public class EggInteraction : MonoBehaviour
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
-        OnGrabbingEgg?.Invoke();
     }
 
     private void AttemptGivingEgg()
@@ -123,5 +122,6 @@ public class EggInteraction : MonoBehaviour
         transform.parent = eggHoldingSpot;
         transform.position = eggHoldingSpot.position;
         transform.rotation = eggHoldingSpot.rotation;
+        OnGrabbingEgg?.Invoke();
     }    
 }
