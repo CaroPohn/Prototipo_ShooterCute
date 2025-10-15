@@ -6,7 +6,7 @@ public class MeleeAnimationHandler : MonoBehaviour
 {
     private MeleeEnemy meleeEnemy;
 
-    public event Action OnEnemyShooting;
+    public event Action OnEnemyAttacking;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class MeleeAnimationHandler : MonoBehaviour
 
     public void AttackPoseReached()
     {
-        OnEnemyShooting?.Invoke();
+        OnEnemyAttacking?.Invoke();
     }
 
     public void OnFinishDeadAnimation()

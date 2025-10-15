@@ -28,6 +28,8 @@ public class MeleeEnemy : MonoBehaviour
     public bool stopMeleeDieAnimation;
     public bool stopMeleeSpawnAnimation;
 
+    public float attackRadius;
+
     private NavMeshAgent agent;
 
     private void Start()
@@ -44,17 +46,30 @@ public class MeleeEnemy : MonoBehaviour
 
     private void OnEnable()
     {
-        meleeAnimationHandler.OnEnemyShooting += MeleeLogic;
+        meleeAnimationHandler.OnEnemyAttacking += MeleeLogic;
     }
 
     private void OnDisable()
     {
-        meleeAnimationHandler.OnEnemyShooting -= MeleeLogic;
+        meleeAnimationHandler.OnEnemyAttacking -= MeleeLogic;
     }
 
     public void MeleeLogic()
     {
-        
+        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
+
+        foreach (Collider hit in hitColliders)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                PlayerHealthSystem playerHealth = hit.GetComponent<PlayerHealthSystem>();
+
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                }
+            }
+        }
     }
 
     public void DeactivateColliders()
@@ -152,7 +167,8 @@ public class MeleeEnemy : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, attackDistance);
+        Gizmos.color = Color.red;
+        if (shootPoint != null)
+            Gizmos.DrawWireSphere(shootPoint.position, attackRadius);
     }
 }
