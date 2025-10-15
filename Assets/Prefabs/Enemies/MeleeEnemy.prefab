@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 2344883729738473738}
-  attackDistance: 2
+  attackDistance: 3
   shootPoint: {fileID: 7912267102624382315}
   meleeAnimationHandler: {fileID: 566079664025629926}
   spawnVFX: {fileID: 3846207672706766493, guid: ab391ec8b6d94a94985d21cf75ace492, type: 3}
@@ -240,6 +240,7 @@ MonoBehaviour:
   attackTimer: 0
   stopMeleeDieAnimation: 0
   stopMeleeSpawnAnimation: 0
+  attackRadius: 1
 --- !u!195 &2034877262682976914
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -3614,14 +3614,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6006154167729184603, guid: 10fc891a15ff36749b3fa0896cc10ad9, type: 3}
-      propertyPath: attackDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6006154167729184603, guid: 10fc891a15ff36749b3fa0896cc10ad9, type: 3}
-      propertyPath: meleeAnimationHandler
-      value: 
-      objectReference: {fileID: 1419580351}
     - target: {fileID: 6214242356817609301, guid: 10fc891a15ff36749b3fa0896cc10ad9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.7589436
@@ -3971,17 +3963,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2868207753155061223, guid: c3a5ac685a20f574c8cee0581b51eb44, type: 3}
---- !u!114 &1419580351 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 566079664025629926, guid: 10fc891a15ff36749b3fa0896cc10ad9, type: 3}
-  m_PrefabInstance: {fileID: 1310309307}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27da8bcfec72cd64d86e330cbbf92377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1467930312
 PrefabInstance:
   m_ObjectHideFlags: 0
