@@ -13,6 +13,8 @@ public class EggInteraction : MonoBehaviour
 
     public static event Action OnInteractWithEgg;
 
+    public static event Action OnGrabbingEgg;
+
     public float minimumDistanceToInteract;
 
     private float distanceToPlayer;
@@ -105,6 +107,7 @@ public class EggInteraction : MonoBehaviour
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
+        OnGrabbingEgg?.Invoke();
     }
 
     private void AttemptGivingEgg()

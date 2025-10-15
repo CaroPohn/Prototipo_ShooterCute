@@ -17,6 +17,7 @@ public class WaveManager : MonoBehaviour
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private bool spawningWave = false;
+    private bool hasRescueTextShow = false;
 
     private bool hasEggInteractedToStartWaves;
 
@@ -31,12 +32,14 @@ public class WaveManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EggInteraction.OnInteractWithEgg += InteractedWithEgg; 
+        EggInteraction.OnInteractWithEgg += InteractedWithEgg;
+        EggInteraction.OnGrabbingEgg += ShowBackToShipText;
     }
 
     private void OnDisable()
     {
         EggInteraction.OnInteractWithEgg -= InteractedWithEgg;
+        EggInteraction.OnGrabbingEgg -= ShowBackToShipText;
     }
 
     void Update()
@@ -47,11 +50,8 @@ public class WaveManager : MonoBehaviour
         }
 
         CheckIfPlayerHasWinAllWaves();
-    }
 
-    private void ShowSurviveMissionText()
-    {
-        objectiveUI.ShowNewMission("SURVIVE", "Defend yourself against the Gnutorrs!");
+        RescueTextHandler();
     }
 
     private void InteractedWithEgg()
@@ -67,15 +67,57 @@ public class WaveManager : MonoBehaviour
 
     private void CheckIfPlayerHasWinAllWaves()
     {
-        if (enemiesAlive == 0 && currentWaveIndex == 6) 
+        int count = 0;
+
+        if (enemiesAlive == 0 && currentWaveIndex == 6 && count == 0) 
         { 
             OnWinningAllWaves?.Invoke();
 
+            hasRescueTextShow = true;
+
+            Debug.Log(hasRescueTextShow);
+
             stationCollider.enabled = false;
             stationEffectsScript.Die();
+
+            count++;
         }
     }
 
+    private void RescueTextHandler()
+    {
+        if (hasRescueTextShow)
+        {
+            objectiveUI.HideMissionNotification();
+            Invoke(nameof(ShowRecueText), 2f);
+
+            Invoke(nameof(ChangeRescueBool), 4f);
+        }
+    }
+
+    private void ChangeRescueBool()
+    {
+        hasRescueTextShow = false;
+    }
+
+    private void ShowSurviveMissionText()
+    {
+        objectiveUI.ShowNewMission("DEFEND YOURSELF!", "Defeat all enemies");
+    }
+
+    private void ShowRecueText()
+    {
+
+
+        objectiveUI.ShowNewMission("RESCUE THE EGG", "Handle with care");
+    }
+
+    private void ShowBackToShipText()
+    {
+        objectiveUI.HideMissionNotification();
+
+        objectiveUI.ShowNewMission("ESCAPE!", "Get back to the ship");
+    }
     IEnumerator StartNextWave()
     {
         spawningWave = true;
