@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 142447411}
   - component: {fileID: 142447410}
   - component: {fileID: 142447412}
+  - component: {fileID: 142447413}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -338,6 +339,18 @@ MonoBehaviour:
   selectedAbilityName: 
   fireGunButton: {fileID: 0}
   electricGunButton: {fileID: 0}
+--- !u!114 &142447413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142447409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87739b95bf7b33142919bdb33de105ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &142831488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179315232123977607, guid: 94b9a4d1b2c68d945af7b854ee5cb9e0, type: 3}

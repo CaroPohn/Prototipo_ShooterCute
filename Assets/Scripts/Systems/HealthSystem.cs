@@ -10,7 +10,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Image healthBarImage;
     [SerializeField] private HitEffectController effectControllerScript;
 
-    private int deathCounter;
+    public int deathCounter;
 
     private PatrolEnemy patrolEnemy;
 
