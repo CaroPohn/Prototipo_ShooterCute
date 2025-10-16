@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,8 @@ public class MeleeEnemy : MonoBehaviour
     public bool stopMeleeSpawnAnimation;
 
     public float attackRadius;
+
+    public static event Action<GameObject> onStopDieAnimation;
 
     private NavMeshAgent agent;
 
@@ -125,7 +128,7 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
-    public void SetHealthSystemActive(HealthMeleeSystem healthSystem, bool isActive)
+    public void SetHealthSystemActive(HealthSystem healthSystem, bool isActive)
     {
         healthSystem.enabled = isActive;
     }
@@ -152,6 +155,7 @@ public class MeleeEnemy : MonoBehaviour
         while (!stopMeleeDieAnimation)
         {
             enemyAnimator.SetTrigger("Die");
+            onStopDieAnimation?.Invoke(gameObject);
 
             yield return null;
         }

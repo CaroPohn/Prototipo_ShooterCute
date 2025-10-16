@@ -11,7 +11,7 @@ public class MeleeFollowState : MeleeStates
 
     public override void UpdateState(MeleeEnemy meleeEnemy)
     {
-        HealthMeleeSystem healthSystem = meleeEnemy.GetComponent<HealthMeleeSystem>();
+        HealthSystem healthSystem = meleeEnemy.GetComponent<HealthSystem>();
 
         meleeEnemy.SetHealthSystemActive(healthSystem, true);
 

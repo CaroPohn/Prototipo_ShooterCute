@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,8 @@ public class PatrolEnemy : MonoBehaviour
 
     public bool stopDieAnimation;
     public bool stopSpawnAnimation;
+
+    public static event Action<GameObject> onStopDieAnimation;
 
     private NavMeshAgent agent;
 
@@ -147,6 +150,7 @@ public class PatrolEnemy : MonoBehaviour
         while (!stopDieAnimation)
         {
             enemyAnimator.SetTrigger("Die");
+            onStopDieAnimation?.Invoke(gameObject);
 
             yield return null;
         }

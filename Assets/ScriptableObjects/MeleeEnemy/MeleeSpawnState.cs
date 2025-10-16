@@ -5,7 +5,7 @@ public class MeleeSpawnState : MeleeStates
 {
     public override void Enter(MeleeEnemy meleeEnemy)
     {
-        HealthMeleeSystem healthSystem = meleeEnemy.GetComponent<HealthMeleeSystem>();
+        HealthSystem healthSystem = meleeEnemy.GetComponent<HealthSystem>();
 
         meleeEnemy.SetHealthSystemActive(healthSystem, false);
 
