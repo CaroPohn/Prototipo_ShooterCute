@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{3B6104FF-662F-AA1E-DE90-AD869B6C5986}",
+    "Hash": "{AD656DDE-2654-3FEF-D171-3BFC0E38EFFC}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "UI_Button_Normal.wav",
       "CachePath": "50/{50002628-A277-EDDB-B485-C2C8CF1EA460}.wem"
+     },
+     {
+      "Id": "96935299",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Egg_Soul_Impact.wav",
+      "CachePath": "35/{35B2841A-7CED-2FA6-FC7D-35F4D03C8638}.wem"
      },
      {
       "Id": "164019464",
@@ -332,10 +340,14 @@
       "Name": "Egg_Soul_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.25666666",
+      "DurationMax": "0.25666666",
+      "MediaRefs": [
+       {
+        "Id": "96935299"
+       }
+      ]
      },
      {
       "Id": "1205999388",
@@ -808,6 +820,6 @@
     ]
    }
   ],
-  "FileHash": "{86D549DA-289E-AE7F-9D7D-E13D369365DE}"
+  "FileHash": "{2DE9AFDC-A6C5-3FAB-8130-AF4BDDA42263}"
  }
 }

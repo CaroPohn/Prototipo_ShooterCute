@@ -144,7 +144,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}"/>
+						<Event Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}">
+							<ChildrenList>
+								<Action Name="" ID="{5A0728DC-8E87-4879-8BE1-9324DC85EC0F}" ShortID="492312074">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Egg_Soul_Impact" ID="{2D361936-4355-4EEE-B871-BAE9037953DD}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}">
 							<ChildrenList>
 								<Action Name="" ID="{E98E7AD4-655A-495B-AFAC-E24D3279765E}" ShortID="375717160">

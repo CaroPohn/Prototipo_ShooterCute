@@ -700,6 +700,35 @@
 								<ActiveSource Name="Egg_ShieldDestroy" ID="{2520685E-7728-4160-A0C0-670FC1C81014}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Egg_Soul_Impact" ID="{2D361936-4355-4EEE-B871-BAE9037953DD}" ShortID="509061660">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_Soul_Impact.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="96935299"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Lumming" ID="{698D86F8-7789-4ACA-A6E9-4646114F686C}" ShortID="753272739">
@@ -822,6 +851,36 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_Button_Special" ID="{56022795-00D8-46FD-B38B-E5942F99C0C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Slider" ID="{5812BE6E-583E-49FD-A07B-CAF8502235CB}" ShortID="26384408">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Slider" ID="{C2BB5182-3D71-4860-B9B3-E1DB83ABBDBC}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Slider.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="985049323"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Slider" ID="{C2BB5182-3D71-4860-B9B3-E1DB83ABBDBC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
