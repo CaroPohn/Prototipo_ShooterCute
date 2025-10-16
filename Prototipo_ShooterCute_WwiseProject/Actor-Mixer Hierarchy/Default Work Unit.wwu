@@ -452,9 +452,33 @@
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>0.5</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>0.2</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>0.2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>1</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
@@ -587,6 +611,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Player_ShootCharge_Electric" ID="{8B8841AC-CE0F-49E6-88EF-3357CA747AC3}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Player_ShootCharge_Electric.wav</AudioFile>
 									<MediaIDList>
@@ -667,6 +694,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Egg_Pickup" ID="{070DADD1-3B44-4A98-9380-82B257DAF186}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Egg_Pickup.wav</AudioFile>
 									<MediaIDList>
@@ -748,6 +778,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Lumming_Levitate" ID="{66ED719B-6F41-498C-A996-B91C9A434B37}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Lumming_Levitate.wav</AudioFile>
 									<MediaIDList>
@@ -937,31 +970,6 @@
 								<ActiveSource Name="Ambient_Lava" ID="{6A16E195-280D-4057-88F4-8B293DCA8C58}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Ambient_DistantImpacts" ID="{7D685078-0F0D-4A2F-8D8F-C4EF00863945}" ShortID="137970753">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Ambient_DistantImpacts" ID="{2813E4D1-9827-4329-A1CD-C61A6A559581}">
-									<Language>SFX</Language>
-									<AudioFile>Ambient_DistantImpacts.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="164019464"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Ambient_DistantImpacts" ID="{2813E4D1-9827-4329-A1CD-C61A6A559581}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Ambient_Collapse" ID="{E0746827-F003-430A-986D-DD477216DBCD}" ShortID="590881798">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -992,6 +1000,42 @@
 								<ActiveSource Name="Ambient_Collapse" ID="{260B5EB4-BFB3-4AA6-8029-AA83544B7638}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Ambient_DistantImpacts" ID="{FA1BA383-6949-4E73-A8A1-078125B242F8}" ShortID="429915665">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AF396D65-F929-4FE3-B8B8-8D6F31E95402}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="20">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AD68C9ED-0DB9-454F-A088-2EEA1CA1E271}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Projectile" ID="{0E720DD8-BA51-4423-B66D-F49A6AAFE95A}" ShortID="62019152">
@@ -1169,28 +1213,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Projectile_Soul_Deploy_End" ID="{7593DF49-DBF5-4A22-8D1D-6F0876DE431E}" ShortID="839305034">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Projectile_Soul_Deploy_End" ID="{29658F23-593C-4D4C-9F17-1075AB24D975}">
-											<Language>SFX</Language>
-											<AudioFile>Projectile_Soul_Deploy_End.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1059247180"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Projectile_Soul_Deploy_End" ID="{29658F23-593C-4D4C-9F17-1075AB24D975}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Projectile_Soul_Deploy_Loop" ID="{39B7B2B0-448F-42EF-853C-511423DBADF0}" ShortID="461932434">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1243,9 +1265,6 @@
 									</Reference>
 									<Reference>
 										<ObjectRef Name="Projectile_Soul_Deploy_Loop" ID="{39B7B2B0-448F-42EF-853C-511423DBADF0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-									</Reference>
-									<Reference>
-										<ObjectRef Name="Projectile_Soul_Deploy_End" ID="{7593DF49-DBF5-4A22-8D1D-6F0876DE431E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
