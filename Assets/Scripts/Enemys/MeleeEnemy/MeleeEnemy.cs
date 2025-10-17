@@ -107,7 +107,7 @@ public class MeleeEnemy : MonoBehaviour
 
         if (!agent.isStopped)
         {
-            enemyAnimator.SetFloat("Velocity", 0.5f);
+            enemyAnimator.SetFloat("Velocity", 0.8f);
         }
         else
         {
