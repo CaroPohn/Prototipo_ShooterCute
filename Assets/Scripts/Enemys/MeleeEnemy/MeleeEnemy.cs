@@ -70,6 +70,7 @@ public class MeleeEnemy : MonoBehaviour
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(damage);
+                    playerHealth.SetEffectType(PlayerHealthSystem.EffectType.EnemyDamage);
                 }
             }
         }

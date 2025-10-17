@@ -56,7 +56,7 @@ public class EnemyProjectile : MonoBehaviour
             if (healthSystem != null)
             {
                 healthSystem.TakeDamage(damage);
-                healthSystem.SetEffectType(PlayerHealthSystem.EffectType.Projectile);
+                healthSystem.SetEffectType(PlayerHealthSystem.EffectType.EnemyDamage);
             }   
         }
     }

@@ -21,7 +21,7 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         None,
         Lava,
-        Projectile,
+        EnemyDamage,
         Heal
     }
 
@@ -110,7 +110,7 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             lavaDamageEffect.SetFloat("_Intensity", 1);
         }
-        else if (effectType == EffectType.Projectile)
+        else if (effectType == EffectType.EnemyDamage)
         {
             projectileDamageEffect.SetFloat("_Intensity", 1);
             StartCoroutine(EffectCooldown());
