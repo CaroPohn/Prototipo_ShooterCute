@@ -922,31 +922,6 @@
 								<ActiveSource Name="Egg_ShieldActivate" ID="{63EA0A71-2ACF-46B9-8B51-BB68FE91BC66}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Egg_Pickup" ID="{F460D24C-0706-48AA-849B-F66A10ED91E9}" ShortID="262980858">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Egg_Pickup" ID="{070DADD1-3B44-4A98-9380-82B257DAF186}">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Egg_Pickup.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="541912967"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Egg_Pickup" ID="{070DADD1-3B44-4A98-9380-82B257DAF186}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" ShortID="574446683">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -998,6 +973,28 @@
 								<ActiveSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Egg_Pickup" ID="{306920FC-4039-4A49-B5B0-4D37BC9A4192}" ShortID="933293210">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_Pickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="541912967"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Lumming" ID="{698D86F8-7789-4ACA-A6E9-4646114F686C}" ShortID="753272739">
@@ -1031,7 +1028,7 @@
 								<ActiveSource Name="Lumming_Levitate" ID="{66ED719B-6F41-498C-A996-B91C9A434B37}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Lumming_Heal" ID="{0114F993-08D9-4AC9-B82E-2607D9CE3EA0}" ShortID="972597139">
+						<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1041,7 +1038,63 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Lumming_Heal" ID="{C909462C-7ED4-4D2B-9106-5061899732A3}">
+								<Sound Name="Lumming_Ability_Electric_Impact" ID="{1496BD4B-EB47-4EBC-8F96-D3E543602D4C}" ShortID="866989004">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}">
+											<Language>SFX</Language>
+											<AudioFile>Lumming_Ability_Electric_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="803171057"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lumming_Ability_Electric_Impact2" ID="{F182A5D8-89FB-4E39-8CB6-19A6DB2671C4}" ShortID="105237773">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}">
+											<Language>SFX</Language>
+											<AudioFile>Lumming_Ability_Electric_Impact2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="132527993"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Lumming_Heal" ID="{09E06293-D658-4574-B0C9-DC01954BFD06}" ShortID="276470379">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}">
 									<Language>SFX</Language>
 									<AudioFile>Lumming_Heal.wav</AudioFile>
 									<MediaIDList>
@@ -1050,7 +1103,7 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Lumming_Heal" ID="{C909462C-7ED4-4D2B-9106-5061899732A3}" Platform="Linked"/>
+								<ActiveSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -1375,65 +1428,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Projectile_Hit_BasicProjectile2" ID="{535C0ACC-8BB5-4FD4-A619-268EC666206E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Projectile_Hit_ElectricProjectile" ID="{1263374B-9248-4DE4-A9BF-7D6DB8AF7FE6}" ShortID="124656722">
-							<PropertyList>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Projectile_Hit_ElectricProjectile" ID="{8223E051-ECF9-42A3-A0B3-9D7026E7BC96}" ShortID="106438584">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Projectile_Hit_ElectricProjectile" ID="{12C7174A-84F7-488F-90DD-46130190BDA0}">
-											<Language>SFX</Language>
-											<AudioFile>Projectile_Hit_ElectricProjectile.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="327166184"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Projectile_Hit_ElectricProjectile" ID="{12C7174A-84F7-488F-90DD-46130190BDA0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Projectile_Hit_ElectricProjectile2" ID="{55AD88D5-1AD8-450D-8762-051C29EE0D40}" ShortID="346237493">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Projectile_Hit_ElectricProjectile2" ID="{682DA3F8-9537-44D3-987E-2A22B30638EE}">
-											<Language>SFX</Language>
-											<AudioFile>Projectile_Hit_ElectricProjectile2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="673550933"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Projectile_Hit_ElectricProjectile2" ID="{682DA3F8-9537-44D3-987E-2A22B30638EE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
