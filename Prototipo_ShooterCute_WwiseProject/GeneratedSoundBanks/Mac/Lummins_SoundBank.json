@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{AD656DDE-2654-3FEF-D171-3BFC0E38EFFC}",
+    "Hash": "{89277B21-B9E8-B830-08F0-E3AA152B700B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -32,6 +32,14 @@
       "CachePath": "50/{50002628-A277-EDDB-B485-C2C8CF1EA460}.wem"
      },
      {
+      "Id": "73726335",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Lava_3.wav",
+      "CachePath": "ED/{ED081B41-A08A-B54C-E446-1D3D1FD6FCB7}.wem"
+     },
+     {
       "Id": "96935299",
       "Language": "SFX",
       "Streaming": "false",
@@ -40,12 +48,28 @@
       "CachePath": "35/{35B2841A-7CED-2FA6-FC7D-35F4D03C8638}.wem"
      },
      {
-      "Id": "164019464",
+      "Id": "116215165",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Ambient_DistantImpacts.wav",
-      "CachePath": "E9/{E9DAE0AC-B6C4-A065-5B27-133CE1A57F9C}.wem"
+      "ShortName": "Player_Player_Footstep_Stone_1.wav",
+      "CachePath": "D4/{D445C096-3C6B-0CC5-C5AD-07878CE3D2F0}.wem"
+     },
+     {
+      "Id": "151651069",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Stone_3.wav",
+      "CachePath": "83/{837379D3-8CF4-9F21-4112-1347D6908C1A}.wem"
+     },
+     {
+      "Id": "177551594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Stone_2.wav",
+      "CachePath": "51/{5187959A-49FA-EDC1-5156-F35C67F37257}.wem"
      },
      {
       "Id": "184096320",
@@ -88,6 +112,14 @@
       "CachePath": "A7/{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem"
      },
      {
+      "Id": "409772932",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Lava_2.wav",
+      "CachePath": "49/{49279885-8CCF-1682-4F13-15787378342F}.wem"
+     },
+     {
       "Id": "414879116",
       "Language": "SFX",
       "Streaming": "false",
@@ -104,6 +136,14 @@
       "CachePath": "2E/{2E574D82-C9D0-58F1-2399-9271339995E8}.wem"
      },
      {
+      "Id": "433651031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Stone_4.wav",
+      "CachePath": "95/{95D7A808-239B-6689-BB21-7D8F08F24B2C}.wem"
+     },
+     {
       "Id": "472405016",
       "Language": "SFX",
       "Streaming": "false",
@@ -117,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Lumming_Levitate.wav",
-      "CachePath": "0B/{0B5FF4E4-A563-ECD3-A2B3-98C6CE6E6B89}.wem"
+      "CachePath": "47/{478FDC0B-79D6-3D64-CD29-9A0BA176EE4A}.wem"
      },
      {
       "Id": "538417311",
@@ -192,6 +232,14 @@
       "CachePath": "C4/{C4E6D90D-A75E-D408-3B8C-D957B8178DFE}.wem"
      },
      {
+      "Id": "866558810",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Lava_4.wav",
+      "CachePath": "6C/{6CFCB49D-9E8A-4AE8-B13A-F87CD11365E7}.wem"
+     },
+     {
       "Id": "893337246",
       "Language": "SFX",
       "Streaming": "false",
@@ -230,6 +278,14 @@
       "Location": "Memory",
       "ShortName": "Player_Jump_1.wav",
       "CachePath": "3C/{3CD8A6FD-47D8-CD8B-C8E4-6B64C97E032A}.wem"
+     },
+     {
+      "Id": "1008580385",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_Player_Footstep_Lava_1.wav",
+      "CachePath": "35/{35BDAE14-8D5B-3C77-6F81-99A1F4057E48}.wem"
      }
     ],
     "Events": [
@@ -250,12 +306,7 @@
       "Name": "Ambient_DistantImpacts",
       "ObjectPath": "\\Events\\Default Work Unit\\Ambient\\Ambient_DistantImpacts",
       "GUID": "{A37B3518-9697-4999-82F7-DDA810DD0450}",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "164019464"
-       }
-      ]
+      "DurationType": "Infinite"
      },
      {
       "Id": "4275106484",
@@ -625,10 +676,55 @@
       "Name": "Player_Footstep",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Footstep",
       "GUID": "{0EB49463-85D3-4425-A97B-6BC92274A370}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.17327084",
+      "DurationMax": "0.541125",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1833605183",
+         "Id": "1216965916",
+         "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "116215165"
+         },
+         {
+          "Id": "151651069"
+         },
+         {
+          "Id": "177551594"
+         },
+         {
+          "Id": "433651031"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1833605183",
+         "Id": "540301611",
+         "GUID": "{F2E500CC-1405-4BBA-B04C-688683C4D304}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "73726335"
+         },
+         {
+          "Id": "409772932"
+         },
+         {
+          "Id": "866558810"
+         },
+         {
+          "Id": "1008580385"
+         }
+        ]
+       }
+      ]
      },
      {
       "Id": "1305133589",
@@ -817,9 +913,31 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1833605183",
+      "Name": "Footstep_Surface",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface",
+      "GUID": "{E14ACD43-2837-4013-BD83-6A2679B58F53}",
+      "Switches": [
+       {
+        "Id": "540301611",
+        "Name": "Lava",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface\\Lava",
+        "GUID": "{F2E500CC-1405-4BBA-B04C-688683C4D304}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface\\Stone",
+        "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{2DE9AFDC-A6C5-3FAB-8130-AF4BDDA42263}"
+  "FileHash": "{C19C1EDD-3D0D-685D-9496-8364A409CBA1}"
  }
 }

@@ -17,7 +17,17 @@
 				</Folder>
 				<Folder Name="Player" ID="{61D10539-998A-49C2-8D83-25A41D2D180F}" ShortID="450451628">
 					<ChildrenList>
-						<Event Name="Player_Footstep" ID="{0EB49463-85D3-4425-A97B-6BC92274A370}"/>
+						<Event Name="Player_Footstep" ID="{0EB49463-85D3-4425-A97B-6BC92274A370}">
+							<ChildrenList>
+								<Action Name="" ID="{C13672DD-09DA-4423-AB7D-EAC2FA628784}" ShortID="673609214">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Footstep" ID="{3D33F405-2298-46D5-ACE8-5555A8B7FFFD}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Shoot_Basic" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}">
 							<ChildrenList>
 								<Action Name="" ID="{2E5E5E8D-13E0-4603-A8F6-D835EB36D4EC}" ShortID="258825527">
