@@ -73,7 +73,7 @@
 								<Action Name="" ID="{EF0A34A5-C2B3-48B8-B2A4-25A6277A1479}" ShortID="271648246">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Lumming_Heal" ID="{0114F993-08D9-4AC9-B82E-2607D9CE3EA0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Lumming_Heal" ID="{09E06293-D658-4574-B0C9-DC01954BFD06}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -106,7 +106,17 @@
 						<Event Name="Lumming_Ability_Fire_Start" ID="{7EFF0B72-D253-4833-8E94-D1AF3C3E7650}"/>
 						<Event Name="Lumming_Ability_Fire_Impact" ID="{4B39072A-FBA8-497A-9ABD-F3879B0D59A4}"/>
 						<Event Name="Lumming_Ability_Electric_Start" ID="{8D90FE84-A906-4DC2-919F-FAA13FE46797}"/>
-						<Event Name="Lumming_Ability_Electric_Impact" ID="{7FA934BB-7197-48FF-ACBF-468F9AC31460}"/>
+						<Event Name="Lumming_Ability_Electric_Impact" ID="{7FA934BB-7197-48FF-ACBF-468F9AC31460}">
+							<ChildrenList>
+								<Action Name="" ID="{23A77618-1C04-45AA-AE40-D98B02F7935A}" ShortID="549079182">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" ShortID="753824209">
@@ -160,7 +170,7 @@
 								<Action Name="" ID="{E98E7AD4-655A-495B-AFAC-E24D3279765E}" ShortID="375717160">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Egg_Pickup" ID="{F460D24C-0706-48AA-849B-F66A10ED91E9}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Egg_Pickup" ID="{306920FC-4039-4A49-B5B0-4D37BC9A4192}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -292,28 +302,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}">
-							<ChildrenList>
-								<Action Name="" ID="{C516AD1B-69FF-4E90-9FB0-8A18149FB817}" ShortID="513621292">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Projectile_Hit_ElectricProjectile" ID="{1263374B-9248-4DE4-A9BF-7D6DB8AF7FE6}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{998798F3-A0D2-4D5F-99FF-3974660D9391}" ShortID="342676911">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
+						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
 						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}"/>
 					</ChildrenList>
 				</Folder>
