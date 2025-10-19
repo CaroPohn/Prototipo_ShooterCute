@@ -36,6 +36,14 @@ public class TextWriter : MonoBehaviour
         StartCoroutine(WriteCoroutine(description, descriptionTMP));
         StartCoroutine(WriteCoroutine(title, titleTMP));
     }
+    void ShowOnlyTitle()
+    {
+        StartCoroutine(WriteCoroutine(title, titleTMP));
+    }
+    void ShowOnlyDescription()
+    {
+        StartCoroutine(WriteCoroutine(description, descriptionTMP));
+    }
 
     IEnumerator WriteCoroutine(string textToShow, TextMeshProUGUI tmpToWriteTo)
     {
