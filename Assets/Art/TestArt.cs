@@ -6,6 +6,7 @@ public class TestArt : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Image image;
     [SerializeField] float cooldown = 3;
+    [SerializeField] Animator animInteract;
     float fill = 1f;
     bool onCooldown = false;
     float timer = 0;
@@ -49,6 +50,11 @@ public class TestArt : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.D))
         {
             objectiveUIScript.HideMissionNotification();
+
+        }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            animInteract.SetBool("visible", !animInteract.GetBool("visible"));
 
         }
     }
