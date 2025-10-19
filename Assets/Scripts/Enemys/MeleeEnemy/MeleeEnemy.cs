@@ -4,31 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolEnemy : MonoBehaviour
+public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField] private Animator enemyAnimator;
 
     [Header("Follow")]
     private Transform player;
 
-    public float followDistance;
+    public float attackDistance;
 
     [Header("Shoot")]
     [SerializeField] private Transform shootPoint;
-    [SerializeField] private GameObject projectilePrefab;
 
     private List<Collider> enemyColliders;
 
-    [SerializeField] private EnemyAnimationHandler enemyAnimationHandler;
+    [SerializeField] private MeleeAnimationHandler meleeAnimationHandler;
 
     [SerializeField] private GameObject spawnVFX;
 
-    public float shootCoolDown;
+    public float attackCoolDown;
     public float damage;
-    public float shootTimer;
+    public float attackTimer;
 
-    public bool stopDieAnimation;
-    public bool stopSpawnAnimation;
+    public bool stopMeleeDieAnimation;
+    public bool stopMeleeSpawnAnimation;
+
+    public float attackRadius;
 
     public static event Action<GameObject> onStopDieAnimation;
 
@@ -42,31 +43,36 @@ public class PatrolEnemy : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
-        stopDieAnimation = false;
-        stopSpawnAnimation = false;
+        stopMeleeDieAnimation = false;
+        stopMeleeSpawnAnimation = false;
     }
 
     private void OnEnable()
     {
-        enemyAnimationHandler.OnEnemyShooting += ShootLogic;
+        meleeAnimationHandler.OnEnemyAttacking += MeleeLogic;
     }
 
     private void OnDisable()
     {
-        enemyAnimationHandler.OnEnemyShooting -= ShootLogic;
+        meleeAnimationHandler.OnEnemyAttacking -= MeleeLogic;
     }
 
-    public void ShootLogic()
+    public void MeleeLogic()
     {
-        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
+        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
 
-        Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
-
-        EnemyProjectile projScript = projectile.GetComponent<EnemyProjectile>();
-        if (projScript != null)
+        foreach (Collider hit in hitColliders)
         {
-            projScript.SetDamage(damage);
-            projScript.SetDirection(direction);
+            if (hit.CompareTag("Player"))
+            {
+                PlayerHealthSystem playerHealth = hit.GetComponent<PlayerHealthSystem>();
+
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                    playerHealth.SetEffectType(PlayerHealthSystem.EffectType.EnemyDamage);
+                }
+            }
         }
     }
 
@@ -82,7 +88,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        return distanceToPlayer <= followDistance;
+        return distanceToPlayer <= attackDistance;
     }
 
     public void SetTargetToFollow()
@@ -101,7 +107,7 @@ public class PatrolEnemy : MonoBehaviour
 
         if (!agent.isStopped)
         {
-            enemyAnimator.SetFloat("Velocity", 0.5f);
+            enemyAnimator.SetFloat("Velocity", 0.8f);
         }
         else
         {
@@ -128,7 +134,7 @@ public class PatrolEnemy : MonoBehaviour
         healthSystem.enabled = isActive;
     }
 
-    public void ShootAnimationHandler()
+    public void AttackAnimationHandler()
     {
         enemyAnimator.SetTrigger("Attack");
     }
@@ -147,7 +153,7 @@ public class PatrolEnemy : MonoBehaviour
 
     public IEnumerator DieCoroutine()
     {
-        while (!stopDieAnimation)
+        while (!stopMeleeDieAnimation)
         {
             enemyAnimator.SetTrigger("Die");
             onStopDieAnimation?.Invoke(gameObject);
@@ -166,7 +172,8 @@ public class PatrolEnemy : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, followDistance);
+        Gizmos.color = Color.red;
+        if (shootPoint != null)
+            Gizmos.DrawWireSphere(shootPoint.position, attackRadius);
     }
 }

@@ -21,7 +21,7 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         None,
         Lava,
-        Projectile,
+        EnemyDamage,
         Heal
     }
 
@@ -42,11 +42,13 @@ public class PlayerHealthSystem : MonoBehaviour
     private void OnEnable()
     {
         DeathMapLimit.OnExitLava += StartLavaExitDamageCorroutine;
+        GamePause.OnRestartLevel += ResetPlayer;
     }
 
     private void OnDisable()
     {
         DeathMapLimit.OnExitLava -= StartLavaExitDamageCorroutine;
+        GamePause.OnRestartLevel -= ResetPlayer;
     }
 
     private void Update()
@@ -72,6 +74,12 @@ public class PlayerHealthSystem : MonoBehaviour
 
             PlayerDeath();
         }
+    }
+
+    private void ResetPlayer()
+    {
+        healthEffect.SetFloat("_Intensity", 0);
+        effectType = EffectType.None;
     }
 
     private void PlayerDeath()
@@ -102,7 +110,7 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             lavaDamageEffect.SetFloat("_Intensity", 1);
         }
-        else if (effectType == EffectType.Projectile)
+        else if (effectType == EffectType.EnemyDamage)
         {
             projectileDamageEffect.SetFloat("_Intensity", 1);
             StartCoroutine(EffectCooldown());

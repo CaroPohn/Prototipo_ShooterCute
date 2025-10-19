@@ -7,12 +7,9 @@ public class HealthSystem : MonoBehaviour
     public float maxHealth;
     public float health;
 
-    [SerializeField] private Image healthBarImage;
     [SerializeField] private HitEffectController effectControllerScript;
 
-    private int deathCounter;
-
-    private PatrolEnemy patrolEnemy;
+    public int deathCounter;
 
     [SerializeField] private GameObject dieParticle;
 
@@ -22,19 +19,27 @@ public class HealthSystem : MonoBehaviour
     {
         health = maxHealth;
         deathCounter = 0;
+    }
 
-        patrolEnemy = GetComponent<PatrolEnemy>();
+    private void OnEnable()
+    {
+        PatrolEnemy.onStopDieAnimation += Die;
+        MeleeEnemy.onStopDieAnimation += Die;
+    }
+
+    private void OnDisable()
+    {
+        PatrolEnemy.onStopDieAnimation -= Die;
+        MeleeEnemy.onStopDieAnimation -= Die;
     }
 
     private void Update()
     {
-        UpdateHealthBar();
-
         if (health <= 0)
         {
             health = 0;
             
-            Die();
+            Die(gameObject);
         }
     }
 
@@ -61,16 +66,11 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    protected void Die()
+    protected void Die(GameObject sender)
     {
-        if (patrolEnemy.stopDieAnimation)
+        if (sender == gameObject)
         {
             effectControllerScript.Dissolve();
-        }     
-    }
-
-    private void UpdateHealthBar()
-    {
-        healthBarImage.fillAmount = health / maxHealth;
+        }      
     }
 }
