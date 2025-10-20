@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class EggInteraction : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class EggInteraction : MonoBehaviour
 
     [SerializeField] private StationAnimationHandler stationAnimationHandler;
 
-    [SerializeField] private Animator UIInteractAnimator;
+    [SerializeField] private Animator uIInteractAnimator;
+
+    [SerializeField] private GameObject exclamationUI;
 
     public event Action OnInteractWithEgg;
 
@@ -92,6 +95,8 @@ public class EggInteraction : MonoBehaviour
         {
             OnInteractWithEgg?.Invoke();
 
+            exclamationUI.SetActive(false);
+
             hasPlayerInteracted = true;
         }
     }
@@ -99,7 +104,7 @@ public class EggInteraction : MonoBehaviour
     private void SpawnInteractText(bool isActive)
     {
         //interactText.SetActive(isActive);
-        UIInteractAnimator.SetBool("visible", isActive);
+        uIInteractAnimator.SetBool("visible", isActive);
     }
 
     private void MakeTextFollowPlayer()
