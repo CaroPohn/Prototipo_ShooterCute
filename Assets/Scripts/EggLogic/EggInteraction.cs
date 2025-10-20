@@ -11,6 +11,8 @@ public class EggInteraction : MonoBehaviour
 
     [SerializeField] private StationAnimationHandler stationAnimationHandler;
 
+    [SerializeField] private Animator UIInteractAnimator;
+
     public event Action OnInteractWithEgg;
 
     public event Action OnGrabbingEgg;
@@ -96,12 +98,14 @@ public class EggInteraction : MonoBehaviour
 
     private void SpawnInteractText(bool isActive)
     {
-        interactText.SetActive(isActive);
+        //interactText.SetActive(isActive);
+        UIInteractAnimator.SetBool("visible", isActive);
     }
 
     private void MakeTextFollowPlayer()
     {
-        interactText.transform.LookAt(playerTransform.position);
+        Vector3 lookPosition = new Vector3(playerTransform.position.x, interactText.transform.position.y, playerTransform.position.z);
+        interactText.transform.LookAt(lookPosition);
     }
 
     private void LetPlayerGrabEgg()
