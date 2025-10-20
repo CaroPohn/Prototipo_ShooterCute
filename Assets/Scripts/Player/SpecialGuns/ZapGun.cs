@@ -127,8 +127,8 @@ public class ZapGun : Gun
 
     public override void Shoot()
     {
-        //Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Vector3 shootPoint = shootPivot.position;
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+        Vector3 shootPoint = screenCenter;
 
         Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 
