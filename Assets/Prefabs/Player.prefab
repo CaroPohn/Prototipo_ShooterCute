@@ -496,7 +496,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32127
+    m_Bits: 294271
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -754,8 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ff2fb5cbbf2c64f9820138f708b7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun1: {fileID: 7571600346205282550}
-  Gun2: {fileID: 5043191429675989928}
+  arms: {fileID: 0}
   bomb: {fileID: 2685545516680452881}
   electric: {fileID: 1525334386934703808}
   bombHolder: {fileID: 2083992056861317168}
@@ -764,6 +763,7 @@ MonoBehaviour:
   timer: 10
   weaponIndex: 0
   playerWeaponChooseScript: {fileID: 0}
+  abilityUIAnim: {fileID: 0}
   inputReader: {fileID: 0}
 --- !u!1 &9020958556680679936
 GameObject:
