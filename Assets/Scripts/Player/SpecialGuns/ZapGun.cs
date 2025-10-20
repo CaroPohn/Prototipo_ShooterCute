@@ -94,7 +94,7 @@ public class ZapGun : Gun
 
             if (Time.time - lastShootTime < timeBetweenShots)
             {
-                electric_Gun_VFX_Script.Release(0, 0);
+                electric_Gun_VFX_Script.Release(0, 0, shootPivot);
                 shootHoldTime = 0f;
                 return;
             }
@@ -118,7 +118,7 @@ public class ZapGun : Gun
 
             Shoot();
 
-            electric_Gun_VFX_Script.Release(hitDistance, 0.5f);
+            electric_Gun_VFX_Script.Release(hitDistance, 0.5f, shootPivot);
 
             lastShootTime = Time.time;
             shootHoldTime = 0f;
@@ -127,8 +127,8 @@ public class ZapGun : Gun
 
     public override void Shoot()
     {
-        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Vector3 shootPoint = screenCenter;
+        //Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+        Vector3 shootPoint = shootPivot.position;
 
         Ray ray = playerCamera.ScreenPointToRay(shootPoint);
 

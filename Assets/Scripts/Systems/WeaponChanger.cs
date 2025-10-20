@@ -88,6 +88,8 @@ public class WeaponChanger : MonoBehaviour
     {
         if (weaponIndex == 1)
         {
+            selectedAbility.SetActive(false);
+
             if (selectedGun != null)
                 selectedGun.SetActive(true);
 
