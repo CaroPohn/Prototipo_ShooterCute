@@ -9,30 +9,41 @@ public class WaveManager : MonoBehaviour
     public List<Transform> spawnPoints;
     public List<Wave> waves;
 
-    [SerializeField] private TextMeshProUGUI waveText;
+    [SerializeField] private StationWithEggEffects stationEffectsScript;
+    [SerializeField] private Collider stationCollider;
+
+    [SerializeField] private ObjectiveUI objectiveUI;
+
+    [SerializeField] private EggInteraction eggInteracionScript;
 
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private bool spawningWave = false;
+    private bool hasRescueTextShow = false;
 
     private bool hasEggInteractedToStartWaves;
 
     public static event Action OnWinningAllWaves;
-    //public static event Action OnNewWave;
 
     private void Start()
     {
         hasEggInteractedToStartWaves = false;
+
+        objectiveUI.ShowNewMission("FIND THE EGG", "Locate the endangered Lumming egg");
     }
 
     private void OnEnable()
     {
-        EggInteraction.OnInteractWithEgg += InteractedWithEgg;
+        eggInteracionScript.OnInteractWithEgg += InteractedWithEgg;
+        eggInteracionScript.OnGrabbingEgg += ShowShipText;
+        OnWinningAllWaves += RescueTextHandler;
     }
 
     private void OnDisable()
     {
-        EggInteraction.OnInteractWithEgg -= InteractedWithEgg;
+        eggInteracionScript.OnInteractWithEgg -= InteractedWithEgg;
+        eggInteracionScript.OnGrabbingEgg -= ShowShipText;
+        OnWinningAllWaves -= RescueTextHandler;
     }
 
     void Update()
@@ -48,30 +59,60 @@ public class WaveManager : MonoBehaviour
     private void InteractedWithEgg()
     {
         hasEggInteractedToStartWaves = true;
+
+        objectiveUI.HideMissionNotification();
+
+        Invoke(nameof(ShowSurviveMissionText), 2f);
+
+        stationEffectsScript.Close();
     }
 
     private void CheckIfPlayerHasWinAllWaves()
     {
-        if (enemiesAlive == 0 && currentWaveIndex == 6) 
-        { 
+        if (enemiesAlive == 0 && currentWaveIndex == 6 && !hasRescueTextShow)
+        {
             OnWinningAllWaves?.Invoke();
+
+            hasRescueTextShow = true;
+
+            Debug.Log(hasRescueTextShow);
+
+            stationCollider.enabled = false;
+            stationEffectsScript.Die();
         }
     }
 
+    private void RescueTextHandler()
+    {
+        objectiveUI.HideMissionNotification();
+        Invoke(nameof(ShowRescueText), 2f);
+    }
+
+    private void ShowSurviveMissionText()
+    {
+        objectiveUI.ShowNewMission("DEFEND YOURSELF!", "Defeat all enemies");
+    }
+
+    private void ShowRescueText()
+    {
+        objectiveUI.ShowNewMission("RESCUE THE EGG", "Handle with care");
+    }
+
+    private void ShowShipText()
+    {
+        objectiveUI.HideMissionNotification();
+        Invoke(nameof(ShowBackToShipText), 2f);
+    }
+
+    private void ShowBackToShipText()
+    {
+        objectiveUI.ShowNewMission("ESCAPE!", "Get back to the ship");
+    }
     IEnumerator StartNextWave()
     {
-        //OnNewWave?.Invoke();
-
         spawningWave = true;
 
-        waveText.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(2f); 
-
-        waveText.gameObject.SetActive(false);
-
-        yield return new WaitForSeconds(2f); 
-
+        yield return new WaitForSeconds(2f);
 
         Wave wave = waves[currentWaveIndex];
 

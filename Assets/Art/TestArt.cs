@@ -1,22 +1,61 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestArt : MonoBehaviour
 {
-    [SerializeField] EggShield eggShield;
+    [SerializeField] Animator anim;
+    [SerializeField] Image image;
+    [SerializeField] float cooldown = 3;
+    [SerializeField] Animator animInteract;
+    float fill = 1f;
+    bool onCooldown = false;
+    float timer = 0;
+
+    [SerializeField] ObjectiveUI objectiveUIScript;
 
     private void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            if (anim.GetBool("isReady"))
+            {
+                fill = 0f;
+                timer = 0;
+                onCooldown = true;
+            }
+            else 
+            {
+                fill = 1f;
+                onCooldown = false;
+            }
+            anim.SetBool("isReady",!anim.GetBool("isReady"));
+        }
+        if (!anim.GetBool("isReady"))
+        {
+            timer += Time.deltaTime;
+            fill = timer/cooldown;
+        }
+        image.fillAmount = Mathf.Clamp(fill,0,1);
+
         if (Input.GetKeyUp(KeyCode.A))
         {
-            eggShield.Appear();
+            objectiveUIScript.ShowNewMission("FIND THE EGG", "Locate the endangered Lumming egg");
+
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            objectiveUIScript.ShowNewMission("SURVIVE", "Defend yourself against the Gnutorrs!");
+
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
-            eggShield.Desintegrate();
+            objectiveUIScript.HideMissionNotification();
+
         }
-        else if (Input.GetKeyUp(KeyCode.G))
+        if (Input.GetKeyUp(KeyCode.F))
         {
-            eggShield.GetHit();
+            animInteract.SetBool("visible", !animInteract.GetBool("visible"));
+
         }
     }
 }

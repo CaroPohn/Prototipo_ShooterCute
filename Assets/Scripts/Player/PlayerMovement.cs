@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     private bool readyToJump;
 
+    [SerializeField] private Animator armsAnimator;
+
     public float playerHeight;
     private bool IsPlayerOnGround;
 
@@ -31,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         readyToJump = true;
         rb.useGravity = false;
+
+        transform.rotation = Quaternion.Euler(0, orientation.eulerAngles.y, 0);
     }
 
     private void OnEnable()
@@ -49,9 +53,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         IsPlayerOnGround = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
-
-        Quaternion targetRotation = Quaternion.Euler(0, cameraOrientation.eulerAngles.y, 0);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15f);
     }
 
     private void FixedUpdate()
@@ -74,6 +75,11 @@ public class PlayerMovement : MonoBehaviour
         inputDir = value;
     }
 
+    private void WalkAnimationHandler()
+    {
+        armsAnimator.SetFloat("Speed", 1);
+    }
+
     private void AttemptJump()
     {
         if (readyToJump && (IsPlayerOnGround))
@@ -87,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 GetGroundNormal()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f + 0.2f))
         {
             return hit.normal;
         }
@@ -97,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = cameraOrientation.forward * inputDir.y + cameraOrientation.right * inputDir.x;
+        moveDirection = orientation.forward * inputDir.y + orientation.right * inputDir.x;
 
         Vector3 groundNormal = GetGroundNormal();
         Vector3 adjustedDirection = Vector3.ProjectOnPlane(moveDirection, groundNormal).normalized;

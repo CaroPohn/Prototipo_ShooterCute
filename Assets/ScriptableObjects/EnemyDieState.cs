@@ -7,6 +7,8 @@ public class EnemyDieState : EnemyStates
     {
         patrolEnemy.StopFollowingPlayer(true);
 
+        patrolEnemy.DeactivateColliders();
+
         patrolEnemy.DieAnimationHandler();
     }
 }

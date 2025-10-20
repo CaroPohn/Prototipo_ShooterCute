@@ -7,15 +7,13 @@ public class EggInteraction : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform eggHoldingSpot;
 
-    [SerializeField] private GameObject eggShield;
-
-    [SerializeField] private EggShield eggShieldScript;
-
-    //private FadeEggManager fadeEggManagerScript;
-
     [SerializeField] private GameObject interactText;
 
-    public static event Action OnInteractWithEgg;
+    [SerializeField] private StationAnimationHandler stationAnimationHandler;
+
+    public event Action OnInteractWithEgg;
+
+    public event Action OnGrabbingEgg;
 
     public float minimumDistanceToInteract;
 
@@ -25,17 +23,14 @@ public class EggInteraction : MonoBehaviour
     private bool hasPlayerInteracted;
     private bool canPlayerGrabEgg;
 
-    //private float corruptionFloat;
+    private bool hasDieStationAnimationFinished;
 
     private void Start()
     {
         isPlayerCloseEnough = false;
         hasPlayerInteracted = false;
         canPlayerGrabEgg = false;
-
-        eggShield.gameObject.SetActive(false);
-
-        //fadeEggManagerScript = GetComponent<FadeEggManager>();
+        hasDieStationAnimationFinished = false;
     }
 
     private void OnEnable()
@@ -43,7 +38,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction += AttemtInteraction;
         inputReader.OnInteraction += AttemptGivingEgg;
         WaveManager.OnWinningAllWaves += LetPlayerGrabEgg;
-        //WaveManager.OnNewWave += CorruptionEggEffectManager;
+        stationAnimationHandler.OnFinishStationDeathAnimation += StationAnimationFinished;
     }
 
     private void OnDisable()
@@ -51,7 +46,7 @@ public class EggInteraction : MonoBehaviour
         inputReader.OnInteraction -= AttemtInteraction;
         inputReader.OnInteraction -= AttemptGivingEgg;
         WaveManager.OnWinningAllWaves -= LetPlayerGrabEgg;
-        //WaveManager.OnNewWave -= CorruptionEggEffectManager;
+        stationAnimationHandler.OnFinishStationDeathAnimation -= StationAnimationFinished;
     }
 
     private void Update()
@@ -64,12 +59,10 @@ public class EggInteraction : MonoBehaviour
         }
     }
 
-    //private void CorruptionEggEffectManager()
-    //{
-    //    corruptionFloat += 0.18f;
-
-    //    fadeEggManagerScript.UpdateEggFadeProgress(corruptionFloat);
-    //}
+    private void StationAnimationFinished()
+    {
+        hasDieStationAnimationFinished = true;
+    }
 
     private void CalculateDistanceToPlayer()
     {
@@ -97,10 +90,6 @@ public class EggInteraction : MonoBehaviour
         {
             OnInteractWithEgg?.Invoke();
 
-            eggShield.gameObject.SetActive(true);
-
-            eggShieldScript.Appear();
-
             hasPlayerInteracted = true;
         }
     }
@@ -118,13 +107,11 @@ public class EggInteraction : MonoBehaviour
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
-
-        eggShieldScript.Desintegrate();
     }
 
     private void AttemptGivingEgg()
     {
-        if (canPlayerGrabEgg && isPlayerCloseEnough)
+        if (canPlayerGrabEgg && isPlayerCloseEnough && hasDieStationAnimationFinished)
         {
             GivePlayerEggWhenInteracting();
         }
@@ -135,5 +122,6 @@ public class EggInteraction : MonoBehaviour
         transform.parent = eggHoldingSpot;
         transform.position = eggHoldingSpot.position;
         transform.rotation = eggHoldingSpot.rotation;
+        OnGrabbingEgg?.Invoke();
     }    
 }
