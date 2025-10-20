@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{89277B21-B9E8-B830-08F0-E3AA152B700B}",
+    "Hash": "{922747E9-8D9F-25C2-0B4F-3EA999089487}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -54,6 +54,14 @@
       "Location": "Memory",
       "ShortName": "Player_Player_Footstep_Stone_1.wav",
       "CachePath": "D4/{D445C096-3C6B-0CC5-C5AD-07878CE3D2F0}.wem"
+     },
+     {
+      "Id": "132527993",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lumming_Ability_Electric_Impact2.wav",
+      "CachePath": "EC/{EC22A23E-2203-169C-95AC-CF6A5433E158}.wem"
      },
      {
       "Id": "151651069",
@@ -102,14 +110,6 @@
       "Location": "Memory",
       "ShortName": "Egg_Levitate_Loop.wav",
       "CachePath": "E9/{E951B9C8-5473-1649-0BD7-7D307C00EE35}.wem"
-     },
-     {
-      "Id": "327166184",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Projectile_Hit_ElectricProjectile.wav",
-      "CachePath": "A7/{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem"
      },
      {
       "Id": "409772932",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_Pickup.wav",
-      "CachePath": "EA/{EA03BD16-FA75-5000-122B-A5EA927DFB82}.wem"
+      "CachePath": "7A/{7AECF24A-E085-BA69-7B49-AB2890E8AFA2}.wem"
      },
      {
       "Id": "580075034",
@@ -197,15 +197,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_ShieldActivate.wav",
-      "CachePath": "84/{84E34095-26CE-A387-9DF3-1CAFF96161E1}.wem"
-     },
-     {
-      "Id": "673550933",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Projectile_Hit_ElectricProjectile2.wav",
-      "CachePath": "EC/{EC22A23E-2203-169C-95AC-CF6A5433E158}.wem"
+      "CachePath": "65/{6592B92C-8309-72ED-91BD-10D1598008B5}.wem"
      },
      {
       "Id": "746078826",
@@ -221,7 +213,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Lumming_Heal.wav",
-      "CachePath": "0F/{0FAA7CA3-836A-DE47-3D67-36DBDEDB2FD6}.wem"
+      "CachePath": "6B/{6B5C55C0-6710-23A1-3689-C827A0E64CFF}.wem"
      },
      {
       "Id": "785818676",
@@ -230,6 +222,14 @@
       "Location": "Memory",
       "ShortName": "Player_Shoot_Basic.wav",
       "CachePath": "C4/{C4E6D90D-A75E-D408-3B8C-D957B8178DFE}.wem"
+     },
+     {
+      "Id": "803171057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lumming_Ability_Electric_Impact.wav",
+      "CachePath": "A7/{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem"
      },
      {
       "Id": "866558810",
@@ -350,8 +350,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_PickUp",
       "GUID": "{597FB879-0D5F-49DA-9FF4-C30590A92459}",
       "DurationType": "OneShot",
-      "DurationMin": "1.1666666",
-      "DurationMax": "1.1666666",
+      "DurationMin": "0.8",
+      "DurationMax": "0.8",
       "MediaRefs": [
        {
         "Id": "541912967"
@@ -364,8 +364,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldActivate",
       "GUID": "{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}",
       "DurationType": "OneShot",
-      "DurationMin": "1.8169167",
-      "DurationMax": "1.8169167",
+      "DurationMin": "3.9",
+      "DurationMax": "3.9",
       "MediaRefs": [
        {
         "Id": "662917913"
@@ -475,10 +475,17 @@
       "Name": "Lumming_Ability_Electric_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Lumming_Ability_Electric_Impact",
       "GUID": "{7FA934BB-7197-48FF-ACBF-468F9AC31460}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.640625",
+      "DurationMax": "2.640625",
+      "MediaRefs": [
+       {
+        "Id": "132527993"
+       },
+       {
+        "Id": "803171057"
+       }
+      ]
      },
      {
       "Id": "768425324",
@@ -516,8 +523,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Lumming_Heal",
       "GUID": "{08E1FB78-8A3A-4ECA-8DE1-4B04DFD61079}",
       "DurationType": "OneShot",
-      "DurationMin": "2.40625",
-      "DurationMax": "2.40625",
+      "DurationMin": "1.8797916",
+      "DurationMax": "1.8797916",
       "MediaRefs": [
        {
         "Id": "780748996"
@@ -825,17 +832,10 @@
       "Name": "Projectile_Hit_ElectricProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_ElectricProjectile",
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "2.640625",
-      "DurationMax": "2.640625",
-      "MediaRefs": [
-       {
-        "Id": "327166184"
-       },
-       {
-        "Id": "673550933"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "2994932292",
@@ -938,6 +938,6 @@
     ]
    }
   ],
-  "FileHash": "{6C7E8B83-4BD3-C378-B09E-4FBDEA1A40F5}"
+  "FileHash": "{4DEDB7F0-FBC0-D930-278C-3E395390D1E5}"
  }
 }
