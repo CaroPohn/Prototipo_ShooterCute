@@ -116,6 +116,8 @@ public class EggInteraction : MonoBehaviour
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
+
+        exclamationUI.SetActive(true);
     }
 
     private void AttemptGivingEgg()
@@ -132,5 +134,6 @@ public class EggInteraction : MonoBehaviour
         transform.position = eggHoldingSpot.position;
         transform.rotation = eggHoldingSpot.rotation;
         OnGrabbingEgg?.Invoke();
+        exclamationUI.SetActive(false);
     }    
 }
