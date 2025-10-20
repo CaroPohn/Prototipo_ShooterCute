@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{5709FC51-8122-41A5-EAB5-9A82EFC1F44C}",
+    "Hash": "{6C4D8ADE-B6C9-4927-1526-3C5BF4FCDF75}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_Soul_Impact.wav",
-      "CachePath": "35/{35B2841A-7CED-2FA6-FC7D-35F4D03C8638}.wem"
+      "CachePath": "0B/{0BAAA337-7C3F-6B37-6BA9-760AD9AF8542}.wem"
      },
      {
       "Id": "116215165",
@@ -144,6 +144,14 @@
       "CachePath": "95/{95D7A808-239B-6689-BB21-7D8F08F24B2C}.wem"
      },
      {
+      "Id": "469117519",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Soul_Deploy_Loop.wav",
+      "CachePath": "42/{425A2EFA-2FFF-489D-1318-685DFD8A7B22}.wem"
+     },
+     {
       "Id": "472405016",
       "Language": "SFX",
       "Streaming": "false",
@@ -158,6 +166,14 @@
       "Location": "Memory",
       "ShortName": "Lumming_Levitate.wav",
       "CachePath": "47/{478FDC0B-79D6-3D64-CD29-9A0BA176EE4A}.wem"
+     },
+     {
+      "Id": "532381909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Soul_Deploy_Start.wav",
+      "CachePath": "8D/{8DA56352-4039-57EB-8435-B39DB4DDADFA}.wem"
      },
      {
       "Id": "538417311",
@@ -197,7 +213,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_ShieldActivate.wav",
-      "CachePath": "65/{6592B92C-8309-72ED-91BD-10D1598008B5}.wem"
+      "CachePath": "29/{29459E14-08FC-7CB5-AB06-49EF19DFAEAA}.wem"
      },
      {
       "Id": "746078826",
@@ -400,8 +416,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
       "DurationType": "OneShot",
-      "DurationMin": "0.25666666",
-      "DurationMax": "0.25666666",
+      "DurationMin": "1.09",
+      "DurationMax": "1.09",
       "MediaRefs": [
        {
         "Id": "96935299"
@@ -850,10 +866,15 @@
       "Name": "Projectile_Soul_Deploy",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Soul_Deploy",
       "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "469117519"
+       },
+       {
+        "Id": "532381909"
+       }
+      ]
      },
      {
       "Id": "3345914708",
@@ -956,6 +977,6 @@
     ]
    }
   ],
-  "FileHash": "{A16721C5-29C0-448F-2473-4BF9B94F48B5}"
+  "FileHash": "{7C5EC307-6B3C-2C4E-E08D-D44599A17C6E}"
  }
 }
