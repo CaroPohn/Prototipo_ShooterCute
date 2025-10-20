@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{922747E9-8D9F-25C2-0B4F-3EA999089487}",
+    "Hash": "{5709FC51-8122-41A5-EAB5-9A82EFC1F44C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -149,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "UI_Button_Special.wav",
-      "CachePath": "D4/{D4FDACC7-303F-4CDD-870F-334B2DDF6CA0}.wem"
+      "CachePath": "19/{19BF9758-08F4-1C4D-1A0B-8DA1ADC15845}.wem"
      },
      {
       "Id": "507842327",
@@ -270,6 +270,14 @@
       "Location": "Memory",
       "ShortName": "Player_Jump_5.wav",
       "CachePath": "F0/{F0CBD4FB-D547-B74B-6453-8803DC13EF89}.wem"
+     },
+     {
+      "Id": "985049323",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Slider.wav",
+      "CachePath": "4A/{4A79BC0E-2867-334C-2F59-72B4E97D6199}.wem"
      },
      {
       "Id": "989220512",
@@ -867,8 +875,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Button_Special",
       "GUID": "{EB428E82-5A3C-473D-96E5-76937AC605AF}",
       "DurationType": "OneShot",
-      "DurationMin": "0.12345833",
-      "DurationMax": "0.12345833",
+      "DurationMin": "0.133",
+      "DurationMax": "0.133",
       "MediaRefs": [
        {
         "Id": "472405016"
@@ -880,10 +888,20 @@
       "Name": "UI_Slider",
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider",
       "GUID": "{3558FD6F-8026-493C-A46C-2D21325EDD2D}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "985049323"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3748721091",
+      "Name": "Pitch_Slider",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Pitch_Slider",
+      "GUID": "{5E276FFD-46E0-4760-BDF2-4299FBAB1602}"
      }
     ],
     "StateGroups": [
@@ -938,6 +956,6 @@
     ]
    }
   ],
-  "FileHash": "{4DEDB7F0-FBC0-D930-278C-3E395390D1E5}"
+  "FileHash": "{B57E24CC-83E0-385B-E8B9-8379CDCE2686}"
  }
 }
