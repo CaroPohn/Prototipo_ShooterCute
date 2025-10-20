@@ -173,6 +173,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{2CA0AEE9-FB4B-4F29-BEA8-DFBCDD3A2141}" ShortID="40848104">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Projectile_Soul_Deploy" ID="{0400C974-2252-4CF5-B219-FB361902EECE}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}">
@@ -323,7 +334,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
-						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}"/>
+						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}">
+							<ChildrenList>
+								<Action Name="" ID="{0D87CCEA-350C-4070-B5A2-320CA7D14BF5}" ShortID="586171283">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Projectile_Soul_Deploy" ID="{0400C974-2252-4CF5-B219-FB361902EECE}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
