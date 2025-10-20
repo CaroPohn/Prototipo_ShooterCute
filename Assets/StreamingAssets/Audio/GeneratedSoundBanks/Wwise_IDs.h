@@ -94,6 +94,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CROSSFADE = 1369808713U;
+        static const AkUniqueID PITCH_SLIDER = 3748721091U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

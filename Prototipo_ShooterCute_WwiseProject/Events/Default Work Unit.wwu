@@ -286,7 +286,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}"/>
+						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
+							<ChildrenList>
+								<Action Name="" ID="{B7DA0DA1-4649-45A4-B663-6ADBB1CAFA48}" ShortID="780985807">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" ShortID="666977553">

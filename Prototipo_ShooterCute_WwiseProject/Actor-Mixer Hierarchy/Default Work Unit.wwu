@@ -1199,6 +1199,45 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{7341177E-29D6-4389-8671-E2A8A46F745A}" ShortID="663908480">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Pitch_Slider" ID="{5E276FFD-46E0-4760-BDF2-4299FBAB1602}" WorkUnitID="{D2D599AC-106F-4328-9AC7-F8E4281E6A8C}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{00BA8959-86BB-423A-856F-A85ED13E5BB4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>20</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>200</XPos>
+																		<YPos>1200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_Slider" ID="{D75066A0-5DBE-43C9-9A14-861D014076FD}" Platform="Linked"/>
 							</ActiveSourceList>
