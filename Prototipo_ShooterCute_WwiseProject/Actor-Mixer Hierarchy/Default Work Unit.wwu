@@ -900,28 +900,6 @@
 								<ActiveSource Name="Egg_Levitate_Loop" ID="{756850FB-0A06-4171-A2B6-000358CB2C92}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Egg_ShieldActivate" ID="{4FC27C1B-0F30-4AF5-8039-B64D177E1D57}" ShortID="933470132">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Egg_ShieldActivate" ID="{63EA0A71-2ACF-46B9-8B51-BB68FE91BC66}">
-									<Language>SFX</Language>
-									<AudioFile>Egg_ShieldActivate.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="662917913"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Egg_ShieldActivate" ID="{63EA0A71-2ACF-46B9-8B51-BB68FE91BC66}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" ShortID="574446683">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -993,6 +971,28 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Egg_ShieldActivate" ID="{590686ED-B8D0-45BC-B0B9-90EA27A09731}" ShortID="824388307">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_ShieldActivate" ID="{A0D3C892-D0ED-4D52-AADC-52BBD447E2BF}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_ShieldActivate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="662917913"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_ShieldActivate" ID="{A0D3C892-D0ED-4D52-AADC-52BBD447E2BF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
