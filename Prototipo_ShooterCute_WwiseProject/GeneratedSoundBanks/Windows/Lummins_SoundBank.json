@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{6C4D8ADE-B6C9-4927-1526-3C5BF4FCDF75}",
+    "Hash": "{D7D8A56B-CBB8-27A5-0BB7-21DC34B330A3}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -112,6 +112,14 @@
       "CachePath": "E9/{E951B9C8-5473-1649-0BD7-7D307C00EE35}.wem"
      },
      {
+      "Id": "346723824",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_1.wav",
+      "CachePath": "8D/{8DF4CB1B-2167-33F7-7427-BD99076BF9B3}.wem"
+     },
+     {
       "Id": "409772932",
       "Language": "SFX",
       "Streaming": "false",
@@ -200,6 +208,14 @@
       "CachePath": "75/{75C46BCF-F5EE-1CF5-4893-9E431AC5C3E7}.wem"
      },
      {
+      "Id": "623450889",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_2.wav",
+      "CachePath": "17/{17A302EA-DAC2-9F48-2509-831BB8990C67}.wem"
+     },
+     {
       "Id": "642849261",
       "Language": "SFX",
       "Streaming": "false",
@@ -214,6 +230,22 @@
       "Location": "Memory",
       "ShortName": "Egg_ShieldActivate.wav",
       "CachePath": "29/{29459E14-08FC-7CB5-AB06-49EF19DFAEAA}.wem"
+     },
+     {
+      "Id": "686454239",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_6.wav",
+      "CachePath": "AC/{ACE0D01C-7A94-B56E-92CB-08BEC78BD1FA}.wem"
+     },
+     {
+      "Id": "692635665",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_5.wav",
+      "CachePath": "E4/{E40D208A-9D01-5C5C-C0CD-374E38AB220E}.wem"
      },
      {
       "Id": "746078826",
@@ -246,6 +278,22 @@
       "Location": "Memory",
       "ShortName": "Lumming_Ability_Electric_Impact.wav",
       "CachePath": "A7/{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem"
+     },
+     {
+      "Id": "818804425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_4.wav",
+      "CachePath": "0B/{0BB31916-1CF7-51CF-97A0-D4C8409CDEDC}.wem"
+     },
+     {
+      "Id": "851326233",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_3.wav",
+      "CachePath": "1B/{1B3DED50-9E23-F485-18ED-7DB8B6A5E0F7}.wem"
      },
      {
       "Id": "866558810",
@@ -310,6 +358,14 @@
       "Location": "Memory",
       "ShortName": "Player_Player_Footstep_Lava_1.wav",
       "CachePath": "35/{35BDAE14-8D5B-3C77-6F81-99A1F4057E48}.wem"
+     },
+     {
+      "Id": "1054473271",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_DistantImpacts_7.wav",
+      "CachePath": "C9/{C92A883C-FD51-71AB-331C-C41140E30060}.wem"
      }
     ],
     "Events": [
@@ -330,7 +386,30 @@
       "Name": "Ambient_DistantImpacts",
       "ObjectPath": "\\Events\\Default Work Unit\\Ambient\\Ambient_DistantImpacts",
       "GUID": "{A37B3518-9697-4999-82F7-DDA810DD0450}",
-      "DurationType": "Infinite"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "346723824"
+       },
+       {
+        "Id": "623450889"
+       },
+       {
+        "Id": "686454239"
+       },
+       {
+        "Id": "692635665"
+       },
+       {
+        "Id": "818804425"
+       },
+       {
+        "Id": "851326233"
+       },
+       {
+        "Id": "1054473271"
+       }
+      ]
      },
      {
       "Id": "4275106484",
@@ -977,6 +1056,6 @@
     ]
    }
   ],
-  "FileHash": "{FC788047-12FB-2D18-929F-26F46D0AEA39}"
+  "FileHash": "{122F6444-230E-34A2-5DD9-6F85B1780781}"
  }
 }

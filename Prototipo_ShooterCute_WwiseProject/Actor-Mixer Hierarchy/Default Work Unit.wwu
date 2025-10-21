@@ -1360,6 +1360,19 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CD77AB93-0A81-4AD4-A575-7FD927A57ED1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -1377,6 +1390,19 @@
 									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4DC63EB1-76FE-42D1-BADB-A6572FEFD399}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1386,6 +1412,162 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambient_DistantImpacts_1" ID="{D48A4BFB-5A2F-474D-869B-2E7FEB56CC37}" ShortID="338121696">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_1" ID="{E2437A4E-E547-4E6E-8CD2-8C1519C65694}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346723824"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_1" ID="{E2437A4E-E547-4E6E-8CD2-8C1519C65694}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_7" ID="{BDD67B89-DECF-4A9E-83D0-1193D08CCF45}" ShortID="578018887">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_7" ID="{0CA7A1B4-BFAD-4ACB-9ECF-00ECCCFABFC3}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054473271"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_7" ID="{0CA7A1B4-BFAD-4ACB-9ECF-00ECCCFABFC3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_6" ID="{6C4572D2-2FDE-4F46-AAEB-89ED290B1D5A}" ShortID="292070209">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_6" ID="{BF6C3D9B-88DF-40F7-940A-AAD95D7292EC}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="686454239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_6" ID="{BF6C3D9B-88DF-40F7-940A-AAD95D7292EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_5" ID="{0D5AB51C-9FA0-4E31-B621-49D1060A9DE8}" ShortID="953404243">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_5" ID="{9E8F45D1-5C28-460D-9263-5D001506D10F}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="692635665"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_5" ID="{9E8F45D1-5C28-460D-9263-5D001506D10F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_4" ID="{C550E776-4191-4649-BEC4-22B43E26FE65}" ShortID="345072263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_4" ID="{B7F7C4E7-73D5-4710-A913-360A488FBD0E}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="818804425"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_4" ID="{B7F7C4E7-73D5-4710-A913-360A488FBD0E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_3" ID="{133F13E8-08B0-43CF-9EFD-C8494264F57F}" ShortID="522536106">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_3" ID="{23D0A1FA-F101-406F-8553-2AFA10E971DF}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="851326233"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_3" ID="{23D0A1FA-F101-406F-8553-2AFA10E971DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_2" ID="{2DD75F2A-08F6-44C5-B9CD-628A8F13C324}" ShortID="391903586">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_2" ID="{6BD3A8F4-F801-49B8-BCFF-BEE2B24E4A57}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="623450889"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_2" ID="{6BD3A8F4-F801-49B8-BCFF-BEE2B24E4A57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
