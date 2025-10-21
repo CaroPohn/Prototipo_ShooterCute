@@ -51,8 +51,6 @@ public class BombFriendSystem : MonoBehaviour
 
         player = transform.parent;
 
-        Debug.Log(transform.parent.name);
-
         parentTransform = transform.parent;
         transform.position = transform.parent.position;
 
@@ -181,8 +179,9 @@ public class BombFriendSystem : MonoBehaviour
 
         isRunning = false;
         gameObject.SetActive(false);
-        transform.parent = parentTransform;
+        transform.parent = parentTransform;       
         transform.position = parentTransform.position;
+        transform.localPosition = Vector3.zero;
         transform.rotation = parentTransform.rotation;  
     }
 

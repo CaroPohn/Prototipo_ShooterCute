@@ -19,14 +19,14 @@ public class Electric_Gun_VFX : MonoBehaviour
     {
         //muzzle.Stop();
         chargeObject.SetActive(false);
-        PlayRay(36f,0.5f);
+        PlayRay(36f,0.5f, transform);
     }
 
-    public void Release(float hitDistance,float intensity)
+    public void Release(float hitDistance,float intensity, Transform pivot)
     {
         //muzzle.Stop();
         chargeObject.SetActive(false);
-        PlayRay(hitDistance,intensity);
+        PlayRay(hitDistance, intensity, pivot);
 
     }
     public void Cancel()
@@ -36,9 +36,9 @@ public class Electric_Gun_VFX : MonoBehaviour
 
     }
 
-    void PlayRay(float hitDistance, float intensity)
+    void PlayRay(float hitDistance, float intensity, Transform pivot)
     {
-        VisualEffect rayInstance = Instantiate(rayEffect, transform.position, transform.rotation);
+        VisualEffect rayInstance = Instantiate(rayEffect, pivot.transform.position, pivot.transform.rotation);
 
         rayInstance.SendEvent("PlayRay");
         rayInstance.SetFloat(distancePropID, hitDistance);
