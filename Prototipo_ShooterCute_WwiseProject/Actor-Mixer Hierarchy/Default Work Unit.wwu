@@ -1106,6 +1106,31 @@
 								<ActiveSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Lumming_Levitate_2" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lumming_Levitate_2" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}">
+									<Language>SFX</Language>
+									<AudioFile>Lumming_Levitate_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="157621030"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lumming_Levitate_2" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{5441150D-5FE2-4A22-B873-F9292A6399BF}" ShortID="888078412">
