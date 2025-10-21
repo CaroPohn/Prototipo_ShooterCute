@@ -75,8 +75,6 @@ public class WaveManager : MonoBehaviour
 
             hasRescueTextShow = true;
 
-            Debug.Log(hasRescueTextShow);
-
             stationCollider.enabled = false;
             stationEffectsScript.Die();
         }
