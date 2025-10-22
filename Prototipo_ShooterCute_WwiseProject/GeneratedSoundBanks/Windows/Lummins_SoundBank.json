@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{DC799953-B061-219A-C55A-10CFE2420587}",
+    "Hash": "{FE2D4565-E99A-8991-5A5C-4D87F5878510}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -437,6 +437,7 @@
       "Name": "Egg_Levitate",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Levitate",
       "GUID": "{86CEEACD-B2E3-4BB2-AC46-554026C847F3}",
+      "Color": "15",
       "MaxAttenuation": "30",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -450,6 +451,7 @@
       "Name": "Egg_PickUp",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_PickUp",
       "GUID": "{597FB879-0D5F-49DA-9FF4-C30590A92459}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "0.8",
       "DurationMax": "0.8",
@@ -464,6 +466,7 @@
       "Name": "Egg_ShieldActivate",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldActivate",
       "GUID": "{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "3.9",
       "DurationMax": "3.9",
@@ -478,6 +481,7 @@
       "Name": "Egg_ShieldDestroy",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_ShieldDestroy",
       "GUID": "{87296857-A859-4A3B-87B2-F20E2D2D9FC4}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "3",
       "DurationMax": "3",
@@ -492,6 +496,7 @@
       "Name": "Egg_Soul_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
+      "Color": "15",
       "MaxAttenuation": "25",
       "DurationType": "OneShot",
       "DurationMin": "1.09",
@@ -794,7 +799,8 @@
          "GroupType": "Switch",
          "GroupId": "1833605183",
          "Id": "1216965916",
-         "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}"
+         "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}",
+         "Default": "true"
         },
         "MediaRefs": [
          {
@@ -945,6 +951,7 @@
       "Name": "Projectile_Soul_Deploy",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Soul_Deploy",
       "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
+      "Color": "15",
       "MaxAttenuation": "25",
       "DurationType": "OneShot",
       "DurationMin": "0.3",
@@ -1056,6 +1063,6 @@
     ]
    }
   ],
-  "FileHash": "{CF105451-3C2E-35C7-C918-C4077358EEA9}"
+  "FileHash": "{139754BF-67AD-952E-C993-AB0B90E34148}"
  }
 }

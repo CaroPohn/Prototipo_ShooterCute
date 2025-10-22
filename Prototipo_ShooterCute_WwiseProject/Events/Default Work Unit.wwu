@@ -136,6 +136,10 @@
 				<Folder Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" ShortID="753824209">
 					<ChildrenList>
 						<Event Name="Egg_Levitate" ID="{86CEEACD-B2E3-4BB2-AC46-554026C847F3}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{C6C60FA5-B190-479F-8F18-B5632294558D}" ShortID="110531300">
 									<ReferenceList>
@@ -147,6 +151,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{78EF98E5-A84B-4F64-A3A0-60CC5A062BC0}" ShortID="1033925054">
 									<ReferenceList>
@@ -158,6 +166,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{214D7B65-05EE-44B5-A587-211A23EFDC3F}" ShortID="942343375">
 									<ReferenceList>
@@ -169,6 +181,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5A0728DC-8E87-4879-8BE1-9324DC85EC0F}" ShortID="492312074">
 									<ReferenceList>
@@ -191,6 +207,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{E98E7AD4-655A-495B-AFAC-E24D3279765E}" ShortID="375717160">
 									<ReferenceList>
@@ -351,6 +371,10 @@
 						</Event>
 						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}"/>
 						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{0D87CCEA-350C-4070-B5A2-320CA7D14BF5}" ShortID="586171283">
 									<ReferenceList>

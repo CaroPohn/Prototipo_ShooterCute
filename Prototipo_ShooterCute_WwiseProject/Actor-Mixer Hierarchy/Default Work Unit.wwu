@@ -632,6 +632,9 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Stone" ID="{4A98E414-0F26-4526-A388-37A47AA2B427}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
@@ -873,7 +876,9 @@
 						<Sound Name="Egg_Levitate" ID="{6D01CEF8-2AAA-4865-99A1-B12F8647EE5E}" ShortID="208787825">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -908,7 +913,9 @@
 						<Sound Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" ShortID="574446683">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="80"/>
 							</PropertyList>
 							<ReferenceList>
@@ -935,11 +942,13 @@
 						<Sound Name="Egg_Soul_Impact" ID="{2D361936-4355-4EEE-B871-BAE9037953DD}" ShortID="509061660">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>25</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
 							</PropertyList>
 							<ReferenceList>
@@ -967,6 +976,10 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Egg_Pickup" ID="{306920FC-4039-4A49-B5B0-4D37BC9A4192}" ShortID="933293210">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -989,6 +1002,10 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Egg_ShieldActivate" ID="{AC098C75-DEF5-4D1D-AF3F-5FF913976442}" ShortID="1021735319">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1152,7 +1169,9 @@
 					<ChildrenList>
 						<Sound Name="UI_Button_Normal" ID="{53B92A31-78B6-4974-8F4D-4ACD1D2B2E48}" ShortID="952060930">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1190,7 +1209,9 @@
 						</Sound>
 						<Sound Name="UI_Button_Special" ID="{5017CE95-0ADF-46ED-874B-C3F79146CC94}" ShortID="563087847">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1716,6 +1737,8 @@
 						<RandomSequenceContainer Name="Projectile_Soul_Deploy" ID="{0400C974-2252-4CF5-B219-FB361902EECE}" ShortID="449005521">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
