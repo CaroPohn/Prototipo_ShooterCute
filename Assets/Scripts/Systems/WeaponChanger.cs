@@ -88,6 +88,8 @@ public class WeaponChanger : MonoBehaviour
     {
         if (weaponIndex == 1)
         {
+            TurnOffAbility();
+
             if (selectedGun != null)
                 selectedGun.SetActive(true);
 
@@ -97,11 +99,19 @@ public class WeaponChanger : MonoBehaviour
         {
             selectedGun.SetActive(false);
             arms.SetActive(false);
-        
+
             if (selectedAbility != null)
             {
                 selectedAbility.SetActive(true);
             }
+        }
+    }
+
+    private void TurnOffAbility()
+    {
+        if(selectedAbility.activeSelf && timer >= 10.0f)
+        {
+            selectedAbility.SetActive(false);
         }
     }
 
