@@ -81,6 +81,7 @@ public class SelectionMenu : MonoBehaviour
             currentWeaponIndex = (currentWeaponIndex + 1) % elements.Length;
         }
 
+        AkUnitySoundEngine.PostEvent("UI_Button_Normal", gameObject);
         UpdateDisplays();
     }
 
@@ -97,6 +98,7 @@ public class SelectionMenu : MonoBehaviour
             currentWeaponIndex = (currentWeaponIndex - 1 + elements.Length) % elements.Length;
         }
 
+        AkUnitySoundEngine.PostEvent("UI_Button_Normal", gameObject);
         UpdateDisplays();
     }
 
@@ -113,6 +115,7 @@ public class SelectionMenu : MonoBehaviour
             currentAbilityIndex = (currentAbilityIndex + 1) % elements.Length;
         }
 
+        AkUnitySoundEngine.PostEvent("UI_Button_Normal", gameObject);
         UpdateDisplays();
     }
 
@@ -129,6 +132,7 @@ public class SelectionMenu : MonoBehaviour
             currentAbilityIndex = (currentAbilityIndex - 1 + elements.Length) % elements.Length;
         }
 
+        AkUnitySoundEngine.PostEvent("UI_Button_Normal", gameObject);
         UpdateDisplays();
     }
 
@@ -151,6 +155,8 @@ public class SelectionMenu : MonoBehaviour
 
     private void StartPlayScene()
     {
+        AkUnitySoundEngine.PostEvent("UI_Button_Special", gameObject);
+        
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
 
