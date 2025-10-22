@@ -37,6 +37,8 @@ public class EggStation : MonoBehaviour
         if(eggShield != null )
         {
             eggShield.Desintegrate();
+
+            AkUnitySoundEngine.PostEvent("Egg_ShieldDestroy", gameObject);
         }
     }
     public void SpawnShield()
