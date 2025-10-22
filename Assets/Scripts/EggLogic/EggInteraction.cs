@@ -89,6 +89,8 @@ public class EggInteraction : MonoBehaviour
             OnInteractWithEgg?.Invoke();
 
             hasPlayerInteracted = true;
+
+            AkUnitySoundEngine.PostEvent("Egg_ShieldActivate", gameObject);
         }
     }
 
@@ -120,5 +122,7 @@ public class EggInteraction : MonoBehaviour
         transform.parent = eggHoldingSpot;
         transform.position = eggHoldingSpot.position;
         transform.rotation = eggHoldingSpot.rotation;
+        
+        AkUnitySoundEngine.PostEvent("Egg_PickUp", gameObject);
     }    
 }
