@@ -24,13 +24,16 @@ public class LevelController : MonoBehaviour
     //[SerializeField] private GameObject WinEggText;
     //[SerializeField] private GameObject StartWavesEggText;
 
+    [Header("Egg")]
+    [SerializeField] private EggInteraction eggInteractionScript;
+
     private void OnEnable()
     {
         Time.timeScale = 1.0f;
 
         WinColliderTrigger.OnWinningLevel += WinLevel;
         WaveManager.OnWinningAllWaves += ActivateEggWinText;
-        EggInteraction.OnInteractWithEgg += DeactivateEggStartWavesText;
+        eggInteractionScript.OnInteractWithEgg += DeactivateEggStartWavesText;
         inputReader.OnPause += PauseGame;
         playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
     }
@@ -39,7 +42,7 @@ public class LevelController : MonoBehaviour
     {
         WinColliderTrigger.OnWinningLevel -= WinLevel;
         WaveManager.OnWinningAllWaves -= ActivateEggWinText;
-        EggInteraction.OnInteractWithEgg -= DeactivateEggStartWavesText;
+        eggInteractionScript.OnInteractWithEgg -= DeactivateEggStartWavesText;
         inputReader.OnPause -= PauseGame;
     }
 

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class EggInteraction : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class EggInteraction : MonoBehaviour
 
     [SerializeField] private StationAnimationHandler stationAnimationHandler;
 
-    public static event Action OnInteractWithEgg;
+    [SerializeField] private Animator uIInteractAnimator;
+
+    [SerializeField] private GameObject exclamationUI;
+
+    public event Action OnInteractWithEgg;
+
+    public event Action OnGrabbingEgg;
 
     public float minimumDistanceToInteract;
 
@@ -90,6 +97,8 @@ public class EggInteraction : MonoBehaviour
         {
             OnInteractWithEgg?.Invoke();
 
+            exclamationUI.SetActive(false);
+
             hasPlayerInteracted = true;
 
             AkUnitySoundEngine.PostEvent("Egg_ShieldActivate", gameObject);
@@ -98,17 +107,21 @@ public class EggInteraction : MonoBehaviour
 
     private void SpawnInteractText(bool isActive)
     {
-        interactText.SetActive(isActive);
+        //interactText.SetActive(isActive);
+        uIInteractAnimator.SetBool("visible", isActive);
     }
 
     private void MakeTextFollowPlayer()
     {
-        interactText.transform.LookAt(playerTransform.position);
+        Vector3 lookPosition = new Vector3(playerTransform.position.x, interactText.transform.position.y, playerTransform.position.z);
+        interactText.transform.LookAt(lookPosition);
     }
 
     private void LetPlayerGrabEgg()
     {
         canPlayerGrabEgg = true;
+
+        exclamationUI.SetActive(true);
     }
 
     private void AttemptGivingEgg()
@@ -126,5 +139,8 @@ public class EggInteraction : MonoBehaviour
         transform.rotation = eggHoldingSpot.rotation;
 
         AkUnitySoundEngine.PostEvent("Egg_PickUp", gameObject);
+        
+        OnGrabbingEgg?.Invoke();
+        exclamationUI.SetActive(false);
     }    
 }

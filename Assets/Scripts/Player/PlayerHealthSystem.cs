@@ -17,11 +17,15 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private float timeElapsedSinceExit;
 
+    private Material lavaMat;
+    private Material healthMat;
+    private Material damageMat;
+
     public enum EffectType
     {
         None,
         Lava,
-        Projectile,
+        EnemyDamage,
         Heal
     }
 
@@ -37,6 +41,10 @@ public class PlayerHealthSystem : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+
+        lavaMat = lavaDamageEffect;
+        healthMat = healthEffect;
+        damageMat = projectileDamageEffect;
     }
 
     private void OnEnable()
@@ -78,7 +86,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private void ResetPlayer()
     {
-        healthEffect.SetFloat("_Intensity", 0);
+        healthMat.SetFloat("_Intensity", 0);
         effectType = EffectType.None;
     }
 
@@ -102,23 +110,24 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         if (effectType == EffectType.None)
         {
-            lavaDamageEffect.SetFloat("_Intensity", 0);
-            projectileDamageEffect.SetFloat("_Intensity", 0);
-            healthEffect.SetFloat("_Intensity", 0);
+            lavaMat.SetFloat("_Intensity", 0);
+            damageMat.SetFloat("_Intensity", 0);
+            healthMat.SetFloat("_Intensity", 0);
         }
         else if (effectType == EffectType.Lava)
         {
-            lavaDamageEffect.SetFloat("_Intensity", 1);
+            lavaMat.SetFloat("_Intensity", 1);
+            StopCoroutine(HealEffectCooldown());
         }
-        else if (effectType == EffectType.Projectile)
+        else if (effectType == EffectType.EnemyDamage)
         {
-            projectileDamageEffect.SetFloat("_Intensity", 1);
+            damageMat.SetFloat("_Intensity", 1);
             StartCoroutine(EffectCooldown());
         }
         else if (effectType == EffectType.Heal)
         {
-            lavaDamageEffect.SetFloat("_Intensity", 0);
-            healthEffect.SetFloat("_Intensity", 1);
+            lavaMat.SetFloat("_Intensity", 0);
+            healthMat.SetFloat("_Intensity", 1);
             StartCoroutine(HealEffectCooldown());
 
             StopCoroutine(LavaDamageOverTimeAfterExit());
@@ -145,13 +154,18 @@ public class PlayerHealthSystem : MonoBehaviour
 
         while (elapsed < duration)
         {
+            if (effectType == EffectType.Lava)
+            {
+                yield break;
+            }
+
             elapsed += Time.deltaTime;
             float currentValue = Mathf.Lerp(startValue, endValue, elapsed / duration);
             healthEffect.SetFloat("_Intensity", currentValue);
             yield return null;
         }
 
-        healthEffect.SetFloat("_Intensity", endValue);
+        healthMat.SetFloat("_Intensity", endValue);
         effectType = EffectType.None;
     }
 

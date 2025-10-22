@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7542007372021456324}
+  - component: {fileID: 7589965563453736505}
   m_Layer: 0
   m_Name: Stone_B
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   - {fileID: 2969335077425124122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &7589965563453736505
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681277637418965102}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 0.25, z: 0.15}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.12, y: 0, z: -0.05}
+  m_TimeToStationary: 0.5
 --- !u!1 &7036936301590998461
 GameObject:
   m_ObjectHideFlags: 0

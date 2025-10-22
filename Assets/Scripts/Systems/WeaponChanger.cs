@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponChanger : MonoBehaviour 
+public class WeaponChanger : MonoBehaviour
 {
     [SerializeField] private GameObject arms;
 
@@ -13,7 +13,7 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] public Image FillAbilityImage;
 
-    public float timer; 
+    public float timer;
 
     public int weaponIndex;
 
@@ -21,6 +21,8 @@ public class WeaponChanger : MonoBehaviour
     private string abilityName;
 
     [SerializeField] private PlayerWeaponChoose playerWeaponChooseScript;
+
+    [SerializeField] private Animator abilityUIAnim;
 
     [SerializeField] private InputReader inputReader;
 
@@ -59,6 +61,15 @@ public class WeaponChanger : MonoBehaviour
         {
             FillAbilityImage.fillAmount += (1f / 10f) * Time.deltaTime;
         }
+
+        if (timer >= 10.0f)
+        {
+            abilityUIAnim.SetBool("isReady", true);
+        }
+        else
+        {
+            abilityUIAnim.SetBool("isReady", false);
+        }
     }
 
     private void ChangeToWeapon()
@@ -77,6 +88,8 @@ public class WeaponChanger : MonoBehaviour
     {
         if (weaponIndex == 1)
         {
+            TurnOffAbility();
+
             if (selectedGun != null)
                 selectedGun.SetActive(true);
 
@@ -86,11 +99,19 @@ public class WeaponChanger : MonoBehaviour
         {
             selectedGun.SetActive(false);
             arms.SetActive(false);
-        
+
             if (selectedAbility != null)
             {
                 selectedAbility.SetActive(true);
             }
+        }
+    }
+
+    private void TurnOffAbility()
+    {
+        if(selectedAbility.activeSelf && timer >= 10.0f)
+        {
+            selectedAbility.SetActive(false);
         }
     }
 
