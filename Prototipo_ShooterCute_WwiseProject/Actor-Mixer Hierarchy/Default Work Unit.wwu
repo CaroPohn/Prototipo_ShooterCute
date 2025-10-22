@@ -7,7 +7,9 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Player_Jump" ID="{ECB4B163-E914-41CC-890E-27F6BA78709D}" ShortID="813203338">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1274,8 +1276,10 @@
 						<Sound Name="Ambient_Wind" ID="{75CE978D-40FA-4FF3-B1E0-072AC11D25FF}" ShortID="15551451">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1302,7 +1306,9 @@
 						<Sound Name="Ambient_Lava" ID="{30B3363E-B2D3-4C08-A7AA-F32FB1E55036}" ShortID="95699721">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
@@ -1365,6 +1371,7 @@
 						</Sound>
 						<RandomSequenceContainer Name="Ambient_DistantImpacts" ID="{FA1BA383-6949-4E73-A8A1-078125B242F8}" ShortID="429915665">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
@@ -1372,6 +1379,7 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>

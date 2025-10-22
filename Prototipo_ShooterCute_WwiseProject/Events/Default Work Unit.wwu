@@ -64,6 +64,10 @@
 						</Event>
 						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}"/>
 						<Event Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{C57B8240-86FB-466A-B9BA-35CEC0D6CB0B}" ShortID="51812891">
 									<ReferenceList>
@@ -228,6 +232,10 @@
 				<Folder Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" ShortID="459971135">
 					<ChildrenList>
 						<Event Name="Ambient_Lava" ID="{08ED279A-8209-4CE9-8C53-94ACA939ABAB}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5AD0BEA7-12EA-44D7-9954-F6E88A87118E}" ShortID="697672778">
 									<ReferenceList>
@@ -239,6 +247,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Ambient_Wind" ID="{D3C01CD1-68A5-4FBD-9B83-4CD651E5813B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{4C39FAB5-3210-45A5-87B4-BABEE69B930C}" ShortID="1032930474">
 									<ReferenceList>
@@ -250,6 +262,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Ambient_DistantImpacts" ID="{A37B3518-9697-4999-82F7-DDA810DD0450}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{3F712461-1EDF-4DDA-A8A2-A55D35C08EB5}" ShortID="977500318">
 									<ReferenceList>
