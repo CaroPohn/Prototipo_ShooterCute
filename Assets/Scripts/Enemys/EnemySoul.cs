@@ -12,6 +12,7 @@ public class EnemySoul : MonoBehaviour
     {
         ps.trigger.SetCollider(0,GameObject.Find("Egg Soul Force Field").GetComponent<Collider>());
         ps.Play();
+        AkUnitySoundEngine.PostEvent("Projectile_Soul_Deploy", gameObject);
     }
 
     // Update is called once per frame

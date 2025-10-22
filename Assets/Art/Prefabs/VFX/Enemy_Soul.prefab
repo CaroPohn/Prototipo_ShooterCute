@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1231939851064378060}
   - component: {fileID: 3580172290817743177}
   - component: {fileID: 4919544594344123799}
+  - component: {fileID: -6912556894533155252}
   m_Layer: 0
   m_Name: Enemy_Soul
   m_TagString: Untagged
@@ -4917,3 +4918,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ps: {fileID: 1231939851064378060}
+--- !u!114 &-6912556894533155252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743157432706941736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e0186bd54d13547958a1c44d87349e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 1
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1

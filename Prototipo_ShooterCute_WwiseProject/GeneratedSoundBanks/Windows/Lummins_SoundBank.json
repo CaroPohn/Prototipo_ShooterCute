@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{7B331FCF-53C8-3B54-4178-0D28E54B9F9F}",
+    "Hash": "{2A00796B-BC87-7FB0-9B8D-858C26CD380F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -158,14 +158,6 @@
       "Location": "Memory",
       "ShortName": "Player_Player_Footstep_Stone_4.wav",
       "CachePath": "95/{95D7A808-239B-6689-BB21-7D8F08F24B2C}.wem"
-     },
-     {
-      "Id": "469117519",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Projectile_Soul_Deploy_Loop.wav",
-      "CachePath": "42/{425A2EFA-2FFF-489D-1318-685DFD8A7B22}.wem"
      },
      {
       "Id": "472405016",
@@ -500,6 +492,7 @@
       "Name": "Egg_Soul_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
+      "MaxAttenuation": "25",
       "DurationType": "OneShot",
       "DurationMin": "1.09",
       "DurationMax": "1.09",
@@ -952,11 +945,11 @@
       "Name": "Projectile_Soul_Deploy",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Soul_Deploy",
       "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
-      "DurationType": "Infinite",
+      "MaxAttenuation": "25",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3",
+      "DurationMax": "0.3",
       "MediaRefs": [
-       {
-        "Id": "469117519"
-       },
        {
         "Id": "532381909"
        }
@@ -1063,6 +1056,6 @@
     ]
    }
   ],
-  "FileHash": "{9735F622-6314-41F3-7C82-870C8437F917}"
+  "FileHash": "{7E6B814A-0C6E-844D-9BF4-EF037FEF4995}"
  }
 }
