@@ -29,6 +29,8 @@ public class EggInteraction : MonoBehaviour
         hasPlayerInteracted = false;
         canPlayerGrabEgg = false;
         hasDieStationAnimationFinished = false;
+
+        AkUnitySoundEngine.PostEvent("Egg_Levitate", gameObject);
     }
 
     private void OnEnable()
@@ -122,7 +124,7 @@ public class EggInteraction : MonoBehaviour
         transform.parent = eggHoldingSpot;
         transform.position = eggHoldingSpot.position;
         transform.rotation = eggHoldingSpot.rotation;
-        
+
         AkUnitySoundEngine.PostEvent("Egg_PickUp", gameObject);
     }    
 }
