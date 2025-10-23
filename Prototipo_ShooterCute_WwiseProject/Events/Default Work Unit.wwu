@@ -62,7 +62,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}"/>
+						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}">
+							<ChildrenList>
+								<Action Name="" ID="{39040BDF-EE3E-490A-BF94-18A27F9C4539}" ShortID="357565215">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_TakeDamage_Generic" ID="{C384DC0F-A2D5-4895-B324-B2F58271D723}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="15"/>
@@ -98,7 +108,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Lumming_Levitate(old)" ID="{A2A6AE96-2D7F-494C-8BC2-12221E62255A}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -240,13 +250,63 @@
 				</Folder>
 				<Folder Name="Enemy" ID="{B4F7FB49-4CC7-402A-8068-6876465C9C75}" ShortID="667240271">
 					<ChildrenList>
-						<Event Name="Enemy_Spawn_Adult" ID="{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}"/>
+						<Event Name="Enemy_Spawn_Adult" ID="{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}">
+							<ChildrenList>
+								<Action Name="" ID="{8C504D38-147F-417A-A09C-155F9FC6D4C0}" ShortID="195943135">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Spawn_Adult" ID="{48025873-2DBF-4A20-87C8-19BE76439800}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}"/>
-						<Event Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}"/>
+						<Event Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}">
+							<ChildrenList>
+								<Action Name="" ID="{8B30DD6D-8CB5-4FDF-B1ED-95533E408AFA}" ShortID="307671829">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Footstep_Adult" ID="{95FA0EEC-24BB-4C73-90AC-8967F3FE369B}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}"/>
-						<Event Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}"/>
-						<Event Name="Enemy_TakeDamage" ID="{30A93EC0-31F0-4DDE-BFCE-510D1297C630}"/>
-						<Event Name="Enemy_Death" ID="{C87E5E1B-B10A-496F-B556-26AEDA087099}"/>
+						<Event Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}">
+							<ChildrenList>
+								<Action Name="" ID="{070B0540-B250-43C6-93D9-87FC66072318}" ShortID="945917162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Shoot_Basic" ID="{77A714C2-3062-4F39-AAB0-C37B859E53D5}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enemy_TakeDamage" ID="{30A93EC0-31F0-4DDE-BFCE-510D1297C630}">
+							<ChildrenList>
+								<Action Name="" ID="{90BB812E-863A-4098-BDEB-3BF31F3DB724}" ShortID="86573296">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_TakeDamage" ID="{FCB3732E-2896-4FDC-A65F-3BD5A2EE69F1}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enemy_Death" ID="{C87E5E1B-B10A-496F-B556-26AEDA087099}">
+							<ChildrenList>
+								<Action Name="" ID="{AFD4B40B-FBBF-4B4F-88CE-DB0922FCA939}" ShortID="548723269">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Death" ID="{203BD543-1930-493B-9866-12258C56C443}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" ShortID="459971135">
@@ -297,6 +357,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Ambient_Collapse" ID="{D63FA170-E634-428D-A49C-1FEEED4E94DC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{B8450105-2DD1-41FE-996A-AFEBEBF0DF65}" ShortID="254581468">
 									<ReferenceList>
@@ -354,16 +418,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Projectile_Hit_BasicProjectile" ID="{A545B015-0BC7-4C71-9F82-0D8B76DF95F6}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{D8D2AAEB-7041-40E4-B640-181CFFFF2547}" ShortID="153596884">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
