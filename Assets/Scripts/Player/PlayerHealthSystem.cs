@@ -18,6 +18,8 @@ public class PlayerHealthSystem : MonoBehaviour
     private float timeElapsedSinceExit;
 
     private bool isCurrentlyBurning;
+    private bool hasPlayedDamageSound;
+    private bool hasPlayedHealSound;
 
     private Material lavaMat;
     private Material healthMat;
@@ -49,6 +51,8 @@ public class PlayerHealthSystem : MonoBehaviour
         damageMat = projectileDamageEffect;
 
         isCurrentlyBurning = false;
+        hasPlayedDamageSound = false;
+        hasPlayedHealSound = false;
 
         AkUnitySoundEngine.SetState("Player_Burn", "None");
     }
@@ -121,9 +125,8 @@ public class PlayerHealthSystem : MonoBehaviour
             healthMat.SetFloat("_Intensity", 0);
             if (isCurrentlyBurning)
             {
-                // Cambió de quemado a no quemado
                 AkUnitySoundEngine.SetState("Player_Burn", "Not_Burning");
-                AkUnitySoundEngine.PostEvent("Player_Burn", gameObject); // si tenés este evento en Wwise
+                AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
                 isCurrentlyBurning = false;
             }
         }
@@ -134,21 +137,35 @@ public class PlayerHealthSystem : MonoBehaviour
 
             if (!isCurrentlyBurning)
             {
-                // Entró en estado de quemado
                 AkUnitySoundEngine.SetState("Player_Burn", "Burning");
                 AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
+                
                 isCurrentlyBurning = true;
             }
         }
         else if (effectType == EffectType.EnemyDamage)
         {
             damageMat.SetFloat("_Intensity", 1);
-            StartCoroutine(EffectCooldown());
+
+            if (!hasPlayedDamageSound)
+            {
+                AkUnitySoundEngine.PostEvent("Player_TakeDamage_Generic", gameObject);
+                hasPlayedDamageSound = true;
+            }
+
+            StartCoroutine(DamageEffectCooldown());
         }
         else if (effectType == EffectType.Heal)
         {
             lavaMat.SetFloat("_Intensity", 0);
             healthMat.SetFloat("_Intensity", 1);
+            
+            if (!hasPlayedHealSound)
+            {
+                AkUnitySoundEngine.PostEvent("Lumming_Heal", gameObject);
+                hasPlayedHealSound = true;
+            }
+
             StartCoroutine(HealEffectCooldown());
 
             if (isCurrentlyBurning)
@@ -169,10 +186,11 @@ public class PlayerHealthSystem : MonoBehaviour
         StartCoroutine(LavaDamageOverTimeAfterExit());
     }
 
-    private IEnumerator EffectCooldown()
+    private IEnumerator DamageEffectCooldown()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         effectType = EffectType.None;
+        hasPlayedDamageSound = false;
     }
 
     private IEnumerator HealEffectCooldown()
@@ -197,6 +215,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
         healthMat.SetFloat("_Intensity", endValue);
         effectType = EffectType.None;
+        hasPlayedHealSound = false;
     }
 
     private IEnumerator LavaDamageOverTimeAfterExit()
