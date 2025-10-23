@@ -65,6 +65,8 @@ public class PatrolEnemy : MonoBehaviour
 
     public void ShootLogic()
     {
+        AkUnitySoundEngine.PostEvent("Enemy_Shoot_Basic", gameObject);
+
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
         Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
