@@ -15,6 +15,9 @@ public class HealthSystem : MonoBehaviour
 
     public Action onDeath;
 
+    private float hitSoundCooldown = 1f;
+    private float hitEffectTimer = 0f;
+
     private void Start()
     {
         health = maxHealth;
@@ -35,6 +38,8 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
+        hitEffectTimer += Time.deltaTime;
+
         if (health <= 0)
         {
             health = 0;
@@ -45,6 +50,13 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (hitEffectTimer >= hitSoundCooldown)
+        {
+            effectControllerScript.GetHit();
+            AkUnitySoundEngine.PostEvent("Enemy_TakeDamage", gameObject);
+            hitEffectTimer = 0f;
+        }
+
         effectControllerScript.GetHit();
 
         if (!gameObject.activeSelf)
