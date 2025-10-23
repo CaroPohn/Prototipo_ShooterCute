@@ -45,6 +45,8 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        AkUnitySoundEngine.PostEvent("Projectile_Hit_BasicProjectile", gameObject);
+
         ContactPoint contact = collision.GetContact(0);
         Vector3 hitPoint = contact.point;
         Vector3 hitNormal = contact.normal;

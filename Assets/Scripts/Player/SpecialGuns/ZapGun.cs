@@ -40,6 +40,13 @@ public class ZapGun : Gun
 
     private VisualEffect activeMuzzleEffect;
 
+    private uint chargeEventPlayingId;
+
+    private void Start()
+    {
+        AkUnitySoundEngine.SetSwitch("Player_Shoot_Type", "Electric", gameObject);
+    }
+
     void OnEnable()
     {
         inputReader.OnShoot += StartHoldingShoot;
@@ -64,20 +71,19 @@ public class ZapGun : Gun
     {
         if (!levelController.isGamePaused)
         {
-            //if (Time.time - lastShootTime >= timeBetweenShots)
-            //{
             if (isHoldingShoot)
                 return;
 
-                zapAnimator.SetBool("Charging", true);
+            zapAnimator.SetBool("Charging", true);
 
-                isHoldingShoot = true;
-                shootHoldTime = 0f;
+            isHoldingShoot = true;
+            shootHoldTime = 0f;
 
-                electric_Gun_VFX_Script.Charge();
+            electric_Gun_VFX_Script.Charge();
 
-                armsAnimator.SetBool(armsAnimationName, true);
-            //}
+            armsAnimator.SetBool(armsAnimationName, true);
+
+            //chargeEventPlayingId = AkUnitySoundEngine.PostEvent("Player_ShootCharge_Electric", gameObject);
         }
     }
 
@@ -91,6 +97,12 @@ public class ZapGun : Gun
             isHoldingShoot = false;
             zapAnimator.SetBool("Charging", false);
             armsAnimator.SetBool(armsAnimationName, false);
+
+            //if (chargeEventPlayingId != 0)
+            //{
+            //    AkUnitySoundEngine.ExecuteActionOnEvent("Player_ShootCharge_Electric", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
+            //    chargeEventPlayingId = 0;
+            //}
 
             if (Time.time - lastShootTime < timeBetweenShots)
             {
@@ -119,6 +131,7 @@ public class ZapGun : Gun
             Shoot();
 
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f, shootPivot);
+            AkUnitySoundEngine.PostEvent("Player_Shoot", gameObject);
 
             lastShootTime = Time.time;
             shootHoldTime = 0f;
