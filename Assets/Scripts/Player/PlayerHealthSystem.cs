@@ -17,6 +17,8 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private float timeElapsedSinceExit;
 
+    private bool isCurrentlyBurning;
+
     private Material lavaMat;
     private Material healthMat;
     private Material damageMat;
@@ -45,6 +47,10 @@ public class PlayerHealthSystem : MonoBehaviour
         lavaMat = lavaDamageEffect;
         healthMat = healthEffect;
         damageMat = projectileDamageEffect;
+
+        isCurrentlyBurning = false;
+
+        AkUnitySoundEngine.SetState("Player_Burn", "None");
     }
 
     private void OnEnable()
@@ -113,11 +119,26 @@ public class PlayerHealthSystem : MonoBehaviour
             lavaMat.SetFloat("_Intensity", 0);
             damageMat.SetFloat("_Intensity", 0);
             healthMat.SetFloat("_Intensity", 0);
+            if (isCurrentlyBurning)
+            {
+                // Cambió de quemado a no quemado
+                AkUnitySoundEngine.SetState("Player_Burn", "Not_Burning");
+                AkUnitySoundEngine.PostEvent("Player_Burn", gameObject); // si tenés este evento en Wwise
+                isCurrentlyBurning = false;
+            }
         }
         else if (effectType == EffectType.Lava)
         {
             lavaMat.SetFloat("_Intensity", 1);
             StopCoroutine(HealEffectCooldown());
+
+            if (!isCurrentlyBurning)
+            {
+                // Entró en estado de quemado
+                AkUnitySoundEngine.SetState("Player_Burn", "Burning");
+                AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
+                isCurrentlyBurning = true;
+            }
         }
         else if (effectType == EffectType.EnemyDamage)
         {
@@ -130,8 +151,17 @@ public class PlayerHealthSystem : MonoBehaviour
             healthMat.SetFloat("_Intensity", 1);
             StartCoroutine(HealEffectCooldown());
 
+            if (isCurrentlyBurning)
+            {
+                AkUnitySoundEngine.SetState("Player_Burn", "None");
+                AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
+                isCurrentlyBurning = false;
+            }
+
             StopCoroutine(LavaDamageOverTimeAfterExit());
         }
+
+        
     }
 
     private void StartLavaExitDamageCorroutine()
