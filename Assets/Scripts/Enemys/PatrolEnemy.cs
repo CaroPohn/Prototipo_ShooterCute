@@ -30,10 +30,6 @@ public class PatrolEnemy : MonoBehaviour
     public bool stopDieAnimation;
     public bool stopSpawnAnimation;
 
-    private float stepTimer;
-    private float stepTime;
-    private bool hasStepSoundReproduce;
-
     public static event Action<GameObject> onStopDieAnimation;
 
     private NavMeshAgent agent;
@@ -48,43 +44,23 @@ public class PatrolEnemy : MonoBehaviour
 
         stopDieAnimation = false;
         stopSpawnAnimation = false;
-
-        stepTime = 0.2f;
-        hasStepSoundReproduce = false;
-    }
-
-    private void Update()
-    {
-        stepTimer += Time.deltaTime;
-
-        if (!agent.isStopped)
-        {
-            ChangeStepSoundBool();
-        }
     }
 
     private void OnEnable()
     {
         enemyAnimationHandler.OnEnemyShooting += ShootLogic;
+        enemyAnimationHandler.OnEnemyStep += StepSoundActivation;
     }
 
     private void OnDisable()
     {
         enemyAnimationHandler.OnEnemyShooting -= ShootLogic;
+        enemyAnimationHandler.OnEnemyStep -= StepSoundActivation;
     }
 
-    private void ChangeStepSoundBool()
+    public void StepSoundActivation()
     {
-        if (stepTimer > stepTime)
-        {
-            stepTimer = 0;
-            hasStepSoundReproduce = !hasStepSoundReproduce;
-
-            if (hasStepSoundReproduce)
-            {
-                AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
-            }
-        }
+        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
     }
 
     public void ShootLogic()

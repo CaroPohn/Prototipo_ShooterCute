@@ -50,11 +50,18 @@ public class MeleeEnemy : MonoBehaviour
     private void OnEnable()
     {
         meleeAnimationHandler.OnEnemyAttacking += MeleeLogic;
+        meleeAnimationHandler.OnEnemyStep += StepSoundActivation;
     }
 
     private void OnDisable()
     {
         meleeAnimationHandler.OnEnemyAttacking -= MeleeLogic;
+        meleeAnimationHandler.OnEnemyStep -= StepSoundActivation;
+    }
+
+    public void StepSoundActivation()
+    {
+        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
     }
 
     public void MeleeLogic()
