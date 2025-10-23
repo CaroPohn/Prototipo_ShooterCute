@@ -74,6 +74,7 @@ public class HealthSystem : MonoBehaviour
             {
                 Instantiate(dieParticle, transform.position, Quaternion.identity);
                 onDeath?.Invoke();
+                AkUnitySoundEngine.PostEvent("Enemy_Death", gameObject);
             }
         }
     }
