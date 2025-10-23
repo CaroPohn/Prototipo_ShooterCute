@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{FE2D4565-E99A-8991-5A5C-4D87F5878510}",
+    "Hash": "{9AD9D30E-3281-D74C-6F6F-6DA2F218F72C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -64,6 +64,14 @@
       "CachePath": "EC/{EC22A23E-2203-169C-95AC-CF6A5433E158}.wem"
      },
      {
+      "Id": "147422935",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Footstep_Adult_2.wav",
+      "CachePath": "62/{621807FA-1080-0571-97D5-C458F4400E5A}.wem"
+     },
+     {
       "Id": "151651069",
       "Language": "SFX",
       "Streaming": "false",
@@ -94,6 +102,14 @@
       "Location": "Memory",
       "ShortName": "Ambient_Collapse.wav",
       "CachePath": "E1/{E101655D-C4A6-B959-1183-AC9FAF84FFD3}.wem"
+     },
+     {
+      "Id": "191808004",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Footstep_Adult_3.wav",
+      "CachePath": "55/{55FACE9F-DDFD-C63E-5B72-96259E1FE288}.wem"
      },
      {
       "Id": "219577463",
@@ -280,6 +296,14 @@
       "CachePath": "0B/{0BB31916-1CF7-51CF-97A0-D4C8409CDEDC}.wem"
      },
      {
+      "Id": "826783670",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Footstep_Adult_1.wav",
+      "CachePath": "CF/{CFA92188-0015-C481-06B3-382B190CF8BC}.wem"
+     },
+     {
       "Id": "851326233",
       "Language": "SFX",
       "Streaming": "false",
@@ -318,6 +342,14 @@
       "Location": "Memory",
       "ShortName": "Projectile_Hit_BasicProjectile2.wav",
       "CachePath": "42/{42F89C5D-71B8-77F8-1804-865BCBC65F52}.wem"
+     },
+     {
+      "Id": "949324635",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Footstep_Adult_4.wav",
+      "CachePath": "0E/{0EE767E3-6CEC-84A4-336D-2BC4DB6B62E9}.wem"
      },
      {
       "Id": "969074419",
@@ -522,10 +554,24 @@
       "Name": "Enemy_Footstep_Adult",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Footstep_Adult",
       "GUID": "{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.41320834",
+      "DurationMax": "0.45464584",
+      "MediaRefs": [
+       {
+        "Id": "147422935"
+       },
+       {
+        "Id": "191808004"
+       },
+       {
+        "Id": "826783670"
+       },
+       {
+        "Id": "949324635"
+       }
+      ]
      },
      {
       "Id": "1530017751",
@@ -1063,6 +1109,6 @@
     ]
    }
   ],
-  "FileHash": "{139754BF-67AD-952E-C993-AB0B90E34148}"
+  "FileHash": "{995BDF93-10CD-1EFB-848F-344EE37AA339}"
  }
 }
