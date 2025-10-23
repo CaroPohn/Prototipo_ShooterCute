@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = false;
 
         transform.rotation = Quaternion.Euler(0, orientation.eulerAngles.y, 0);
+        hasStepSoundReproduce = false;
     }
 
     private void OnEnable()
@@ -111,8 +112,6 @@ public class PlayerMovement : MonoBehaviour
                 AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Lava", gameObject);
                 break;
         }
-
-        Debug.Log("Ground Layer:" + groundLayer);
     }
 
     private string GetGroundLayer()
@@ -120,13 +119,15 @@ public class PlayerMovement : MonoBehaviour
         string groundLayer;
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.2f));
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.2f))
         {
             int layerIndex = hit.collider.gameObject.layer;
             groundLayer = LayerMask.LayerToName(layerIndex);
+
+            return groundLayer;
         }
-        
-        return groundLayer;
+
+        return null;
     }
 
     private void ChangeStepSoundBool()
