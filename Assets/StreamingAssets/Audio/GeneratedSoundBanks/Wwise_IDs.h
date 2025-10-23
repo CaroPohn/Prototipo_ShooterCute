@@ -48,8 +48,7 @@ namespace AK
         static const AkUniqueID PLAYER_BURN = 3890490206U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
-        static const AkUniqueID PLAYER_SHOOT_BASIC = 1403130241U;
-        static const AkUniqueID PLAYER_SHOOT_ELECTRIC = 2855950240U;
+        static const AkUniqueID PLAYER_SHOOT = 4004702906U;
         static const AkUniqueID PLAYER_SHOOTCHARGE_ELECTRIC = 3840296224U;
         static const AkUniqueID PLAYER_TAKEDAMAGE_GENERIC = 3727341601U;
         static const AkUniqueID PROJECTILE_HIT_BASICPROJECTILE = 950925848U;
@@ -88,6 +87,17 @@ namespace AK
                 static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace FOOTSTEP_SURFACE
+
+        namespace PLAYER_SHOOT_TYPE
+        {
+            static const AkUniqueID GROUP = 3124051321U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BASIC = 3340296461U;
+                static const AkUniqueID ELECTRIC = 3250089732U;
+            } // namespace SWITCH
+        } // namespace PLAYER_SHOOT_TYPE
 
     } // namespace SWITCHES
 

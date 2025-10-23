@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{240B7575-7EE5-E8AE-0B54-713C0A022BBC}",
+    "Hash": "{14868E46-78EE-FDB5-C549-EFD44AC22675}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -1114,33 +1114,43 @@
       ]
      },
      {
-      "Id": "1403130241",
-      "Name": "Player_Shoot_Basic",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Shoot_Basic",
+      "Id": "4004702906",
+      "Name": "Player_Shoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Shoot",
       "GUID": "{069EFDFC-4941-421D-9D97-7FA5411138FD}",
       "DurationType": "OneShot",
       "DurationMin": "0.5376127",
-      "DurationMax": "0.63933283",
-      "MediaRefs": [
-       {
-        "Id": "785818676"
-       }
-      ]
-     },
-     {
-      "Id": "2855950240",
-      "Name": "Player_Shoot_Electric",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Shoot_Electric",
-      "GUID": "{DFF5F983-0297-41A1-87F3-D82108E3F654}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.9808313",
       "DurationMax": "1.4656179",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "225716251"
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3124051321",
+         "Id": "3340296461",
+         "GUID": "{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "785818676"
+         }
+        ]
        },
        {
-        "Id": "426256890"
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3124051321",
+         "Id": "3250089732",
+         "GUID": "{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "225716251"
+         },
+         {
+          "Id": "426256890"
+         }
+        ]
        }
       ]
      },
@@ -1320,10 +1330,30 @@
         "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}"
        }
       ]
+     },
+     {
+      "Id": "3124051321",
+      "Name": "Player_Shoot_Type",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type",
+      "GUID": "{A7C3106E-D4FD-46C7-AA5B-EF9BA214C07C}",
+      "Switches": [
+       {
+        "Id": "3250089732",
+        "Name": "Electric",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type\\Electric",
+        "GUID": "{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"
+       },
+       {
+        "Id": "3340296461",
+        "Name": "Basic",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type\\Basic",
+        "GUID": "{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{FB5CC2D2-1E2A-2839-5766-A726145B483B}"
+  "FileHash": "{D3DC3E64-23A8-F943-C960-87F74D60D5D6}"
  }
 }

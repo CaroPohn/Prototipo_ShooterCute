@@ -10,7 +10,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1242907925	Egg_Levitate			\Default Work Unit\Egg\Egg_Levitate	
 	1305133589	Player_Jump			\Default Work Unit\Player\Player_Jump	
 	1388907814	Enemy_Spawn_Adult			\Default Work Unit\Enemy\Enemy_Spawn_Adult	
-	1403130241	Player_Shoot_Basic			\Default Work Unit\Player\Player_Shoot_Basic	
 	1410046624	Ambient_Wind			\Default Work Unit\Ambient\Ambient_Wind	
 	1479913785	Music_Stinger_Defeat			\Default Work Unit\Music\Music_Stinger_Defeat	
 	1485126323	Egg_PickUp			\Default Work Unit\Egg\Egg_PickUp	
@@ -23,7 +22,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2208495489	Lumming_Ability_Fire_Impact			\Default Work Unit\Lumming\Lumming_Ability_Fire_Impact	
 	2453392179	Player_Footstep			\Default Work Unit\Player\Player_Footstep	
 	2851111675	Lumming_Heal			\Default Work Unit\Lumming\Lumming_Heal	
-	2855950240	Player_Shoot_Electric			\Default Work Unit\Player\Player_Shoot_Electric	
 	2994932292	Projectile_Soul_Deploy			\Default Work Unit\Projectile\Projectile_Soul_Deploy	
 	3112455934	Music_Gameplay_Rest			\Default Work Unit\Music\Music_Gameplay_Rest	
 	3115620430	UI_Button_Special			\Default Work Unit\UI\UI_Button_Special	
@@ -38,6 +36,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3966329825	Music_Gameplay_Collapse			\Default Work Unit\Music\Music_Gameplay_Collapse	
 	3986156551	Lumming_Levitate			\Default Work Unit\Lumming\Lumming_Levitate	
 	3987036369	UI_Slider			\Default Work Unit\UI\UI_Slider	
+	4004702906	Player_Shoot			\Default Work Unit\Player\Player_Shoot	
 	4066633160	Music_Gameplay_Stage2			\Default Work Unit\Music\Music_Gameplay_Stage2	
 	4066633161	Music_Gameplay_Stage3			\Default Work Unit\Music\Music_Gameplay_Stage3	
 	4066633163	Music_Gameplay_Stage1			\Default Work Unit\Music\Music_Gameplay_Stage1	
@@ -47,10 +46,13 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1833605183	Footstep_Surface			\Default Work Unit\Footstep_Surface	
+	3124051321	Player_Shoot_Type			\Default Work Unit\Player_Shoot_Type	
 
 Switch	ID	Name	Switch Group			Notes
 	540301611	Lava	Footstep_Surface			
 	1216965916	Stone	Footstep_Surface			
+	3250089732	Electric	Player_Shoot_Type			
+	3340296461	Basic	Player_Shoot_Type			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3890490206	Player_Burn			\Default Work Unit\Player_Burn	
@@ -79,7 +81,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	184096320	Ambient_Collapse	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\E1\{E101655D-C4A6-B959-1183-AC9FAF84FFD3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient\Ambient_Collapse		17280096
 	191808004	Enemy_Footstep_Adult_3	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\55\{55FACE9F-DDFD-C63E-5B72-96259E1FE288}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Footstep_Adult\Enemy_Footstep_Adult_3		85604
 	219577463	Player_Jump_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\05\{052948D2-798A-D505-207E-4115ECD0B953}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Jump\Player_Jump_2		91800
-	225716251	Player_Shoot_Electric	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\4F\{4F2F61AB-5C5F-079B-37CD-412FF2B99E6C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Electric\Player_Shoot_Electric		258140
+	225716251	Player_Shoot_Electric	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\4F\{4F2F61AB-5C5F-079B-37CD-412FF2B99E6C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot\Player_Shoot_Electric\Player_Shoot_Electric		258140
 	235576888	Enemy_Spawn_Adult_3	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\55\{554C0747-884E-C62F-6F48-6BBEA34759AC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Spawn_Adult\Enemy_Spawn_Adult_3		262488
 	256724536	Egg_Levitate	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\E9\{E951B9C8-5473-1649-0BD7-7D307C00EE35}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg\Egg_Levitate		941868
 	298032319	Enemy_Shoot_Basic_1	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\4A\{4A128793-3F2B-6CBC-6375-F4D10512673E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Shoot_Basic\Enemy_Shoot_Basic_1		151984
@@ -88,7 +90,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	403220722	Player_TakeDamage_Generic_3	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\42\{42EFEDEA-75B5-1957-1076-0A2A9AD81254}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_TakeDamage_Generic\Player_TakeDamage_Generic_3		80540
 	409772932	Player_Player_Footstep_Lava_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\49\{49279885-8CCF-1682-4F13-15787378342F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Footstep\Player_Footstep_Lava\Player_Player_Footstep_Lava_2		92884
 	414879116	Player_Burn_Start	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\88\{880AAAC1-41D4-47CE-260D-A5516E6F225E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Burn\Player_Burn_Start		696112
-	426256890	Player_Shoot_Electric2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\2E\{2E574D82-C9D0-58F1-2399-9271339995E8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Electric\Player_Shoot_Electric2		205460
+	426256890	Player_Shoot_Electric2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\2E\{2E574D82-C9D0-58F1-2399-9271339995E8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot\Player_Shoot_Electric\Player_Shoot_Electric2		205460
 	433651031	Player_Player_Footstep_Stone_4	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\95\{95D7A808-239B-6689-BB21-7D8F08F24B2C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Footstep\Player_Footstep_Stone\Player_Player_Footstep_Stone_4		34876
 	472405016	UI_Button_Special	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\19\{19BF9758-08F4-1C4D-1A0B-8DA1ADC15845}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Button_Special		25632
 	532381909	Projectile_Soul_Deploy_1	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\8D\{8DA56352-4039-57EB-8435-B39DB4DDADFA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Projectile\Projectile_Soul_Deploy\Projectile_Soul_Deploy_1		57696
@@ -108,7 +110,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	748423447	Enemy_Shoot_Basic_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\8E\{8E0974B9-385B-2029-9D76-30534B307B07}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Shoot_Basic\Enemy_Shoot_Basic_2		171268
 	774050302	Player_TakeDamage_Generic_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\D1\{D1EDA135-4648-EEA9-4EF0-554171C64583}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_TakeDamage_Generic\Player_TakeDamage_Generic_2		94100
 	780748996	Lumming_Heal	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\6B\{6B5C55C0-6710-23A1-3689-C827A0E64CFF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lumming\Lumming_Heal		361016
-	785818676	Player_Shoot_Basic	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C4\{C4E6D90D-A75E-D408-3B8C-D957B8178DFE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot_Basic		112660
+	785818676	Player_Shoot_Basic	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\C4\{C4E6D90D-A75E-D408-3B8C-D957B8178DFE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot\Player_Shoot_Basic\Player_Shoot_Basic		112660
 	791673339	Enemy_Shoot_Basic_4	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\3A\{3A2EECF0-8DA2-60AA-6859-4C07FE251F9C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_Shoot_Basic\Enemy_Shoot_Basic_4		158668
 	803171057	Lumming_Ability_Electric_Impact	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\A7\{A7FCE693-AC7A-A080-A813-532ADF89FC53}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lumming\Lumming_Ability_Electric_Impact\Lumming_Ability_Electric_Impact		507096
 	811700119	Enemy_TakeDamage_2	Y:\Documents\GitHub\Prototipo_ShooterCute\Prototipo_ShooterCute_WwiseProject\.cache\DE\{DEA8F84E-9310-7008-3563-BE5C8587F89E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Enemy_TakeDamage\Enemy_TakeDamage_2		61832

@@ -304,74 +304,6 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" ShortID="658894020">
-							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{214E8DD2-B6CE-415C-A871-F29537001C58}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="4"/>
-													<Property Name="Min" Type="Real64" Value="-2"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{2DC4B6B0-4083-4959-82BF-6FAE02F63D9C}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="150"/>
-													<Property Name="Min" Type="Real64" Value="-150"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E43ECFF4-F19F-4EB9-A8B6-F06C2831685C}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="1"/>
-													<Property Name="Min" Type="Real64" Value="-1"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}">
-									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0203117445697935"/>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Player_Shoot_Basic.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="785818676"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<SwitchContainer Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" ShortID="464537938">
 							<PropertyList>
 								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
@@ -499,110 +431,10 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<RandomSequenceContainer Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" ShortID="739053376">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{DEAB235B-C6A0-422A-99A6-6E22B7A0E898}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-4"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{BBBDD53F-C055-4C6A-8253-0322B2DE444E}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="150"/>
-													<Property Name="Min" Type="Real64" Value="-150"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
-								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{4898717F-87DE-4106-806C-84BF7BC9EBDE}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-1"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Player_Shoot_Electric" ID="{542787C2-446E-4174-8A2E-77407B5A5844}" ShortID="249147092">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0241959951456311"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.182569781553398"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0153974514563107"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Player_Shoot_Electric.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="225716251"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Player_Shoot_Electric2" ID="{235A8DE4-D09D-4397-BC90-CF9CBE53D8EB}" ShortID="501730241">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}">
-											<Language>SFX</Language>
-											<AudioFile>Player_Shoot_Electric2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="426256890"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" ShortID="5687844">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -614,6 +446,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="Player_ShootCharge_Electric" ID="{8B8841AC-CE0F-49E6-88EF-3357CA747AC3}">
 									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="2.00610332738284"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.60317181711075"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -864,6 +698,231 @@
 										<SwitchRef Name="Lava" ID="{F2E500CC-1405-4BBA-B04C-688683C4D304}"/>
 										<ItemList>
 											<ItemRef Name="Player_Footstep_Lava" ID="{C1329D63-CCC2-45A8-999A-710CA26345A6}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Player_Shoot" ID="{F9957B13-B82C-4C24-8C7A-DE8212981073}" ShortID="826179180">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Basic" ID="{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Player_Shoot_Type" ID="{A7C3106E-D4FD-46C7-AA5B-EF9BA214C07C}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" ShortID="739053376">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DEAB235B-C6A0-422A-99A6-6E22B7A0E898}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BBBDD53F-C055-4C6A-8253-0322B2DE444E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4898717F-87DE-4106-806C-84BF7BC9EBDE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Shoot_Electric" ID="{542787C2-446E-4174-8A2E-77407B5A5844}" ShortID="249147092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0241959951456311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.182569781553398"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0153974514563107"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Electric.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="225716251"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Shoot_Electric2" ID="{235A8DE4-D09D-4397-BC90-CF9CBE53D8EB}" ShortID="501730241">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Electric2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="426256890"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}" ShortID="663961191">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" ShortID="658894020">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{214E8DD2-B6CE-415C-A871-F29537001C58}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																	<Property Name="Min" Type="Real64" Value="-2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2DC4B6B0-4083-4959-82BF-6FAE02F63D9C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="150"/>
+																	<Property Name="Min" Type="Real64" Value="-150"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E43ECFF4-F19F-4EB9-A8B6-F06C2831685C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1"/>
+																	<Property Name="Min" Type="Real64" Value="-1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0203117445697935"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Basic.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785818676"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Basic" ID="{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"/>
+										<ItemList>
+											<ItemRef Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Electric" ID="{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"/>
+										<ItemList>
+											<ItemRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>

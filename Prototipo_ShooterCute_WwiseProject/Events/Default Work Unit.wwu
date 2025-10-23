@@ -28,29 +28,18 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Shoot_Basic" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}">
+						<Event Name="Player_Shoot" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}">
 							<ChildrenList>
-								<Action Name="" ID="{2E5E5E8D-13E0-4603-A8F6-D835EB36D4EC}" ShortID="258825527">
+								<Action Name="" ID="{16AB2A7A-C9CC-4289-8A48-0A74EA7AAF01}" ShortID="152125887">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+											<ObjectRef Name="Player_Shoot" ID="{F9957B13-B82C-4C24-8C7A-DE8212981073}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_ShootCharge_Electric" ID="{84768FD9-4248-43E5-9833-69D4D2280890}"/>
-						<Event Name="Player_Shoot_Electric" ID="{DFF5F983-0297-41A1-87F3-D82108E3F654}">
-							<ChildrenList>
-								<Action Name="" ID="{1A896F95-3B3F-43BB-B6E1-CEABCC329F11}" ShortID="430272386">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}">
 							<ChildrenList>
 								<Action Name="" ID="{9F8EFD7E-0A27-4D69-89CA-317EE5F47776}" ShortID="210706161">
