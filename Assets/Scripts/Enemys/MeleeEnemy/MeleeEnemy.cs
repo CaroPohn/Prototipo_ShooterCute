@@ -148,6 +148,8 @@ public class MeleeEnemy : MonoBehaviour
 
     public void SpawnAnimationHandler()
     {
+        AkUnitySoundEngine.PostEvent("Enemy_Spawn_Adult", gameObject);
+
         StartCoroutine(SpawnCoroutine());
 
         Instantiate(spawnVFX, transform.position, transform.rotation);
