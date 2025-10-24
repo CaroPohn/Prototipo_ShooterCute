@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{64366689-9B56-82BC-BADF-888027D9D4A6}",
+    "Hash": "{EC8D90FD-D4B5-7253-C7B5-AD5AC0A1B700}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -54,6 +54,14 @@
       "Location": "Memory",
       "ShortName": "Enemy_Death_3.wav",
       "CachePath": "AA/{AAD2D55B-C21B-2AEE-63F1-950181EB0706}.wem"
+     },
+     {
+      "Id": "90676618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_ShootCharge_Electric.wav",
+      "CachePath": "76/{769F37C9-5F12-9B33-E11F-D725609B2EF2}.wem"
      },
      {
       "Id": "96935299",
@@ -697,6 +705,8 @@
       "Name": "Enemy_Death",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Death",
       "GUID": "{C87E5E1B-B10A-496F-B556-26AEDA087099}",
+      "Color": "15",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "1.2090833",
       "DurationMax": "1.2715417",
@@ -717,6 +727,7 @@
       "Name": "Enemy_Footstep_Adult",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Footstep_Adult",
       "GUID": "{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}",
+      "Color": "15",
       "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.41320834",
@@ -751,6 +762,8 @@
       "Name": "Enemy_Shoot_Basic",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Shoot_Basic",
       "GUID": "{D5B4029C-F6DF-411E-886D-CA10E5DAE467}",
+      "Color": "15",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.79108334",
       "DurationMax": "0.89152086",
@@ -774,6 +787,8 @@
       "Name": "Enemy_Spawn_Adult",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Spawn_Adult",
       "GUID": "{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}",
+      "Color": "15",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "1.366625",
       "DurationMax": "1.6922083",
@@ -804,6 +819,8 @@
       "Name": "Enemy_TakeDamage",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_TakeDamage",
       "GUID": "{30A93EC0-31F0-4DDE-BFCE-510D1297C630}",
+      "Color": "15",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.2676875",
       "DurationMax": "0.32154167",
@@ -827,6 +844,7 @@
       "Name": "Lumming_Ability_Electric_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Lumming_Ability_Electric_Impact",
       "GUID": "{7FA934BB-7197-48FF-ACBF-468F9AC31460}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "2.640625",
       "DurationMax": "2.640625",
@@ -874,6 +892,7 @@
       "Name": "Lumming_Heal",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Lumming_Heal",
       "GUID": "{08E1FB78-8A3A-4ECA-8DE1-4B04DFD61079}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "1.8797916",
       "DurationMax": "1.8797916",
@@ -908,6 +927,7 @@
       "Name": "Lumming_Levitate",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Lumming_Levitate",
       "GUID": "{8D18B643-3ADE-4C77-A1B0-21F56F2A1084}",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1000,6 +1020,7 @@
       "Name": "Player_Burn",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Burn",
       "GUID": "{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}",
+      "Color": "15",
       "DurationType": "Infinite",
       "SwitchContainers": [
        {
@@ -1035,6 +1056,7 @@
       "Name": "Player_Footstep",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Footstep",
       "GUID": "{0EB49463-85D3-4425-A97B-6BC92274A370}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "0.17327084",
       "DurationMax": "0.541125",
@@ -1118,6 +1140,7 @@
       "Name": "Player_Shoot",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_Shoot",
       "GUID": "{069EFDFC-4941-421D-9D97-7FA5411138FD}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "0.5376127",
       "DurationMax": "1.4656179",
@@ -1159,16 +1182,19 @@
       "Name": "Player_ShootCharge_Electric",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_ShootCharge_Electric",
       "GUID": "{84768FD9-4248-43E5-9833-69D4D2280890}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "90676618"
+       }
+      ]
      },
      {
       "Id": "3727341601",
       "Name": "Player_TakeDamage_Generic",
       "ObjectPath": "\\Events\\Default Work Unit\\Player\\Player_TakeDamage_Generic",
       "GUID": "{81046388-C246-4D12-8170-0F305F4CD7C0}",
+      "Color": "15",
       "DurationType": "OneShot",
       "DurationMin": "0.39546365",
       "DurationMax": "0.5251405",
@@ -1195,6 +1221,8 @@
       "Name": "Projectile_Hit_BasicProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_BasicProjectile",
       "GUID": "{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}",
+      "Color": "15",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "1.0426576",
       "DurationMax": "1.2776903",
@@ -1212,7 +1240,7 @@
       "Name": "Projectile_Hit_ElectricProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_ElectricProjectile",
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -1354,6 +1382,6 @@
     ]
    }
   ],
-  "FileHash": "{E3E03EF3-018E-79CD-F1E2-030A00D3F4BE}"
+  "FileHash": "{F44D2096-D0C0-0297-D9ED-417B71B3B7B4}"
  }
 }
