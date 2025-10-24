@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         stepTimer += Time.deltaTime;
 
         Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
-        isMoving = horizontalVelocity.magnitude > 0.1f;
+        isMoving = horizontalVelocity.magnitude > 5f;
 
         ChangeStepSoundBool();
 
