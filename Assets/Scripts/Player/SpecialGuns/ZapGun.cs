@@ -83,7 +83,7 @@ public class ZapGun : Gun
 
             armsAnimator.SetBool(armsAnimationName, true);
 
-            //chargeEventPlayingId = AkUnitySoundEngine.PostEvent("Player_ShootCharge_Electric", gameObject);
+            chargeEventPlayingId = AkUnitySoundEngine.PostEvent("Player_ShootCharge_Electric", gameObject);
         }
     }
 
@@ -98,11 +98,11 @@ public class ZapGun : Gun
             zapAnimator.SetBool("Charging", false);
             armsAnimator.SetBool(armsAnimationName, false);
 
-            //if (chargeEventPlayingId != 0)
-            //{
-            //    AkUnitySoundEngine.ExecuteActionOnEvent("Player_ShootCharge_Electric", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
-            //    chargeEventPlayingId = 0;
-            //}
+            if (chargeEventPlayingId != 0)
+            {
+                AkUnitySoundEngine.ExecuteActionOnEvent("Player_ShootCharge_Electric", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
+                chargeEventPlayingId = 0;
+            }
 
             if (Time.time - lastShootTime < timeBetweenShots)
             {
