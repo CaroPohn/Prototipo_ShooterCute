@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID AMBIENT_COLLAPSE = 941448663U;
         static const AkUniqueID AMBIENT_DISTANTIMPACTS = 269417926U;
         static const AkUniqueID AMBIENT_LAVA = 4275106484U;
+        static const AkUniqueID AMBIENT_LAVA_STOP = 3216338163U;
         static const AkUniqueID AMBIENT_WIND = 1410046624U;
         static const AkUniqueID EGG_LEVITATE = 1242907925U;
         static const AkUniqueID EGG_PICKUP = 1485126323U;

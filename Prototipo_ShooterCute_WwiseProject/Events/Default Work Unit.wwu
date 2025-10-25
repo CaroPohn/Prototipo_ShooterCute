@@ -420,6 +420,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Ambient_Lava_Stop" ID="{4E8C2E56-188B-4790-B910-F17C97FCD248}">
+							<ChildrenList>
+								<Action Name="" ID="{C42D3E11-70F6-4C01-B980-E04ADB22EECD}" ShortID="134138727">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient_Lava" ID="{30B3363E-B2D3-4C08-A7AA-F32FB1E55036}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" ShortID="952974412">
