@@ -151,12 +151,13 @@ public class ZapGun : Gun
 
         int winLayer = LayerMask.NameToLayer("WinCollider");
         int playerLayer = LayerMask.NameToLayer("Player");
+        int sfxLayer = LayerMask.NameToLayer("SFX");
 
         bool hitSomething = false;
 
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer)
+            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == sfxLayer)
                 continue;
 
             hitSomething = true;
