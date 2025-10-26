@@ -19,12 +19,16 @@ public class HealthPackHolder : MonoBehaviour
     {
         healthPackSystem.OnGrabingHealthPack += GrabHealthPack;
         healthPackSystem.OnGrabingHealthPack += ChangeGrabbedBool;
+
+        //AkUnitySoundEngine.PostEvent("Lumming_Levitate", gameObject);
     }
 
     private void OnDisable()
     {
         healthPackSystem.OnGrabingHealthPack -= GrabHealthPack;
         healthPackSystem.OnGrabingHealthPack -= ChangeGrabbedBool;
+
+        //AkUnitySoundEngine.ExecuteActionOnEvent("Lumming_Levitate", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
     }
 
     private void Start()
