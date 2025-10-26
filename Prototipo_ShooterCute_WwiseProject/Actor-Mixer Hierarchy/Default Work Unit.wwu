@@ -315,13 +315,13 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+									<ObjectRef Name="Not_Burning" ID="{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="Player_Burn" ID="{23C13519-1B8E-4316-8173-09451ABD9196}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+									<ObjectRef Name="Player_Burn" ID="{229061BD-7495-49B2-B0FB-2C732B3D15BB}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -419,15 +419,15 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
+										<SwitchRef Name="Burning" ID="{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"/>
 										<ItemList>
-											<ItemRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}"/>
+											<ItemRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
+										<SwitchRef Name="Not_Burning" ID="{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}"/>
 										<ItemList>
-											<ItemRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}"/>
+											<ItemRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>
@@ -1333,13 +1333,18 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>20</XPos>
+																		<XPos>0</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>200</XPos>
-																		<YPos>1200</YPos>
+																		<XPos>0.001</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>600</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>

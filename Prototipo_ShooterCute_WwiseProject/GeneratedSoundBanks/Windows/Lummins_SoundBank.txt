@@ -1,32 +1,34 @@
 Event	ID	Name			Wwise Object Path	Notes
 	16747207	Egg_ShieldActivate			\Default Work Unit\Egg\Egg_ShieldActivate	
 	269417926	Ambient_DistantImpacts			\Default Work Unit\Ambient\Ambient_DistantImpacts	
+	491614049	Enemy_Attack_Baby			\Default Work Unit\Enemy\Enemy_Attack_Baby	
+	634443763	UI_Slider_Hold			\Default Work Unit\UI\UI_Slider_Hold	
 	768425324	Lumming_Ability_Electric_Start			\Default Work Unit\Lumming\Lumming_Ability_Electric_Start	
 	842135496	Enemy_TakeDamage			\Default Work Unit\Enemy\Enemy_TakeDamage	
 	941448663	Ambient_Collapse			\Default Work Unit\Ambient\Ambient_Collapse	
 	950925848	Projectile_Hit_BasicProjectile			\Default Work Unit\Projectile\Projectile_Hit_BasicProjectile	
 	1126770210	Egg_ShieldDestroy			\Default Work Unit\Egg\Egg_ShieldDestroy	
+	1205364051	UI_Slider_Release			\Default Work Unit\UI\UI_Slider_Release	
 	1205999388	Enemy_Death			\Default Work Unit\Enemy\Enemy_Death	
 	1242907925	Egg_Levitate			\Default Work Unit\Egg\Egg_Levitate	
 	1305133589	Player_Jump			\Default Work Unit\Player\Player_Jump	
 	1388907814	Enemy_Spawn_Adult			\Default Work Unit\Enemy\Enemy_Spawn_Adult	
 	1410046624	Ambient_Wind			\Default Work Unit\Ambient\Ambient_Wind	
-	1479913785	Music_Stinger_Defeat			\Default Work Unit\Music\Music_Stinger_Defeat	
 	1485126323	Egg_PickUp			\Default Work Unit\Egg\Egg_PickUp	
 	1512820010	Lumming_Idle_FireInteraction			\Default Work Unit\Lumming\Lumming_Idle_FireInteraction	
 	1530017751	Enemy_Footstep_Baby			\Default Work Unit\Enemy\Enemy_Footstep_Baby	
-	1598298728	Music_Menu			\Default Work Unit\Music\Music_Menu	
 	1703828721	Lumming_Idle_ElectricInteraction			\Default Work Unit\Lumming\Lumming_Idle_ElectricInteraction	
 	1749973457	Lumming_Ability_Fire_Start			\Default Work Unit\Lumming\Lumming_Ability_Fire_Start	
 	1815360318	Enemy_Spawn_Baby			\Default Work Unit\Enemy\Enemy_Spawn_Baby	
 	2208495489	Lumming_Ability_Fire_Impact			\Default Work Unit\Lumming\Lumming_Ability_Fire_Impact	
 	2453392179	Player_Footstep			\Default Work Unit\Player\Player_Footstep	
+	2612520127	Music_Initialize			\Default Work Unit\Music\Music_Initialize	
 	2851111675	Lumming_Heal			\Default Work Unit\Lumming\Lumming_Heal	
 	2994932292	Projectile_Soul_Deploy			\Default Work Unit\Projectile\Projectile_Soul_Deploy	
-	3112455934	Music_Gameplay_Rest			\Default Work Unit\Music\Music_Gameplay_Rest	
 	3115620430	UI_Button_Special			\Default Work Unit\UI\UI_Button_Special	
 	3216338163	Ambient_Lava_Stop			\Default Work Unit\Ambient\Ambient_Lava_Stop	
 	3220447791	Egg_Soul_Impact			\Default Work Unit\Egg\Egg_Soul_Impact	
+	3227181061	Music_Stop			\Default Work Unit\Music\Music_Stop	
 	3345914708	UI_Button_Normal			\Default Work Unit\UI\UI_Button_Normal	
 	3521032401	Enemy_Footstep_Adult			\Default Work Unit\Enemy\Enemy_Footstep_Adult	
 	3600532549	Projectile_Hit_ElectricProjectile			\Default Work Unit\Projectile\Projectile_Hit_ElectricProjectile	
@@ -34,34 +36,39 @@ Event	ID	Name			Wwise Object Path	Notes
 	3727341601	Player_TakeDamage_Generic			\Default Work Unit\Player\Player_TakeDamage_Generic	
 	3840296224	Player_ShootCharge_Electric			\Default Work Unit\Player\Player_ShootCharge_Electric	
 	3890490206	Player_Burn			\Default Work Unit\Player\Player_Burn	
-	3966329825	Music_Gameplay_Collapse			\Default Work Unit\Music\Music_Gameplay_Collapse	
 	3986156551	Lumming_Levitate			\Default Work Unit\Lumming\Lumming_Levitate	
-	3987036369	UI_Slider			\Default Work Unit\UI\UI_Slider	
 	4004702906	Player_Shoot			\Default Work Unit\Player\Player_Shoot	
-	4066633160	Music_Gameplay_Stage2			\Default Work Unit\Music\Music_Gameplay_Stage2	
-	4066633161	Music_Gameplay_Stage3			\Default Work Unit\Music\Music_Gameplay_Stage3	
-	4066633163	Music_Gameplay_Stage1			\Default Work Unit\Music\Music_Gameplay_Stage1	
 	4213470894	Lumming_Ability_Electric_Impact			\Default Work Unit\Lumming\Lumming_Ability_Electric_Impact	
-	4254684058	Music_Stinger_Victory			\Default Work Unit\Music\Music_Stinger_Victory	
 	4275106484	Ambient_Lava			\Default Work Unit\Ambient\Ambient_Lava	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1833605183	Footstep_Surface			\Default Work Unit\Footstep_Surface	
 	3124051321	Player_Shoot_Type			\Default Work Unit\Player_Shoot_Type	
+	3890490206	Player_Burn			\Default Work Unit\Player_Burn	
 
 Switch	ID	Name	Switch Group			Notes
 	540301611	Lava	Footstep_Surface			
 	1216965916	Stone	Footstep_Surface			
 	3250089732	Electric	Player_Shoot_Type			
 	3340296461	Basic	Player_Shoot_Type			
-
-State Group	ID	Name			Wwise Object Path	Notes
-	3890490206	Player_Burn			\Default Work Unit\Player_Burn	
-
-State	ID	Name	State Group			Notes
-	748895195	None	Player_Burn			
 	3518279182	Burning	Player_Burn			
 	4104232280	Not_Burning	Player_Burn			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Music_State			
+	993086497	Stage_Collapse	Music_State			
+	1019463238	Stage_Win	Music_State			
+	1545043933	Stage_Defeat	Music_State			
+	1847784213	Stage_Calm	Music_State			
+	2607556080	Menu	Music_State			
+	4175426376	Stage_4	Music_State			
+	4175426377	Stage_5	Music_State			
+	4175426381	Stage_1	Music_State			
+	4175426382	Stage_2	Music_State			
+	4175426383	Stage_3	Music_State			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3748721091	Pitch_Slider			\Default Work Unit\Pitch_Slider	

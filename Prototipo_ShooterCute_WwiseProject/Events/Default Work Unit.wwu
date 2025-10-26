@@ -5,14 +5,31 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{9FBEA2F6-4B97-4241-862A-A335E3F3AAF7}" ShortID="843001279">
 					<ChildrenList>
-						<Event Name="Music_Menu" ID="{C21FF7AC-4D3E-455D-844A-3AA2F3DD3A84}"/>
-						<Event Name="Music_Gameplay_Stage1" ID="{1A741A28-ADDE-4B5B-ABB9-59767E0D968A}"/>
-						<Event Name="Music_Gameplay_Stage2" ID="{3AC3A579-864A-4D53-B5DC-8906D728A01F}"/>
-						<Event Name="Music_Gameplay_Stage3" ID="{92AC3962-FE7E-4CDC-A22A-D8B01B8A19DE}"/>
-						<Event Name="Music_Gameplay_Rest" ID="{6E6B5CD3-A563-4AE1-830F-F6ABFA100876}"/>
-						<Event Name="Music_Gameplay_Collapse" ID="{1FE70671-A783-4C24-83DF-6544D0A4B9F8}"/>
-						<Event Name="Music_Stinger_Victory" ID="{37F92CFA-5C62-4B45-AB13-82EB9749C4B3}"/>
-						<Event Name="Music_Stinger_Defeat" ID="{6273843A-72BD-4E2C-AE48-73C30AC25D60}"/>
+						<Event Name="Music_Initialize" ID="{1FE70671-A783-4C24-83DF-6544D0A4B9F8}">
+							<ChildrenList>
+								<Action Name="" ID="{486A3686-DFBD-4A83-957C-F12759E00602}" ShortID="296544260">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music Manager" ID="{0B055E43-C1EA-43B2-9478-44C8E8628D6F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Stop" ID="{06E400DB-C479-484A-9F72-DA401BB1EA88}">
+							<ChildrenList>
+								<Action Name="" ID="{1D00ABC2-0D4E-4A41-B79F-91C40340EBDE}" ShortID="769220679">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music Manager" ID="{0B055E43-C1EA-43B2-9478-44C8E8628D6F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{61D10539-998A-49C2-8D83-25A41D2D180F}" ShortID="450451628">
@@ -356,6 +373,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Enemy_Attack_Baby" ID="{3ABFDF21-8D58-49C7-90D2-433180571C3D}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" ShortID="459971135">
@@ -421,6 +439,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Ambient_Lava_Stop" ID="{4E8C2E56-188B-4790-B910-F17C97FCD248}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{C42D3E11-70F6-4C01-B980-E04ADB22EECD}" ShortID="134138727">
 									<PropertyList>
@@ -460,9 +482,23 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
+						<Event Name="UI_Slider_Hold" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
 							<ChildrenList>
 								<Action Name="" ID="{B7DA0DA1-4649-45A4-B663-6ADBB1CAFA48}" ShortID="780985807">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Slider_Release" ID="{902CF4E5-6AB3-432C-927F-C5FDAD72FF21}">
+							<ChildrenList>
+								<Action Name="" ID="{CF6EC68E-93DC-49DA-AC5D-5B9EFF4FEE07}" ShortID="207095158">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>

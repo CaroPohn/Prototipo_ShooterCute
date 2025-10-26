@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID EGG_SHIELDACTIVATE = 16747207U;
         static const AkUniqueID EGG_SHIELDDESTROY = 1126770210U;
         static const AkUniqueID EGG_SOUL_IMPACT = 3220447791U;
+        static const AkUniqueID ENEMY_ATTACK_BABY = 491614049U;
         static const AkUniqueID ENEMY_DEATH = 1205999388U;
         static const AkUniqueID ENEMY_FOOTSTEP_ADULT = 3521032401U;
         static const AkUniqueID ENEMY_FOOTSTEP_BABY = 1530017751U;
@@ -38,14 +39,8 @@ namespace AK
         static const AkUniqueID LUMMING_IDLE_ELECTRICINTERACTION = 1703828721U;
         static const AkUniqueID LUMMING_IDLE_FIREINTERACTION = 1512820010U;
         static const AkUniqueID LUMMING_LEVITATE = 3986156551U;
-        static const AkUniqueID MUSIC_GAMEPLAY_COLLAPSE = 3966329825U;
-        static const AkUniqueID MUSIC_GAMEPLAY_REST = 3112455934U;
-        static const AkUniqueID MUSIC_GAMEPLAY_STAGE1 = 4066633163U;
-        static const AkUniqueID MUSIC_GAMEPLAY_STAGE2 = 4066633160U;
-        static const AkUniqueID MUSIC_GAMEPLAY_STAGE3 = 4066633161U;
-        static const AkUniqueID MUSIC_MENU = 1598298728U;
-        static const AkUniqueID MUSIC_STINGER_DEFEAT = 1479913785U;
-        static const AkUniqueID MUSIC_STINGER_VICTORY = 4254684058U;
+        static const AkUniqueID MUSIC_INITIALIZE = 2612520127U;
+        static const AkUniqueID MUSIC_STOP = 3227181061U;
         static const AkUniqueID PLAYER_BURN = 3890490206U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
@@ -57,22 +52,43 @@ namespace AK
         static const AkUniqueID PROJECTILE_SOUL_DEPLOY = 2994932292U;
         static const AkUniqueID UI_BUTTON_NORMAL = 3345914708U;
         static const AkUniqueID UI_BUTTON_SPECIAL = 3115620430U;
-        static const AkUniqueID UI_SLIDER = 3987036369U;
+        static const AkUniqueID UI_SLIDER_HOLD = 634443763U;
+        static const AkUniqueID UI_SLIDER_RELEASE = 1205364051U;
     } // namespace EVENTS
 
     namespace STATES
     {
-        namespace PLAYER_BURN
+        namespace GAMEPLAY_PAUSE
         {
-            static const AkUniqueID GROUP = 3890490206U;
+            static const AkUniqueID GROUP = 1652209498U;
 
             namespace STATE
             {
-                static const AkUniqueID BURNING = 3518279182U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID NOT_BURNING = 4104232280U;
+                static const AkUniqueID PAUSED = 319258907U;
+                static const AkUniqueID UNPAUSED = 1365518790U;
             } // namespace STATE
-        } // namespace PLAYER_BURN
+        } // namespace GAMEPLAY_PAUSE
+
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID STAGE_1 = 4175426381U;
+                static const AkUniqueID STAGE_2 = 4175426382U;
+                static const AkUniqueID STAGE_3 = 4175426383U;
+                static const AkUniqueID STAGE_4 = 4175426376U;
+                static const AkUniqueID STAGE_5 = 4175426377U;
+                static const AkUniqueID STAGE_CALM = 1847784213U;
+                static const AkUniqueID STAGE_COLLAPSE = 993086497U;
+                static const AkUniqueID STAGE_DEFEAT = 1545043933U;
+                static const AkUniqueID STAGE_WIN = 1019463238U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
 
     } // namespace STATES
 
@@ -88,6 +104,17 @@ namespace AK
                 static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace FOOTSTEP_SURFACE
+
+        namespace PLAYER_BURN
+        {
+            static const AkUniqueID GROUP = 3890490206U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BURNING = 3518279182U;
+                static const AkUniqueID NOT_BURNING = 4104232280U;
+            } // namespace SWITCH
+        } // namespace PLAYER_BURN
 
         namespace PLAYER_SHOOT_TYPE
         {

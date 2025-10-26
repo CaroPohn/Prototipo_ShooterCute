@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{F64FF519-0D64-EC69-09DC-96068CAE4A01}",
+    "Hash": "{456D654C-1A24-163A-B3CE-FE8173D54EE6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -617,6 +617,7 @@
       "Name": "Ambient_Lava_Stop",
       "ObjectPath": "\\Events\\Default Work Unit\\Ambient\\Ambient_Lava_Stop",
       "GUID": "{4E8C2E56-188B-4790-B910-F17C97FCD248}",
+      "Color": "15",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -709,6 +710,16 @@
         "Id": "96935299"
        }
       ]
+     },
+     {
+      "Id": "491614049",
+      "Name": "Enemy_Attack_Baby",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Attack_Baby",
+      "GUID": "{3ABFDF21-8D58-49C7-90D2-433180571C3D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "1205999388",
@@ -946,80 +957,17 @@
       ]
      },
      {
-      "Id": "3966329825",
-      "Name": "Music_Gameplay_Collapse",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Gameplay_Collapse",
+      "Id": "2612520127",
+      "Name": "Music_Initialize",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Initialize",
       "GUID": "{1FE70671-A783-4C24-83DF-6544D0A4B9F8}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite"
      },
      {
-      "Id": "3112455934",
-      "Name": "Music_Gameplay_Rest",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Gameplay_Rest",
-      "GUID": "{6E6B5CD3-A563-4AE1-830F-F6ABFA100876}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "4066633163",
-      "Name": "Music_Gameplay_Stage1",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Gameplay_Stage1",
-      "GUID": "{1A741A28-ADDE-4B5B-ABB9-59767E0D968A}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "4066633160",
-      "Name": "Music_Gameplay_Stage2",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Gameplay_Stage2",
-      "GUID": "{3AC3A579-864A-4D53-B5DC-8906D728A01F}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "4066633161",
-      "Name": "Music_Gameplay_Stage3",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Gameplay_Stage3",
-      "GUID": "{92AC3962-FE7E-4CDC-A22A-D8B01B8A19DE}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "1598298728",
-      "Name": "Music_Menu",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Menu",
-      "GUID": "{C21FF7AC-4D3E-455D-844A-3AA2F3DD3A84}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "1479913785",
-      "Name": "Music_Stinger_Defeat",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Stinger_Defeat",
-      "GUID": "{6273843A-72BD-4E2C-AE48-73C30AC25D60}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "4254684058",
-      "Name": "Music_Stinger_Victory",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Stinger_Victory",
-      "GUID": "{37F92CFA-5C62-4B45-AB13-82EB9749C4B3}",
+      "Id": "3227181061",
+      "Name": "Music_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music_Stop",
+      "GUID": "{06E400DB-C479-484A-9F72-DA401BB1EA88}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1035,27 +983,28 @@
       "SwitchContainers": [
        {
         "SwitchValue": {
-         "GroupType": "State",
+         "GroupType": "Switch",
          "GroupId": "3890490206",
-         "Id": "4104232280",
-         "GUID": "{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"
+         "Id": "3518279182",
+         "GUID": "{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"
         },
         "MediaRefs": [
          {
-          "Id": "642849261"
+          "Id": "414879116"
          }
         ]
        },
        {
         "SwitchValue": {
-         "GroupType": "State",
+         "GroupType": "Switch",
          "GroupId": "3890490206",
-         "Id": "3518279182",
-         "GUID": "{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"
+         "Id": "4104232280",
+         "GUID": "{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}",
+         "Default": "true"
         },
         "MediaRefs": [
          {
-          "Id": "414879116"
+          "Id": "642849261"
          }
         ]
        }
@@ -1300,9 +1249,9 @@
       ]
      },
      {
-      "Id": "3987036369",
-      "Name": "UI_Slider",
-      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider",
+      "Id": "634443763",
+      "Name": "UI_Slider_Hold",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider_Hold",
       "GUID": "{3558FD6F-8026-493C-A46C-2D21325EDD2D}",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -1310,6 +1259,16 @@
         "Id": "985049323"
        }
       ]
+     },
+     {
+      "Id": "1205364051",
+      "Name": "UI_Slider_Release",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider_Release",
+      "GUID": "{902CF4E5-6AB3-432C-927F-C5FDAD72FF21}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -1322,28 +1281,76 @@
     ],
     "StateGroups": [
      {
-      "Id": "3890490206",
-      "Name": "Player_Burn",
-      "ObjectPath": "\\States\\Default Work Unit\\Player_Burn",
-      "GUID": "{23C13519-1B8E-4316-8173-09451ABD9196}",
+      "Id": "3826569560",
+      "Name": "Music_State",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_State",
+      "GUID": "{6F630EBA-4CCA-4FFE-886D-D55A9AC877B7}",
       "States": [
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\None",
-        "GUID": "{969935EA-A88C-4E42-98FE-FB63A559FF5D}"
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\None",
+        "GUID": "{052047A5-134F-47B3-B5FA-6D58F9966E7B}"
        },
        {
-        "Id": "3518279182",
-        "Name": "Burning",
-        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Burning",
-        "GUID": "{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"
+        "Id": "993086497",
+        "Name": "Stage_Collapse",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Collapse",
+        "GUID": "{C5892637-4620-4C0A-BD78-C5A25E161499}"
        },
        {
-        "Id": "4104232280",
-        "Name": "Not_Burning",
-        "ObjectPath": "\\States\\Default Work Unit\\Player_Burn\\Not_Burning",
-        "GUID": "{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"
+        "Id": "1019463238",
+        "Name": "Stage_Win",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Win",
+        "GUID": "{47525A07-AD97-4532-9BC9-941A78BCFEE3}"
+       },
+       {
+        "Id": "1545043933",
+        "Name": "Stage_Defeat",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Defeat",
+        "GUID": "{F2D87AE5-55E1-4B5F-A440-6D64B18F0557}"
+       },
+       {
+        "Id": "1847784213",
+        "Name": "Stage_Calm",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Calm",
+        "GUID": "{285A4665-6AFB-4FD2-A700-418C58D4A906}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Menu",
+        "GUID": "{5C8455D0-616B-45E0-9808-F9791351E993}"
+       },
+       {
+        "Id": "4175426376",
+        "Name": "Stage_4",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_4",
+        "GUID": "{9D27FD0D-1897-483E-A01D-366C4045973B}"
+       },
+       {
+        "Id": "4175426377",
+        "Name": "Stage_5",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_5",
+        "GUID": "{71C38126-0BB8-4963-9A5D-96F0734D15F5}"
+       },
+       {
+        "Id": "4175426381",
+        "Name": "Stage_1",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_1",
+        "GUID": "{A3C5A768-4E9C-4FE7-87A6-9D1EE890BFCE}"
+       },
+       {
+        "Id": "4175426382",
+        "Name": "Stage_2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_2",
+        "GUID": "{C9A2079C-ECA3-4852-8DC7-EC832C6CFA52}"
+       },
+       {
+        "Id": "4175426383",
+        "Name": "Stage_3",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_3",
+        "GUID": "{9C6A5768-A341-4951-903B-28425B46B8CB}"
        }
       ]
      }
@@ -1388,10 +1395,30 @@
         "GUID": "{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"
        }
       ]
+     },
+     {
+      "Id": "3890490206",
+      "Name": "Player_Burn",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn",
+      "GUID": "{229061BD-7495-49B2-B0FB-2C732B3D15BB}",
+      "Switches": [
+       {
+        "Id": "3518279182",
+        "Name": "Burning",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Burning",
+        "GUID": "{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"
+       },
+       {
+        "Id": "4104232280",
+        "Name": "Not_Burning",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Not_Burning",
+        "GUID": "{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{A4F0962A-D680-8340-CBEF-9E22A05D007E}"
+  "FileHash": "{43632EEB-64A7-E619-F654-2AF79A22A4C3}"
  }
 }

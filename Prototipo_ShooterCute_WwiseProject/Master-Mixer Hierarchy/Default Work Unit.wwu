@@ -14,6 +14,68 @@
 						<Bus Name="Music" ID="{A12B1824-0CEF-4447-A7F1-8BB227CB049E}"/>
 						<Bus Name="UI" ID="{56C5D930-922C-4417-B4E1-49046EEA62A8}"/>
 					</ChildrenList>
+					<StateInfo>
+						<StatePropertyList>
+							<Property Name="BusVolume"/>
+							<Property Name="Lowpass"/>
+							<Property Name="Volume"/>
+						</StatePropertyList>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Gameplay_Pause" ID="{0221C828-D207-4922-8316-A956ABD3CDF5}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Unpaused" ID="{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"/>
+								<CustomState Name="" ID="{AF12C7FF-07CC-4525-881E-2E162BE9DA0E}" ShortID="824124046">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-6"/>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"/>
+								<CustomState Name="" ID="{B9A732BD-EE3E-4284-8A89-8BC6D01E50DD}" ShortID="481530497"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Paused" ID="{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"/>
+								<CustomState Name="" ID="{E17D64CE-2D20-4AED-AB80-74B3A9E9A397}" ShortID="871191563"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{93C5A4F3-6FAF-42B2-81CD-F381FADC6AA9}" ShortID="1071892278">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Pause_EQ" ID="{9EED38C0-D46B-4CB9-B545-F2A4EF9D32C8}" WorkUnitID="{A750CC05-A6CF-40A7-B36A-5F5472A460AB}"/>
+											</Reference>
+										</ReferenceList>
+										<StateInfo>
+											<CustomStateList>
+												<CustomState>
+													<StateRef Name="Unpaused" ID="{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"/>
+													<CustomState Name="" ID="{83791EC5-104B-4B59-8154-82C5A5EF4B8C}" ShortID="989576391"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="None" ID="{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"/>
+													<CustomState Name="" ID="{7DF913E4-EE55-4987-B962-0508BA4363B7}" ShortID="558349359"/>
+												</CustomState>
+												<CustomState>
+													<StateRef Name="Paused" ID="{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"/>
+													<CustomState Name="" ID="{820EA276-920A-41A6-8BAF-9296FE0823EF}" ShortID="632452627"/>
+												</CustomState>
+											</CustomStateList>
+										</StateInfo>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -3,23 +3,30 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{5E1CFD9D-6454-49E8-A283-806F46A94016}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Player_Burn" ID="{23C13519-1B8E-4316-8173-09451ABD9196}">
+				<StateGroup Name="Music_State" ID="{6F630EBA-4CCA-4FFE-886D-D55A9AC877B7}">
+					<ChildrenList>
+						<State Name="None" ID="{052047A5-134F-47B3-B5FA-6D58F9966E7B}"/>
+						<State Name="Menu" ID="{5C8455D0-616B-45E0-9808-F9791351E993}"/>
+						<State Name="Stage_1" ID="{A3C5A768-4E9C-4FE7-87A6-9D1EE890BFCE}"/>
+						<State Name="Stage_2" ID="{C9A2079C-ECA3-4852-8DC7-EC832C6CFA52}"/>
+						<State Name="Stage_3" ID="{9C6A5768-A341-4951-903B-28425B46B8CB}"/>
+						<State Name="Stage_4" ID="{9D27FD0D-1897-483E-A01D-366C4045973B}"/>
+						<State Name="Stage_5" ID="{71C38126-0BB8-4963-9A5D-96F0734D15F5}"/>
+						<State Name="Stage_Calm" ID="{285A4665-6AFB-4FD2-A700-418C58D4A906}"/>
+						<State Name="Stage_Collapse" ID="{C5892637-4620-4C0A-BD78-C5A25E161499}"/>
+						<State Name="Stage_Win" ID="{47525A07-AD97-4532-9BC9-941A78BCFEE3}"/>
+						<State Name="Stage_Defeat" ID="{F2D87AE5-55E1-4B5F-A440-6D64B18F0557}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Gameplay_Pause" ID="{0221C828-D207-4922-8316-A956ABD3CDF5}">
 					<PropertyList>
-						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
 					</PropertyList>
 					<ChildrenList>
-						<State Name="None" ID="{969935EA-A88C-4E42-98FE-FB63A559FF5D}"/>
-						<State Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
-						<State Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
+						<State Name="None" ID="{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"/>
+						<State Name="Paused" ID="{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"/>
+						<State Name="Unpaused" ID="{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"/>
 					</ChildrenList>
-					<TransitionList>
-						<Transition>
-							<StartState Name="Burning" ID="{AE79EE7B-ADEC-4F84-82B0-0CC69762BFA2}"/>
-							<EndState Name="Not_Burning" ID="{82DA700C-AB27-4F1A-83A8-931D8ABFE95A}"/>
-							<Time>1</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
