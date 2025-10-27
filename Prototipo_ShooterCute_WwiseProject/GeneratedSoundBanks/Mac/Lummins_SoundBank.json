@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{700F0C92-A5DF-2B96-23D5-3467EA619E50}",
+    "Hash": "{18EB4CD8-BCF4-5FAF-5C38-B7FE6681AF67}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -256,14 +256,6 @@
       "CachePath": "19/{19BF9758-08F4-1C4D-1A0B-8DA1ADC15845}.wem"
      },
      {
-      "Id": "532381909",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Projectile_Soul_Deploy_Start.wav",
-      "CachePath": "8D/{8DA56352-4039-57EB-8435-B39DB4DDADFA}.wem"
-     },
-     {
       "Id": "533007242",
       "Language": "SFX",
       "Streaming": "false",
@@ -358,6 +350,14 @@
       "Location": "Memory",
       "ShortName": "Ambient_DistantImpacts_5.wav",
       "CachePath": "E4/{E40D208A-9D01-5C5C-C0CD-374E38AB220E}.wem"
+     },
+     {
+      "Id": "699003035",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Soul_Deploy.wav",
+      "CachePath": "74/{74C821A7-C78C-3B7A-9088-CD4F3C30E389}.wem"
      },
      {
       "Id": "732762074",
@@ -1247,11 +1247,11 @@
       "Color": "15",
       "MaxAttenuation": "25",
       "DurationType": "OneShot",
-      "DurationMin": "0.3",
-      "DurationMax": "0.3",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
       "MediaRefs": [
        {
-        "Id": "532381909"
+        "Id": "699003035"
        }
       ]
      },
@@ -1454,6 +1454,6 @@
     ]
    }
   ],
-  "FileHash": "{19C47A23-A3E2-E04A-F30C-147BE17B0FAE}"
+  "FileHash": "{F2D693AD-ADC9-6D9C-08A9-76D57E50F4FD}"
  }
 }

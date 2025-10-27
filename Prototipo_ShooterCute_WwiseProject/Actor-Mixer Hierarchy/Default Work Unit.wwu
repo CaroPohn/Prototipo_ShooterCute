@@ -1824,39 +1824,32 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Projectile_Soul_Deploy_1" ID="{3CBA5523-338A-4CC6-83F2-3E99BC41CD2C}" ShortID="853943727">
+								<Sound Name="Projectile_Soul_Deploy" ID="{4F44690B-19E5-4E87-9895-D8B693BBB746}" ShortID="600026090">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Projectile_Soul_Deploy_Start" ID="{020B2767-1B26-4873-957E-B87BAC4C6666}">
+										<AudioFileSource Name="Projectile_Soul_Deploy" ID="{8FC19B45-1561-44C6-A24E-997C7A4A8E0C}">
 											<Language>SFX</Language>
-											<AudioFile>Projectile_Soul_Deploy_Start.wav</AudioFile>
+											<AudioFile>Projectile_Soul_Deploy.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="532381909"/>
+												<MediaID ID="699003035"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Projectile_Soul_Deploy_Start" ID="{020B2767-1B26-4873-957E-B87BAC4C6666}" Platform="Linked"/>
+										<ActiveSource Name="Projectile_Soul_Deploy" ID="{8FC19B45-1561-44C6-A24E-997C7A4A8E0C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<PositioningInfo>
 								<Position Name="" ID="{44975BF9-D0E4-4EBD-B83C-8D15E749F863}"/>
 							</PositioningInfo>
-							<ObjectLists>
-								<ObjectList Name="Playlist">
-									<Reference>
-										<ObjectRef Name="Projectile_Soul_Deploy_1" ID="{3CBA5523-338A-4CC6-83F2-3E99BC41CD2C}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Projectile_Hit_ElectricProjectile" ID="{CCC94566-7AC8-4C5A-8D22-51245AC5D0D2}" ShortID="785137912">
 							<PropertyList>
