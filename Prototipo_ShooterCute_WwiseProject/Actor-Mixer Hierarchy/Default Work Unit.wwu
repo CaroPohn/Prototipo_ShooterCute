@@ -1071,9 +1071,9 @@
 								<ActiveSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Egg_ShieldActivate" ID="{AC098C75-DEF5-4D1D-AF3F-5FF913976442}" ShortID="1021735319">
+						<Sound Name="Egg_ShieldActivate" ID="{91691D5F-2B5C-49B4-8A24-3DD55E98BC60}" ShortID="245996861">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="Color" Type="int16" Value="5"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1081,11 +1081,11 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Egg_ShieldActivate" ID="{2DC00170-BB62-4AA8-BF85-67D0E0648420}">
+								<AudioFileSource Name="Egg_ShieldActivate" ID="{42431026-8AE4-400F-87F4-CCA9424A8B2D}">
 									<Language>SFX</Language>
 									<AudioFile>Egg_ShieldActivate.wav</AudioFile>
 									<MediaIDList>
@@ -1094,7 +1094,7 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Egg_ShieldActivate" ID="{2DC00170-BB62-4AA8-BF85-67D0E0648420}" Platform="Linked"/>
+								<ActiveSource Name="Egg_ShieldActivate" ID="{42431026-8AE4-400F-87F4-CCA9424A8B2D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
