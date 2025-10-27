@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{456D654C-1A24-163A-B3CE-FE8173D54EE6}",
+    "Hash": "{1ADD4C68-3298-3F1B-5662-ADEF7505371B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -48,6 +48,14 @@
       "CachePath": "ED/{ED081B41-A08A-B54C-E446-1D3D1FD6FCB7}.wem"
      },
      {
+      "Id": "83276941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_ElectricProjectile_2.wav",
+      "CachePath": "B1/{B13F032F-E9C3-708A-5F2B-E2AB52F9562C}.wem"
+     },
+     {
       "Id": "90504550",
       "Language": "SFX",
       "Streaming": "false",
@@ -61,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Player_ShootCharge_Electric.wav",
-      "CachePath": "76/{769F37C9-5F12-9B33-E11F-D725609B2EF2}.wem"
+      "CachePath": "E0/{E0062733-C439-7A42-7938-7EDF50B2CA55}.wem"
      },
      {
       "Id": "96935299",
@@ -190,6 +198,14 @@
       "Location": "Memory",
       "ShortName": "Ambient_DistantImpacts_1.wav",
       "CachePath": "8D/{8DF4CB1B-2167-33F7-7427-BD99076BF9B3}.wem"
+     },
+     {
+      "Id": "367618522",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_ElectricProjectile_3.wav",
+      "CachePath": "CE/{CE57A9BF-D3E5-9480-A993-02543F99F285}.wem"
      },
      {
       "Id": "403220722",
@@ -342,6 +358,14 @@
       "Location": "Memory",
       "ShortName": "Ambient_DistantImpacts_5.wav",
       "CachePath": "E4/{E40D208A-9D01-5C5C-C0CD-374E38AB220E}.wem"
+     },
+     {
+      "Id": "732762074",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Projectile_Hit_ElectricProjectile_1.wav",
+      "CachePath": "5D/{5D960AC3-0BFD-46F8-65D5-DA13C84641C4}.wem"
      },
      {
       "Id": "746078826",
@@ -1201,8 +1225,19 @@
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
       "MaxAttenuation": "20",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "1.391631",
+      "DurationMax": "1.8047222",
+      "MediaRefs": [
+       {
+        "Id": "83276941"
+       },
+       {
+        "Id": "367618522"
+       },
+       {
+        "Id": "732762074"
+       }
+      ]
      },
      {
       "Id": "2994932292",
@@ -1419,6 +1454,6 @@
     ]
    }
   ],
-  "FileHash": "{5FAA42D4-676C-61AC-92BD-2070BEB89DAA}"
+  "FileHash": "{1881358E-C609-102C-76BE-4D72501A359C}"
  }
 }
