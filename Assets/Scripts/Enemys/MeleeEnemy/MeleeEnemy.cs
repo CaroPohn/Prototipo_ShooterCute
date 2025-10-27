@@ -66,8 +66,10 @@ public class MeleeEnemy : MonoBehaviour
 
     public void MeleeLogic()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
+        AkUnitySoundEngine.PostEvent("Enemy_Attack_Baby", gameObject);
 
+        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
+      
         foreach (Collider hit in hitColliders)
         {
             if (hit.CompareTag("Player"))

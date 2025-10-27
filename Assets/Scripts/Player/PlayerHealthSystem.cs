@@ -125,7 +125,7 @@ public class PlayerHealthSystem : MonoBehaviour
             healthMat.SetFloat("_Intensity", 0);
             if (isCurrentlyBurning)
             {
-                AkUnitySoundEngine.SetState("Player_Burn", "Not_Burning");
+                AkUnitySoundEngine.SetSwitch("Player_Burn", "Not_Burning", gameObject);
                 AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
                 isCurrentlyBurning = false;
             }
@@ -137,7 +137,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
             if (!isCurrentlyBurning)
             {
-                AkUnitySoundEngine.SetState("Player_Burn", "Burning");
+                AkUnitySoundEngine.SetSwitch("Player_Burn", "Burning", gameObject);
                 AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
                 
                 isCurrentlyBurning = true;
@@ -170,7 +170,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
             if (isCurrentlyBurning)
             {
-                AkUnitySoundEngine.SetState("Player_Burn", "None");
+                AkUnitySoundEngine.SetSwitch("Player_Burn", "None", gameObject);
                 AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
                 isCurrentlyBurning = false;
             }
