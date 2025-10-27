@@ -54,7 +54,7 @@ public class PlayerHealthSystem : MonoBehaviour
         hasPlayedDamageSound = false;
         hasPlayedHealSound = false;
 
-        AkUnitySoundEngine.SetState("Player_Burn", "None");
+        AkUnitySoundEngine.SetSwitch("Player_Burn", "Silence", gameObject);
     }
 
     private void OnEnable()
