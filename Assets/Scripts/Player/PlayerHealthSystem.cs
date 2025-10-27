@@ -170,7 +170,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
             if (isCurrentlyBurning)
             {
-                AkUnitySoundEngine.SetSwitch("Player_Burn", "None", gameObject);
+                AkUnitySoundEngine.SetSwitch("Player_Burn", "Silence", gameObject);
                 AkUnitySoundEngine.PostEvent("Player_Burn", gameObject);
                 isCurrentlyBurning = false;
             }

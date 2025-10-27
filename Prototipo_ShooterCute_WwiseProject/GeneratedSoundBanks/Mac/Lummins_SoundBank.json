@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{18EB4CD8-BCF4-5FAF-5C38-B7FE6681AF67}",
+    "Hash": "{CECBCB7F-09ED-D8A9-D476-DB67F79AA44E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -576,6 +576,18 @@
       "CachePath": "C9/{C92A883C-FD51-71AB-331C-C41140E30060}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "502479969",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Player\\Player_Burn\\Sound break\\Silence",
+       "GUID": "{C95F38F4-9BB6-4161-92CF-0B0933858BB0}",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "941448663",
@@ -1022,6 +1034,21 @@
         "SwitchValue": {
          "GroupType": "Switch",
          "GroupId": "3890490206",
+         "Id": "3041563226",
+         "GUID": "{B8726E37-D0B9-42C3-A78E-52ED7F57A9C3}"
+        },
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "502479969"
+          }
+         ]
+        }
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3890490206",
          "Id": "4104232280",
          "GUID": "{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}",
          "Default": "true"
@@ -1438,6 +1465,12 @@
       "GUID": "{229061BD-7495-49B2-B0FB-2C732B3D15BB}",
       "Switches": [
        {
+        "Id": "3041563226",
+        "Name": "Silence",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Silence",
+        "GUID": "{B8726E37-D0B9-42C3-A78E-52ED7F57A9C3}"
+       },
+       {
         "Id": "3518279182",
         "Name": "Burning",
         "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Burning",
@@ -1454,6 +1487,6 @@
     ]
    }
   ],
-  "FileHash": "{F2D693AD-ADC9-6D9C-08A9-76D57E50F4FD}"
+  "FileHash": "{B4035EEC-510B-F8CC-5143-AA916E7630EE}"
  }
 }

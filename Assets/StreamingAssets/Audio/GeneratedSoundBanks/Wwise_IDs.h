@@ -113,6 +113,7 @@ namespace AK
             {
                 static const AkUniqueID BURNING = 3518279182U;
                 static const AkUniqueID NOT_BURNING = 4104232280U;
+                static const AkUniqueID SILENCE = 3041563226U;
             } // namespace SWITCH
         } // namespace PLAYER_BURN
 
