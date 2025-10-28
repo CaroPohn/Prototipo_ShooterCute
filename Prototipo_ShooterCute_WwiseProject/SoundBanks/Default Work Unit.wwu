@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CC6BAA36-B5D4-4E09-A1D6-495ABA73728E}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{CC6BAA36-B5D4-4E09-A1D6-495ABA73728E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CC6BAA36-B5D4-4E09-A1D6-495ABA73728E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Lummins_SoundBank" ID="{8B372C42-ECB1-4691-81BD-DB0C5B83147C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Enemy" ID="{B4F7FB49-4CC7-402A-8068-6876465C9C75}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{9FBEA2F6-4B97-4241-862A-A335E3F3AAF7}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lumming" ID="{94890852-4F9B-43E8-BA4C-9E5A20140015}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player" ID="{61D10539-998A-49C2-8D83-25A41D2D180F}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

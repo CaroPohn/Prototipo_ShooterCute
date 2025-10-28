@@ -14,6 +14,10 @@ public class GamePause : MonoBehaviour
     [SerializeField] private Canvas settingsCanvas;
     [SerializeField] private Canvas pauseCanvas;
 
+    [SerializeField] private Material lavaDamageEffect;
+    [SerializeField] private Material projectileDamageEffect;
+    [SerializeField] private Material healthEffect;
+
     [SerializeField] private LevelController levelController;
 
     public static event Action OnRestartLevel;
@@ -70,6 +74,11 @@ public class GamePause : MonoBehaviour
     void Restart()
     {
         OnRestartLevel?.Invoke();
+
+        lavaDamageEffect.SetFloat("_Intensity", 0);
+        projectileDamageEffect.SetFloat("_Intensity", 0);
+        healthEffect.SetFloat("_Intensity", 0);
+
         SceneLoader.Instance.ChangeScene("SelectionMenu");
     }
 

@@ -26,6 +26,8 @@ public class FireGun : Gun
     private void Start()
     {
         timer = 0.2f;
+
+        AkUnitySoundEngine.SetSwitch("Player_Shoot_Type", "Basic", gameObject);
     }
 
     private void OnEnable()
@@ -56,6 +58,8 @@ public class FireGun : Gun
 
     public override void Shoot()
     {
+        AkUnitySoundEngine.PostEvent("Player_Shoot", gameObject);
+
         timer = 0;
 
         Instantiate(muzzleFlash, shootPoint);

@@ -49,15 +49,24 @@ public class PatrolEnemy : MonoBehaviour
     private void OnEnable()
     {
         enemyAnimationHandler.OnEnemyShooting += ShootLogic;
+        enemyAnimationHandler.OnEnemyStep += StepSoundActivation;
     }
 
     private void OnDisable()
     {
         enemyAnimationHandler.OnEnemyShooting -= ShootLogic;
+        enemyAnimationHandler.OnEnemyStep -= StepSoundActivation;
+    }
+
+    public void StepSoundActivation()
+    {
+        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
     }
 
     public void ShootLogic()
     {
+        AkUnitySoundEngine.PostEvent("Enemy_Shoot_Basic", gameObject);
+
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
         Vector3 direction = (player.position - shootPoint.position).normalized * Time.deltaTime;
@@ -135,6 +144,8 @@ public class PatrolEnemy : MonoBehaviour
 
     public void SpawnAnimationHandler()
     {
+        AkUnitySoundEngine.PostEvent("Enemy_Spawn_Adult", gameObject);
+
         StartCoroutine(SpawnCoroutine());
 
         Instantiate(spawnVFX, transform.position, transform.rotation);

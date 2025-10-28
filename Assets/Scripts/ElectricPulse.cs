@@ -28,6 +28,8 @@ public class ElectricPulse : MonoBehaviour
     {
         if (electricAbilityScript.hasAbilityBeenUsed && count < 1)
         {
+            AkUnitySoundEngine.PostEvent("Lumming_Ability_Electric_Impact", gameObject);
+
             count++;
 
             Instantiate(impactAreaPrefab, transform.position, Quaternion.identity);

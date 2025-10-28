@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{060CA7AA-17C9-429A-93B5-A69C4751F708}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{060CA7AA-17C9-429A-93B5-A69C4751F708}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{060CA7AA-17C9-429A-93B5-A69C4751F708}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Footstep_Surface" ID="{E14ACD43-2837-4013-BD83-6A2679B58F53}">
+					<ChildrenList>
+						<Switch Name="Lava" ID="{F2E500CC-1405-4BBA-B04C-688683C4D304}"/>
+						<Switch Name="Stone" ID="{4A98E414-0F26-4526-A388-37A47AA2B427}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Player_Shoot_Type" ID="{A7C3106E-D4FD-46C7-AA5B-EF9BA214C07C}">
+					<ChildrenList>
+						<Switch Name="Basic" ID="{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"/>
+						<Switch Name="Electric" ID="{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Player_Burn" ID="{229061BD-7495-49B2-B0FB-2C732B3D15BB}">
+					<ChildrenList>
+						<Switch Name="Burning" ID="{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"/>
+						<Switch Name="Not_Burning" ID="{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}"/>
+						<Switch Name="Silence" ID="{B8726E37-D0B9-42C3-A78E-52ED7F57A9C3}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
