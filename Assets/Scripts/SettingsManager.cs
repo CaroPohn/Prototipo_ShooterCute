@@ -1,4 +1,5 @@
 using System;
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,16 @@ public class SettingsManager : MonoBehaviour
     public event Action OnSensChange;
 
     private float sensValue;
+
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        
+    }
 
     private void Start()
     {
@@ -60,5 +71,22 @@ public class SettingsManager : MonoBehaviour
     public float GetSensitivity()
     {
         return sensValue;
+    }
+
+    private void SliderDeselectSound()
+    {
+        AkUnitySoundEngine.PostEvent("UI_Slider_Release", gameObject);
+    }
+
+    private void FovSliderHoldSound()
+    {
+        AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", fovSlider.value);
+        AkUnitySoundEngine.PostEvent("UI_Slider_Hold", gameObject);
+    }
+
+    private void SensSliderHoldSound()
+    {
+        AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", sensSlider.value);
+        AkUnitySoundEngine.PostEvent("UI_Slider_Hold", gameObject);
     }
 }
