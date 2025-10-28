@@ -39,6 +39,7 @@ namespace AK
         static const AkUniqueID LUMMING_IDLE_ELECTRICINTERACTION = 1703828721U;
         static const AkUniqueID LUMMING_IDLE_FIREINTERACTION = 1512820010U;
         static const AkUniqueID LUMMING_LEVITATE = 3986156551U;
+        static const AkUniqueID LUMMING_LEVITATE_STOP = 1325059842U;
         static const AkUniqueID MUSIC_INITIALIZE = 2612520127U;
         static const AkUniqueID MUSIC_STOP = 3227181061U;
         static const AkUniqueID PLAYER_BURN = 3890490206U;
