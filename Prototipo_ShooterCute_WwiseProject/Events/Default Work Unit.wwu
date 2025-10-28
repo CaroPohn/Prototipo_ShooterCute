@@ -187,6 +187,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Lumming_Levitate_Stop" ID="{9B62BC41-1369-4D66-832A-13EAF84DBB77}">
+							<ChildrenList>
+								<Action Name="" ID="{CD83514C-1E28-498E-A2C7-2604C0495560}" ShortID="923307213">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Egg" ID="{ABE67F8A-B9D6-40D2-BEBF-25F0CEDEDFF3}" ShortID="753824209">
