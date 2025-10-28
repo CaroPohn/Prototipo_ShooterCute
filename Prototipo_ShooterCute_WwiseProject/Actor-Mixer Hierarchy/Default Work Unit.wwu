@@ -1349,7 +1349,17 @@
 						<Sound Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" ShortID="256054162">
 							<PropertyList>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1361,6 +1371,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="UI_Slider" ID="{D75066A0-5DBE-43C9-9A14-861D014076FD}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0101214574898785"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.01417004048583"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0242914979757085"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.0970496533109963"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>UI_Slider.wav</AudioFile>
 									<MediaIDList>

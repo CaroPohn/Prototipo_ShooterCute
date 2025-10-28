@@ -53,8 +53,7 @@ namespace AK
         static const AkUniqueID PROJECTILE_SOUL_DEPLOY = 2994932292U;
         static const AkUniqueID UI_BUTTON_NORMAL = 3345914708U;
         static const AkUniqueID UI_BUTTON_SPECIAL = 3115620430U;
-        static const AkUniqueID UI_SLIDER_HOLD = 634443763U;
-        static const AkUniqueID UI_SLIDER_RELEASE = 1205364051U;
+        static const AkUniqueID UI_SLIDER = 3987036369U;
     } // namespace EVENTS
 
     namespace STATES

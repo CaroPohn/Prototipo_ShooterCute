@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{5F22B261-3815-0EF0-1A47-8E8FF2BF215B}",
+    "Hash": "{ADDE1BEF-394F-F9B6-7A84-8074D37056FD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -549,7 +549,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "UI_Slider.wav",
-      "CachePath": "4A/{4A79BC0E-2867-334C-2F59-72B4E97D6199}.wem"
+      "CachePath": "46/{4664E209-6C63-A193-F3CE-9E19E81A1085}.wem"
      },
      {
       "Id": "989220512",
@@ -1321,26 +1321,18 @@
       ]
      },
      {
-      "Id": "634443763",
-      "Name": "UI_Slider_Hold",
-      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider_Hold",
+      "Id": "3987036369",
+      "Name": "UI_Slider",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider",
       "GUID": "{3558FD6F-8026-493C-A46C-2D21325EDD2D}",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "0.07275815",
+      "DurationMax": "0.07275815",
       "MediaRefs": [
        {
         "Id": "985049323"
        }
       ]
-     },
-     {
-      "Id": "1205364051",
-      "Name": "UI_Slider_Release",
-      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_Slider_Release",
-      "GUID": "{902CF4E5-6AB3-432C-927F-C5FDAD72FF21}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -1497,6 +1489,6 @@
     ]
    }
   ],
-  "FileHash": "{069841D0-DCA5-EA7B-C260-34478BEBA221}"
+  "FileHash": "{CDCB937B-E47B-5333-E43C-B1BAAD7C5AF0}"
  }
 }

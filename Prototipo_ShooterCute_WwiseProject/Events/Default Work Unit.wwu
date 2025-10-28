@@ -496,23 +496,9 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="UI_Slider_Hold" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
+						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
 							<ChildrenList>
 								<Action Name="" ID="{B7DA0DA1-4649-45A4-B663-6ADBB1CAFA48}" ShortID="780985807">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="UI_Slider_Release" ID="{902CF4E5-6AB3-432C-927F-C5FDAD72FF21}">
-							<ChildrenList>
-								<Action Name="" ID="{CF6EC68E-93DC-49DA-AC5D-5B9EFF4FEE07}" ShortID="207095158">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
