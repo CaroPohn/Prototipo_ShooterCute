@@ -6,7 +6,8 @@ public class Lumming_Levitate : MonoBehaviour
 {
     public GameObject triggerObject = null;
     private bool playerInside = false;
-       void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == triggerObject)
         {        
@@ -26,6 +27,7 @@ public class Lumming_Levitate : MonoBehaviour
 
     void OnDisable()
     {
+        playerInside = false;
         AkUnitySoundEngine.PostEvent("Lumming_Levitate_Stop", gameObject);
     }
 
