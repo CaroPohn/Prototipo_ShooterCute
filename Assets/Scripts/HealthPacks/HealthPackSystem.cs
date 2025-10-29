@@ -29,14 +29,14 @@ public class HealthPackSystem : MonoBehaviour
             {
                 playerHealthSystem.health += healingNum;
                 playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.Heal);
-                AkUnitySoundEngine.ExecuteActionOnEvent("Lumming_Levitate", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
+                AkUnitySoundEngine.PostEvent("Lumming_Levitate_Stop", gameObject);
                 OnGrabingHealthPack?.Invoke();
             }
             else if (playerHealthSystem.health + healingNum > playerHealthSystem.maxHealth && playerHealthSystem.health != playerHealthSystem.maxHealth) 
             {
                 playerHealthSystem.health = playerHealthSystem.maxHealth;
                 playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.Heal);
-                AkUnitySoundEngine.ExecuteActionOnEvent("Lumming_Levitate", AkActionOnEventType.AkActionOnEventType_Stop, gameObject);
+                AkUnitySoundEngine.PostEvent("Lumming_Levitate_Stop", gameObject);
                 OnGrabingHealthPack?.Invoke();
             }
         }
