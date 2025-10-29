@@ -308,6 +308,8 @@
 						</RandomSequenceContainer>
 						<SwitchContainer Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" ShortID="464537938">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1126,7 +1128,7 @@
 						</Sound>
 						<Sound Name="Egg_ShieldActivate" ID="{91691D5F-2B5C-49B4-8A24-3DD55E98BC60}" ShortID="245996861">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="5"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1242,7 +1244,9 @@
 						<Sound Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -1924,6 +1928,9 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Projectile_Hit_ElectricProjectile" ID="{CCC94566-7AC8-4C5A-8D22-51245AC5D0D2}" ShortID="785137912">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1937,6 +1944,7 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
