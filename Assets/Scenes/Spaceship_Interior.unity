@@ -249,6 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837406014}
+  - component: {fileID: 837406015}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -275,6 +276,22 @@ Transform:
   - {fileID: 1616823835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837406015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837406013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d9ef80e5faccb40972c8c43576d0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelSelectorCameraTransform: {fileID: 1616823835}
+  LoadoutCameraTransform: {fileID: 1630484157}
+  SummaryCameraTransform: {fileID: 1961521143}
+  LookingAtDoorCameraTransform: {fileID: 2083892259}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,10 +1199,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2852609459424426668}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SummaryUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120928994828733153, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2756456598891236088, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
       propertyPath: m_Name
       value: SpaceShipInterior
       objectReference: {fileID: 0}
+    - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: changer
+      value: 
+      objectReference: {fileID: 837406015}
     - target: {fileID: 9035388349994792014, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1195,6 +1244,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+--- !u!114 &2852609459424426668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+  m_PrefabInstance: {fileID: 2852609459424426667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7e150bd0ec2154a976242232f8379a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8856061277610045825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1203,10 +1263,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1002576506569219267, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: camChanger
+      value: 
+      objectReference: {fileID: 837406015}
     - target: {fileID: 4476758360818667072, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_Name
       value: SpaceShipInterior_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5243310075628253487, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: summaryUI
+      value: 
+      objectReference: {fileID: 2852609459424426668}
     - target: {fileID: 7140650449124970459, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1287,6 +1355,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922519774020057440, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: summaryUI
+      value: 
+      objectReference: {fileID: 2852609459424426668}
     - target: {fileID: 8922519774020057440, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: planetsRotationCenter
       value: 

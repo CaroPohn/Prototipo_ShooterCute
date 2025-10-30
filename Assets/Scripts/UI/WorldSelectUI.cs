@@ -13,6 +13,7 @@ public class WorldSelectUI : MonoBehaviour
     [SerializeField] GameObject moveLeftButtonGO;
     [SerializeField] GameObject infoPanel;
     [SerializeField] Button chooseButton;
+    [SerializeField] SummaryUI summaryUI;
 
     [SerializeField] TextMeshProUGUI ChoosetmpUGUI;
     bool planetSelected = false;
@@ -84,6 +85,7 @@ public class WorldSelectUI : MonoBehaviour
         {
             planetSelected = true;
             ChoosetmpUGUI.text = "Cancel selection";
+            summaryUI.UpdatePlanet(CurrentWorld);
         }
         else
         {

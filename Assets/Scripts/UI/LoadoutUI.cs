@@ -6,12 +6,9 @@ public class LoadoutUI : MonoBehaviour
     [SerializeField] LummingSlots weaponSlot;
     [SerializeField] LummingSlots abilitySlot;
     [SerializeField] LoadoutWarningsUI warnings;
+    [SerializeField] SummaryUI summaryUI;
     LummingSlots currentSelectedSlot = null;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    
     public void WeaponButtonPressed()
     {
         if(currentSelectedSlot == weaponSlot)
@@ -62,7 +59,7 @@ public class LoadoutUI : MonoBehaviour
             DisplaySameLummingWarning();
             return;
         }
-        //Send updated data to summary
+        summaryUI.UpdateLoadout(weaponSlot.GetCurrentLumming(), abilitySlot.GetCurrentLumming());
     }
     void DisplayEmptyWarning()
     {
@@ -71,10 +68,5 @@ public class LoadoutUI : MonoBehaviour
     void DisplaySameLummingWarning()
     {
         warnings.SameLummingWarning();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
