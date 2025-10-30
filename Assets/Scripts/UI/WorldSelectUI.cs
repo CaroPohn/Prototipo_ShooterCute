@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,9 +13,17 @@ public class WorldSelectUI : MonoBehaviour
     [SerializeField] GameObject moveLeftButtonGO;
     [SerializeField] GameObject infoPanel;
     [SerializeField] Button chooseButton;
+
+    [SerializeField] TextMeshProUGUI ChoosetmpUGUI;
+    bool planetSelected = false;
     void Start()
     {
         
+    }
+
+    public World GetCurrentWorld()
+    {
+        return CurrentWorld;
     }
     public void moveLeft()
     {
@@ -71,8 +80,20 @@ public class WorldSelectUI : MonoBehaviour
     }
     public void Choose()
     {
-      
-    
+        if (!planetSelected)
+        {
+            planetSelected = true;
+            ChoosetmpUGUI.text = "Cancel selection";
+        }
+        else
+        {
+            planetSelected = false;
+            ChoosetmpUGUI.text = "Choose";
+        }
+        moveRightButtonGO.SetActive(!planetSelected);
+        moveLeftButtonGO.SetActive(!planetSelected);
+        infoPanel.SetActive(false);
+
     }
     void Update()
     {
