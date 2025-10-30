@@ -52,10 +52,13 @@ MonoBehaviour:
   reloadTime: 0
   timeBetweenShots: 0.5
   electric_Gun_VFX_Script: {fileID: 0}
+  armsAnimator: {fileID: 0}
   hitPointEffect: {fileID: 0}
   shootPivot: {fileID: 8496743880716301185}
   playerCamera: {fileID: 0}
   inputReader: {fileID: 0}
+  levelController: {fileID: 0}
+  zapAnimator: {fileID: 0}
 --- !u!114 &6235007681987416415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +143,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4954974652039653757}
     m_Modifications:
+    - target: {fileID: 76834366917754184, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557101058143954307, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472006706460819912, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832308215232634909, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 163350d33410e8d46a34afb84bafa9dd, type: 2}
     - target: {fileID: 6328928576298206518, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -180,9 +199,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312257213338318312, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8462421770015025933, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462421770015025933, guid: 54c035ff4cbce6d4993902495efb66ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

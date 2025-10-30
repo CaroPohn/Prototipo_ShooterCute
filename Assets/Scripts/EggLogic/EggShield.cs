@@ -67,6 +67,8 @@ public class EggShield : MonoBehaviour
     {
         if (eggGetHitCoroutine != null) StopCoroutine(eggGetHitCoroutine);
         eggGetHitCoroutine = StartCoroutine("ShieldGetHitCoroutine");
+
+        AkUnitySoundEngine.PostEvent("Egg_Soul_Impact", gameObject);
     }
     IEnumerator ShieldGetHitCoroutine()
     {

@@ -1,0 +1,268 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{87DB8452-1B33-A5EE-6A30-7150CC7A2697}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3369903790",
+       "Name": "Pause_EQ",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Pause_EQ",
+       "GUID": "{9EED38C0-D46B-4CB9-B545-F2A4EF9D32C8}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{C90EB52A-749A-46CC-B0B9-F44345D116A9}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{899EED3B-9B28-4301-9EE8-E96194425C0B}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX",
+      "GUID": "{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}"
+     },
+     {
+      "Id": "1551306167",
+      "Name": "UI",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UI",
+      "GUID": "{56C5D930-922C-4417-B4E1-49046EEA62A8}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3369903790"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
+      "GUID": "{A12B1824-0CEF-4447-A7F1-8BB227CB049E}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1369808713",
+      "Name": "Crossfade",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Crossfade",
+      "GUID": "{619A51BF-E357-4C71-AF72-E0B3F376A6A6}"
+     },
+     {
+      "Id": "3748721091",
+      "Name": "Pitch_Slider",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Pitch_Slider",
+      "GUID": "{5E276FFD-46E0-4760-BDF2-4299FBAB1602}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1652209498",
+      "Name": "Gameplay_Pause",
+      "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause",
+      "GUID": "{0221C828-D207-4922-8316-A956ABD3CDF5}",
+      "States": [
+       {
+        "Id": "319258907",
+        "Name": "Paused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Paused",
+        "GUID": "{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\None",
+        "GUID": "{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"
+       },
+       {
+        "Id": "1365518790",
+        "Name": "Unpaused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Unpaused",
+        "GUID": "{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"
+       }
+      ]
+     },
+     {
+      "Id": "3826569560",
+      "Name": "Music_State",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_State",
+      "GUID": "{6F630EBA-4CCA-4FFE-886D-D55A9AC877B7}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\None",
+        "GUID": "{052047A5-134F-47B3-B5FA-6D58F9966E7B}"
+       },
+       {
+        "Id": "993086497",
+        "Name": "Stage_Collapse",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Collapse",
+        "GUID": "{C5892637-4620-4C0A-BD78-C5A25E161499}"
+       },
+       {
+        "Id": "1019463238",
+        "Name": "Stage_Win",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Win",
+        "GUID": "{47525A07-AD97-4532-9BC9-941A78BCFEE3}"
+       },
+       {
+        "Id": "1545043933",
+        "Name": "Stage_Defeat",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Defeat",
+        "GUID": "{F2D87AE5-55E1-4B5F-A440-6D64B18F0557}"
+       },
+       {
+        "Id": "1847784213",
+        "Name": "Stage_Calm",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Calm",
+        "GUID": "{285A4665-6AFB-4FD2-A700-418C58D4A906}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Menu",
+        "GUID": "{5C8455D0-616B-45E0-9808-F9791351E993}"
+       },
+       {
+        "Id": "4175426376",
+        "Name": "Stage_4",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_4",
+        "GUID": "{9D27FD0D-1897-483E-A01D-366C4045973B}"
+       },
+       {
+        "Id": "4175426377",
+        "Name": "Stage_5",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_5",
+        "GUID": "{71C38126-0BB8-4963-9A5D-96F0734D15F5}"
+       },
+       {
+        "Id": "4175426381",
+        "Name": "Stage_1",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_1",
+        "GUID": "{A3C5A768-4E9C-4FE7-87A6-9D1EE890BFCE}"
+       },
+       {
+        "Id": "4175426382",
+        "Name": "Stage_2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_2",
+        "GUID": "{C9A2079C-ECA3-4852-8DC7-EC832C6CFA52}"
+       },
+       {
+        "Id": "4175426383",
+        "Name": "Stage_3",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_3",
+        "GUID": "{9C6A5768-A341-4951-903B-28425B46B8CB}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1833605183",
+      "Name": "Footstep_Surface",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface",
+      "GUID": "{E14ACD43-2837-4013-BD83-6A2679B58F53}",
+      "Switches": [
+       {
+        "Id": "540301611",
+        "Name": "Lava",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface\\Lava",
+        "GUID": "{F2E500CC-1405-4BBA-B04C-688683C4D304}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Footstep_Surface\\Stone",
+        "GUID": "{4A98E414-0F26-4526-A388-37A47AA2B427}"
+       }
+      ]
+     },
+     {
+      "Id": "3124051321",
+      "Name": "Player_Shoot_Type",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type",
+      "GUID": "{A7C3106E-D4FD-46C7-AA5B-EF9BA214C07C}",
+      "Switches": [
+       {
+        "Id": "3250089732",
+        "Name": "Electric",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type\\Electric",
+        "GUID": "{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"
+       },
+       {
+        "Id": "3340296461",
+        "Name": "Basic",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Shoot_Type\\Basic",
+        "GUID": "{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"
+       }
+      ]
+     },
+     {
+      "Id": "3890490206",
+      "Name": "Player_Burn",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn",
+      "GUID": "{229061BD-7495-49B2-B0FB-2C732B3D15BB}",
+      "Switches": [
+       {
+        "Id": "3041563226",
+        "Name": "Silence",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Silence",
+        "GUID": "{B8726E37-D0B9-42C3-A78E-52ED7F57A9C3}"
+       },
+       {
+        "Id": "3518279182",
+        "Name": "Burning",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Burning",
+        "GUID": "{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"
+       },
+       {
+        "Id": "4104232280",
+        "Name": "Not_Burning",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Player_Burn\\Not_Burning",
+        "GUID": "{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5EFFA65F-5FFA-C32C-700D-77560593DC85}"
+ }
+}

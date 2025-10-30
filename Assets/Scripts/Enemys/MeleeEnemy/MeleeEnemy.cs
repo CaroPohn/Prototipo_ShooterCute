@@ -50,17 +50,26 @@ public class MeleeEnemy : MonoBehaviour
     private void OnEnable()
     {
         meleeAnimationHandler.OnEnemyAttacking += MeleeLogic;
+        meleeAnimationHandler.OnEnemyStep += StepSoundActivation;
     }
 
     private void OnDisable()
     {
         meleeAnimationHandler.OnEnemyAttacking -= MeleeLogic;
+        meleeAnimationHandler.OnEnemyStep -= StepSoundActivation;
+    }
+
+    public void StepSoundActivation()
+    {
+        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
     }
 
     public void MeleeLogic()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
+        AkUnitySoundEngine.PostEvent("Enemy_Attack_Baby", gameObject);
 
+        Collider[] hitColliders = Physics.OverlapSphere(shootPoint.position, attackRadius);
+      
         foreach (Collider hit in hitColliders)
         {
             if (hit.CompareTag("Player"))
@@ -141,6 +150,8 @@ public class MeleeEnemy : MonoBehaviour
 
     public void SpawnAnimationHandler()
     {
+        AkUnitySoundEngine.PostEvent("Enemy_Spawn_Adult", gameObject);
+
         StartCoroutine(SpawnCoroutine());
 
         Instantiate(spawnVFX, transform.position, transform.rotation);

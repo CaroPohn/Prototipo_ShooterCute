@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     private bool readyToJump;
+    private bool isMoving;
 
     [SerializeField] private Animator armsAnimator;
 
@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody rb;
 
+    private bool hasStepSoundReproduce;
+    private float stepTimer;
+
+    public float stepTime;
+
     [SerializeField] InputReader inputReader;
 
     private void Start()
@@ -35,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = false;
 
         transform.rotation = Quaternion.Euler(0, orientation.eulerAngles.y, 0);
+        hasStepSoundReproduce = false;
     }
 
     private void OnEnable()
@@ -53,6 +59,15 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         IsPlayerOnGround = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f);
+
+        stepTimer += Time.deltaTime;
+
+        Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+        isMoving = horizontalVelocity.magnitude > 5f;
+
+        ChangeStepSoundBool();
+
+        FootstepAudioSwitch();
     }
 
     private void FixedUpdate()
@@ -73,6 +88,60 @@ public class PlayerMovement : MonoBehaviour
     private void AttemptMove(Vector2 value)
     {
         inputDir = value;
+    }
+
+    private void FootstepAudioSwitch()
+    {
+        string groundLayer = GetGroundLayer();
+
+        switch(groundLayer)
+        {
+            case "Default":
+                AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Stone", gameObject);
+                break;
+
+            case "IgnoreNavMesh":
+                AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Stone", gameObject);
+                break;
+
+            case "Lava":
+                AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Lava", gameObject);
+                break;
+
+            case "NavLava":
+                AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Lava", gameObject);
+                break;
+        }
+    }
+
+    private string GetGroundLayer()
+    {
+        string groundLayer;
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, playerHeight * 0.5f + 0.2f))
+        {
+            int layerIndex = hit.collider.gameObject.layer;
+            groundLayer = LayerMask.LayerToName(layerIndex);
+
+            return groundLayer;
+        }
+
+        return null;
+    }
+
+    private void ChangeStepSoundBool()
+    {
+        if (stepTimer > stepTime)
+        {
+            stepTimer = 0;
+            hasStepSoundReproduce = !hasStepSoundReproduce;
+
+            if (hasStepSoundReproduce && isMoving && IsPlayerOnGround)
+            {
+                AkUnitySoundEngine.PostEvent("Player_Footstep", gameObject);
+            }
+        }
     }
 
     private void WalkAnimationHandler()
@@ -117,6 +186,8 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        AkUnitySoundEngine.PostEvent("Player_Jump", gameObject);
     }
 
     private void ResetJump()

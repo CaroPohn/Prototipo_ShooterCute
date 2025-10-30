@@ -1,0 +1,33 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1652209498	Gameplay_Pause			\Default Work Unit\Gameplay_Pause	
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	Gameplay_Pause			
+	748895195	None	Gameplay_Pause			
+	1365518790	Unpaused	Gameplay_Pause			
+	748895195	None	Music_State			
+	993086497	Stage_Collapse	Music_State			
+	1019463238	Stage_Win	Music_State			
+	1545043933	Stage_Defeat	Music_State			
+	1847784213	Stage_Calm	Music_State			
+	2607556080	Menu	Music_State			
+	4175426376	Stage_4	Music_State			
+	4175426377	Stage_5	Music_State			
+	4175426381	Stage_1	Music_State			
+	4175426382	Stage_2	Music_State			
+	4175426383	Stage_3	Music_State			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3369903790	Pause_EQ	Wwise Parametric EQ			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

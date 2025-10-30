@@ -7,6 +7,7 @@ public class EnemyAnimationHandler : MonoBehaviour
     private PatrolEnemy patrolEnemy;
 
     public event Action OnEnemyShooting;
+    public event Action OnEnemyStep;
 
     private void Start()
     {
@@ -16,6 +17,11 @@ public class EnemyAnimationHandler : MonoBehaviour
     public void AttackPoseReached()
     {
         OnEnemyShooting?.Invoke();
+    }
+
+    public void OnStep()
+    {
+        OnEnemyStep?.Invoke();
     }
 
     public void OnFinishDeadAnimation()

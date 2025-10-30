@@ -1,6 +1,2493 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}" SchemaVersion="123">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Player" ID="{2B8FECE2-AA1C-4994-B0F4-852A1C9E2761}" ShortID="104581610">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Player_Jump" ID="{ECB4B163-E914-41CC-890E-27F6BA78709D}" ShortID="813203338">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1660E2F8-3EEE-436A-A3D6-71D1FE9998FA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+													<Property Name="Min" Type="Real64" Value="-75"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player_Jump_1" ID="{3F6A9929-5D6E-4519-BA63-107F6142F816}" ShortID="87617564">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Jump_1" ID="{F7B76194-B70B-4E54-8456-5052AA74D2F6}">
+											<Language>SFX</Language>
+											<AudioFile>Player_Jump_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="989220512"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Jump_1" ID="{F7B76194-B70B-4E54-8456-5052AA74D2F6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Jump_2" ID="{8314A292-23E1-433C-B7AB-C8408433791C}" ShortID="24913406">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Jump_2" ID="{D6F34B97-8681-445E-848B-3B01BA5D94C3}">
+											<Language>SFX</Language>
+											<AudioFile>Player_Jump_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="219577463"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Jump_2" ID="{D6F34B97-8681-445E-848B-3B01BA5D94C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Jump_3" ID="{728A8EB1-5AFA-476A-8538-82D1EDE54A8F}" ShortID="355970329">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Jump_3" ID="{C88CCC88-FAF4-4B5A-98F8-108F1EC12E09}">
+											<Language>SFX</Language>
+											<AudioFile>Player_Jump_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="67274651"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Jump_3" ID="{C88CCC88-FAF4-4B5A-98F8-108F1EC12E09}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Jump_4" ID="{8FD1D049-2757-40DE-B56E-643C2A42AA0F}" ShortID="904222934">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Jump_4" ID="{6F48CF13-FD42-444C-B2C8-DDAFE73A64F2}">
+											<Language>SFX</Language>
+											<AudioFile>Player_Jump_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="921428888"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Jump_4" ID="{6F48CF13-FD42-444C-B2C8-DDAFE73A64F2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Jump_5" ID="{1EFECA11-2DC0-4CEA-A860-E9516FB4D3FC}" ShortID="946613992">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Jump_5" ID="{4BDAB9A7-0303-4842-AD7E-FA83EDD02713}">
+											<Language>SFX</Language>
+											<AudioFile>Player_Jump_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="969074419"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Jump_5" ID="{4BDAB9A7-0303-4842-AD7E-FA83EDD02713}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Player_TakeDamage_Generic" ID="{C384DC0F-A2D5-4895-B324-B2F58271D723}" ShortID="94302956">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B8395D0C-C546-44C1-BCB6-BE4745FE2408}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player_TakeDamage_Generic_1" ID="{9C690C3E-914F-41B5-AFF0-A80C2A369C50}" ShortID="702800055">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_TakeDamage_Generic_1" ID="{EECD7658-3E15-40F7-82D4-7975A25A817A}">
+											<Language>SFX</Language>
+											<AudioFile>Player_TakeDamage_Generic_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="902544792"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_TakeDamage_Generic_1" ID="{EECD7658-3E15-40F7-82D4-7975A25A817A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_TakeDamage_Generic_2" ID="{9C5609B0-D0E9-4A02-B713-C76A421D2272}" ShortID="564085921">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_TakeDamage_Generic_2" ID="{46595E2D-9205-4F9A-9344-20CF1DE7A949}">
+											<Language>SFX</Language>
+											<AudioFile>Player_TakeDamage_Generic_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="774050302"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_TakeDamage_Generic_2" ID="{46595E2D-9205-4F9A-9344-20CF1DE7A949}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_TakeDamage_Generic_3" ID="{07ED007D-D185-443E-B553-D2EBDFC560E1}" ShortID="813999964">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_TakeDamage_Generic_3" ID="{9A2015DC-C6D7-43E7-88D9-5E8FBAE34B7F}">
+											<Language>SFX</Language>
+											<AudioFile>Player_TakeDamage_Generic_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="403220722"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_TakeDamage_Generic_3" ID="{9A2015DC-C6D7-43E7-88D9-5E8FBAE34B7F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_TakeDamage_Generic_4" ID="{D30CD0E5-298B-486E-AA4D-7129C010A317}" ShortID="748270123">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_TakeDamage_Generic_4" ID="{2DC8CAA6-0A35-4A8E-B831-22F81A934115}">
+											<Language>SFX</Language>
+											<AudioFile>Player_TakeDamage_Generic_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="541581528"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_TakeDamage_Generic_4" ID="{2DC8CAA6-0A35-4A8E-B831-22F81A934115}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_TakeDamage_Generic_5" ID="{4DC6C417-E23F-446B-B72A-6254FAABE6A0}" ShortID="714590443">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>60</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_TakeDamage_Generic_5" ID="{9B3B9CB0-D651-4949-BCDB-3C222E91435B}">
+											<Language>SFX</Language>
+											<AudioFile>Player_TakeDamage_Generic_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="533007242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_TakeDamage_Generic_5" ID="{9B3B9CB0-D651-4949-BCDB-3C222E91435B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<SwitchContainer Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" ShortID="464537938">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Not_Burning" ID="{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Player_Burn" ID="{229061BD-7495-49B2-B0FB-2C732B3D15BB}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}" ShortID="570093356">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Burn_End" ID="{E99A4473-F0C3-41A4-B639-3EAD4D71EFA1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.612085370725624"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.30842414916031"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player_Burn_End.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="642849261"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Burn_End" ID="{E99A4473-F0C3-41A4-B639-3EAD4D71EFA1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}" ShortID="1062954609">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Burn_Start" ID="{B897E362-ACF9-4975-8884-D3986182D91F}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="151.035"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.50233910928561"/>
+												<Property Name="LoopEnd" Type="Real64" Value="3.17386981477012"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player_Burn_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="414879116"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Burn_Start" ID="{B897E362-ACF9-4975-8884-D3986182D91F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sound break" ID="{B473C019-F907-4EFC-A56C-5712ED9E85E8}" ShortID="387141702">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{C95F38F4-9BB6-4161-92CF-0B0933858BB0}" ShortID="502479969" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.1"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{C95F38F4-9BB6-4161-92CF-0B0933858BB0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Sound break" ID="{B473C019-F907-4EFC-A56C-5712ED9E85E8}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>0.01</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>0.01</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>0.5</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>0.01</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}"/>
+										<PropertyList>
+											<Property Name="FadeInTime" Type="Real64">
+												<ValueList>
+													<Value>0.2</Value>
+												</ValueList>
+											</Property>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>0.01</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Burning" ID="{7F9FFB20-FCBD-4291-A2D4-07DD564FD15D}"/>
+										<ItemList>
+											<ItemRef Name="Player_Burn_Start" ID="{0118CF9E-2FC2-4724-88A2-C0C3B0E887D1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Silence" ID="{B8726E37-D0B9-42C3-A78E-52ED7F57A9C3}"/>
+										<ItemList>
+											<ItemRef Name="Sound break" ID="{B473C019-F907-4EFC-A56C-5712ED9E85E8}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Not_Burning" ID="{4FE90B38-94CA-4D66-A5BC-B34952FFC1BC}"/>
+										<ItemList>
+											<ItemRef Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<Sound Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" ShortID="5687844">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Player_ShootCharge_Electric" ID="{8B8841AC-CE0F-49E6-88EF-3357CA747AC3}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="70.94"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2.00610332738284"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.20293583972772"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Player_ShootCharge_Electric.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="90676618"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Player_ShootCharge_Electric" ID="{8B8841AC-CE0F-49E6-88EF-3357CA747AC3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<SwitchContainer Name="Player_Footstep" ID="{3D33F405-2298-46D5-ACE8-5555A8B7FFFD}" ShortID="73301333">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Stone" ID="{4A98E414-0F26-4526-A388-37A47AA2B427}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Footstep_Surface" ID="{E14ACD43-2837-4013-BD83-6A2679B58F53}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Player_Footstep_Stone" ID="{D9FF805E-5B4B-4051-B484-1E783265197A}" ShortID="493171538">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Player_Footstep_Stone_1" ID="{0BF69FBC-7E14-4BF8-9DED-9874255324B4}" ShortID="374037115">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Stone_1" ID="{13FB5358-CF2C-42D7-BC22-7A84F68F7660}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Stone_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="116215165"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Stone_1" ID="{13FB5358-CF2C-42D7-BC22-7A84F68F7660}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Stone_2" ID="{A9CBE464-E1BC-441C-890E-525BD581B104}" ShortID="58859017">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Stone_2" ID="{293FED67-FD7A-46FA-890D-C2AC366D5A6A}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Stone_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="177551594"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Stone_2" ID="{293FED67-FD7A-46FA-890D-C2AC366D5A6A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Stone_3" ID="{272105A9-6990-44BE-813E-DD1C17FF66E7}" ShortID="665889806">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Stone_3" ID="{E7F4B482-FC93-4F2F-995E-E0BA4C7658DF}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Stone_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="151651069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Stone_3" ID="{E7F4B482-FC93-4F2F-995E-E0BA4C7658DF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Stone_4" ID="{D10E3A26-E609-4319-8FFF-DA3A640E87B4}" ShortID="933359190">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Stone_4" ID="{6C8948F0-F256-4F06-911F-BE22863D655A}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Stone_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="433651031"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Stone_4" ID="{6C8948F0-F256-4F06-911F-BE22863D655A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Player_Footstep_Lava" ID="{C1329D63-CCC2-45A8-999A-710CA26345A6}" ShortID="188469280">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Player_Footstep_Lava_1" ID="{09B13920-B9FD-4E69-B58B-FAF6FE8C4137}" ShortID="72294650">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Lava_1" ID="{5E729104-3AA3-49CC-9E55-19EE6C6E8DF1}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Lava_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1008580385"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Lava_1" ID="{5E729104-3AA3-49CC-9E55-19EE6C6E8DF1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Lava_2" ID="{C2AF28DB-6806-44F6-9196-08A54024D871}" ShortID="493537691">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Lava_2" ID="{13AEBA08-5041-45A9-BA37-0EB6D5295879}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Lava_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="409772932"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Lava_2" ID="{13AEBA08-5041-45A9-BA37-0EB6D5295879}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Lava_3" ID="{59E96029-DD90-48FE-A319-F7CE8F552DC2}" ShortID="558209889">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Lava_3" ID="{73CC2E73-F49A-4008-92AB-3378BE7B2268}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Lava_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="73726335"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Lava_3" ID="{73CC2E73-F49A-4008-92AB-3378BE7B2268}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Player_Footstep_Lava_4" ID="{04947CA7-6639-49EC-BC4D-C9DADAA2DD42}" ShortID="118423768">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Player_Footstep_Lava_4" ID="{0C5845C5-2EE8-4A3B-8912-CE1DF3E0624D}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Player_Footstep_Lava_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="866558810"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Player_Footstep_Lava_4" ID="{0C5845C5-2EE8-4A3B-8912-CE1DF3E0624D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Footstep_Stone" ID="{D9FF805E-5B4B-4051-B484-1E783265197A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Footstep_Lava" ID="{C1329D63-CCC2-45A8-999A-710CA26345A6}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Stone" ID="{4A98E414-0F26-4526-A388-37A47AA2B427}"/>
+										<ItemList>
+											<ItemRef Name="Player_Footstep_Stone" ID="{D9FF805E-5B4B-4051-B484-1E783265197A}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Lava" ID="{F2E500CC-1405-4BBA-B04C-688683C4D304}"/>
+										<ItemList>
+											<ItemRef Name="Player_Footstep_Lava" ID="{C1329D63-CCC2-45A8-999A-710CA26345A6}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Player_Shoot" ID="{F9957B13-B82C-4C24-8C7A-DE8212981073}" ShortID="826179180">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Basic" ID="{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Player_Shoot_Type" ID="{A7C3106E-D4FD-46C7-AA5B-EF9BA214C07C}" WorkUnitID="{060CA7AA-17C9-429A-93B5-A69C4751F708}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}" ShortID="739053376">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DEAB235B-C6A0-422A-99A6-6E22B7A0E898}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-4"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BBBDD53F-C055-4C6A-8253-0322B2DE444E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4898717F-87DE-4106-806C-84BF7BC9EBDE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Shoot_Electric" ID="{542787C2-446E-4174-8A2E-77407B5A5844}" ShortID="249147092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0241959951456311"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.182569781553398"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0153974514563107"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Electric.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="225716251"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Electric" ID="{DEAC01BD-FDA9-40E1-B6D3-268DE1A147EF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Shoot_Electric2" ID="{235A8DE4-D09D-4397-BC90-CF9CBE53D8EB}" ShortID="501730241">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Electric2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="426256890"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Electric2" ID="{D7035783-A3AD-471D-9818-05E0BC0200B9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}" ShortID="663961191">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player_Shoot_Basic" ID="{1317F581-4FD4-4C32-A72E-7928F0A24136}" ShortID="658894020">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{214E8DD2-B6CE-415C-A871-F29537001C58}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="4"/>
+																	<Property Name="Min" Type="Real64" Value="-2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2DC4B6B0-4083-4959-82BF-6FAE02F63D9C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="150"/>
+																	<Property Name="Min" Type="Real64" Value="-150"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E43ECFF4-F19F-4EB9-A8B6-F06C2831685C}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1"/>
+																	<Property Name="Min" Type="Real64" Value="-1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0203117445697935"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Player_Shoot_Basic.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785818676"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Shoot_Basic" ID="{7899ACFE-4CE8-4157-978C-76A79A827F79}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Basic" ID="{45A666BF-5139-4FA3-AFBA-BF63CDC89CD1}"/>
+										<ItemList>
+											<ItemRef Name="Player_Shoot_Basic" ID="{6FE07538-E078-4A91-B8C9-F32944C55FEE}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Electric" ID="{DC7927F4-A3BF-4FEB-9B0E-0C7A2B6D49CB}"/>
+										<ItemList>
+											<ItemRef Name="Player_Shoot_Electric" ID="{3FD6259E-AA88-4FD8-BBE2-5D6D69DC5BE0}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Egg" ID="{CCC0B6A8-786D-4365-9967-7E6469B143C2}" ShortID="478425201">
+					<ChildrenList>
+						<Sound Name="Egg_Levitate" ID="{6D01CEF8-2AAA-4865-99A1-B12F8647EE5E}" ShortID="208787825">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Egg_Levitate Attenuation" ID="{4CFEB922-1225-4896-9A78-DE01EADAFB59}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_Levitate_Loop" ID="{756850FB-0A06-4171-A2B6-000358CB2C92}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="306.551"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.687446138427013"/>
+										<Property Name="LoopEnd" Type="Real64" Value="4.16329756416861"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Egg_Levitate_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="256724536"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_Levitate_Loop" ID="{756850FB-0A06-4171-A2B6-000358CB2C92}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" ShortID="574446683">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_ShieldDestroy" ID="{2520685E-7728-4160-A0C0-670FC1C81014}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_ShieldDestroy.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="580075034"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_ShieldDestroy" ID="{2520685E-7728-4160-A0C0-670FC1C81014}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Egg_Soul_Impact" ID="{2D361936-4355-4EEE-B871-BAE9037953DD}" ShortID="509061660">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Projectile_Soul Attenuation" ID="{666C62DB-BBD8-4AD3-B6CB-C619AB2AC458}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_Soul_Impact.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="96935299"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Egg_Pickup" ID="{306920FC-4039-4A49-B5B0-4D37BC9A4192}" ShortID="933293210">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_Pickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="541912967"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_Pickup" ID="{B5360B70-BE76-40E2-B720-B2E17FC53FC6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Egg_ShieldActivate" ID="{91691D5F-2B5C-49B4-8A24-3DD55E98BC60}" ShortID="245996861">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="5"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Egg_ShieldActivate" ID="{42431026-8AE4-400F-87F4-CCA9424A8B2D}">
+									<Language>SFX</Language>
+									<AudioFile>Egg_ShieldActivate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="662917913"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Egg_ShieldActivate" ID="{42431026-8AE4-400F-87F4-CCA9424A8B2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Lumming" ID="{698D86F8-7789-4ACA-A6E9-4646114F686C}" ShortID="753272739">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lumming_Ability_Electric_Impact" ID="{1496BD4B-EB47-4EBC-8F96-D3E543602D4C}" ShortID="866989004">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}">
+											<Language>SFX</Language>
+											<AudioFile>Lumming_Ability_Electric_Impact.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="803171057"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lumming_Ability_Electric_Impact2" ID="{F182A5D8-89FB-4E39-8CB6-19A6DB2671C4}" ShortID="105237773">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}">
+											<Language>SFX</Language>
+											<AudioFile>Lumming_Ability_Electric_Impact2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="132527993"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Lumming_Heal" ID="{09E06293-D658-4574-B0C9-DC01954BFD06}" ShortID="276470379">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}">
+									<Language>SFX</Language>
+									<AudioFile>Lumming_Heal.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="780748996"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}">
+									<Language>SFX</Language>
+									<AudioFile>Lumming_Levitate_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="157621030"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{5441150D-5FE2-4A22-B873-F9292A6399BF}" ShortID="888078412">
+					<ChildrenList>
+						<Sound Name="UI_Button_Normal" ID="{53B92A31-78B6-4974-8F4D-4ACD1D2B2E48}" ShortID="952060930">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{125DDB2F-5F6A-41A6-BE03-B55009635AA7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{56C5D930-922C-4417-B4E1-49046EEA62A8}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Normal" ID="{AA6890E6-9C9C-4EED-AF4F-461075BAD8E3}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Normal.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="69972425"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Normal" ID="{AA6890E6-9C9C-4EED-AF4F-461075BAD8E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Button_Special" ID="{5017CE95-0ADF-46ED-874B-C3F79146CC94}" ShortID="563087847">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{680741A8-EAE2-4291-8CA7-8683248281BF}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{56C5D930-922C-4417-B4E1-49046EEA62A8}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Special" ID="{56022795-00D8-46FD-B38B-E5942F99C0C8}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Special.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="472405016"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Special" ID="{56022795-00D8-46FD-B38B-E5942F99C0C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" ShortID="256054162">
+							<PropertyList>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{56C5D930-922C-4417-B4E1-49046EEA62A8}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Slider" ID="{D75066A0-5DBE-43C9-9A14-861D014076FD}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Slider.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="985049323"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{7341177E-29D6-4389-8671-E2A8A46F745A}" ShortID="663908480">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Pitch_Slider" ID="{5E276FFD-46E0-4760-BDF2-4299FBAB1602}" WorkUnitID="{D2D599AC-106F-4328-9AC7-F8E4281E6A8C}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{00BA8959-86BB-423A-856F-A85ED13E5BB4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>600</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Slider" ID="{D75066A0-5DBE-43C9-9A14-861D014076FD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{5AA18C35-3A0D-49D7-B4B7-EA3E62425E32}" ShortID="352447747">
+					<ChildrenList>
+						<Sound Name="Ambient_Wind" ID="{75CE978D-40FA-4FF3-B1E0-072AC11D25FF}" ShortID="15551451">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Wind" ID="{12546B3E-114A-4EF6-968F-287CD44C6DF7}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Wind.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="893337246"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Wind" ID="{12546B3E-114A-4EF6-968F-287CD44C6DF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambient_Lava" ID="{30B3363E-B2D3-4C08-A7AA-F32FB1E55036}" ShortID="95699721">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Ambient_Lava Attenuation" ID="{48971BAA-DAEC-42FE-96BF-DFCE763CED57}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Lava" ID="{6A16E195-280D-4057-88F4-8B293DCA8C58}">
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Lava.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="746078826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Lava" ID="{6A16E195-280D-4057-88F4-8B293DCA8C58}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ambient_Collapse" ID="{E0746827-F003-430A-986D-DD477216DBCD}" ShortID="590881798">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambient_Collapse" ID="{260B5EB4-BFB3-4AA6-8029-AA83544B7638}">
+									<Language>SFX</Language>
+									<AudioFile>Ambient_Collapse.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="184096320"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambient_Collapse" ID="{260B5EB4-BFB3-4AA6-8029-AA83544B7638}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Ambient_DistantImpacts" ID="{FA1BA383-6949-4E73-A8A1-078125B242F8}" ShortID="429915665">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AF396D65-F929-4FE3-B8B8-8D6F31E95402}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CD77AB93-0A81-4AD4-A575-7FD927A57ED1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="20">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AD68C9ED-0DB9-454F-A088-2EEA1CA1E271}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4DC63EB1-76FE-42D1-BADB-A6572FEFD399}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Ambient_DistantImpacts attenuation" ID="{EFAF204B-C02F-442A-A26B-99B907939B6A}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambient_DistantImpacts_1" ID="{D48A4BFB-5A2F-474D-869B-2E7FEB56CC37}" ShortID="338121696">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_1" ID="{E2437A4E-E547-4E6E-8CD2-8C1519C65694}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346723824"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_1" ID="{E2437A4E-E547-4E6E-8CD2-8C1519C65694}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_7" ID="{BDD67B89-DECF-4A9E-83D0-1193D08CCF45}" ShortID="578018887">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_7" ID="{0CA7A1B4-BFAD-4ACB-9ECF-00ECCCFABFC3}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054473271"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_7" ID="{0CA7A1B4-BFAD-4ACB-9ECF-00ECCCFABFC3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_6" ID="{6C4572D2-2FDE-4F46-AAEB-89ED290B1D5A}" ShortID="292070209">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_6" ID="{BF6C3D9B-88DF-40F7-940A-AAD95D7292EC}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="686454239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_6" ID="{BF6C3D9B-88DF-40F7-940A-AAD95D7292EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_5" ID="{0D5AB51C-9FA0-4E31-B621-49D1060A9DE8}" ShortID="953404243">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_5" ID="{9E8F45D1-5C28-460D-9263-5D001506D10F}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="692635665"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_5" ID="{9E8F45D1-5C28-460D-9263-5D001506D10F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_4" ID="{C550E776-4191-4649-BEC4-22B43E26FE65}" ShortID="345072263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_4" ID="{B7F7C4E7-73D5-4710-A913-360A488FBD0E}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="818804425"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_4" ID="{B7F7C4E7-73D5-4710-A913-360A488FBD0E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_3" ID="{133F13E8-08B0-43CF-9EFD-C8494264F57F}" ShortID="522536106">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_3" ID="{23D0A1FA-F101-406F-8553-2AFA10E971DF}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="851326233"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_3" ID="{23D0A1FA-F101-406F-8553-2AFA10E971DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambient_DistantImpacts_2" ID="{2DD75F2A-08F6-44C5-B9CD-628A8F13C324}" ShortID="391903586">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambient_DistantImpacts_2" ID="{6BD3A8F4-F801-49B8-BCFF-BEE2B24E4A57}">
+											<Language>SFX</Language>
+											<AudioFile>Ambient_DistantImpacts_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="623450889"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambient_DistantImpacts_2" ID="{6BD3A8F4-F801-49B8-BCFF-BEE2B24E4A57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Projectile" ID="{0E720DD8-BA51-4423-B66D-F49A6AAFE95A}" ShortID="62019152">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Projectile_Hit_BasicProjectile" ID="{A545B015-0BC7-4C71-9F82-0D8B76DF95F6}" ShortID="776219510">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="Highpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8F68B469-5CB2-4FF0-84B9-565C9A20B16A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0D9C2C77-5F81-4BB7-98FF-D8AA2E88D045}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Projectile_Hit_BasicProjectile" ID="{CD13ED61-ED6F-47E2-B661-5ADAB4CE4679}" ShortID="676508185">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Hit_BasicProjectile" ID="{22CDBF94-1040-4697-8C6F-6F7885C7754A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0182215743440233"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0783527696793003"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Hit_BasicProjectile.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="538417311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Hit_BasicProjectile" ID="{22CDBF94-1040-4697-8C6F-6F7885C7754A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Projectile_Hit_BasicProjectile2" ID="{990CB64D-FED6-48E6-8678-4FE2C1E74F33}" ShortID="6715937">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Hit_BasicProjectile2" ID="{535C0ACC-8BB5-4FD4-A619-268EC666206E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0291545189504373"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.112973760932945"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Hit_BasicProjectile2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="937047025"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Hit_BasicProjectile2" ID="{535C0ACC-8BB5-4FD4-A619-268EC666206E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Projectile_Soul_Deploy" ID="{0400C974-2252-4CF5-B219-FB361902EECE}" ShortID="449005521">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Projectile_Soul Attenuation" ID="{666C62DB-BBD8-4AD3-B6CB-C619AB2AC458}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Projectile_Soul_Deploy" ID="{4F44690B-19E5-4E87-9895-D8B693BBB746}" ShortID="600026090">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Soul_Deploy" ID="{8FC19B45-1561-44C6-A24E-997C7A4A8E0C}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Soul_Deploy.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="699003035"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Soul_Deploy" ID="{8FC19B45-1561-44C6-A24E-997C7A4A8E0C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{44975BF9-D0E4-4EBD-B83C-8D15E749F863}"/>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Projectile_Hit_ElectricProjectile" ID="{CCC94566-7AC8-4C5A-8D22-51245AC5D0D2}" ShortID="785137912">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2775E694-70A6-41D5-8A11-BDE12FB80F13}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="300"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Projectile_Hit_ElectricProjectile_3" ID="{BC2A31F2-9EF5-418B-9C4C-66973D9F6E70}" ShortID="734620444">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Hit_ElectricProjectile_3" ID="{824942AC-84DC-4F6A-8495-7A80DCCADCA7}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Hit_ElectricProjectile_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="367618522"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Hit_ElectricProjectile_3" ID="{824942AC-84DC-4F6A-8495-7A80DCCADCA7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Projectile_Hit_ElectricProjectile_2" ID="{17F9F386-A9D1-48C9-8B56-29DCB8B1924C}" ShortID="431484037">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Hit_ElectricProjectile_2" ID="{710367D0-106E-4CD7-AB55-8319DC1480C5}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Hit_ElectricProjectile_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="83276941"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Hit_ElectricProjectile_2" ID="{710367D0-106E-4CD7-AB55-8319DC1480C5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Projectile_Hit_ElectricProjectile_1" ID="{24100362-E4DE-4ACF-BFD4-5D106036A691}" ShortID="855414881">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Projectile_Hit_ElectricProjectile_1" ID="{836C4B81-7F77-4F95-9DEA-66B3461DDEB9}">
+											<Language>SFX</Language>
+											<AudioFile>Projectile_Hit_ElectricProjectile_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="732762074"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Projectile_Hit_ElectricProjectile_1" ID="{836C4B81-7F77-4F95-9DEA-66B3461DDEB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{807C3FF5-9478-41CF-8FD3-F8FF2382847E}" ShortID="405524357">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Enemy_Death" ID="{203BD543-1930-493B-9866-12258C56C443}" ShortID="1012993237">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Enemy_Death_1" ID="{0C5FC50B-A1F8-49B4-826D-16E1C77727B1}" ShortID="804360057">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Death_1" ID="{2B5D117A-C741-4C14-AEE2-CF40683323FF}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Death_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="820574024"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Death_1" ID="{2B5D117A-C741-4C14-AEE2-CF40683323FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Death_2" ID="{DCD42058-6FC1-4A45-B9D4-A34604CF96A8}" ShortID="925085278">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Death_2" ID="{7FAD8D2B-6BB0-4C59-B2D2-3930DB211F5D}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Death_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="64781824"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Death_2" ID="{7FAD8D2B-6BB0-4C59-B2D2-3930DB211F5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Death_3" ID="{37E823E8-78D7-4920-91BC-9384A2BFCCBF}" ShortID="1065975192">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Death_3" ID="{8A138D33-53FB-445D-9A5D-723D3A975040}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Death_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="90504550"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Death_3" ID="{8A138D33-53FB-445D-9A5D-723D3A975040}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Enemy_Spawn_Adult" ID="{48025873-2DBF-4A20-87C8-19BE76439800}" ShortID="856720792">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Enemy_Spawn_Adult_1" ID="{73E2E828-B744-4FDE-8E1F-82BEDDCF39EB}" ShortID="311969716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Spawn_Adult_1" ID="{810287B7-C4E5-4E3C-B248-990B203246A0}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Spawn_Adult_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="687631586"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Spawn_Adult_1" ID="{810287B7-C4E5-4E3C-B248-990B203246A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Spawn_Adult_2" ID="{ACE293F3-6144-4240-9C55-5285DC781B92}" ShortID="541188575">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Spawn_Adult_2" ID="{9F613DA1-C03B-44FA-A990-479D43EA3577}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Spawn_Adult_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="892475828"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Spawn_Adult_2" ID="{9F613DA1-C03B-44FA-A990-479D43EA3577}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Spawn_Adult_3" ID="{DB2BB13C-577A-4660-AEF7-B7A2F23B4445}" ShortID="642086465">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Spawn_Adult_3" ID="{E99EA013-D331-4ADF-BB85-827904FBB554}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Spawn_Adult_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="235576888"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Spawn_Adult_3" ID="{E99EA013-D331-4ADF-BB85-827904FBB554}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Enemy_Footstep_Adult" ID="{95FA0EEC-24BB-4C73-90AC-8967F3FE369B}" ShortID="104802562">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy_Footstep Attenuation" ID="{6BCBCC36-343C-4054-A7B5-88B3FA2D3F21}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Enemy_Footstep_Adult_1" ID="{0B5F7FAF-5DF2-41AB-B100-1362E724D1DC}" ShortID="392705706">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Footstep_Adult_1" ID="{0BC08471-C126-4AEA-A6B7-72C2CB9DA0FC}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Footstep_Adult_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="826783670"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Footstep_Adult_1" ID="{0BC08471-C126-4AEA-A6B7-72C2CB9DA0FC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Footstep_Adult_2" ID="{7764613A-C52D-44F6-B998-6AEBC33C4DF3}" ShortID="250469618">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Footstep_Adult_2" ID="{C482580D-7B6F-4770-B64B-9E1437969479}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Footstep_Adult_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="147422935"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Footstep_Adult_2" ID="{C482580D-7B6F-4770-B64B-9E1437969479}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Footstep_Adult_3" ID="{F5878AD7-7C4E-47F3-9DD7-021F3D327D76}" ShortID="896751417">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Footstep_Adult_3" ID="{49D899C0-1FD4-44B2-8602-8C5A4D8B4747}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Footstep_Adult_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="191808004"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Footstep_Adult_3" ID="{49D899C0-1FD4-44B2-8602-8C5A4D8B4747}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Footstep_Adult_4" ID="{0006B706-B162-44F4-B567-BEF5B06D4620}" ShortID="146701733">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Footstep_Adult_4" ID="{EDC1B18F-2086-474E-9466-E72394EAF7AA}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Footstep_Adult_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="949324635"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Footstep_Adult_4" ID="{EDC1B18F-2086-474E-9466-E72394EAF7AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Enemy_Shoot_Basic" ID="{77A714C2-3062-4F39-AAB0-C37B859E53D5}" ShortID="14004464">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Enemy_Shoot_Basic_1" ID="{BC193D6B-4B88-4154-B869-15D567FEF3E5}" ShortID="847156016">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Shoot_Basic_1" ID="{834A7D64-4AD1-4B0E-91C4-3709FEED7865}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Shoot_Basic_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="298032319"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Shoot_Basic_1" ID="{834A7D64-4AD1-4B0E-91C4-3709FEED7865}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Shoot_Basic_2" ID="{AB940618-5BDA-48E1-8732-4ED3446DD508}" ShortID="442374187">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Shoot_Basic_2" ID="{199324D4-D2BA-4ED1-8ED0-F1E8AE277409}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Shoot_Basic_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="748423447"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Shoot_Basic_2" ID="{199324D4-D2BA-4ED1-8ED0-F1E8AE277409}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Shoot_Basic_3" ID="{81BC2F55-13B7-4FE5-8314-556A60F63371}" ShortID="528298125">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Shoot_Basic_3" ID="{1EB5C731-254E-4558-AB47-0861420F4DE4}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Shoot_Basic_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="619272677"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Shoot_Basic_3" ID="{1EB5C731-254E-4558-AB47-0861420F4DE4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_Shoot_Basic_4" ID="{2D3DD345-9497-44F1-9F59-87E75BBB8C4D}" ShortID="823312604">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_Shoot_Basic_4" ID="{7675D5D7-B44F-4D5B-904E-D2A33E9A76A1}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_Shoot_Basic_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="791673339"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_Shoot_Basic_4" ID="{7675D5D7-B44F-4D5B-904E-D2A33E9A76A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Enemy_TakeDamage" ID="{FCB3732E-2896-4FDC-A65F-3BD5A2EE69F1}" ShortID="427440073">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Enemy_TakeDamage_1" ID="{B1C7D0E0-1B7B-493A-8550-DD3A9CD62C32}" ShortID="676623830">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_TakeDamage_1" ID="{90F03272-AD0F-44BA-8CE4-857AE55F1228}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_TakeDamage_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="321910503"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_TakeDamage_1" ID="{90F03272-AD0F-44BA-8CE4-857AE55F1228}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_TakeDamage_2" ID="{19D26FE1-D991-40AD-8492-D2BD155B2E88}" ShortID="314310740">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_TakeDamage_2" ID="{632B998A-007A-4231-AF2D-08C3206AC38E}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_TakeDamage_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811700119"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_TakeDamage_2" ID="{632B998A-007A-4231-AF2D-08C3206AC38E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_TakeDamage_3" ID="{C5B8CD9F-FDB5-45E7-9E80-C14E434E105F}" ShortID="964430787">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_TakeDamage_3" ID="{BE7592EE-83F7-4D64-9D1F-80463C6FDBF2}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_TakeDamage_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="844587155"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_TakeDamage_3" ID="{BE7592EE-83F7-4D64-9D1F-80463C6FDBF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Enemy_TakeDamage_4" ID="{8CAECC53-0DD0-4748-9E5A-67189389107C}" ShortID="463821341">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Enemy_TakeDamage_4" ID="{5E132C07-A4D3-4615-BCAF-42CA42C183D5}">
+											<Language>SFX</Language>
+											<AudioFile>Enemy_TakeDamage_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="850576423"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Enemy_TakeDamage_4" ID="{5E132C07-A4D3-4615-BCAF-42CA42C183D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
