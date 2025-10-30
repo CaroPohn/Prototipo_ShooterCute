@@ -13,7 +13,7 @@ public class LoadoutWarningsUI : MonoBehaviour
     public void EmptySlotWarning()
     {
         TextMeshProUGUI.text = "Weapon and ability must have a lumming assigned";
-        containerGO.SetActive(true)
+        containerGO.SetActive(true);
     }
     public void CloseButton()
     {
