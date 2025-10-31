@@ -21,6 +21,8 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Canvas gamePlayCanvas;
     [SerializeField] private Canvas winCanvas;
 
+    [SerializeField] private GameEndScreenUI gameEndScreenUI;
+
     //[SerializeField] private GameObject WinEggText;
     //[SerializeField] private GameObject StartWavesEggText;
 
@@ -78,11 +80,12 @@ public class LevelController : MonoBehaviour
 
     private void WinLevel()
     {
-        Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
-        winCanvas.gameObject.SetActive(true);
+        gameEndScreenUI.PlayMissionAccomplishedAnimation();
+
+        //winCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
     }
 
