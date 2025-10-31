@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class TestArt : MonoBehaviour
 {
-    [SerializeField] GameEndScreenUI gameEndScreenUI;
+    [SerializeField] Animator animArms;
+    [SerializeField] Animator animBomb;
 
     private void Update()
     {
@@ -11,12 +12,14 @@ public class TestArt : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.A))
         {
-            gameEndScreenUI.PlayMissionAccomplishedAnimation();
+            animArms.SetTrigger("Bomb_Ability");
+            animBomb.SetTrigger("Ability");
 
         }
         else if (Input.GetKeyUp(KeyCode.S))
         {
-            gameEndScreenUI.PlayMissionFailedAnimation();
+            animArms.SetTrigger("Ability_Release");
+            
 
         }
         
