@@ -1,3 +1,4 @@
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,11 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] private Animator abilityUIAnim;
 
     [SerializeField] private InputReader inputReader;
+
+    [SerializeField] private Animator armsAnimator;
+    [SerializeField] private Animator bombAnimator;
+
+    [SerializeField] private GameObject bombAbilityAnimGO;
 
     GameObject selectedGun;
     GameObject selectedAbility;
@@ -93,12 +99,24 @@ public class WeaponChanger : MonoBehaviour
             if (selectedGun != null)
                 selectedGun.SetActive(true);
 
+            bombAbilityAnimGO.SetActive(false);
+
             arms.SetActive(true);
         }
         else if (weaponIndex == 2 && timer >= 10.0f)
         {
             selectedGun.SetActive(false);
-            arms.SetActive(false);
+            bombAbilityAnimGO.SetActive(true);
+
+            if (abilityName == "BombAbility")
+            {
+                armsAnimator.SetTrigger("Bomb_Ability");
+                bombAnimator.SetTrigger("Ability");
+            }
+            //else if (abilityName == "ElectricAbility")
+            //{
+
+            //}
 
             if (selectedAbility != null)
             {

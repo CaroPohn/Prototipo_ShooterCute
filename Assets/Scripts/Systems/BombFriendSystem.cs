@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,8 @@ public class BombFriendSystem : MonoBehaviour
     private WeaponChanger weaponChangerScript;
 
     private InputReader inputReader;
+
+    [SerializeField] private Animator armsAnimator;
 
     private void Awake()
     {
@@ -74,6 +77,7 @@ public class BombFriendSystem : MonoBehaviour
     {
         inputReader.OnShoot += AttemptDropAndRun;
         timer = 0;
+        SetSkinnedRenderersVisible(false);
     }
 
     private void OnDisable()
@@ -104,12 +108,23 @@ public class BombFriendSystem : MonoBehaviour
         }
     }
 
+    public void SetSkinnedRenderersVisible(bool visible)
+    {
+        foreach (var skinnedRenderer in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            skinnedRenderer.enabled = visible;
+        }
+    }
+
     private void AttemptDropAndRun()
     {
         if (!isRunning)
         {
+            SetSkinnedRenderersVisible(true);
             agent.enabled = true;
             DropAndRun();
+
+            armsAnimator.SetTrigger("Ability_Release");
         }    
     }
 
