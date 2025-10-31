@@ -325,7 +325,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}"/>
+						<Event Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}">
+							<ChildrenList>
+								<Action Name="" ID="{E2EE69F9-C0DC-4A65-83CB-3D29133FF780}" ShortID="101969203">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Spawn_Baby" ID="{E2EF1840-BC7C-4493-9CA3-98746034609F}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="15"/>
@@ -341,7 +351,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}"/>
+						<Event Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}">
+							<ChildrenList>
+								<Action Name="" ID="{5D6136EF-23DD-46DB-A4CF-212C52D84679}" ShortID="386530749">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Footstep_Baby" ID="{51906541-3DF5-4A39-9906-D41AA80AC160}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="15"/>
@@ -387,7 +407,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Enemy_Attack_Baby" ID="{3ABFDF21-8D58-49C7-90D2-433180571C3D}"/>
+						<Event Name="Enemy_Attack_Baby" ID="{3ABFDF21-8D58-49C7-90D2-433180571C3D}">
+							<ChildrenList>
+								<Action Name="" ID="{8C9AE150-CA4E-4139-A812-8EF75A8AFCB2}" ShortID="847692563">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Attack_Baby" ID="{57E42EAF-3861-4ED6-8D06-B886DD54617E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambient" ID="{721E9EBB-DB70-47DE-9939-0926CF709C6B}" ShortID="459971135">
@@ -507,6 +537,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="UI_SkillReady" ID="{8DE71464-444E-4B48-8176-158129DF6CBE}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" ShortID="666977553">
