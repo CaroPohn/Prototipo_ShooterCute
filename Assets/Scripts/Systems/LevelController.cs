@@ -23,9 +23,6 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private GameEndScreenUI gameEndScreenUI;
 
-    //[SerializeField] private GameObject WinEggText;
-    //[SerializeField] private GameObject StartWavesEggText;
-
     [Header("Egg")]
     [SerializeField] private EggInteraction eggInteractionScript;
 
@@ -34,8 +31,6 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 1.0f;
 
         WinColliderTrigger.OnWinningLevel += WinLevel;
-        WaveManager.OnWinningAllWaves += ActivateEggWinText;
-        eggInteractionScript.OnInteractWithEgg += DeactivateEggStartWavesText;
         inputReader.OnPause += PauseGame;
         playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
     }
@@ -43,8 +38,6 @@ public class LevelController : MonoBehaviour
     private void OnDisable()
     {
         WinColliderTrigger.OnWinningLevel -= WinLevel;
-        WaveManager.OnWinningAllWaves -= ActivateEggWinText;
-        eggInteractionScript.OnInteractWithEgg -= DeactivateEggStartWavesText;
         inputReader.OnPause -= PauseGame;
     }
 
@@ -54,7 +47,6 @@ public class LevelController : MonoBehaviour
 
         gamePlayCanvas.gameObject.SetActive(true);
         winCanvas.gameObject.SetActive(false);
-        //WinEggText.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -66,37 +58,28 @@ public class LevelController : MonoBehaviour
     {
         if (playerHealthSystem.health <= 0)
         {
-            playerHealthSystem.health = playerHealthSystem.maxHealth;
-
-            Rigidbody rb = player.GetComponent<Rigidbody>();
-
-            player.SetActive(true);
-
-            playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
-
-            rb.AddForce(0, 0, 0);
+            LoseLevel();
         }
+    }
+
+    private void LoseLevel()
+    {
+        Time.timeScale = 0.0f;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        gameEndScreenUI.PlayMissionFailedAnimation();
     }
 
     private void WinLevel()
     {
+        Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         gameEndScreenUI.PlayMissionAccomplishedAnimation();
 
-        //winCanvas.gameObject.SetActive(true);
         gamePlayCanvas.gameObject.SetActive(false);
-    }
-
-    private void ActivateEggWinText()
-    {
-        //WinEggText.SetActive(true);
-    }
-
-    private void DeactivateEggStartWavesText()
-    {
-        //StartWavesEggText.SetActive(false);
     }
 
     public void PauseGame()

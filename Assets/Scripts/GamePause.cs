@@ -66,12 +66,12 @@ public class GamePause : MonoBehaviour
         settingsCanvas.gameObject.SetActive(false);
     }
 
-    void ShowPause()
+    public void ShowPause()
     {
         pauseCanvas.gameObject.SetActive(true);
     }
 
-    void Restart()
+    public void Restart()
     {
         OnRestartLevel?.Invoke();
 
