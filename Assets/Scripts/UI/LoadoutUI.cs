@@ -1,19 +1,22 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LoadoutUI : MonoBehaviour
 {
-    [SerializeField] GameObject posibilities;
+    [SerializeField] LummingOptionsUI optionsPanel;
     [SerializeField] LummingSlots weaponSlot;
     [SerializeField] LummingSlots abilitySlot;
-    [SerializeField] LoadoutWarningsUI warnings;
     [SerializeField] SummaryUI summaryUI;
     LummingSlots currentSelectedSlot = null;
-    
+    [SerializeField] Ready_Button_Spaceship saveChangesButton;
+    [SerializeField] LummingOnTable lummingOnTable;
+    Lumming savedWeaponLumming = Lumming.None;
+    Lumming savedAbilityLumming = Lumming.None;
     public void WeaponButtonPressed()
     {
         if(currentSelectedSlot == weaponSlot)
         {
-            posibilities.SetActive(false);
+            optionsPanel.HideOptions();
             weaponSlot.StopActiveAnimation();
             currentSelectedSlot = null;
         }
@@ -22,14 +25,14 @@ public class LoadoutUI : MonoBehaviour
             weaponSlot.PlayActiveAnimation();
             abilitySlot.StopActiveAnimation();
             currentSelectedSlot = weaponSlot;
-            posibilities.SetActive(true);
+            optionsPanel.ShowOptions();
         }
     }
     public void AbilityButtonPressed()
     {
         if (currentSelectedSlot == abilitySlot)
         {
-            posibilities.SetActive(false);
+            optionsPanel.HideOptions();
             abilitySlot.StopActiveAnimation();
             currentSelectedSlot = null;
         }
@@ -38,35 +41,38 @@ public class LoadoutUI : MonoBehaviour
             weaponSlot.StopActiveAnimation();
             abilitySlot.PlayActiveAnimation();
             currentSelectedSlot = abilitySlot;
-            posibilities.SetActive(true);
+            optionsPanel.ShowOptions();
         }
         
     }
     public void SlotPressed(int lumming)
     {
         currentSelectedSlot.ReplaceLumming((Lumming)lumming);
+        if(currentSelectedSlot == weaponSlot)
+        {
+            lummingOnTable.UpdateLummingOnTable((Lumming)lumming);
+        }
+        if (ButtonShouldActivate())
+        {
+            saveChangesButton.PlayAnimationReady();
+        }
+        else saveChangesButton.PlayAnimationDisabled();
+        optionsPanel.HideOptions();
+        weaponSlot.StopActiveAnimation();
+        abilitySlot.StopActiveAnimation();
+    }
+    bool ButtonShouldActivate()
+    {
+        if (weaponSlot.GetCurrentLumming() == Lumming.None || abilitySlot.GetCurrentLumming() == Lumming.None) return false;
+        if (weaponSlot.GetCurrentLumming() == abilitySlot.GetCurrentLumming()) return false;
+        if (weaponSlot.GetCurrentLumming() == savedWeaponLumming || abilitySlot.GetCurrentLumming() == savedAbilityLumming) return false;
+        return true;
     }
     public void SaveChanges()
     {
-        if(weaponSlot.GetCurrentLumming() == Lumming.None || abilitySlot.GetCurrentLumming() == Lumming.None)
-        {
-            DisplayEmptyWarning();
-            return;
-        }
-        
-        if(weaponSlot.GetCurrentLumming() == abilitySlot.GetCurrentLumming())
-        {
-            DisplaySameLummingWarning();
-            return;
-        }
-        summaryUI.UpdateLoadout(weaponSlot.GetCurrentLumming(), abilitySlot.GetCurrentLumming());
-    }
-    void DisplayEmptyWarning()
-    {
-        warnings.EmptySlotWarning();
-    }
-    void DisplaySameLummingWarning()
-    {
-        warnings.SameLummingWarning();
+        savedWeaponLumming = weaponSlot.GetCurrentLumming();
+        savedAbilityLumming = abilitySlot.GetCurrentLumming();
+        summaryUI.UpdateLoadout(savedWeaponLumming, savedAbilityLumming);
+        saveChangesButton.PlayAnimationDisabled();
     }
 }
