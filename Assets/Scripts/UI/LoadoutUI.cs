@@ -9,6 +9,7 @@ public class LoadoutUI : MonoBehaviour
     [SerializeField] SummaryUI summaryUI;
     LummingSlots currentSelectedSlot = null;
     [SerializeField] Ready_Button_Spaceship saveChangesButton;
+    [SerializeField] LummingOnTable lummingOnTable;
     Lumming savedWeaponLumming = Lumming.None;
     Lumming savedAbilityLumming = Lumming.None;
     public void WeaponButtonPressed()
@@ -47,6 +48,10 @@ public class LoadoutUI : MonoBehaviour
     public void SlotPressed(int lumming)
     {
         currentSelectedSlot.ReplaceLumming((Lumming)lumming);
+        if(currentSelectedSlot == weaponSlot)
+        {
+            lummingOnTable.UpdateLummingOnTable((Lumming)lumming);
+        }
         if (ButtonShouldActivate())
         {
             saveChangesButton.PlayAnimationReady();

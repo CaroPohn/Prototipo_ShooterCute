@@ -5,100 +5,51 @@ using UnityEngine.UI;
 
 public class WorldSelectUI : MonoBehaviour
 {
-    [SerializeField] World[] worldsInOrder;
-    World CurrentWorld = World.Lava;
-    int index = 0;
-    [SerializeField] Transform planetsRotationCenter;
-    [SerializeField] GameObject moveRightButtonGO;
-    [SerializeField] GameObject moveLeftButtonGO;
-    [SerializeField] GameObject infoPanel;
-    [SerializeField] Button chooseButton;
+    World currentWorld = World.Lava;
+    [SerializeField] Ready_Button_Spaceship chooseButton;
     [SerializeField] SummaryUI summaryUI;
+    [SerializeField] RotatingPlanets rotatingPlanets;
+    [SerializeField] CurrentPlanetInformation currentPlanetInformation;
 
-    [SerializeField] TextMeshProUGUI ChoosetmpUGUI;
     bool planetSelected = false;
-    void Start()
-    {
-        
-    }
+
 
     public World GetCurrentWorld()
     {
-        return CurrentWorld;
+        return currentWorld;
     }
-    public void moveLeft()
+    public void MoveRight()
     {
-        index--;
-        if(index < 0)
-        {
-            index = worldsInOrder.Length - 1;
-        }
-        CurrentWorld = worldsInOrder[index];
-        RotateLeft();
+        currentWorld = rotatingPlanets.RotateToRight();
+        currentPlanetInformation.UpdateDataToPlanet(currentWorld);
         CheckIfChooseButtonShouldBeActive();
     }
-    void RotateLeft()
+    public void MoveLeft()
     {
-        planetsRotationCenter.Rotate(new Vector3(0, -360 / 3, 0));
-    }
-    void RotateRight()
-    {
-        planetsRotationCenter.Rotate(new Vector3(0, 360 / 3, 0));
-    }
-    public void moveRight()
-    {
-        index++;
-        if (index >= worldsInOrder.Length)
-        {
-            index = 0;
-        }
-        CurrentWorld = worldsInOrder[index];
-        RotateRight();
+        currentWorld = rotatingPlanets.RotateToLeft();
+        currentPlanetInformation.UpdateDataToPlanet(currentWorld);
         CheckIfChooseButtonShouldBeActive();
-    }
-    public void CheckInfo()
-    {
-        if (!infoPanel.activeSelf)
-        {
-            moveRightButtonGO.SetActive(false);
-            moveLeftButtonGO.SetActive(false);
-            infoPanel.SetActive(true);
-        }
-        else
-        {
-            moveRightButtonGO.SetActive(true);
-            moveLeftButtonGO.SetActive(true);
-            infoPanel.SetActive(false);
-        }
     }
     void CheckIfChooseButtonShouldBeActive()
     {
-        if (CurrentWorld != World.Lava)
+        if ((currentWorld != World.Lava) || ((currentWorld == World.Lava) &&(planetSelected)))
         {
-            chooseButton.interactable = false;
+            chooseButton.PlayAnimationDisabled();
         }
-        else chooseButton.interactable = true;
+        else chooseButton.PlayAnimationReady();
     }
     public void Choose()
     {
+        chooseButton.PlayAnimationDisabled();
         if (!planetSelected)
         {
             planetSelected = true;
-            ChoosetmpUGUI.text = "Cancel selection";
-            summaryUI.UpdatePlanet(CurrentWorld);
+            summaryUI.UpdatePlanet(currentWorld);
         }
         else
         {
             planetSelected = false;
-            ChoosetmpUGUI.text = "Choose";
         }
-        moveRightButtonGO.SetActive(!planetSelected);
-        moveLeftButtonGO.SetActive(!planetSelected);
-        infoPanel.SetActive(false);
 
-    }
-    void Update()
-    {
-        
     }
 }

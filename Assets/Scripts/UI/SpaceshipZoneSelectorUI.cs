@@ -5,12 +5,10 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] SpaceshipZone[] spaceshipZonesInOrder;
     SpaceshipZone currentZone = SpaceshipZone.WorldSelect;
     int index = 0;
-    [SerializeField] GameObject worldSelectLineGO;
-    [SerializeField] GameObject loadoutLineGO;
-    [SerializeField] GameObject readyLineGO;
     [SerializeField] GameObject WorldselectUI;
     [SerializeField] GameObject loadoutUI;
     [SerializeField] CameraChanger camChanger;
+    [SerializeField] ZoneChangerUI zoneChangerUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,30 +16,19 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     }
     void UpdateCanvas()
     {
-        if(currentZone == SpaceshipZone.WorldSelect)
+        zoneChangerUI.UpdateZoneChanger(currentZone);
+        if (currentZone == SpaceshipZone.WorldSelect)
         {
-            worldSelectLineGO.SetActive(true);
-            readyLineGO.SetActive(false);
-            loadoutLineGO.SetActive(false);
-
             WorldselectUI.SetActive(true);
             loadoutUI.SetActive(false);
         }
         else if(currentZone == SpaceshipZone.Loadout)
         {
-            worldSelectLineGO.SetActive(false);
-            readyLineGO.SetActive(false);
-            loadoutLineGO.SetActive(true);
-
             WorldselectUI.SetActive(false);
             loadoutUI.SetActive(true);
         }
         else
         {
-            worldSelectLineGO.SetActive(false);
-            readyLineGO.SetActive(true);
-            loadoutLineGO.SetActive(false);
-
             WorldselectUI.SetActive(false);
             loadoutUI.SetActive(false);
         }
