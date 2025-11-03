@@ -61,7 +61,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public void StepSoundActivation()
     {
-        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
+        AkUnitySoundEngine.PostEvent("Enemy_Footstep_Baby", gameObject);
     }
 
     public void MeleeLogic()
@@ -150,7 +150,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public void SpawnAnimationHandler()
     {
-        AkUnitySoundEngine.PostEvent("Enemy_Spawn_Adult", gameObject);
+        AkUnitySoundEngine.PostEvent("Enemy_Spawn_Baby", gameObject);
 
         StartCoroutine(SpawnCoroutine());
 
