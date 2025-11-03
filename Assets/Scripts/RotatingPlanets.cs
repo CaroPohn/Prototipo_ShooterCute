@@ -6,6 +6,7 @@ public class RotatingPlanets : MonoBehaviour
     World CurrentWorld = World.Lava;
     int index = 0;
     [SerializeField] Transform planetsRotationCenter;
+    [SerializeField] Transform[] planetsOffsets;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public World RotateToLeft()
     {
@@ -35,9 +36,17 @@ public class RotatingPlanets : MonoBehaviour
     void RotateLeft()
     {
         planetsRotationCenter.Rotate(new Vector3(0, -120, 0));
+        foreach(Transform planetOffse in planetsOffsets) 
+        {
+            planetOffse.Rotate(new Vector3(0, 120, 0));
+        }
     }
     void RotateRight()
     {
         planetsRotationCenter.Rotate(new Vector3(0, 120, 0));
+        foreach (Transform planetOffse in planetsOffsets)
+        {
+            planetOffse.Rotate(new Vector3(0, -120, 0));
+        }
     }
 }

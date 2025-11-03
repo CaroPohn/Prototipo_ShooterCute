@@ -8,8 +8,11 @@ public class SummaryUI : MonoBehaviour
     [SerializeField] Sprite[] lummingsSprites;
     [SerializeField] Image planetImage;
     [SerializeField] Sprite[] planetsSprites;
-    [SerializeField] GameObject leverCanvas;
     [SerializeField] CameraChanger changer;
+    [SerializeField] Image worldImage;
+    [SerializeField] Sprite lavaWorldSprite;
+    [SerializeField] GameObject infoDescriptionGO;
+    [SerializeField] Ready_Button_Spaceship readyButton;
     bool aLoadoutWasSelected = false;
     bool aPlanetWasSelected = false;
     public void UpdateLoadout(Lumming weapon,Lumming ability)
@@ -21,7 +24,12 @@ public class SummaryUI : MonoBehaviour
     }
     public void UpdatePlanet(World world)
     {
-        aPlanetWasSelected = world != World.None;
+        aPlanetWasSelected = (world != World.None);
+        if(world == World.Lava)
+        {
+            infoDescriptionGO.SetActive(true);
+            worldImage.sprite = lavaWorldSprite;
+        }
         TurnOnOffLever();
 
     }
@@ -29,18 +37,18 @@ public class SummaryUI : MonoBehaviour
     {
         if(aLoadoutWasSelected && aPlanetWasSelected)
         {
-            leverCanvas.SetActive(true);
+            readyButton.PlayAnimationReady();
         }
         else
         {
-            leverCanvas.SetActive(false);
+            readyButton.PlayAnimationDisabled();
         }
 
 
     }
     public void StartLevel()
     {
-        leverCanvas.SetActive(false);
+        readyButton.PlayAnimationDisabled();
         changer.ChangeCameraTo(SpaceshipZone.LookingAtDoor);
     }
 
