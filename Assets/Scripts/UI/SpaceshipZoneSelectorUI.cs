@@ -11,6 +11,12 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] CameraChanger camChanger;
     [SerializeField] ZoneChangerUI zoneChangerUI;
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     private void Update()
     {
         MoveWithInput();
