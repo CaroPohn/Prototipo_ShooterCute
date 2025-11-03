@@ -10,8 +10,9 @@ public class LoadoutUI : MonoBehaviour
     LummingSlots currentSelectedSlot = null;
     [SerializeField] Ready_Button_Spaceship saveChangesButton;
     [SerializeField] LummingOnTable lummingOnTable;
-    Lumming savedWeaponLumming = Lumming.None;
-    Lumming savedAbilityLumming = Lumming.None;
+    public Lumming savedWeaponLumming = Lumming.None;
+    public Lumming savedAbilityLumming = Lumming.None;
+
     public void WeaponButtonPressed()
     {
         if(currentSelectedSlot == weaponSlot)
@@ -28,6 +29,7 @@ public class LoadoutUI : MonoBehaviour
             optionsPanel.ShowOptions();
         }
     }
+
     public void AbilityButtonPressed()
     {
         if (currentSelectedSlot == abilitySlot)
@@ -42,9 +44,9 @@ public class LoadoutUI : MonoBehaviour
             abilitySlot.PlayActiveAnimation();
             currentSelectedSlot = abilitySlot;
             optionsPanel.ShowOptions();
-        }
-        
+        }     
     }
+
     public void SlotPressed(int lumming)
     {
         currentSelectedSlot.ReplaceLumming((Lumming)lumming);
@@ -52,6 +54,7 @@ public class LoadoutUI : MonoBehaviour
         {
             lummingOnTable.UpdateLummingOnTable((Lumming)lumming);
         }
+
         if (ButtonShouldActivate())
         {
             saveChangesButton.PlayAnimationReady();
@@ -61,6 +64,7 @@ public class LoadoutUI : MonoBehaviour
         weaponSlot.StopActiveAnimation();
         abilitySlot.StopActiveAnimation();
     }
+
     bool ButtonShouldActivate()
     {
         if (weaponSlot.GetCurrentLumming() == Lumming.None || abilitySlot.GetCurrentLumming() == Lumming.None) return false;
@@ -68,6 +72,7 @@ public class LoadoutUI : MonoBehaviour
         if (weaponSlot.GetCurrentLumming() == savedWeaponLumming || abilitySlot.GetCurrentLumming() == savedAbilityLumming) return false;
         return true;
     }
+
     public void SaveChanges()
     {
         savedWeaponLumming = weaponSlot.GetCurrentLumming();

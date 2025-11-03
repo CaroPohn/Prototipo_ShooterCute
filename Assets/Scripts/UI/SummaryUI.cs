@@ -8,13 +8,19 @@ public class SummaryUI : MonoBehaviour
     [SerializeField] Sprite[] lummingsSprites;
     [SerializeField] Image planetImage;
     [SerializeField] Sprite[] planetsSprites;
+    [SerializeField] GameObject leverCanvas;
     [SerializeField] CameraChanger changer;
-    [SerializeField] Image worldImage;
-    [SerializeField] Sprite lavaWorldSprite;
-    [SerializeField] GameObject infoDescriptionGO;
-    [SerializeField] Ready_Button_Spaceship readyButton;
+
+    private string weaponName;
+    private string abilityName;
+
+    public string sceneName;
+
+    [SerializeField] private LoadoutUI loadout;
+
     bool aLoadoutWasSelected = false;
     bool aPlanetWasSelected = false;
+
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
         weaponImage.sprite = lummingsSprites[(int)weapon];
@@ -22,34 +28,64 @@ public class SummaryUI : MonoBehaviour
         aLoadoutWasSelected = true;
         TurnOnOffLever();
     }
+
     public void UpdatePlanet(World world)
     {
-        aPlanetWasSelected = (world != World.None);
-        if(world == World.Lava)
-        {
-            infoDescriptionGO.SetActive(true);
-            worldImage.sprite = lavaWorldSprite;
-        }
+        aPlanetWasSelected = world != World.None;
         TurnOnOffLever();
 
     }
+
     public void TurnOnOffLever()
     {
         if(aLoadoutWasSelected && aPlanetWasSelected)
         {
-            readyButton.PlayAnimationReady();
+            leverCanvas.SetActive(true);
         }
         else
         {
-            readyButton.PlayAnimationDisabled();
+            leverCanvas.SetActive(false);
         }
-
-
     }
+
     public void StartLevel()
     {
-        readyButton.PlayAnimationDisabled();
+        leverCanvas.SetActive(false);
         changer.ChangeCameraTo(SpaceshipZone.LookingAtDoor);
+
+        AkUnitySoundEngine.PostEvent("UI_Button_Special", gameObject);
+
+        Invoke(nameof(StartLevelAfterCameraMoves), 0.1f);
     }
 
+    private void StartLevelAfterCameraMoves()
+    {
+        if (loadout.savedWeaponLumming == Lumming.Bomb)
+        {
+            weaponName = "FireGun";
+        }
+
+        if (loadout.savedAbilityLumming == Lumming.Chispean)
+        {
+            abilityName = "ElectricAbility";
+        }
+
+        if (loadout.savedWeaponLumming == Lumming.Chispean)
+        {
+            weaponName = "ZapGun";
+        }
+
+        if (loadout.savedAbilityLumming == Lumming.Bomb)
+        {
+            abilityName = "BombAbility";
+        }
+
+        PlayerSelectionData.selectedWeapon = weaponName;
+        PlayerSelectionData.selectedAbility = abilityName;
+
+        Debug.Log(PlayerSelectionData.selectedWeapon);
+        Debug.Log(PlayerSelectionData.selectedAbility);
+
+        SceneLoader.Instance.ChangeScene(sceneName);
+    }
 }

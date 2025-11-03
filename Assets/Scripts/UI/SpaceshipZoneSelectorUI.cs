@@ -10,11 +10,12 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] GameObject readyUI;
     [SerializeField] CameraChanger camChanger;
     [SerializeField] ZoneChangerUI zoneChangerUI;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void Update()
     {
-        
+        MoveWithInput();
     }
+
     void UpdateCanvas()
     {
         zoneChangerUI.UpdateZoneChanger(currentZone);
@@ -36,8 +37,17 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
             loadoutUI.SetActive(false);
             readyUI.SetActive(true);
         }
-
     }
+
+    private void MoveWithInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            MoveLeft();
+
+        if (Input.GetKeyDown(KeyCode.E))
+            MoveRight();
+    }
+
     public void MoveLeft()
     {
         index--;
@@ -49,6 +59,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         UpdateCanvas();
         camChanger.ChangeCameraTo(currentZone);
     }
+
     public void MoveRight()
     {
         index++;
@@ -60,6 +71,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         UpdateCanvas();
         camChanger.ChangeCameraTo(currentZone);
     }
+
     void UpdateIndex(SpaceshipZone newSpaceshipZone)
     {
         for (int i = 0; i < spaceshipZonesInOrder.Length; i++)
@@ -71,6 +83,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
             }
         }
     }
+
     public void GoToLoadout()
     {
         currentZone = SpaceshipZone.Loadout;
@@ -78,6 +91,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         UpdateCanvas();
         camChanger.ChangeCameraTo(currentZone);
     }
+
     public void GoToWorldSelect()
     {
         currentZone = SpaceshipZone.WorldSelect;
@@ -85,16 +99,12 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         UpdateCanvas();
         camChanger.ChangeCameraTo(currentZone);
     }
+
     public void GoToReady()
     {
         currentZone = SpaceshipZone.Ready;
         UpdateIndex(currentZone);
         UpdateCanvas();
         camChanger.ChangeCameraTo(currentZone);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

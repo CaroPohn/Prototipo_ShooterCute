@@ -14,16 +14,19 @@ public class LummingSlots : MonoBehaviour
     [SerializeField] TextMeshProUGUI CategoryTMP;
     [SerializeField] TextMeshProUGUI NameTMP;
     Lumming currentLuming = Lumming.None;
+
     public void ReplaceLumming(Lumming lumming)
     {
         lummingImage.sprite = lummingImages[(int)lumming];
         currentLuming = lumming;
         NameTMP.text = lumming.ToString();
     }
+
     public Lumming GetCurrentLumming()
     {
         return currentLuming;
     }
+
     public void PlayActiveAnimation()
     {
         boxImage.sprite = selectedSprite;
@@ -32,6 +35,7 @@ public class LummingSlots : MonoBehaviour
         NameTMP.color = selectedColor;
         lummingImage.color = selectedColor;
     }
+
     public void StopActiveAnimation()
     {
         boxImage.sprite = unselectedSprite;
