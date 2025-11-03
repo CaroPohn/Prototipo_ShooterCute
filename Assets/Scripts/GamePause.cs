@@ -79,7 +79,7 @@ public class GamePause : MonoBehaviour
         projectileDamageEffect.SetFloat("_Intensity", 0);
         healthEffect.SetFloat("_Intensity", 0);
 
-        SceneLoader.Instance.ChangeScene("SelectionMenu");
+        SceneLoader.Instance.ChangeScene("Spaceship_Interior");
     }
 
     public void ExitGame()
