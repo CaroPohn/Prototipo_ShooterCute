@@ -28,10 +28,12 @@ public class SummaryUI : MonoBehaviour
         canvas.SetActive(true);
         TurnOnOffLever();
     }
+
     public void LeaveReadyZone()
     {
         canvas.SetActive(false);
     }
+
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
         weaponImage.sprite = lummingsSprites[(int)weapon];

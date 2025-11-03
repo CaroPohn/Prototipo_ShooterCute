@@ -15,6 +15,8 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
