@@ -10,6 +10,11 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] CameraChanger camChanger;
     [SerializeField] ZoneChangerUI zoneChangerUI;
 
+    private void Update()
+    {
+        MoveWithInput();
+    }
+
     void UpdateCanvas()
     {
         zoneChangerUI.UpdateZoneChanger(currentZone);
@@ -28,7 +33,15 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
             WorldselectUI.SetActive(false);
             loadoutUI.SetActive(false);
         }
+    }
 
+    private void MoveWithInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            MoveLeft();
+
+        if (Input.GetKeyDown(KeyCode.E))
+            MoveRight();
     }
 
     public void MoveLeft()
