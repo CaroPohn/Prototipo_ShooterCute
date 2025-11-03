@@ -7,9 +7,11 @@ public class SummaryUI : MonoBehaviour
     [SerializeField] Image abilityImage;
     [SerializeField] Sprite[] lummingsSprites;
     [SerializeField] Image planetImage;
-    [SerializeField] Sprite[] planetsSprites;
-    [SerializeField] GameObject leverCanvas;
+    [SerializeField] Sprite lavaWorldSprite;
+    [SerializeField] GameObject missionDescriptionGO;
+    [SerializeField] Ready_Button_Spaceship readyButton;
     [SerializeField] CameraChanger changer;
+    [SerializeField] GameObject canvas;
 
     private string weaponName;
     private string abilityName;
@@ -21,18 +23,31 @@ public class SummaryUI : MonoBehaviour
     bool aLoadoutWasSelected = false;
     bool aPlanetWasSelected = false;
 
+    public void DisplaySummaryCanvas()
+    {
+        canvas.SetActive(true);
+        TurnOnOffLever();
+    }
+    public void LeaveReadyZone()
+    {
+        canvas.SetActive(false);
+    }
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
         weaponImage.sprite = lummingsSprites[(int)weapon];
         abilityImage.sprite = lummingsSprites[(int)ability];
         aLoadoutWasSelected = true;
-        TurnOnOffLever();
+        
     }
 
     public void UpdatePlanet(World world)
     {
-        aPlanetWasSelected = world != World.None;
-        TurnOnOffLever();
+        aPlanetWasSelected = (world != World.None);
+        if(world  == World.Lava)
+        {
+            missionDescriptionGO.SetActive(true);
+            planetImage.sprite = lavaWorldSprite;
+        }
 
     }
 
@@ -40,17 +55,17 @@ public class SummaryUI : MonoBehaviour
     {
         if(aLoadoutWasSelected && aPlanetWasSelected)
         {
-            leverCanvas.SetActive(true);
+            readyButton.PlayAnimationReady();
         }
         else
         {
-            leverCanvas.SetActive(false);
+            readyButton.PlayAnimationDisabled();
         }
     }
 
     public void StartLevel()
     {
-        leverCanvas.SetActive(false);
+        readyButton.PlayAnimationDisabled();
         changer.ChangeCameraTo(SpaceshipZone.LookingAtDoor);
 
         AkUnitySoundEngine.PostEvent("UI_Button_Special", gameObject);

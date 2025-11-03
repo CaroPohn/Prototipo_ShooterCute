@@ -7,7 +7,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     int index = 0;
     [SerializeField] GameObject WorldselectUI;
     [SerializeField] GameObject loadoutUI;
-    [SerializeField] GameObject readyUI;
+    [SerializeField] SummaryUI summaryUI;
     [SerializeField] CameraChanger camChanger;
     [SerializeField] ZoneChangerUI zoneChangerUI;
 
@@ -23,19 +23,19 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         {
             WorldselectUI.SetActive(true);
             loadoutUI.SetActive(false);
-            readyUI.SetActive(false);
+            summaryUI.LeaveReadyZone();
         }
         else if(currentZone == SpaceshipZone.Loadout)
         {
             WorldselectUI.SetActive(false);
             loadoutUI.SetActive(true);
-            readyUI.SetActive(false);
+            summaryUI.LeaveReadyZone();
         }
         else if(currentZone == SpaceshipZone.Ready)
         {
             WorldselectUI.SetActive(false);
             loadoutUI.SetActive(false);
-            readyUI.SetActive(true);
+            summaryUI.DisplaySummaryCanvas();
         }
     }
 

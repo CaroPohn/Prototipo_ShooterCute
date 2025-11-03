@@ -240,11 +240,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 776425802}
   m_LocalEulerAnglesHint: {x: 27.781, y: 13.722, z: 16.795}
---- !u!1 &218896529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7385087380423962628, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
-  m_PrefabInstance: {fileID: 2852609459424426667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242788678
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +544,11 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!1 &1137396238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8014856933177780720, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+  m_PrefabInstance: {fileID: 8856061277610045825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1314819193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,13 +1418,29 @@ PrefabInstance:
       value: SpaceShipInterior
       objectReference: {fileID: 0}
     - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1137396238}
+    - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
       propertyPath: changer
       value: 
       objectReference: {fileID: 837406015}
     - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: loadout
+      value: 
+      objectReference: {fileID: 8856061277610045827}
+    - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: sceneName
+      value: LavaWorld-Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
       propertyPath: readyButton
       value: 
       objectReference: {fileID: 8856061277610045826}
+    - target: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+      propertyPath: missionDescriptionGO
+      value: 
+      objectReference: {fileID: 2852609459424426670}
     - target: {fileID: 9035388349994792014, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1439,7 +1455,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
   m_PrefabInstance: {fileID: 2852609459424426667}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218896529}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a7e150bd0ec2154a976242232f8379a, type: 3}
@@ -1456,6 +1472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c751b146485904fb88e9821a0c9bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2852609459424426670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4719815429562604051, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
+  m_PrefabInstance: {fileID: 2852609459424426667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8856061277610045825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1465,13 +1486,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1002576506569219267, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: summaryUI
+      value: 
+      objectReference: {fileID: 2852609459424426668}
+    - target: {fileID: 1002576506569219267, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: camChanger
       value: 
       objectReference: {fileID: 837406015}
     - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 218896529}
+      objectReference: {fileID: 2852609459424426668}
+    - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SummaryUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683106261089384547, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4476758360818667072, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_Name
       value: SpaceShipInterior_Canvas
@@ -1484,6 +1525,10 @@ PrefabInstance:
       propertyPath: lummingOnTable
       value: 
       objectReference: {fileID: 2852609459424426669}
+    - target: {fileID: 7075493098201050042, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: initialButtonState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7140650449124970459, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1564,6 +1609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8014856933177780720, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8922519774020057440, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: summaryUI
       value: 
@@ -1586,6 +1635,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e8ce86561a700344a6d0730e86c39af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8856061277610045827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5243310075628253487, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+  m_PrefabInstance: {fileID: 8856061277610045825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be922c53c1b95748bd87326af0d3796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
