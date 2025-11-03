@@ -137,7 +137,7 @@ public class WeaponChanger : MonoBehaviour
         if(selectedAbility.activeSelf && timer >= 10.0f)
         {
             selectedAbility.SetActive(false);
-            armsAnimator.SetTrigger("Ability_Release");
+            armsAnimator.SetTrigger("Ability_Cancel");
         }
     }
 
