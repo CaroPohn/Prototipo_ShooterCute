@@ -15,7 +15,7 @@ public class ZapGun : Gun
 
     private float shootHoldTime;
     private float lastShootTime;
-    private bool isHoldingShoot;
+    public bool isHoldingShoot;
 
     private float hitDistance;
 

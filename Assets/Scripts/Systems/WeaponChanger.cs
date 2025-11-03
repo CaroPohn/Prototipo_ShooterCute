@@ -33,6 +33,8 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] private GameObject bombAbilityAnimGO;
     [SerializeField] private GameObject electricAbilityAnimGO;
 
+    [SerializeField] private ZapGun zapGunScript;
+
     GameObject selectedGun;
     GameObject selectedAbility;
 
@@ -107,7 +109,7 @@ public class WeaponChanger : MonoBehaviour
 
             arms.SetActive(true);
         }
-        else if (weaponIndex == 2 && timer >= 10.0f)
+        else if (weaponIndex == 2 && timer >= 10.0f && !zapGunScript.isHoldingShoot)
         {
             selectedGun.SetActive(false);
             
