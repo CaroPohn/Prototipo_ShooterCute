@@ -116,6 +116,7 @@ public class ElectricAbility : MonoBehaviour
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
 
+        weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
         weaponChangerScript.ChangeWeapon();
     }
 }

@@ -132,6 +132,7 @@ public class BombFriendSystem : MonoBehaviour
         weaponChangerScript.weaponIndex = 1;
         weaponChangerScript.FillAbilityImage.fillAmount = 0;
 
+        weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
         weaponChangerScript.ChangeWeapon();
 
         transform.parent = null;

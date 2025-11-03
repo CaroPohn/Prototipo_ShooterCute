@@ -27,7 +27,7 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] private InputReader inputReader;
 
-    [SerializeField] private Animator armsAnimator;
+    [SerializeField] public Animator armsAnimator;
     [SerializeField] private Animator bombAnimator;
     [SerializeField] private Animator electricAnimator;
 
@@ -96,6 +96,8 @@ public class WeaponChanger : MonoBehaviour
     {
         if (weaponIndex == 1)
         {
+            armsAnimator.SetBool("UsingAbility", false);
+
             TurnOffAbility();
 
             if (selectedGun != null)
@@ -114,14 +116,14 @@ public class WeaponChanger : MonoBehaviour
             {
                 bombAbilityAnimGO.SetActive(true);
 
-                armsAnimator.SetTrigger("Bomb_Ability");
+                armsAnimator.SetBool("UsingAbility", true);
                 bombAnimator.SetTrigger("Ability");              
             }
             else if (abilityName == "ElectricAbility")
             {
                 electricAbilityAnimGO.SetActive(true);
 
-                armsAnimator.SetTrigger("Bomb_Ability");
+                armsAnimator.SetBool("UsingAbility", true);
                 electricAnimator.SetTrigger("Ability");             
             }
 
@@ -134,7 +136,7 @@ public class WeaponChanger : MonoBehaviour
 
     private void TurnOffAbility()
     {
-        if(selectedAbility.activeSelf && timer >= 10.0f)
+        if (selectedAbility.activeSelf && timer >= 10.0f)
         {
             selectedAbility.SetActive(false);
             armsAnimator.SetTrigger("Ability_Cancel");
