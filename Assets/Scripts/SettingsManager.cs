@@ -23,17 +23,17 @@ public class SettingsManager : MonoBehaviour
 
     private float sensValue;
 
-    //private void Awake()
-    //{
-    //    fovSlider.onValueChanged.AddListener(FovSliderHoldSound);
-    //    sensSlider.onValueChanged.AddListener(SensSliderHoldSound);
-    //}
+    private void Awake()
+    {
+        fovSlider.onValueChanged.AddListener(FovSliderHoldSound);
+        sensSlider.onValueChanged.AddListener(SensSliderHoldSound);
+    }
 
-    //private void OnDestroy()
-    //{
-    //    fovSlider.onValueChanged?.RemoveListener(FovSliderHoldSound);
-    //    sensSlider.onValueChanged?.RemoveListener(SensSliderHoldSound);
-    //}
+    private void OnDestroy()
+    {
+        fovSlider.onValueChanged?.RemoveListener(FovSliderHoldSound);
+        sensSlider.onValueChanged?.RemoveListener(SensSliderHoldSound);
+    }
 
     private void Start()
     {
@@ -81,15 +81,15 @@ public class SettingsManager : MonoBehaviour
     //    AkUnitySoundEngine.PostEvent("UI_Slider_Release", gameObject);
     //}
 
-    //private void FovSliderHoldSound(float value)
-    //{
-    //    AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", value);
-    //    AkUnitySoundEngine.PostEvent("UI_Slider_Hold", gameObject);
-    //}
+    private void FovSliderHoldSound(float value)
+    {
+        AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", value);
+        AkUnitySoundEngine.PostEvent("UI_Slider", gameObject);
+    }
 
-    //private void SensSliderHoldSound(float value)
-    //{
-    //    AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", value);
-    //    AkUnitySoundEngine.PostEvent("UI_Slider_Hold", gameObject);
-    //}
+    private void SensSliderHoldSound(float value)
+    {
+        AkUnitySoundEngine.SetRTPCValue("Pitch_Slider", value);
+        AkUnitySoundEngine.PostEvent("UI_Slider", gameObject);
+    }
 }
