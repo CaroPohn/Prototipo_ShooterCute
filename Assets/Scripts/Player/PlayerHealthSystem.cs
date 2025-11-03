@@ -6,6 +6,7 @@ using System.Collections;
 public class PlayerHealthSystem : MonoBehaviour
 {
     [SerializeField] private Material lavaDamageEffect;
+    [SerializeField] private Material heatEffect;
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
@@ -22,6 +23,7 @@ public class PlayerHealthSystem : MonoBehaviour
     private bool hasPlayedHealSound;
 
     private Material lavaMat;
+    private Material heatMat;
     private Material healthMat;
     private Material damageMat;
 
@@ -47,6 +49,7 @@ public class PlayerHealthSystem : MonoBehaviour
         health = maxHealth;
 
         lavaMat = lavaDamageEffect;
+        heatMat = heatEffect;
         healthMat = healthEffect;
         damageMat = projectileDamageEffect;
 
@@ -121,6 +124,7 @@ public class PlayerHealthSystem : MonoBehaviour
         if (effectType == EffectType.None)
         {
             lavaMat.SetFloat("_Intensity", 0);
+            heatMat.SetFloat("_Intensity", 0);
             damageMat.SetFloat("_Intensity", 0);
             healthMat.SetFloat("_Intensity", 0);
             if (isCurrentlyBurning)
@@ -133,6 +137,7 @@ public class PlayerHealthSystem : MonoBehaviour
         else if (effectType == EffectType.Lava)
         {
             lavaMat.SetFloat("_Intensity", 1);
+            heatMat.SetFloat("_Intensity", 1);
             StopCoroutine(HealEffectCooldown());
 
             if (!isCurrentlyBurning)
@@ -158,6 +163,7 @@ public class PlayerHealthSystem : MonoBehaviour
         else if (effectType == EffectType.Heal)
         {
             lavaMat.SetFloat("_Intensity", 0);
+            heatMat.SetFloat("_Intensity", 0);
             healthMat.SetFloat("_Intensity", 1);
             
             if (!hasPlayedHealSound)

@@ -15,6 +15,7 @@ public class GamePause : MonoBehaviour
     [SerializeField] private Canvas pauseCanvas;
 
     [SerializeField] private Material lavaDamageEffect;
+    [SerializeField] private Material heatEffect;
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
@@ -76,6 +77,7 @@ public class GamePause : MonoBehaviour
         OnRestartLevel?.Invoke();
 
         lavaDamageEffect.SetFloat("_Intensity", 0);
+        heatEffect.SetFloat("_Intensity", 0);
         projectileDamageEffect.SetFloat("_Intensity", 0);
         healthEffect.SetFloat("_Intensity", 0);
 
