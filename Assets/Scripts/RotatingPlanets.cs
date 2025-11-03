@@ -36,17 +36,17 @@ public class RotatingPlanets : MonoBehaviour
     void RotateLeft()
     {
         planetsRotationCenter.Rotate(new Vector3(0, -120, 0));
-        foreach(Transform planetOffse in planetsOffsets) 
+        foreach(Transform planetOffset in planetsOffsets) 
         {
-            planetOffse.Rotate(new Vector3(0, 120, 0));
+            planetOffset.Rotate(new Vector3(0, 120, 0));
         }
     }
     void RotateRight()
     {
         planetsRotationCenter.Rotate(new Vector3(0, 120, 0));
-        foreach (Transform planetOffse in planetsOffsets)
+        foreach (Transform planetOffset in planetsOffsets)
         {
-            planetOffse.Rotate(new Vector3(0, -120, 0));
+            planetOffset.Rotate(new Vector3(0, -120, 0));
         }
     }
 }
