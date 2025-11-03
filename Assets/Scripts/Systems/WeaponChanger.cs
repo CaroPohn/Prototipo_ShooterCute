@@ -29,8 +29,10 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] private Animator armsAnimator;
     [SerializeField] private Animator bombAnimator;
+    [SerializeField] private Animator electricAnimator;
 
     [SerializeField] private GameObject bombAbilityAnimGO;
+    [SerializeField] private GameObject electricAbilityAnimGO;
 
     GameObject selectedGun;
     GameObject selectedAbility;
@@ -100,23 +102,28 @@ public class WeaponChanger : MonoBehaviour
                 selectedGun.SetActive(true);
 
             bombAbilityAnimGO.SetActive(false);
+            electricAbilityAnimGO.SetActive(false);
 
             arms.SetActive(true);
         }
         else if (weaponIndex == 2 && timer >= 10.0f)
         {
             selectedGun.SetActive(false);
-            bombAbilityAnimGO.SetActive(true);
-
+            
             if (abilityName == "BombAbility")
             {
-                armsAnimator.SetTrigger("Bomb_Ability");
-                bombAnimator.SetTrigger("Ability");
-            }
-            //else if (abilityName == "ElectricAbility")
-            //{
+                bombAbilityAnimGO.SetActive(true);
 
-            //}
+                armsAnimator.SetTrigger("Bomb_Ability");
+                bombAnimator.SetTrigger("Ability");              
+            }
+            else if (abilityName == "ElectricAbility")
+            {
+                electricAbilityAnimGO.SetActive(true);
+
+                armsAnimator.SetTrigger("Bomb_Ability");
+                electricAnimator.SetTrigger("Ability");             
+            }
 
             if (selectedAbility != null)
             {
@@ -130,6 +137,7 @@ public class WeaponChanger : MonoBehaviour
         if(selectedAbility.activeSelf && timer >= 10.0f)
         {
             selectedAbility.SetActive(false);
+            armsAnimator.SetTrigger("Ability_Release");
         }
     }
 

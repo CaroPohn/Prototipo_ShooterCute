@@ -98,9 +98,6 @@ public class SummaryUI : MonoBehaviour
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
 
-        Debug.Log(PlayerSelectionData.selectedWeapon);
-        Debug.Log(PlayerSelectionData.selectedAbility);
-
         SceneLoader.Instance.ChangeScene(sceneName);
     }
 }

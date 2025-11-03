@@ -19,6 +19,7 @@ public class ElectricAbility : MonoBehaviour
     private Vector3 moveDirection;
 
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Animator armsAnimator;
 
     private void Awake()
     {
@@ -38,6 +39,8 @@ public class ElectricAbility : MonoBehaviour
         inputReader.OnShoot += AttemptLaunchProjectile;
         EnsureComponents();
 
+        SetSkinnedRenderersVisible(false);
+
         hasAbilityBeenUsed = false;
         zapCollider.enabled = false;
     }
@@ -50,6 +53,14 @@ public class ElectricAbility : MonoBehaviour
     private void Update()
     {
         CalculateFall();
+    }
+
+    public void SetSkinnedRenderersVisible(bool visible)
+    {
+        foreach (var skinnedRenderer in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            skinnedRenderer.enabled = visible;
+        }
     }
 
     private void CalculateFall()
@@ -86,6 +97,9 @@ public class ElectricAbility : MonoBehaviour
 
     private void LaunchProjectile()
     {
+        SetSkinnedRenderersVisible(true);
+        armsAnimator.SetTrigger("Ability_Release");
+
         hasAbilityBeenUsed = true;
         zapCollider.enabled = true;
 

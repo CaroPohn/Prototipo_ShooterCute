@@ -30,15 +30,4 @@ public class CameraChanger : MonoBehaviour
         Camera.main.transform.position = transformToChangeTo.position;
         Camera.main.transform.rotation = transformToChangeTo.rotation;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
