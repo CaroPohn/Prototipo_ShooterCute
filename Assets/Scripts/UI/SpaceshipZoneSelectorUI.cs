@@ -17,6 +17,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         Cursor.visible = true;
 
         Time.timeScale = 1.0f;
+        GoToWorldSelect();
     }
 
     private void Update()
