@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{E70489FE-8DA8-D5F6-D3F7-016A4A0CA2BC}",
+    "Hash": "{26665C18-2B3A-7148-080C-4D7F17D00393}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -310,6 +310,14 @@
       "Location": "Memory",
       "ShortName": "UI_Button_Special.wav",
       "CachePath": "19/{19BF9758-08F4-1C4D-1A0B-8DA1ADC15845}.wem"
+     },
+     {
+      "Id": "515766830",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_SkillReady.wav",
+      "CachePath": "5D/{5DEC15F3-8EA3-946B-9457-B034376D4F9B}.wem"
      },
      {
       "Id": "533007242",
@@ -1694,10 +1702,14 @@
       "Name": "UI_SkillReady",
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_SkillReady",
       "GUID": "{8DE71464-444E-4B48-8176-158129DF6CBE}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "10.76675",
+      "DurationMax": "10.76675",
+      "MediaRefs": [
+       {
+        "Id": "515766830"
+       }
+      ]
      },
      {
       "Id": "3987036369",
@@ -1868,6 +1880,6 @@
     ]
    }
   ],
-  "FileHash": "{5D9DDE45-6E3B-2864-76B8-E29375473C11}"
+  "FileHash": "{93D42D03-A6F2-6F1F-B585-0AB3872D4055}"
  }
 }

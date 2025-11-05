@@ -641,7 +641,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="UI_SkillReady" ID="{8DE71464-444E-4B48-8176-158129DF6CBE}"/>
+						<Event Name="UI_SkillReady" ID="{8DE71464-444E-4B48-8176-158129DF6CBE}">
+							<ChildrenList>
+								<Action Name="" ID="{37E2A6C4-7394-40E1-BFF2-449EB1D9218A}" ShortID="923255205">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SkillReady" ID="{1A686B81-EF1B-4D6D-9975-32C2BE5E4453}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Projectile" ID="{C8CF19F9-8A07-4BBB-94EE-F39CCC0199E7}" ShortID="666977553">
