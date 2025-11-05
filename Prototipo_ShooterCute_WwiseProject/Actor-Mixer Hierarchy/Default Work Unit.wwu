@@ -1376,11 +1376,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="UI_Slider" ID="{D75066A0-5DBE-43C9-9A14-861D014076FD}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0101214574898785"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.01417004048583"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0242914979757085"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.0970496533109963"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>UI_Slider.wav</AudioFile>
@@ -1821,7 +1817,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Projectile_Hit_BasicProjectile" ID="{CD13ED61-ED6F-47E2-B661-5ADAB4CE4679}" ShortID="676508185">
+								<Sound Name="Projectile_Hit_BasicProjectile_1" ID="{CD13ED61-ED6F-47E2-B661-5ADAB4CE4679}" ShortID="676508185">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1833,9 +1829,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="Projectile_Hit_BasicProjectile" ID="{22CDBF94-1040-4697-8C6F-6F7885C7754A}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0182215743440233"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0480088088304409"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0783527696793003"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Projectile_Hit_BasicProjectile.wav</AudioFile>
@@ -1848,7 +1843,7 @@
 										<ActiveSource Name="Projectile_Hit_BasicProjectile" ID="{22CDBF94-1040-4697-8C6F-6F7885C7754A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Projectile_Hit_BasicProjectile2" ID="{990CB64D-FED6-48E6-8678-4FE2C1E74F33}" ShortID="6715937">
+								<Sound Name="Projectile_Hit_BasicProjectile_2" ID="{990CB64D-FED6-48E6-8678-4FE2C1E74F33}" ShortID="6715937">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1860,9 +1855,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="Projectile_Hit_BasicProjectile2" ID="{535C0ACC-8BB5-4FD4-A619-268EC666206E}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0291545189504373"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0127659576370361"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.112973760932945"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Projectile_Hit_BasicProjectile2.wav</AudioFile>
