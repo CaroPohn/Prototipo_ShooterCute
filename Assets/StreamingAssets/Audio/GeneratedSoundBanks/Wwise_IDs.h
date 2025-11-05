@@ -32,8 +32,10 @@ namespace AK
         static const AkUniqueID ENEMY_SPAWN_BABY = 1815360318U;
         static const AkUniqueID ENEMY_TAKEDAMAGE = 842135496U;
         static const AkUniqueID LUMMING_ABILITY_ELECTRIC_IMPACT = 4213470894U;
+        static const AkUniqueID LUMMING_ABILITY_ELECTRIC_SHOOT = 3167041629U;
         static const AkUniqueID LUMMING_ABILITY_ELECTRIC_START = 768425324U;
         static const AkUniqueID LUMMING_ABILITY_FIRE_IMPACT = 2208495489U;
+        static const AkUniqueID LUMMING_ABILITY_FIRE_SHOOT = 3370177220U;
         static const AkUniqueID LUMMING_ABILITY_FIRE_START = 1749973457U;
         static const AkUniqueID LUMMING_HEAL = 2851111675U;
         static const AkUniqueID LUMMING_IDLE_ELECTRICINTERACTION = 1703828721U;

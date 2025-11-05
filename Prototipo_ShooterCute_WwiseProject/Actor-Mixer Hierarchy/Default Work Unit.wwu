@@ -1156,122 +1156,707 @@
 				</Folder>
 				<Folder Name="Lumming" ID="{698D86F8-7789-4ACA-A6E9-4646114F686C}" ShortID="753272739">
 					<ChildrenList>
-						<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="Electric" ID="{371801B6-B126-4EFB-9343-F0226B894C1F}" ShortID="260584715">
 							<ChildrenList>
-								<Sound Name="Lumming_Ability_Electric_Impact" ID="{1496BD4B-EB47-4EBC-8F96-D3E543602D4C}" ShortID="866989004">
+								<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Electric_Impact" ID="{1496BD4B-EB47-4EBC-8F96-D3E543602D4C}" ShortID="866989004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Impact.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="803171057"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Electric_Impact2" ID="{F182A5D8-89FB-4E39-8CB6-19A6DB2671C4}" ShortID="105237773">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Impact2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="132527993"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Ability_Electric_Start" ID="{599E4176-D284-4187-A09A-D66BE77DB7D6}" ShortID="753287490">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Electric_Start_001" ID="{53C414A8-44F5-4D1F-B686-5F7C128B4194}" ShortID="810021422">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Start_001" ID="{898EF01D-FFA1-434A-B5C4-47870242A9C6}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Start_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="716794657"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Start_001" ID="{898EF01D-FFA1-434A-B5C4-47870242A9C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Electric_Start_002" ID="{C37B049C-6EAF-4E83-B97D-9119D3BB38FE}" ShortID="1057530823">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Start_002" ID="{6D1D127E-0694-4FA3-AAD7-E20B453F34C9}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Start_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="793356207"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Start_002" ID="{6D1D127E-0694-4FA3-AAD7-E20B453F34C9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Electric_Start_003" ID="{5903E3C2-5D45-48B5-B31E-D4528FD3EE42}" ShortID="197080595">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Start_003" ID="{A9D62CFC-212B-4E47-91D3-A3309E62A864}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Start_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="147133609"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Start_003" ID="{A9D62CFC-212B-4E47-91D3-A3309E62A864}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" ShortID="413468859">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Electric_Shoot_001" ID="{BF024D6C-0CE4-4291-842E-327A2BBE0A18}" ShortID="1005771989">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Shoot_001" ID="{3E974978-341A-4BC3-B03E-F8EB7B46B017}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Shoot_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="541956104"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Shoot_001" ID="{3E974978-341A-4BC3-B03E-F8EB7B46B017}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Electric_Shoot_002" ID="{EA0E9159-0B53-4395-85BB-49F5C200945A}" ShortID="608603551">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Shoot_002" ID="{705080C3-6335-4E20-982D-2BE5F5A355B1}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Shoot_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1034203104"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Shoot_002" ID="{705080C3-6335-4E20-982D-2BE5F5A355B1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Electric_Shoot_003" ID="{BDF2EE44-B6A8-418F-BDDF-46C05D12BBF4}" ShortID="762959331">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Electric_Shoot_003" ID="{9DFBAA0A-81F7-4ACF-8144-4ED6A2629601}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Electric_Shoot_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="920515197"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Electric_Shoot_003" ID="{9DFBAA0A-81F7-4ACF-8144-4ED6A2629601}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Idle_ElectricInteraction" ID="{3816542A-7F73-4E67-85FD-8783EB09E7AF}" ShortID="806687644">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Idle_ElectricInteraction_001" ID="{066745CD-9569-4DD4-A9EC-D642C348A330}" ShortID="459096348">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_ElectricInteraction_001" ID="{4CC6DA31-BBA8-47A8-B0B1-CE4DF301EB0D}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_ElectricInteraction_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1026765125"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_ElectricInteraction_001" ID="{4CC6DA31-BBA8-47A8-B0B1-CE4DF301EB0D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Idle_ElectricInteraction_002" ID="{73A16B18-D24A-4BE9-9D8E-447993482666}" ShortID="761830868">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_ElectricInteraction_002" ID="{D643DF38-138D-4380-99A5-162274F3AC57}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_ElectricInteraction_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="758563551"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_ElectricInteraction_002" ID="{D643DF38-138D-4380-99A5-162274F3AC57}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Idle_ElectricInteraction_003" ID="{43EF980F-D673-4E06-98B1-FDC95D681F55}" ShortID="413734705">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_ElectricInteraction_003" ID="{E4E8849D-1855-4836-A917-C6AEF7F3CF1C}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_ElectricInteraction_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="172725934"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_ElectricInteraction_003" ID="{E4E8849D-1855-4836-A917-C6AEF7F3CF1C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Fire" ID="{FE7070E9-13D6-43B3-9AA6-60968F57C49F}" ShortID="852947807">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Lumming_Idle_FireInteraction" ID="{1F526F3A-E9D7-4225-949A-75F5B126BE75}" ShortID="802932520">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Idle_FireInteraction_001" ID="{831A3EDB-F4EB-414A-ABEF-E311AFC0B121}" ShortID="572590277">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_FireInteraction_001" ID="{2A9FDE1C-0D09-4F3E-9FEB-A09587366183}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_FireInteraction_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="996284096"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_FireInteraction_001" ID="{2A9FDE1C-0D09-4F3E-9FEB-A09587366183}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Idle_FireInteraction_002" ID="{CED4F205-C884-4425-B8D4-D404B901EA5E}" ShortID="194807682">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_FireInteraction_002" ID="{46DAD909-516B-4B28-9873-185D59903ED2}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_FireInteraction_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="890901767"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_FireInteraction_002" ID="{46DAD909-516B-4B28-9873-185D59903ED2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Idle_FireInteraction_003" ID="{05619670-C386-46F1-9A35-23AAB9283F63}" ShortID="260902482">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Idle_FireInteraction_003" ID="{08472FF7-AC18-4601-8F8D-25154E555EA3}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Idle_FireInteraction_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="278910325"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Idle_FireInteraction_003" ID="{08472FF7-AC18-4601-8F8D-25154E555EA3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Ability_Fire_Start" ID="{4D17A73D-E779-4E43-90E7-CE034BFD6C36}" ShortID="20281787">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Fire_Start_001" ID="{F195A8EA-B3ED-43AE-86D8-77539EF4AF24}" ShortID="977379804">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Start_001" ID="{BAA33757-40C1-46C2-A94B-1C6A20D68A9F}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Start_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="586129666"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Start_001" ID="{BAA33757-40C1-46C2-A94B-1C6A20D68A9F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Fire_Start_002" ID="{CAE38CAD-726E-40ED-9544-068F8FD11138}" ShortID="26599225">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Start_002" ID="{C33C76C0-CCFD-468E-9C88-032139197160}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Start_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="726254611"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Start_002" ID="{C33C76C0-CCFD-468E-9C88-032139197160}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Fire_Start_003" ID="{409DAB01-3994-4850-B74D-52BC600BB663}" ShortID="363140174">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Start_003" ID="{A5741968-0A4B-4C5B-BBE9-867F14EEDD2E}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Start_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="593073987"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Start_003" ID="{A5741968-0A4B-4C5B-BBE9-867F14EEDD2E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Ability_Fire_Impact" ID="{B17F4B70-317A-4341-8886-3EE51403F5DC}" ShortID="708983902">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Fire_Impact_001" ID="{05F8A8BB-810A-4F0D-9AE0-E52444704F36}" ShortID="614049889">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Impact_001" ID="{0460A1E1-89C0-402A-AA26-F2035B397AA2}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Impact_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="540898668"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Impact_001" ID="{0460A1E1-89C0-402A-AA26-F2035B397AA2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Fire_Impact_002" ID="{CF7DCDBC-62BC-40B3-842F-93F89FA94F5C}" ShortID="497200682">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Impact_002" ID="{144F45D1-5F87-43A2-BE43-1D93D2829968}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Impact_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="782202277"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Impact_002" ID="{144F45D1-5F87-43A2-BE43-1D93D2829968}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Fire_Impact_003" ID="{EBDEDF21-0B01-4EF2-A293-44E9384A3005}" ShortID="1010210374">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Impact_003" ID="{1FB9545D-D31B-4336-A5B6-8E9ACC648C3C}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Impact_003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="137468281"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Impact_003" ID="{1FB9545D-D31B-4336-A5B6-8E9ACC648C3C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" ShortID="753814262">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Lumming_Ability_Fire_Shoot_001" ID="{11F88350-1559-4210-8821-BB8424BCC3FB}" ShortID="24070343">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Shoot_001" ID="{DE4C9818-124C-4842-93F5-04776B585A82}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Shoot_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="573444722"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Shoot_001" ID="{DE4C9818-124C-4842-93F5-04776B585A82}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Lumming_Ability_Fire_Shoot_002" ID="{F8798B3F-8DE3-40FE-89C1-65D7A00BF1DF}" ShortID="143658535">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lumming_Ability_Fire_Shoot_002" ID="{BDE0FD40-7CF4-490B-94C3-5A2B2AA384BB}">
+													<Language>SFX</Language>
+													<AudioFile>Lumming_Ability_Fire_Shoot_002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="551451130"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lumming_Ability_Fire_Shoot_002" ID="{BDE0FD40-7CF4-490B-94C3-5A2B2AA384BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Healing" ID="{5613710B-8F64-4099-8B6E-6C8BFF726082}" ShortID="494140793">
+							<ChildrenList>
+								<Sound Name="Lumming_Heal" ID="{09E06293-D658-4574-B0C9-DC01954BFD06}" ShortID="276470379">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}">
+										<AudioFileSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}">
 											<Language>SFX</Language>
-											<AudioFile>Lumming_Ability_Electric_Impact.wav</AudioFile>
+											<AudioFile>Lumming_Heal.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="803171057"/>
+												<MediaID ID="780748996"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Lumming_Ability_Electric_Impact" ID="{97FE3957-27F5-413D-AA3B-B2915E2E91AD}" Platform="Linked"/>
+										<ActiveSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Lumming_Ability_Electric_Impact2" ID="{F182A5D8-89FB-4E39-8CB6-19A6DB2671C4}" ShortID="105237773">
+								<Sound Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+											<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}">
+										<AudioFileSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}">
 											<Language>SFX</Language>
-											<AudioFile>Lumming_Ability_Electric_Impact2.wav</AudioFile>
+											<AudioFile>Lumming_Levitate_2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="132527993"/>
+												<MediaID ID="157621030"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Lumming_Ability_Electric_Impact2" ID="{417C5D88-284E-48E8-BCFE-E0FF2B76C948}" Platform="Linked"/>
+										<ActiveSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-						</RandomSequenceContainer>
-						<Sound Name="Lumming_Heal" ID="{09E06293-D658-4574-B0C9-DC01954BFD06}" ShortID="276470379">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="17"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}">
-									<Language>SFX</Language>
-									<AudioFile>Lumming_Heal.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="780748996"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Lumming_Heal" ID="{CA0EFFD1-28EE-4A14-9CFF-A7B7E26FC1A4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="Color" Type="int16" Value="17"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}">
-									<Language>SFX</Language>
-									<AudioFile>Lumming_Levitate_2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="157621030"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Lumming_Levitate" ID="{C0C68BAF-25C8-472C-8877-0FC1094D0ED9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{5441150D-5FE2-4A22-B873-F9292A6399BF}" ShortID="888078412">
