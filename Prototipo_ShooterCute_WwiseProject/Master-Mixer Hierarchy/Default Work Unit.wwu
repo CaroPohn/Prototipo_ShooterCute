@@ -28,12 +28,7 @@
 						<CustomStateList>
 							<CustomState>
 								<StateRef Name="Unpaused" ID="{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"/>
-								<CustomState Name="" ID="{AF12C7FF-07CC-4525-881E-2E162BE9DA0E}" ShortID="824124046">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64" Value="-6"/>
-										<Property Name="Lowpass" Type="int16" Value="60"/>
-									</PropertyList>
-								</CustomState>
+								<CustomState Name="" ID="{AF12C7FF-07CC-4525-881E-2E162BE9DA0E}" ShortID="824124046"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="None" ID="{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"/>
@@ -41,7 +36,11 @@
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Paused" ID="{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"/>
-								<CustomState Name="" ID="{E17D64CE-2D20-4AED-AB80-74B3A9E9A397}" ShortID="871191563"/>
+								<CustomState Name="" ID="{E17D64CE-2D20-4AED-AB80-74B3A9E9A397}" ShortID="871191563">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>

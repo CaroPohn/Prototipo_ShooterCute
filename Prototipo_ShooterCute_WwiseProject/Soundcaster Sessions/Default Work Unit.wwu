@@ -114,6 +114,173 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Full Gameplay Test" ID="{2115CE70-5CD0-4649-8157-BB7CEF213CEB}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music_Initialize" ID="{1FE70671-A783-4C24-83DF-6544D0A4B9F8}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Wind" ID="{D3C01CD1-68A5-4FBD-9B83-4CD651E5813B}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_Levitate" ID="{86CEEACD-B2E3-4BB2-AC46-554026C847F3}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Spawn_Adult" ID="{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Electric_Start" ID="{8D90FE84-A906-4DC2-919F-FAA13FE46797}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Fire_Start" ID="{7EFF0B72-D253-4833-8E94-D1AF3C3E7650}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Levitate" ID="{8D18B643-3ADE-4C77-A1B0-21F56F2A1084}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Footstep" ID="{0EB49463-85D3-4425-A97B-6BC92274A370}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Projectile_Hit_BasicProjectile" ID="{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="9"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Button_Normal" ID="{8A68EB02-E0A1-4E78-9137-4EDEDD136A5B}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="0" Y="10"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Stop" ID="{06E400DB-C479-484A-9F72-DA401BB1EA88}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_DistantImpacts" ID="{A37B3518-9697-4999-82F7-DDA810DD0450}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Electric_Shoot" ID="{763AEA02-9F99-4EB2-A671-C62F50EEE7EC}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Fire_Shoot" ID="{5BB897F5-AA9E-49BC-9C9F-20C5AF53CDD1}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Heal" ID="{08E1FB78-8A3A-4ECA-8DE1-4B04DFD61079}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="9"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Button_Special" ID="{EB428E82-5A3C-473D-96E5-76937AC605AF}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="1" Y="10"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Lava" ID="{08ED279A-8209-4CE9-8C53-94ACA939ABAB}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Attack_Baby" ID="{3ABFDF21-8D58-49C7-90D2-433180571C3D}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Electric_Impact" ID="{7FA934BB-7197-48FF-ACBF-468F9AC31460}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Ability_Fire_Impact" ID="{4B39072A-FBA8-497A-9ABD-F3879B0D59A4}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Shoot" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="9"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="2" Y="10"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Lava_Stop" ID="{4E8C2E56-188B-4790-B910-F17C97FCD248}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_Death" ID="{C87E5E1B-B10A-496F-B556-26AEDA087099}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Idle_ElectricInteraction" ID="{51F1768D-29FC-4325-9410-E7580728FA10}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lumming_Idle_FireInteraction" ID="{C378DE83-0AA9-4198-B013-3DE861278702}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="8"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_SkillReady" ID="{8DE71464-444E-4B48-8176-158129DF6CBE}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="3" Y="10"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Enemy_TakeDamage" ID="{30A93EC0-31F0-4DDE-BFCE-510D1297C630}" WorkUnitID="{071E1582-E6BD-4A94-B1F0-BD4EB05CBC94}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

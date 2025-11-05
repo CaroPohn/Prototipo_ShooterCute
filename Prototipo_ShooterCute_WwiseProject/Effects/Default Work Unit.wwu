@@ -4,26 +4,21 @@
 		<WorkUnit Name="Default Work Unit" ID="{A750CC05-A6CF-40A7-B36A-5F5472A460AB}" PersistMode="Standalone">
 			<ChildrenList>
 				<Effect Name="Pause_EQ" ID="{9EED38C0-D46B-4CB9-B545-F2A4EF9D32C8}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="0"/>
+						<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="512"/>
+						<Property Name="OnOffBand1" Type="bool" Value="False"/>
+						<Property Name="OnOffBand2" Type="bool" Value="False"/>
+						<Property Name="OnOffBand3" Type="bool" Value="False"/>
+					</PropertyList>
 					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Gameplay_Pause" ID="{0221C828-D207-4922-8316-A956ABD3CDF5}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="Unpaused" ID="{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"/>
-								<CustomState Name="" ID="{EBB63446-EA60-47B5-A6DE-11E4E7869FF8}" ShortID="229860458"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="None" ID="{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"/>
-								<CustomState Name="" ID="{2F648EF2-379C-4CC8-BADB-EE6034DE097E}" ShortID="125420427"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Paused" ID="{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"/>
-								<CustomState Name="" ID="{82B02808-B732-413D-83A4-E64FD9EBA891}" ShortID="620563543"/>
-							</CustomState>
-						</CustomStateList>
+						<StatePropertyList>
+							<Property Name="GainBand1"/>
+							<Property Name="GainBand2"/>
+							<Property Name="GainBand3"/>
+							<Property Name="OutputLevel"/>
+						</StatePropertyList>
 					</StateInfo>
 				</Effect>
 			</ChildrenList>
