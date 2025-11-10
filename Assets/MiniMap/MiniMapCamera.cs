@@ -11,5 +11,11 @@ public class MiniMapCamera : MonoBehaviour
         newPosition.y = transform.position.y;
 
         transform.position = newPosition;
+
+        //Quaternion newRotation = playerTransform.rotation;
+
+        //newRotation.z = transform.rotation.z;
+
+        //transform.rotation = newRotation;
     }
 }
