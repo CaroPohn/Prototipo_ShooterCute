@@ -54,13 +54,13 @@ public class EggShield : MonoBehaviour
     public void Desintegrate()
     {
         StartCoroutine("DesintegrateCoroutine");
-        vfx.Stop();
+        if(vfx != null)vfx.Stop();
     }
 
     public void Appear()
     {
         StartCoroutine("AppearCoroutine");
-        vfx.Play();
+        if (vfx != null) vfx.Play();
     }
 
     public void GetHit()

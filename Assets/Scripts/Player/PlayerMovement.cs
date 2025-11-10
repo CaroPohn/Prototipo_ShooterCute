@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private bool hasStepSoundReproduce;
     private float stepTimer;
 
+    private float animVelocity;
+
     public float stepTime;
 
     [SerializeField] InputReader inputReader;
@@ -48,12 +51,15 @@ public class PlayerMovement : MonoBehaviour
         inputReader.OnJump += AttemptJump;
         inputReader.OnMove += AttemptMove;
 
+        EggInteraction.OnGrabbingEgg += GrabEggAnimation;
     }
 
     private void OnDisable()
     {
         inputReader.OnJump -= AttemptJump;
         inputReader.OnMove -= AttemptMove;
+
+        EggInteraction.OnGrabbingEgg -= GrabEggAnimation;
     }
 
     private void Update()
@@ -68,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
         ChangeStepSoundBool();
 
         FootstepAudioSwitch();
+
+        WalkAnimationHandler();
     }
 
     private void FixedUpdate()
@@ -85,6 +93,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void WalkAnimationHandler()
+    {
+        Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+        float speed = horizontalVelocity.magnitude;
+
+        float minSpeed = 0f;
+        float maxSpeed = 8f;
+
+        float targetAnimVelocity = Mathf.InverseLerp(minSpeed, maxSpeed, speed);
+
+        animVelocity = Mathf.Lerp(animVelocity, targetAnimVelocity, Time.deltaTime * 10f);
+
+        armsAnimator.SetFloat("Speed", animVelocity);
+    }
+
     private void AttemptMove(Vector2 value)
     {
         inputDir = value;
@@ -94,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
     {
         string groundLayer = GetGroundLayer();
 
-        switch(groundLayer)
+        switch (groundLayer)
         {
             case "Default":
                 AkUnitySoundEngine.SetSwitch("Footstep_Surface", "Stone", gameObject);
@@ -144,9 +167,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void WalkAnimationHandler()
+    //private void WalkAnimationHandler()
+    //{
+    //    armsAnimator.SetFloat("Speed", 1);
+    //}
+
+    private void GrabEggAnimation()
     {
-        armsAnimator.SetFloat("Speed", 1);
+        armsAnimator.SetTrigger("Grab");
     }
 
     private void AttemptJump()

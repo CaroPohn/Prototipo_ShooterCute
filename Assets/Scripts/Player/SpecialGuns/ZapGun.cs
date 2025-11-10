@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.VFX;
 
 public class ZapGun : Gun
@@ -6,7 +7,11 @@ public class ZapGun : Gun
     public float spread;
     public float range;
     public float reloadTime;
-    public float timeBetweenShots = 0f;
+
+    public float shootCooldown = 0.5f;
+    private float shootCooldownTimer = 0f;
+
+    private bool canPlayerShot;
 
     private int damageLevel1 = 25;
     private int damageLevel2 = 40;
@@ -14,7 +19,6 @@ public class ZapGun : Gun
     private int damageLevel4 = 120;
 
     private float shootHoldTime;
-    private float lastShootTime;
     public bool isHoldingShoot;
 
     private float hitDistance;
@@ -22,6 +26,8 @@ public class ZapGun : Gun
     private string armsAnimationName = "Charging";
 
     [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
+
+    [SerializeField] private ZapAnimationHandler zapAnimationHandler;
 
     [SerializeField] private Animator armsAnimator;
 
@@ -51,12 +57,16 @@ public class ZapGun : Gun
     {
         inputReader.OnShoot += StartHoldingShoot;
         inputReader.OnHoldingShootCanceled += ReleaseShoot;
+        zapAnimationHandler.OnReleaseZapShot += ChangeShootBool;
+
+        canPlayerShot = true;
     }
 
     void OnDisable()
     {
         inputReader.OnShoot -= StartHoldingShoot;
         inputReader.OnHoldingShootCanceled -= ReleaseShoot;
+        zapAnimationHandler.OnReleaseZapShot -= ChangeShootBool;
     }
 
     void Update()
@@ -65,14 +75,33 @@ public class ZapGun : Gun
         {
             shootHoldTime += Time.deltaTime;
         }
+
+        if (!canPlayerShot)
+        {
+            shootCooldownTimer += Time.deltaTime;
+            if (shootCooldownTimer >= shootCooldown)
+            {
+                canPlayerShot = true;
+                shootCooldownTimer = 0f;
+            }
+        }
+
+        Debug.Log(canPlayerShot);
+    }
+
+    private void ChangeShootBool()
+    {
+        canPlayerShot = true;
     }
 
     private void StartHoldingShoot()
     {
         if (!levelController.isGamePaused)
         {
-            if (isHoldingShoot)
+            if (isHoldingShoot || !canPlayerShot)
                 return;
+
+            canPlayerShot = false;
 
             zapAnimator.SetBool("Charging", true);
 
@@ -104,12 +133,15 @@ public class ZapGun : Gun
                 chargeEventPlayingId = 0;
             }
 
-            if (Time.time - lastShootTime < timeBetweenShots)
-            {
-                electric_Gun_VFX_Script.Release(0, 0, shootPivot);
-                shootHoldTime = 0f;
-                return;
-            }
+            //if (!canPlayerShot)
+            //{
+            //    electric_Gun_VFX_Script.Release(0, 0, shootPivot);
+            //    shootHoldTime = 0f;
+            //    return;
+            //}
+
+            canPlayerShot = false;
+            shootCooldownTimer = 0f;
 
             int damageToDeal = damageLevel1;
 
@@ -133,7 +165,6 @@ public class ZapGun : Gun
             electric_Gun_VFX_Script.Release(hitDistance, 0.5f, shootPivot);
             AkUnitySoundEngine.PostEvent("Player_Shoot", gameObject);
 
-            lastShootTime = Time.time;
             shootHoldTime = 0f;
         }
     }

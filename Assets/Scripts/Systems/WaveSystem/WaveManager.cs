@@ -35,14 +35,14 @@ public class WaveManager : MonoBehaviour
     private void OnEnable()
     {
         eggInteracionScript.OnInteractWithEgg += InteractedWithEgg;
-        eggInteracionScript.OnGrabbingEgg += ShowShipText;
+        EggInteraction.OnGrabbingEgg += ShowShipText;
         OnWinningAllWaves += RescueTextHandler;
     }
 
     private void OnDisable()
     {
         eggInteracionScript.OnInteractWithEgg -= InteractedWithEgg;
-        eggInteracionScript.OnGrabbingEgg -= ShowShipText;
+        EggInteraction.OnGrabbingEgg -= ShowShipText;
         OnWinningAllWaves -= RescueTextHandler;
     }
 
