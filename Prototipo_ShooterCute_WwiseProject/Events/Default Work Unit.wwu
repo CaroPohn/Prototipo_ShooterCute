@@ -30,6 +30,60 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Testing events" ID="{E0DE56AC-3F38-4D26-B789-2054BB6CB530}" ShortID="600147504">
+							<ChildrenList>
+								<Event Name="EggInteraction_Stage1" ID="{5942AFB1-24D0-478D-9336-E1D46D3E0EA2}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="26"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{6217B4A9-5241-40BF-ACA9-484C55156FE9}" ShortID="885048765">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Stage_1" ID="{A3C5A768-4E9C-4FE7-87A6-9D1EE890BFCE}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4CC78661-A16F-4C33-81AB-0CE7348D72AC}" ShortID="712582949">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Egg_ShieldActivate" ID="{91691D5F-2B5C-49B4-8A24-3DD55E98BC60}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="DefeatEnemies_StageCalm" ID="{83A38132-747F-4AEB-AC24-560070A9D630}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="26"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{0162FF01-95F6-4CAF-A20D-040EA5851767}" ShortID="493739041">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Egg_ShieldDestroy" ID="{0F760388-89FF-40CC-A731-8881B1C1CC97}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CCD86A59-250C-4092-A576-79BC0731B4A1}" ShortID="382835532">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="22"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Stage_Calm" ID="{285A4665-6AFB-4FD2-A700-418C58D4A906}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{61D10539-998A-49C2-8D83-25A41D2D180F}" ShortID="450451628">
