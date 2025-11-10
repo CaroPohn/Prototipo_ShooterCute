@@ -3,22 +3,19 @@ using UnityEngine.UI;
 
 public class TestArt : MonoBehaviour
 {
-    [SerializeField] Animator animArms;
-    [SerializeField] Animator animBomb;
-
+    [SerializeField] EggShield corruptedRoots;
     private void Update()
     {
         
 
         if (Input.GetKeyUp(KeyCode.A))
         {
-            animArms.SetTrigger("Bomb_Ability");
-            animBomb.SetTrigger("Ability");
 
+            corruptedRoots.Desintegrate();
         }
         else if (Input.GetKeyUp(KeyCode.S))
         {
-            animArms.SetTrigger("Ability_Release");
+            
             
 
         }
