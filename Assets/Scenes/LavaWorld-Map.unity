@@ -2801,6 +2801,22 @@ PrefabInstance:
       propertyPath: impactAreaPrefab
       value: 
       objectReference: {fileID: 3833049940863328319, guid: 469289f4a703df94e8e7a8ec9bcefbf6, type: 3}
+    - target: {fileID: 1225635785214467938, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225635785214467938, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225635785214467938, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a9db5032289d9847bac008d04c7996f, type: 2}
+    - target: {fileID: 2561602034127090537, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 1665770447}
     - target: {fileID: 3351575266908314722, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
       propertyPath: player
       value: 
@@ -2808,6 +2824,10 @@ PrefabInstance:
     - target: {fileID: 3351575266908314722, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
       propertyPath: moveSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351575266908314722, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
+      propertyPath: maxDistance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3351575266908314722, guid: 280e341477b7cbf468b3b90e4d40ebdb, type: 3}
       propertyPath: armsAnimator
