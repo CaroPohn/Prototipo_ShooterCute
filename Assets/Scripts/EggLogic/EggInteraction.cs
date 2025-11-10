@@ -18,7 +18,7 @@ public class EggInteraction : MonoBehaviour
 
     public event Action OnInteractWithEgg;
 
-    public event Action OnGrabbingEgg;
+    public static event Action OnGrabbingEgg;
 
     public float minimumDistanceToInteract;
 
