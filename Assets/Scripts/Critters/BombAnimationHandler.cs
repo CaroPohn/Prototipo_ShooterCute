@@ -7,6 +7,6 @@ public class BombAnimationHandler : MonoBehaviour
 
     public void OnFinishShot()
     {
-        OnShotEnd.Invoke();
+        OnShotEnd?.Invoke();
     }
 }

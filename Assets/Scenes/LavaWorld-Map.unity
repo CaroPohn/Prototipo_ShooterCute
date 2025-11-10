@@ -245,14 +245,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114751136}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.94558656, y: 0.30484647, z: -0.047539357, w: 0.10331863}
-  m_LocalPosition: {x: 0.11, y: 0.06, z: -0.15}
-  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
+  m_LocalRotation: {x: -0.94558656, y: 0.30484644, z: -0.047539376, w: 0.10331862}
+  m_LocalPosition: {x: 0.016331699, y: 0.015992913, z: -0.15000102}
+  m_LocalScale: {x: 0.73, y: 0.7300001, z: 0.73000014}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1050292574}
   - {fileID: 1070854878}
-  m_Father: {fileID: 309012569}
+  m_Father: {fileID: 1644639630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114751138
 MonoBehaviour:
@@ -1302,6 +1302,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &231200759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4713821899052014814, guid: 7b48000552828bf428591902e62913aa, type: 3}
+  m_PrefabInstance: {fileID: 6679506231758906319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235783769 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8530431873988264081, guid: 94b9a4d1b2c68d945af7b854ee5cb9e0, type: 3}
@@ -1524,11 +1529,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4459803530356463105, guid: b0d6f0de8ba84a24e92a41e94c5bcb55, type: 3}
   m_PrefabInstance: {fileID: 276405091}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &309012569 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2638286324526990573, guid: 2d7677031bcda824580c75b12b3aa965, type: 3}
-  m_PrefabInstance: {fileID: 1644639629}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &346399321 stripped
 Transform:
@@ -2730,6 +2730,18 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2071972981000526878, guid: 7b48000552828bf428591902e62913aa, type: 3}
   m_PrefabInstance: {fileID: 6679506231758906319}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &766209604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231200759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6132517f183e23248ba3b9c22c94ebeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &784718218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,6 +4097,23 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1209468704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3625504327571232488, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
+  m_PrefabInstance: {fileID: 5985081805653526765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1209468706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209468704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7508924f0a3e51944940a73b37d8aec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211625913
 GameObject:
   m_ObjectHideFlags: 0
@@ -17065,12 +17094,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2638286324526990573, guid: 2d7677031bcda824580c75b12b3aa965, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 114751137}
     - targetCorrespondingSourceObject: {fileID: 3514908648140421364, guid: 2d7677031bcda824580c75b12b3aa965, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1111818406}
+    - targetCorrespondingSourceObject: {fileID: 3514908648140421364, guid: 2d7677031bcda824580c75b12b3aa965, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 114751137}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d7677031bcda824580c75b12b3aa965, type: 3}
 --- !u!4 &1644639630 stripped
@@ -19091,6 +19120,10 @@ PrefabInstance:
       propertyPath: timeBetweenShots
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 5839489268998485584, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
+      propertyPath: bombAnimationHandler
+      value: 
+      objectReference: {fileID: 1209468706}
     - target: {fileID: 5868081274072364262, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -19414,7 +19447,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7585805212570319555, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 250464757}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3625504327571232488, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1209468706}
   m_SourcePrefab: {fileID: 100100000, guid: 7c64cb3e658b44f43a86f3bc24574c59, type: 3}
 --- !u!1001 &6679506231758906319
 PrefabInstance:
@@ -19544,6 +19580,10 @@ PrefabInstance:
       propertyPath: timeBetweenShots
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1841301313821162121, guid: 7b48000552828bf428591902e62913aa, type: 3}
+      propertyPath: zapAnimationHandler
+      value: 
+      objectReference: {fileID: 766209604}
     - target: {fileID: 1841301313821162121, guid: 7b48000552828bf428591902e62913aa, type: 3}
       propertyPath: electric_Gun_VFX_Script
       value: 
@@ -19927,7 +19967,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4954974652039653757, guid: 7b48000552828bf428591902e62913aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 276405092}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4713821899052014814, guid: 7b48000552828bf428591902e62913aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 766209604}
   m_SourcePrefab: {fileID: 100100000, guid: 7b48000552828bf428591902e62913aa, type: 3}
 --- !u!114 &6679506231758906320 stripped
 MonoBehaviour:
