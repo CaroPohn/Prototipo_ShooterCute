@@ -7,7 +7,7 @@ public class FireGun : Gun
     [SerializeField] private Transform shootPoint;
     [SerializeField] GameObject projectilePrefab;
 
-    [SerializeField] private Animator armsAnimation;
+    [SerializeField] private Animator armsAnimator;
     [SerializeField] private Animator bombAnimator;
 
     [SerializeField] private Camera playerCamera;
@@ -33,7 +33,8 @@ public class FireGun : Gun
     {
         inputReader.OnShoot += AttemptShoot;
         bombAnimationHandler.OnShotEnd += ChangeShotBool;
-
+        WeaponChanger.OnAbilitySelected += TriggerCancelAnimation;
+    
         canPlayerShoot = true;
     }
 
@@ -41,11 +42,18 @@ public class FireGun : Gun
     {
         inputReader.OnShoot -= AttemptShoot;
         bombAnimationHandler.OnShotEnd -= ChangeShotBool;
+        WeaponChanger.OnAbilitySelected -= TriggerCancelAnimation;
     }
 
     public void ChangeShotBool()
     {
         canPlayerShoot = true;
+    }
+
+    private void TriggerCancelAnimation()
+    {
+        armsAnimator.SetTrigger("CancelAnimation");
+        armsAnimator.Play("IDLE");
     }
 
     public void AttemptShoot()
@@ -71,7 +79,7 @@ public class FireGun : Gun
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
-        armsAnimation.SetTrigger("Shoot");
+        armsAnimator.SetTrigger("Shoot");
 
         Vector3 direction = playerCamera.transform.forward;
 
