@@ -4,15 +4,15 @@ using System.Collections.Generic;
 [RequireComponent(typeof(LineRenderer))]
 public class TrajectoryPreview : MonoBehaviour
 {
-    public Transform origin;               // punto de salida del proyectil
+    public Transform origin;               
     public LineRenderer lineRenderer;
-    public LayerMask collisionMask = ~0;   // capas a considerar
-    public float timeStep = 0.05f;         // tamaño del paso de simulación (seg)
-    public int maxSteps = 300;             // tope de pasos (evita loops infinitos)
-    public float projectileRadius = 0.1f;  // radio para SphereCast (0 para Raycast)
+    public LayerMask collisionMask = ~0;   
+    public float timeStep = 0.05f;         
+    public int maxSteps = 300;             
+    public float projectileRadius = 0.1f;  
     public bool useGravity = true;
-    public float gravityScale = 1f;        // multiplica Physics.gravity
-    public GameObject impactMarkerPrefab;   // opcional: prefab a instanciar en el punto de impacto
+    public float gravityScale = 1f;        
+    public GameObject impactMarkerPrefab;   
     GameObject currentImpactMarker;
     private bool isOn = true;
 
@@ -46,7 +46,6 @@ public class TrajectoryPreview : MonoBehaviour
         lineRenderer.enabled = false;
     }
 
-    // Llama a este método con la velocidad inicial (por ejemplo: moveDirection)
     public void ShowTrajectory(Vector3 initialVelocity)
     {
         if(!isOn) return;
@@ -74,17 +73,15 @@ public class TrajectoryPreview : MonoBehaviour
 
         for (int i = 0; i < maxSteps; i++)
         {
-            // integrar una pequeña fracción de tiempo
             vel += gravity * timeStep;
             pos += vel * timeStep;
 
-            // comprobar colisión entre lastPos y pos
             RaycastHit hit;
             Vector3 dir = pos - lastPos;
             float dist = dir.magnitude;
             if (dist > 0f)
             {
-                dir /= dist; // normalizar
+                dir /= dist; 
 
                 bool collided;
                 if (projectileRadius > 0f)
@@ -98,7 +95,6 @@ public class TrajectoryPreview : MonoBehaviour
 
                 if (collided)
                 {
-                    // agregar punto de impacto y terminar
                     points.Add(hit.point);
                     PlaceImpactMarker(hit.point, hit.normal);
                     return points;
@@ -109,7 +105,6 @@ public class TrajectoryPreview : MonoBehaviour
             lastPos = pos;
         }
 
-        // si no colisionó, remover impact marker si existe
         RemoveImpactMarker();
         return points;
     }
@@ -130,7 +125,7 @@ public class TrajectoryPreview : MonoBehaviour
             currentImpactMarker = Instantiate(impactMarkerPrefab);
 
         currentImpactMarker.transform.position = position;
-        currentImpactMarker.transform.rotation = Quaternion.LookRotation(normal); // orienta según normal
+        currentImpactMarker.transform.rotation = Quaternion.LookRotation(normal);
     }
 
     void RemoveImpactMarker()

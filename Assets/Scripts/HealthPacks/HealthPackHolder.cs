@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class HealthPackHolder : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class HealthPackHolder : MonoBehaviour
     [SerializeField] private GameObject cooldownEffectGO;
     [SerializeField] private Material cooldownEffectMat;
     [SerializeField] private HealthPackSystem healthPackSystem;
+
+    [SerializeField] private Transform modelTransform;
 
     [SerializeField] private GameObject player;
  
@@ -43,7 +46,7 @@ public class HealthPackHolder : MonoBehaviour
             ReactivateHealthPack();
         }
 
-        transform.LookAt(player.transform);
+        modelTransform.LookAt(player.transform);
     }
 
     private void GrabHealthPack()

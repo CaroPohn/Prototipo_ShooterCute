@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +35,8 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] private GameObject electricAbilityAnimGO;
 
     [SerializeField] private ZapGun zapGunScript;
+
+    public static event Action OnAbilitySelected;
 
     GameObject selectedGun;
     GameObject selectedAbility;
@@ -91,6 +94,7 @@ public class WeaponChanger : MonoBehaviour
     {
         weaponIndex = 2;
         ChangeWeapon();
+        OnAbilitySelected?.Invoke();
     }
 
     public void ChangeWeapon()
