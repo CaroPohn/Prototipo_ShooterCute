@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7310582074854855163
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_Skybox
+  m_Shader: {fileID: -6465566751694194690, guid: 3230e295ef333d6479259f57be6e9e49, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: _StarPower
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_76876c0b73bf4a9dad3317f2dacaff45_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: f41ad1a737d915f438ff454f262d2194, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _BlendHeight: -0.02
+    - _Cloud_Intensity: 0.9
+    - _Cloud_Scatter: 0.791
+    - _CloudsScale: 42.2
+    - _Clouds_Density: 0.38
+    - _HorizonBlind: 11.2
+    - _HorizonBlind_Sky: 30
+    - _NadirBlend: 1.4
+    - _NadirBlend_Sky: 1
+    - _Phase_Moon: 0.05
+    - _Size_Moon: 541
+    - _StarHeight: 611.8
+    - _StarPower: 37
+    - _Star_Intensity: 7.3
+    - _TexOffset_Moon: 16.2
+    - _ZenithBlend: 0.9
+    - _ZenithBlend_Sky: 1
+    m_Colors:
+    - _Clouds_Color: {r: 0.8679245, g: 0.7379191, b: 0.20060521, a: 0}
+    - _Clouds_Speed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _Ground_Color: {r: 0.8301887, g: 0.18063876, b: 0, a: 0}
+    - _Horizon_Color: {r: 0.7924528, g: 0.09840911, b: 0, a: 0}
+    - _PanSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _Sky_Color: {r: 0.8490566, g: 0.27731243, b: 0.19624422, a: 0}
+    - _Tint_Moon: {r: 4.3018837, g: 1.094945, b: 0.9537195, a: 0}
+  m_BuildTextureStacks: []
