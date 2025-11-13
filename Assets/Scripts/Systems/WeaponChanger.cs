@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class WeaponChanger : MonoBehaviour
 {
-    [SerializeField] private GameObject arms;
-
     [SerializeField] private GameObject bomb;
     [SerializeField] private GameObject electric;
 
@@ -57,12 +55,16 @@ public class WeaponChanger : MonoBehaviour
     {
         inputReader.OnUseAbility += ChangeToAbility;
         inputReader.OnChangeToWeapon += ChangeToWeapon;
+
+        ArmsAnimatorHandler.OnThrowToIdle += ActivateGun;
     }
 
     private void OnDisable()
     {
         inputReader.OnUseAbility -= ChangeToAbility;
         inputReader.OnChangeToWeapon -= ChangeToWeapon;
+
+        ArmsAnimatorHandler.OnThrowToIdle -= ActivateGun;
     }
 
     private void Update()
@@ -84,6 +86,14 @@ public class WeaponChanger : MonoBehaviour
         }
     }
 
+    private void ActivateGun()
+    {
+        if (!selectedGun.activeSelf)
+        {
+            selectedGun.SetActive(true);
+        }
+    }
+
     private void ChangeToWeapon()
     {
         weaponIndex = 1;
@@ -92,9 +102,9 @@ public class WeaponChanger : MonoBehaviour
 
     private void ChangeToAbility()
     {
+        OnAbilitySelected?.Invoke();
         weaponIndex = 2;
         ChangeWeapon();
-        OnAbilitySelected?.Invoke();
     }
 
     public void ChangeWeapon()
@@ -105,13 +115,8 @@ public class WeaponChanger : MonoBehaviour
 
             TurnOffAbility();
 
-            if (selectedGun != null)
-                selectedGun.SetActive(true);
-
             bombAbilityAnimGO.SetActive(false);
             electricAbilityAnimGO.SetActive(false);
-
-            arms.SetActive(true);
         }
         else if (weaponIndex == 2 && timer >= 10.0f && !zapGunScript.isHoldingShoot)
         {
@@ -145,6 +150,14 @@ public class WeaponChanger : MonoBehaviour
         {
             selectedAbility.SetActive(false);
             armsAnimator.SetTrigger("Ability_Cancel");
+
+            if (selectedGun != null)
+                selectedGun.SetActive(true);
+        }
+        else if (!selectedAbility.activeSelf && timer >= 10.0f)
+        {
+            if (selectedGun != null)
+                selectedGun.SetActive(true);
         }
     }
 

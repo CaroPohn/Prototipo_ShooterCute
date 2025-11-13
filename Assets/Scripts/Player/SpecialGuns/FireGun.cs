@@ -53,7 +53,6 @@ public class FireGun : Gun
     private void TriggerCancelAnimation()
     {
         armsAnimator.SetTrigger("CancelAnimation");
-        armsAnimator.Play("IDLE");
     }
 
     public void AttemptShoot()
