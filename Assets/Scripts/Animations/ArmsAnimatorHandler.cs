@@ -8,5 +8,7 @@ public class ArmsAnimatorHandler : MonoBehaviour
     public void OnReleaseToIdle()
     {
         OnThrowToIdle?.Invoke();
+
+        Debug.Log("Release");
     }
 }
