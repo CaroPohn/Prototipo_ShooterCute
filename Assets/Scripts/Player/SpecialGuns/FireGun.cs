@@ -15,39 +15,42 @@ public class FireGun : Gun
     [SerializeField] private GameObject muzzleFlash;
 
     [SerializeField] private LevelController levelController;
+
+    [SerializeField] private BombAnimationHandler bombAnimationHandler;
     
     public float damage;
-    public float timeBetweenShots;
 
-    private float timer;
+    private bool canPlayerShoot;
 
     [SerializeField] InputReader inputReader;
 
     private void Start()
     {
-        timer = 0.2f;
-
         AkUnitySoundEngine.SetSwitch("Player_Shoot_Type", "Basic", gameObject);
     }
 
     private void OnEnable()
     {
         inputReader.OnShoot += AttemptShoot;
+        bombAnimationHandler.OnShotEnd += ChangeShotBool;
+
+        canPlayerShoot = true;
     }
 
     private void OnDisable()
     {
         inputReader.OnShoot -= AttemptShoot;
+        bombAnimationHandler.OnShotEnd -= ChangeShotBool;
     }
 
-    private void Update()
+    public void ChangeShotBool()
     {
-        timer += Time.deltaTime;
+        canPlayerShoot = true;
     }
 
     public void AttemptShoot()
     {
-        if (timer >= timeBetweenShots)
+        if (canPlayerShoot)
         {
             if (!levelController.isGamePaused)
             {
@@ -60,7 +63,7 @@ public class FireGun : Gun
     {
         AkUnitySoundEngine.PostEvent("Player_Shoot", gameObject);
 
-        timer = 0;
+        canPlayerShoot = false;
 
         Instantiate(muzzleFlash, shootPoint);
 

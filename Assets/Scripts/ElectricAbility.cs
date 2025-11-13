@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(TrajectoryPreview))]
 public class ElectricAbility : MonoBehaviour
 {
     public float minDistance = 5f;
@@ -21,9 +22,12 @@ public class ElectricAbility : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Animator armsAnimator;
 
+    private TrajectoryPreview trajPrev;
+
     private void Awake()
     {
         inputReader = GameObject.FindGameObjectWithTag("InputReader").GetComponent<InputReader>();
+        trajPrev = GetComponent<TrajectoryPreview>();
     }
 
     private void Start()
@@ -32,6 +36,8 @@ public class ElectricAbility : MonoBehaviour
 
         weaponChangerScript = player.GetComponent<WeaponChanger>();
         EnsureComponents();
+
+        trajPrev.SetOrigin(transform);
     }
 
     private void OnEnable()
@@ -43,6 +49,8 @@ public class ElectricAbility : MonoBehaviour
 
         hasAbilityBeenUsed = false;
         zapCollider.enabled = false;
+
+        trajPrev.TurnOn();
     }
 
     private void OnDisable()
@@ -53,6 +61,7 @@ public class ElectricAbility : MonoBehaviour
     private void Update()
     {
         CalculateFall();
+        trajPrev.ShowTrajectory(moveDirection);
     }
 
     public void SetSkinnedRenderersVisible(bool visible)
@@ -118,5 +127,7 @@ public class ElectricAbility : MonoBehaviour
 
         weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
         weaponChangerScript.ChangeWeapon();
+
+        trajPrev.TurnOff();
     }
 }
