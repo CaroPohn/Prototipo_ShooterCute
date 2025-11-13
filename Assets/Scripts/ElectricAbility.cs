@@ -36,8 +36,6 @@ public class ElectricAbility : MonoBehaviour
 
         weaponChangerScript = player.GetComponent<WeaponChanger>();
         EnsureComponents();
-
-        trajPrev.SetOrigin(transform);
     }
 
     private void OnEnable()
