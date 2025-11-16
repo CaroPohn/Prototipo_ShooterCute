@@ -856,6 +856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2815114111448657547, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
+      propertyPath: fill
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2982544274877354260, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
@@ -1215,6 +1219,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266457861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8841205006444434660, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
+  m_PrefabInstance: {fileID: 894395546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfd90449376b1d4c9b753f874a05adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1310484103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,6 +1695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarUI: {fileID: 1802743403}
+  interactHUD_UI: {fileID: 1266457861}
 --- !u!4 &1936780464
 Transform:
   m_ObjectHideFlags: 0
