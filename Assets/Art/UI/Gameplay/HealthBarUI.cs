@@ -83,7 +83,7 @@ public class HealthBarUI : MonoBehaviour
     IEnumerator HPAnimationCourutine(Color glowColor,float effectDuration)
     {
         hpImage.material.SetColor("_GlowColor", glowColor);
-        float initialGlow = 0.5f;
+        float initialGlow = 0.045f;
         hpImage.material.SetFloat("_GlowIntensity", initialGlow);
         float glowProgress = 0;
         while (glowProgress < effectDuration)
