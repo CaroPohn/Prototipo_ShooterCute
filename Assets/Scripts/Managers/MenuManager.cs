@@ -24,4 +24,9 @@ public class MenuManager : MonoBehaviour
     {
         settingsCanvas.SetActive(false);
     }
+
+    public void GoToCreditsScene()
+    {
+        SceneLoader.Instance.ChangeScene("Credits");
+    }
 }
