@@ -10,6 +10,8 @@ public class PlayerHealthSystem : MonoBehaviour
     [SerializeField] private Material projectileDamageEffect;
     [SerializeField] private Material healthEffect;
 
+    [SerializeField] private HealthBarUI healthBarUIScript;
+
     [SerializeField] private Transform spawnPoint;
 
     private float damage = 0.2f;
@@ -92,8 +94,6 @@ public class PlayerHealthSystem : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-
-            //PlayerDeath();
         }
     }
 
@@ -103,15 +103,9 @@ public class PlayerHealthSystem : MonoBehaviour
         effectType = EffectType.None;
     }
 
-    //private void PlayerDeath()
-    //{
-    //    gameObject.SetActive(false);
-    //    gameObject.transform.position = spawnPoint.position;
-    //}
-
     private void UpdateHealthBar()
     {
-        healthBarImage.fillAmount = health / maxHealth;
+        healthBarUIScript.UpdateHPBar(health / maxHealth);
     }
 
     public void SetEffectType(EffectType damageTypeToActivate)

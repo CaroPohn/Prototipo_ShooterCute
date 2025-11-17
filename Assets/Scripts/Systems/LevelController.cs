@@ -19,6 +19,7 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private Canvas chooseCanvas;
     [SerializeField] private Canvas gamePlayCanvas;
+    [SerializeField] private Canvas gamePlayVFXCanvas;
     [SerializeField] private Canvas winCanvas;
 
     [SerializeField] private GameEndScreenUI gameEndScreenUI;
@@ -57,6 +58,7 @@ public class LevelController : MonoBehaviour
         Application.targetFrameRate = 144;
 
         gamePlayCanvas.gameObject.SetActive(true);
+        gamePlayVFXCanvas.gameObject.SetActive(true);
         winCanvas.gameObject.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -100,6 +102,7 @@ public class LevelController : MonoBehaviour
         gameEndScreenUI.PlayMissionAccomplishedAnimation();
 
         gamePlayCanvas.gameObject.SetActive(false);
+        gamePlayVFXCanvas.gameObject.SetActive(false);
     }
 
     public void PauseGame()
