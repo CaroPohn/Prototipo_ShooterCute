@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(LineRenderer))]
 public class TrajectoryPreview : MonoBehaviour
 {
-    public Transform origin;               
+    [SerializeField] private Transform origin;               
     public LineRenderer lineRenderer;
     public LayerMask collisionMask = ~0;   
     public float timeStep = 0.05f;         
@@ -27,10 +27,6 @@ public class TrajectoryPreview : MonoBehaviour
         if (lineRenderer == null) lineRenderer = GetComponent<LineRenderer>();
     }
 
-    public void SetOrigin(Transform origin)
-    {
-        this.origin = origin;
-    }
     public void SetImpactMarkerPrefab(GameObject prefab)
     {
         impactMarkerPrefab = prefab;
