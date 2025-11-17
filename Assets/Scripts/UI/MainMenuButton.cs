@@ -12,6 +12,7 @@ public class MainMenuButton : MonoBehaviour
 
     private void Start()
     {
+        tmpUI.fontMaterial = Instantiate(tmpUI.fontMaterial);
     }
 
     public void OnHover()
