@@ -335,6 +335,10 @@ MonoBehaviour:
   exitButton: {fileID: 4372146536091898070}
   settingsCanvas: {fileID: 514710967789582532}
   pauseCanvas: {fileID: 2702948188240842531}
+  lavaDamageEffect: {fileID: 0}
+  heatEffect: {fileID: 0}
+  projectileDamageEffect: {fileID: 0}
+  healthEffect: {fileID: 0}
   levelController: {fileID: 0}
 --- !u!1 &4952185554360130537
 GameObject:
@@ -920,11 +924,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391467401627977971, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 391467401627977971, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1859653945408862680, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_Name
@@ -936,15 +940,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268586591978842697, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2268586591978842697, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2552900914983549241, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4166138029840680295, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_Pivot.x
@@ -1034,6 +1038,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5242109829378676521, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5470841407114163980, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1044,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6269288543997642687, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6269288543997642687, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
       propertyPath: m_AnchorMin.x

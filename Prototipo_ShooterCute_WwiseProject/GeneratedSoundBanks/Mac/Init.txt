@@ -7,6 +7,7 @@ State	ID	Name	State Group			Notes
 	748895195	None	Gameplay_Pause			
 	1365518790	Unpaused	Gameplay_Pause			
 	748895195	None	Music_State			
+	779076336	Stage_Start	Music_State			
 	993086497	Stage_Collapse	Music_State			
 	1019463238	Stage_Win	Music_State			
 	1545043933	Stage_Defeat	Music_State			
@@ -17,6 +18,11 @@ State	ID	Name	State Group			Notes
 	4175426381	Stage_1	Music_State			
 	4175426382	Stage_2	Music_State			
 	4175426383	Stage_3	Music_State			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\SFX	
+	3991942870	Music			\Default Work Unit\Music	
+	4056684167	Master			\Default Work Unit\Master	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
