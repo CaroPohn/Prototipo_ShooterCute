@@ -1,6 +1,5 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class HealthPackHolder : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class HealthPackHolder : MonoBehaviour
 
     [SerializeField] private GameObject healthPack;
     [SerializeField] private GameObject cooldownEffectGO;
-    [SerializeField] private Material cooldownEffectMat;
+
     [SerializeField] private HealthPackSystem healthPackSystem;
 
     [SerializeField] private Transform modelTransform;
@@ -53,7 +52,6 @@ public class HealthPackHolder : MonoBehaviour
     {
         healthPack.SetActive(false);
         cooldownEffectGO.SetActive(true);
-        StartCoroutine(EffectCooldown());
 
         timer = 0;
     }
@@ -71,23 +69,5 @@ public class HealthPackHolder : MonoBehaviour
     private void ChangeGrabbedBool()
     {
         hasHealthPackBeenGrabbed = !hasHealthPackBeenGrabbed;
-    }
-
-    private IEnumerator EffectCooldown()
-    {
-        float startValue = 0.0f;
-        float endValue = 1.0f;
-        float duration = cooldown;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            float currentValue = Mathf.Lerp(startValue, endValue, elapsed / duration);
-            cooldownEffectMat.SetFloat("_Cooldown", currentValue);
-            yield return null;
-        }
-
-        cooldownEffectMat.SetFloat("_Cooldown", endValue);
     }
 }
