@@ -21,6 +21,8 @@ public class GamePause : MonoBehaviour
 
     [SerializeField] private LevelController levelController;
 
+    private string wiseEventName = "UI_Button_Normal";
+
     public static event Action OnRestartLevel;
 
     private void Start()
@@ -44,35 +46,59 @@ public class GamePause : MonoBehaviour
 
     public void ShowSettingsCanvas()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
         pauseCanvas.gameObject.SetActive(false);
         settingsCanvas.gameObject.SetActive(true);
     }
 
     public void HideSettingsCanvas()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
         pauseCanvas.gameObject.SetActive(true);
-        settingsCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);  
     }
 
     public void HidePause()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
         pauseCanvas.gameObject.SetActive(false);
-        settingsCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);     
     }
 
     public void HidePauseButton()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
         levelController.PauseGame();
         pauseCanvas.gameObject.SetActive(false);
-        settingsCanvas.gameObject.SetActive(false);
+        settingsCanvas.gameObject.SetActive(false);       
     }
 
     public void ShowPause()
     {
-        pauseCanvas.gameObject.SetActive(true);
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
+        pauseCanvas.gameObject.SetActive(true);     
     }
 
     public void Restart()
+    {
+        OnRestartLevel?.Invoke();
+
+        lavaDamageEffect.SetFloat("_Intensity", 0);
+        heatEffect.SetFloat("_Intensity", 0);
+        projectileDamageEffect.SetFloat("_Intensity", 0);
+        healthEffect.SetFloat("_Intensity", 0);
+
+        AkUnitySoundEngine.PostEvent("TransitionTo_Menu", gameObject);
+
+        SceneLoader.Instance.ChangeScene("LavaWorld-Map");
+    }
+
+    public void GoToShip()
     {
         OnRestartLevel?.Invoke();
 
@@ -88,6 +114,8 @@ public class GamePause : MonoBehaviour
 
     public void ExitGame()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+
         Application.Quit();
     }
 }

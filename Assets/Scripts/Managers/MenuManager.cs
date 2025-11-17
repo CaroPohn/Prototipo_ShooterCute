@@ -1,3 +1,4 @@
+using System.Globalization;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
@@ -5,28 +6,35 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject settingsCanvas;
 
+    private string wiseEventName = "UI_Button_Normal";
+
     public void StartLevel()
     {
-        SceneLoader.Instance.ChangeScene("Spaceship_Interior");
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        SceneLoader.Instance.ChangeScene("Spaceship_Interior");  
     }
 
     public void OpenSettings()
     {
-        settingsCanvas.SetActive(true);
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        settingsCanvas.SetActive(true);        
     }
 
     public void ExitGame()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
         Application.Quit();
     }
 
     public void CloseSettings()
     {
-        settingsCanvas.SetActive(false);
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        settingsCanvas.SetActive(false);   
     }
 
     public void GoToCreditsScene()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
         SceneLoader.Instance.ChangeScene("Credits");
     }
 }
