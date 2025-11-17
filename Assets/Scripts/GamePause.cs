@@ -81,6 +81,8 @@ public class GamePause : MonoBehaviour
         projectileDamageEffect.SetFloat("_Intensity", 0);
         healthEffect.SetFloat("_Intensity", 0);
 
+        AkUnitySoundEngine.PostEvent("TransitionTo_Menu", gameObject);
+
         SceneLoader.Instance.ChangeScene("Spaceship_Interior");
     }
 

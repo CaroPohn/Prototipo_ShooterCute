@@ -100,6 +100,8 @@ public class SummaryUI : MonoBehaviour
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
 
+        AkUnitySoundEngine.PostEvent("TransitionTo_Level", gameObject);
+
         SceneLoader.Instance.ChangeScene(sceneName);
     }
 }

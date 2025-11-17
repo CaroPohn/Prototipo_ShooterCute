@@ -95,6 +95,15 @@ public class WeaponChanger : MonoBehaviour
         weaponIndex = 2;
         ChangeWeapon();
         OnAbilitySelected?.Invoke();
+
+        if(abilityName == "ElectricAbility")
+        {
+            AkUnitySoundEngine.PostEvent("Lumming_Ability_Electric_Start", gameObject);
+        }
+        else if(abilityName == "BombAbility")
+        {
+            AkUnitySoundEngine.PostEvent("Lumming_Ability_Fire_Start", gameObject);
+        }
     }
 
     public void ChangeWeapon()

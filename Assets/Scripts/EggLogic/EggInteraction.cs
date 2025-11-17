@@ -30,6 +30,8 @@ public class EggInteraction : MonoBehaviour
 
     private bool hasDieStationAnimationFinished;
 
+    public static event Action OnStartWaves;
+
     private void Start()
     {
         isPlayerCloseEnough = false;
@@ -102,6 +104,8 @@ public class EggInteraction : MonoBehaviour
             hasPlayerInteracted = true;
 
             AkUnitySoundEngine.PostEvent("Egg_ShieldActivate", gameObject);
+
+            OnStartWaves?.Invoke();
         }
     }
 

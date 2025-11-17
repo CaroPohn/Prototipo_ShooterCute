@@ -24,9 +24,17 @@ public class FireGun : Gun
 
     [SerializeField] InputReader inputReader;
 
+    public float minDelay = 2f;
+    public float maxDelay = 6f;
+
+    private float nextPlayTime = 0f;
+    private float timer = 0f;
+
     private void Start()
     {
         AkUnitySoundEngine.SetSwitch("Player_Shoot_Type", "Basic", gameObject);
+
+        nextPlayTime = Random.Range(minDelay, maxDelay);
     }
 
     private void OnEnable()
@@ -43,6 +51,20 @@ public class FireGun : Gun
         inputReader.OnShoot -= AttemptShoot;
         bombAnimationHandler.OnShotEnd -= ChangeShotBool;
         WeaponChanger.OnAbilitySelected -= TriggerCancelAnimation;
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= nextPlayTime)
+        {
+            AkUnitySoundEngine.PostEvent("Lumming_Idle_FireInteraction", gameObject);
+
+            timer = 0f;
+
+            nextPlayTime = Random.Range(minDelay, maxDelay);
+        }
     }
 
     public void ChangeShotBool()

@@ -25,6 +25,10 @@ public class WaveManager : MonoBehaviour
 
     public static event Action OnWinningAllWaves;
 
+    public static event Action OnWaveEasy;
+    public static event Action OnWaveMedium;
+    public static event Action OnWaveHard;
+
     private void Start()
     {
         hasEggInteractedToStartWaves = false;
@@ -113,6 +117,19 @@ public class WaveManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Wave wave = waves[currentWaveIndex];
+
+        if (currentWaveIndex == 0)
+        {
+            OnWaveEasy.Invoke();
+        }
+        else if (currentWaveIndex == 3)
+        {
+            OnWaveMedium.Invoke();
+        }
+        else if (currentWaveIndex == 5)
+        {
+            OnWaveHard.Invoke();
+        }
 
         List<Coroutine> spawnCoroutines = new List<Coroutine>();
         foreach (var instruction in wave.spawnInstructions)

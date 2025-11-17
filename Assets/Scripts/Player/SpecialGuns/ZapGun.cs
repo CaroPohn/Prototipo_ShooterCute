@@ -48,6 +48,13 @@ public class ZapGun : Gun
 
     private uint chargeEventPlayingId;
 
+    public float minDelay = 2f;
+    public float maxDelay = 6f;
+
+    private float nextPlayTime = 0f;
+    private float timer = 0f;
+
+
     private void Start()
     {
         AkUnitySoundEngine.SetSwitch("Player_Shoot_Type", "Electric", gameObject);
@@ -87,6 +94,17 @@ public class ZapGun : Gun
         }
 
         Debug.Log(canPlayerShot);
+
+        timer += Time.deltaTime;
+
+        if (timer >= nextPlayTime)
+        {
+            AkUnitySoundEngine.PostEvent("Lumming_Idle_ElectricInteraction", gameObject);
+
+            timer = 0f;
+
+            nextPlayTime = Random.Range(minDelay, maxDelay);
+        }
     }
 
     private void ChangeShootBool()

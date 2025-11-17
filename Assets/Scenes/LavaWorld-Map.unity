@@ -16447,6 +16447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1604887254}
   - component: {fileID: 1604887253}
+  - component: {fileID: 1604887255}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -16494,6 +16495,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1604887255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604887252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdfcf3f493cf3a4b94fbab5a4e5387e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageStart:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8cb4543b1f92ca24b9cdade16a78c3da, type: 2}
+  stage1:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: daaf81265d458d84da23f4d8e97dfb45, type: 2}
+  stage2:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 04410b64e1bd3c44a957ca03923409dd, type: 2}
+  stage3:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b85a259151e2945a4918a61c9fe6ca, type: 2}
+  stage4:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 447b4d30076abe049b7f7ea883db3976, type: 2}
+  stage5:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e72e8bc4b28e6934ca81e7de64c2afc1, type: 2}
+  stageCalm:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 675e2f6d36a0aa14889267aef6c5c424, type: 2}
+  stageCollapse:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a3d42d907fd84444985d0c51b53e03e5, type: 2}
+  stageDefeat:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c8bd998391dd1649ad1a76f6981bee6, type: 2}
+  stageWin:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1e58f500513986a48b0fac46e944263c, type: 2}
 --- !u!1 &1613485228
 GameObject:
   m_ObjectHideFlags: 0

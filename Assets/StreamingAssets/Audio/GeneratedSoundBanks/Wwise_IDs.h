@@ -18,11 +18,13 @@ namespace AK
         static const AkUniqueID AMBIENT_LAVA = 4275106484U;
         static const AkUniqueID AMBIENT_LAVA_STOP = 3216338163U;
         static const AkUniqueID AMBIENT_WIND = 1410046624U;
+        static const AkUniqueID DEFEATENEMIES_STAGECALM = 642151726U;
         static const AkUniqueID EGG_LEVITATE = 1242907925U;
         static const AkUniqueID EGG_PICKUP = 1485126323U;
         static const AkUniqueID EGG_SHIELDACTIVATE = 16747207U;
         static const AkUniqueID EGG_SHIELDDESTROY = 1126770210U;
         static const AkUniqueID EGG_SOUL_IMPACT = 3220447791U;
+        static const AkUniqueID EGGINTERACTION_STAGE1 = 283473096U;
         static const AkUniqueID ENEMY_ATTACK_BABY = 491614049U;
         static const AkUniqueID ENEMY_DEATH = 1205999388U;
         static const AkUniqueID ENEMY_FOOTSTEP_ADULT = 3521032401U;
@@ -53,6 +55,8 @@ namespace AK
         static const AkUniqueID PROJECTILE_HIT_BASICPROJECTILE = 950925848U;
         static const AkUniqueID PROJECTILE_HIT_ELECTRICPROJECTILE = 3600532549U;
         static const AkUniqueID PROJECTILE_SOUL_DEPLOY = 2994932292U;
+        static const AkUniqueID TRANSITIONTO_LEVEL = 248906496U;
+        static const AkUniqueID TRANSITIONTO_MENU = 3095158519U;
         static const AkUniqueID UI_BUTTON_NORMAL = 3345914708U;
         static const AkUniqueID UI_BUTTON_SPECIAL = 3115620430U;
         static const AkUniqueID UI_SKILLREADY = 1384456466U;
@@ -89,6 +93,7 @@ namespace AK
                 static const AkUniqueID STAGE_CALM = 1847784213U;
                 static const AkUniqueID STAGE_COLLAPSE = 993086497U;
                 static const AkUniqueID STAGE_DEFEAT = 1545043933U;
+                static const AkUniqueID STAGE_START = 779076336U;
                 static const AkUniqueID STAGE_WIN = 1019463238U;
             } // namespace STATE
         } // namespace MUSIC_STATE

@@ -109,6 +109,9 @@ public class ElectricAbility : MonoBehaviour
         SetSkinnedRenderersVisible(true);
         armsAnimator.SetTrigger("Ability_Release");
 
+        AkUnitySoundEngine.PostEvent("Lumming_Ability_Electric_Shoot", gameObject);
+        AkUnitySoundEngine.PostEvent("UI_SkillReady", gameObject);
+
         hasAbilityBeenUsed = true;
         zapCollider.enabled = true;
 

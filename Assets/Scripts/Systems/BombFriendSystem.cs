@@ -137,6 +137,9 @@ public class BombFriendSystem : MonoBehaviour
 
         transform.parent = null;
 
+        AkUnitySoundEngine.PostEvent("Lumming_Ability_Fire_Shoot", gameObject);
+        AkUnitySoundEngine.PostEvent("UI_SkillReady", gameObject);
+
         Vector3 dropPosition = player.position + player.forward * 1f;
         dropPosition.y = GetGroundY(dropPosition) + 0.1f;
         transform.position = dropPosition;
@@ -174,6 +177,8 @@ public class BombFriendSystem : MonoBehaviour
         {
             Instantiate(explosionVFXPrefab, transform.position, Quaternion.identity);
         }
+
+        AkUnitySoundEngine.PostEvent("Lumming_Ability_Fire_Impact", gameObject);
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
 

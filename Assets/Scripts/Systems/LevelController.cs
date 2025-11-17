@@ -26,6 +26,9 @@ public class LevelController : MonoBehaviour
     [Header("Egg")]
     [SerializeField] private EggInteraction eggInteractionScript;
 
+    public static event Action OnDefeat;
+    public static event Action OnWin;
+
     private void OnEnable()
     {
         Time.timeScale = 1.0f;
@@ -68,6 +71,8 @@ public class LevelController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
+        OnDefeat?.Invoke();
+
         gameEndScreenUI.PlayMissionFailedAnimation();
     }
 
@@ -76,6 +81,8 @@ public class LevelController : MonoBehaviour
         Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+
+        OnWin.Invoke();
 
         gameEndScreenUI.PlayMissionAccomplishedAnimation();
 
