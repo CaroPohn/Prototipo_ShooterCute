@@ -43,7 +43,11 @@ public class SettingsManager : MonoBehaviour
         fovText = fovTextHolder.GetComponent<TextMeshProUGUI>();
         sensText = sensTextHolder.GetComponent<TextMeshProUGUI>();
 
-        playerCamera.fieldOfView = savedFov;
+        if (playerCamera != null) 
+        {
+            playerCamera.fieldOfView = savedFov;
+        }
+       
         sensValue = savedSens;
 
         fovText.SetText(savedFov.ToString("F0"));
@@ -58,7 +62,11 @@ public class SettingsManager : MonoBehaviour
 
     private void ChangeFOV(float newFov)
     {
-        playerCamera.fieldOfView = newFov;
+        if (playerCamera != null)
+        {
+            playerCamera.fieldOfView = newFov;
+        }
+
         PlayerPrefs.SetFloat("FOV", newFov);
         fovText.SetText(newFov.ToString("F0"));
     }
@@ -75,11 +83,6 @@ public class SettingsManager : MonoBehaviour
     {
         return sensValue;
     }
-
-    //private void SliderDeselectSound()
-    //{
-    //    AkUnitySoundEngine.PostEvent("UI_Slider_Release", gameObject);
-    //}
 
     private void FovSliderHoldSound(float value)
     {
