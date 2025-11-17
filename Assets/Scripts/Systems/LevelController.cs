@@ -29,11 +29,17 @@ public class LevelController : MonoBehaviour
     public static event Action OnDefeat;
     public static event Action OnWin;
 
+    [SerializeField] private GameObject winCollider;
+
     private void OnEnable()
     {
         Time.timeScale = 1.0f;
 
+        winCollider.SetActive(false);
+
         WinColliderTrigger.OnWinningLevel += WinLevel;
+        EggInteraction.OnGrabbingEgg += ChangeObjetiveToWinCollider; 
+
         inputReader.OnPause += PauseGame;
         playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
     }
@@ -41,6 +47,8 @@ public class LevelController : MonoBehaviour
     private void OnDisable()
     {
         WinColliderTrigger.OnWinningLevel -= WinLevel;
+        EggInteraction.OnGrabbingEgg -= ChangeObjetiveToWinCollider;
+
         inputReader.OnPause -= PauseGame;
     }
 
@@ -63,6 +71,11 @@ public class LevelController : MonoBehaviour
         {
             LoseLevel();
         }
+    }
+
+    private void ChangeObjetiveToWinCollider()
+    {
+        winCollider.SetActive(true);
     }
 
     private void LoseLevel()
