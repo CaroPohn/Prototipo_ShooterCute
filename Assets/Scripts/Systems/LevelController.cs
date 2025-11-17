@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -30,6 +31,8 @@ public class LevelController : MonoBehaviour
     public static event Action OnDefeat;
     public static event Action OnWin;
 
+    private List<GameObject> desintegrateableObjects;
+
     [SerializeField] private GameObject winCollider;
 
     private void OnEnable()
@@ -39,7 +42,11 @@ public class LevelController : MonoBehaviour
         winCollider.SetActive(false);
 
         WinColliderTrigger.OnWinningLevel += WinLevel;
-        EggInteraction.OnGrabbingEgg += ChangeObjetiveToWinCollider; 
+        EggInteraction.OnGrabbingEgg += ChangeObjetiveToWinCollider;
+
+        WaveManager.OnWinningAllWaves += DesintegrateObjects;
+
+        EggShield.OnFinishDesintegrate += DestroyDesintegrateObjects;
 
         inputReader.OnPause += PauseGame;
         playerHealthSystem.SetEffectType(PlayerHealthSystem.EffectType.None);
@@ -49,6 +56,10 @@ public class LevelController : MonoBehaviour
     {
         WinColliderTrigger.OnWinningLevel -= WinLevel;
         EggInteraction.OnGrabbingEgg -= ChangeObjetiveToWinCollider;
+
+        WaveManager.OnWinningAllWaves -= DesintegrateObjects;
+
+        EggShield.OnFinishDesintegrate -= DestroyDesintegrateObjects;
 
         inputReader.OnPause -= PauseGame;
     }
@@ -72,6 +83,32 @@ public class LevelController : MonoBehaviour
         if (playerHealthSystem.health <= 0)
         {
             LoseLevel();
+        }
+    }
+
+    private void DesintegrateObjects()
+    {
+        desintegrateableObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("DesintegrateObject"));
+
+        foreach (GameObject desOBJ in desintegrateableObjects)
+        {
+            EggShield eggShield = desOBJ.GetComponentInChildren<EggShield>();
+
+            if (eggShield != null)
+            {
+                eggShield.Desintegrate();
+            }
+        }
+    }
+
+    private void DestroyDesintegrateObjects()
+    {
+        foreach (GameObject desOBJ in desintegrateableObjects)
+        {
+            if (desOBJ != null)
+            {
+                Destroy(desOBJ);
+            }
         }
     }
 

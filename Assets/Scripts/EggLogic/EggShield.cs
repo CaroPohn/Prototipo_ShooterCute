@@ -5,6 +5,7 @@ using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 using UnityEngine.Rendering;
 using UnityEngine.VFX;
+using System;
 
 public class EggShield : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EggShield : MonoBehaviour
     [SerializeField] VisualEffect vfx;
     Coroutine eggGetHitCoroutine;
     private MaterialPropertyBlock block;
+
+    public static event Action OnFinishDesintegrate;
 
     private void OnEnable()
     {
@@ -88,6 +91,8 @@ public class EggShield : MonoBehaviour
             yield return null;
         }
         UpdateEggFadeProgress(1f);
+
+        OnFinishDesintegrate?.Invoke();
     }
     IEnumerator AppearCoroutine()
     {
