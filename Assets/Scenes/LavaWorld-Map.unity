@@ -2029,9 +2029,8 @@ MonoBehaviour:
   inputReader: {fileID: 200610471}
   playerTransform: {fileID: 1226903909}
   eggHoldingSpot: {fileID: 6701507858275920833}
-  interactText: {fileID: 1585332374}
   stationAnimationHandler: {fileID: 1784219999}
-  uIInteractAnimator: {fileID: 2049647077}
+  interactHUD_UI_Script: {fileID: 1499365441}
   exclamationUI: {fileID: 1574618362}
   minimumDistanceToInteract: 4
 --- !u!114 &474043192 stripped
@@ -16861,6 +16860,17 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5844726434211042907, guid: ea507731ca984eb4e8f3dc4720546de5, type: 3}
   m_PrefabInstance: {fileID: 1784219995}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499365441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8841205006444434660, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
+  m_PrefabInstance: {fileID: 1643189359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfd90449376b1d4c9b753f874a05adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1524144962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2218765039281659679, guid: c96ca0ff998e71445b78b71c48711d0d, type: 3}
@@ -17051,7 +17061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1585332375
 Transform:
   m_ObjectHideFlags: 0
@@ -18922,11 +18932,6 @@ RectTransform:
 --- !u!224 &2049647076 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7425546496864201489, guid: 45757f7bfdaeab249945e0533f41fff4, type: 3}
-  m_PrefabInstance: {fileID: 1591828209}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2049647077 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8573040602850343712, guid: 45757f7bfdaeab249945e0533f41fff4, type: 3}
   m_PrefabInstance: {fileID: 1591828209}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054686176

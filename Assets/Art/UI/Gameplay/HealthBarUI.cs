@@ -18,11 +18,13 @@ public class HealthBarUI : MonoBehaviour
     private float currentHP;
     Coroutine laggedHPBarCoroutine;
     Coroutine GlowAnimationCoroutine;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
     void Start()
     {
         damagedRecievedBarCurrentFill = 1;
         currentHP = 1;
+
+        hpImage.material.SetFloat("_GlowIntensity", 0);
 
         hpImage.material = Instantiate(hpImage.material);
         damagedRecievedBar.material = Instantiate(damagedRecievedBar.material);

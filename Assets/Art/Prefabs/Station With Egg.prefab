@@ -483,11 +483,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7425546496864201489, guid: 45757f7bfdaeab249945e0533f41fff4, type: 3}
   m_PrefabInstance: {fileID: 7223780186692430243}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1349262188705714819 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8573040602850343712, guid: 45757f7bfdaeab249945e0533f41fff4, type: 3}
-  m_PrefabInstance: {fileID: 7223780186692430243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8383733879351001757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,8 +596,7 @@ MonoBehaviour:
   inputReader: {fileID: 0}
   playerTransform: {fileID: 0}
   eggHoldingSpot: {fileID: 0}
-  interactText: {fileID: 5761590201990032881}
   stationAnimationHandler: {fileID: 4441743854907580363}
-  uIInteractAnimator: {fileID: 1349262188705714819}
+  interactHUD_UI_Script: {fileID: 0}
   exclamationUI: {fileID: 6949246594229784843}
   minimumDistanceToInteract: 4

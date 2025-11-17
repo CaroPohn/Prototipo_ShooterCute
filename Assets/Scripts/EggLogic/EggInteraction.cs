@@ -8,11 +8,9 @@ public class EggInteraction : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform eggHoldingSpot;
 
-    [SerializeField] private GameObject interactText;
-
     [SerializeField] private StationAnimationHandler stationAnimationHandler;
 
-    [SerializeField] private Animator uIInteractAnimator;
+    [SerializeField] private InteractHUD_UI interactHUD_UI_Script;
 
     [SerializeField] private GameObject exclamationUI;
 
@@ -84,7 +82,6 @@ public class EggInteraction : MonoBehaviour
             if (isPlayerCloseEnough)
             {
                 SpawnInteractText(isPlayerCloseEnough);
-                MakeTextFollowPlayer();
             }
             else
             {
@@ -111,14 +108,10 @@ public class EggInteraction : MonoBehaviour
 
     private void SpawnInteractText(bool isActive)
     {
-        //interactText.SetActive(isActive);
-        uIInteractAnimator.SetBool("visible", isActive);
-    }
-
-    private void MakeTextFollowPlayer()
-    {
-        Vector3 lookPosition = new Vector3(playerTransform.position.x, interactText.transform.position.y, playerTransform.position.z);
-        interactText.transform.LookAt(lookPosition);
+        if (isActive)
+            interactHUD_UI_Script.Appear();
+        else
+            interactHUD_UI_Script.Hide();
     }
 
     private void LetPlayerGrabEgg()
