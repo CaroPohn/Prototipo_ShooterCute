@@ -28,6 +28,7 @@ public class ZapGun : Gun
     [SerializeField] private Electric_Gun_VFX electric_Gun_VFX_Script;
 
     [SerializeField] private ZapAnimationHandler zapAnimationHandler;
+    [SerializeField] private Animator chispeanAnimator;
 
     [SerializeField] private Animator armsAnimator;
 
@@ -64,16 +65,12 @@ public class ZapGun : Gun
     {
         inputReader.OnShoot += StartHoldingShoot;
         inputReader.OnHoldingShootCanceled += ReleaseShoot;
-        zapAnimationHandler.OnReleaseZapShot += ChangeShootBool;
-
-        canPlayerShot = true;
     }
 
     void OnDisable()
     {
         inputReader.OnShoot -= StartHoldingShoot;
         inputReader.OnHoldingShootCanceled -= ReleaseShoot;
-        zapAnimationHandler.OnReleaseZapShot -= ChangeShootBool;
     }
 
     void Update()
@@ -85,11 +82,10 @@ public class ZapGun : Gun
 
         if (!canPlayerShot)
         {
-            shootCooldownTimer += Time.deltaTime;
-            if (shootCooldownTimer >= shootCooldown)
+            if (Time.time >= shootCooldownTimer)
             {
+                chispeanAnimator.SetTrigger("CancelAnimation");
                 canPlayerShot = true;
-                shootCooldownTimer = 0f;
             }
         }
 
@@ -107,19 +103,17 @@ public class ZapGun : Gun
         }
     }
 
-    private void ChangeShootBool()
-    {
-        canPlayerShot = true;
-    }
-
     private void StartHoldingShoot()
     {
         if (!levelController.isGamePaused)
         {
-            if (isHoldingShoot || !canPlayerShot)
+            if (!canPlayerShot)
                 return;
 
-            canPlayerShot = false;
+            if (isHoldingShoot)
+                return;
+
+            shootCooldownTimer = float.PositiveInfinity;
 
             zapAnimator.SetBool("Charging", true);
 
@@ -141,6 +135,9 @@ public class ZapGun : Gun
             if (!isHoldingShoot)
                 return;
 
+            canPlayerShot = false;
+            shootCooldownTimer = 0f;
+
             isHoldingShoot = false;
             zapAnimator.SetBool("Charging", false);
             armsAnimator.SetBool(armsAnimationName, false);
@@ -158,8 +155,7 @@ public class ZapGun : Gun
             //    return;
             //}
 
-            canPlayerShot = false;
-            shootCooldownTimer = 0f;
+            shootCooldownTimer = Time.time + shootCooldown;
 
             int damageToDeal = damageLevel1;
 
