@@ -14,7 +14,7 @@ public class RotatingElement : MonoBehaviour
 
         if (!isDragging)
         {
-            transform.Rotate(Vector3.up * autoRotateSpeed * Time.deltaTime, Space.World);
+            transform.Rotate(Vector3.up * autoRotateSpeed * Time.deltaTime, Space.Self);
         }
     }
 
@@ -35,7 +35,7 @@ public class RotatingElement : MonoBehaviour
         {
             float deltaX = Input.mousePosition.x - lastMouseX;
 
-            transform.Rotate(Vector3.up, -deltaX * dragRotateSpeed, Space.World);
+            transform.Rotate(Vector3.up, -deltaX * dragRotateSpeed, Space.Self);
 
             lastMouseX = Input.mousePosition.x;
         }
