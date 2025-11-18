@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9148823641161865273}
   - component: {fileID: 2470840015874053260}
+  - component: {fileID: 4439167555924379085}
   m_Layer: 0
   m_Name: CorruptedRoots_B
   m_TagString: DesintegrateObject
@@ -84,6 +85,22 @@ MonoBehaviour:
   maxGlowWhenHit: 0
   timeForGlowToFadeOut: 0
   vfx: {fileID: 0}
+--- !u!208 &4439167555924379085
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918980697024947081}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6104940013996261435
 GameObject:
   m_ObjectHideFlags: 0
