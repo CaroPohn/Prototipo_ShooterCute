@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
@@ -99,6 +100,19 @@ public class SettingsManager : MonoBehaviour
         masterSlider.onValueChanged.AddListener(ChangeMaster);
         musicSlider.onValueChanged.AddListener(ChangeMusic);
         sfxSlider.onValueChanged.AddListener(ChangeSFX);
+
+        masterSlider.onValueChanged.AddListener(MasterSliderHoldSound);
+        musicSlider.onValueChanged.AddListener(MusicSliderHoldSound);
+        sfxSlider.onValueChanged.AddListener(SfxSliderHoldSound);
+
+        Invoke(nameof(InitValues), 1f);
+    }
+
+    void InitValues()
+    {
+        MasterSliderHoldSound(baseVolume);
+        MusicSliderHoldSound(baseVolume);
+        SfxSliderHoldSound(baseVolume);
     }
 
     private void ChangeFOV(float newFov)
