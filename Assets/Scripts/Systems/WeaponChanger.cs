@@ -34,6 +34,8 @@ public class WeaponChanger : MonoBehaviour
 
     [SerializeField] private ZapGun zapGunScript;
 
+    private bool changeToAbility;
+
     public static event Action OnAbilitySelected;
 
     GameObject selectedGun;
@@ -47,22 +49,24 @@ public class WeaponChanger : MonoBehaviour
         selectedGun = FindChildWithTag(gunHandler.transform, weaponName);
         selectedAbility = GetAbilityPrefabByTag(abilityName);
 
+        changeToAbility = false;
+
         weaponIndex = 1;
         ChangeWeapon();
     }
 
     private void OnEnable()
     {
-        inputReader.OnUseAbility += ChangeToAbility;
-        inputReader.OnChangeToWeapon += ChangeToWeapon;
+        inputReader.OnUseAbility += ChangeGunBool;
+        //inputReader.OnChangeToWeapon += ChangeToWeapon;
 
         ArmsAnimatorHandler.OnThrowToIdle += ActivateGun;
     }
 
     private void OnDisable()
     {
-        inputReader.OnUseAbility -= ChangeToAbility;
-        inputReader.OnChangeToWeapon -= ChangeToWeapon;
+        inputReader.OnUseAbility -= ChangeGunBool;
+        //inputReader.OnChangeToWeapon -= ChangeToWeapon;
 
         ArmsAnimatorHandler.OnThrowToIdle -= ActivateGun;
     }
@@ -83,6 +87,25 @@ public class WeaponChanger : MonoBehaviour
         else
         {
             abilityUIAnim.SetBool("isReady", false);
+        }
+    }
+
+    private void ChangeGunBool()
+    {
+        changeToAbility = !changeToAbility;
+
+        SwapGuns();
+    }
+
+    private void SwapGuns()
+    {
+        if (changeToAbility == true)
+        {
+            ChangeToAbility();
+        }
+        else if (changeToAbility == false)
+        {
+            ChangeToWeapon();
         }
     }
 
