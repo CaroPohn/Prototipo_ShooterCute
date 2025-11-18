@@ -79,5 +79,6 @@ public class LoadoutUI : MonoBehaviour
         savedAbilityLumming = abilitySlot.GetCurrentLumming();
         summaryUI.UpdateLoadout(savedWeaponLumming, savedAbilityLumming);
         saveChangesButton.PlayAnimationDisabled();
+        FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
     }
 }

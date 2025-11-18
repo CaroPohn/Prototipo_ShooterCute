@@ -50,6 +50,6 @@ public class WorldSelectUI : MonoBehaviour
         {
             planetSelected = false;
         }
-
+        FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
     }
 }
