@@ -1307,9 +1307,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
+--- !u!1 &876780433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4806915133059905074, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
+  m_PrefabInstance: {fileID: 876780432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876780434 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8692433956778431203, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5763973694343035795, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
   m_PrefabInstance: {fileID: 876780432}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &876780435 stripped
@@ -1339,6 +1344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &876780438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2864516719802299482, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
+  m_PrefabInstance: {fileID: 876780432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &888691052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6974288064029967665, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
@@ -1347,11 +1357,6 @@ GameObject:
 --- !u!1 &890819747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1859653945408862680, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
-  m_PrefabInstance: {fileID: 876780432}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &891730575 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4937774454665056516, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
   m_PrefabInstance: {fileID: 876780432}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &919173968 stripped
@@ -1621,11 +1626,11 @@ MonoBehaviour:
   masterSlider: {fileID: 33298232}
   musicSlider: {fileID: 919173968}
   sfxSlider: {fileID: 430944632}
-  fovTextHolder: {fileID: 876780434}
+  fovTextHolder: {fileID: 876780438}
   sensTextHolder: {fileID: 876780436}
-  masterTextHolder: {fileID: 891730575}
+  masterTextHolder: {fileID: 876780434}
   musicTextHolder: {fileID: 888691052}
-  sfxTextHolder: {fileID: 1812033758}
+  sfxTextHolder: {fileID: 876780433}
   baseFOV: 0
 --- !u!4 &1396886852
 Transform:
@@ -12523,7 +12528,7 @@ PrefabInstance:
     - {fileID: 4380430559116456752, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3241368811373624330, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
-      insertIndex: 180
+      insertIndex: -1
       addedObject: {fileID: 2105602000}
     - targetCorrespondingSourceObject: {fileID: 7454568790259964634, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
       insertIndex: 1
@@ -12891,11 +12896,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8630189408835202149, guid: 550eb5f5879c0474a90293a9aa5034b9, type: 3}
   m_PrefabInstance: {fileID: 1809467560}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1812033758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705871942688667569, guid: 5ffcfb50faff50941ad25c23894e16eb, type: 3}
-  m_PrefabInstance: {fileID: 876780432}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812678330
 GameObject:
