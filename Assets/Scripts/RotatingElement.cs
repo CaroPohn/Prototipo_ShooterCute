@@ -4,6 +4,7 @@ public class RotatingElement : MonoBehaviour
 {
     [SerializeField] float autoRotateSpeed = 20f;
     [SerializeField] float dragRotateSpeed = 5f;
+    [SerializeField] bool canBeRotatedManually = true;
 
     private bool isDragging = false;
     private float lastMouseX;
@@ -20,7 +21,7 @@ public class RotatingElement : MonoBehaviour
 
     void HandleMouseDrag()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canBeRotatedManually)
         {
             lastMouseX = Input.mousePosition.x;
             isDragging = true;
