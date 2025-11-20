@@ -149,6 +149,7 @@ public class PlayerHealthSystem : MonoBehaviour
             if (!hasPlayedDamageSound)
             {
                 AkUnitySoundEngine.PostEvent("Player_TakeDamage_Generic", gameObject);
+
                 hasPlayedDamageSound = true;
             }
 
