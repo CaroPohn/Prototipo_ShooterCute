@@ -234,15 +234,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Idle_ElectricInteraction" ID="{51F1768D-29FC-4325-9410-E7580728FA10}">
-									<ChildrenList>
-										<Action Name="" ID="{74501B99-1FB8-4057-B123-69659F634CCF}" ShortID="371760531">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Lumming_Idle_ElectricInteraction" ID="{3816542A-7F73-4E67-85FD-8783EB09E7AF}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 								</Event>
 							</ChildrenList>
 						</Folder>
@@ -292,15 +287,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Idle_FireInteraction" ID="{C378DE83-0AA9-4198-B013-3DE861278702}">
-									<ChildrenList>
-										<Action Name="" ID="{85500DDE-5D20-439F-AEFC-2672378EDE72}" ShortID="278570">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Lumming_Idle_FireInteraction" ID="{1F526F3A-E9D7-4225-949A-75F5B126BE75}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 								</Event>
 							</ChildrenList>
 						</Folder>

@@ -23,6 +23,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -156,6 +161,13 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -169,6 +181,16 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -309,8 +331,20 @@
 						<SwitchContainer Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" ShortID="464537938">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -328,6 +362,20 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Player_Burn_End" ID="{2F8CCBB9-B032-4E98-B534-37EF0EEA8FAC}" ShortID="570093356">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -507,6 +555,7 @@
 										<Property Name="LoopBegin" Type="Real64" Value="2.00610332738284"/>
 										<Property Name="LoopEnd" Type="Real64" Value="2.20293583972772"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.28612371295575"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Player_ShootCharge_Electric.wav</AudioFile>
@@ -776,6 +825,11 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1014,7 +1068,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Egg_Levitate Attenuation" ID="{4CFEB922-1225-4896-9A78-DE01EADAFB59}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1075,17 +1129,33 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>25</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Projectile_Soul Attenuation" ID="{666C62DB-BBD8-4AD3-B6CB-C619AB2AC458}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1143,7 +1213,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1168,7 +1238,7 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1229,9 +1299,6 @@
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 										</Reference>
@@ -1314,7 +1381,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1394,11 +1461,22 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Lumming_Idle_ElectricInteraction" ID="{3816542A-7F73-4E67-85FD-8783EB09E7AF}" ShortID="806687644">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2CCAF091-39BA-4981-8FEB-04EBB418B96B}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1482,11 +1560,22 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Lumming_Idle_FireInteraction" ID="{1F526F3A-E9D7-4225-949A-75F5B126BE75}" ShortID="802932520">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DE8C09D8-5674-4449-8E17-F60E44515431}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1569,9 +1658,6 @@
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
-										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 										</Reference>
@@ -1654,7 +1740,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1739,7 +1825,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1809,6 +1895,11 @@
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1840,7 +1931,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
-											<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1885,6 +1976,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2035,7 +2131,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+									<ObjectRef Name="UI" ID="{56C5D930-922C-4417-B4E1-49046EEA62A8}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2106,7 +2202,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Ambient_Lava Attenuation" ID="{48971BAA-DAEC-42FE-96BF-DFCE763CED57}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
@@ -2219,7 +2315,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Ambient_DistantImpacts attenuation" ID="{EFAF204B-C02F-442A-A26B-99B907939B6A}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_DistantImpacts" ID="{EFAF204B-C02F-442A-A26B-99B907939B6A}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
@@ -2428,7 +2524,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -2504,7 +2600,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Projectile_Soul Attenuation" ID="{666C62DB-BBD8-4AD3-B6CB-C619AB2AC458}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -2563,13 +2659,13 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2652,7 +2748,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -2737,7 +2833,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -2823,7 +2919,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Enemy_Footstep Attenuation" ID="{6BCBCC36-343C-4054-A7B5-88B3FA2D3F21}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -2930,7 +3026,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -3037,7 +3133,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -3144,7 +3240,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Enemy_Footstep Attenuation" ID="{6BCBCC36-343C-4054-A7B5-88B3FA2D3F21}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -3250,7 +3346,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -3334,7 +3430,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="- Default Attenuation" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>

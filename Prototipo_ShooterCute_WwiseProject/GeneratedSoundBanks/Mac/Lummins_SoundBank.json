@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{97AC33E6-DB91-4723-185F-897C1D1D267E}",
+    "Hash": "{FD831263-DB93-2EEE-1517-7137F00C39A6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Player_ShootCharge_Electric.wav",
-      "CachePath": "E0/{E0062733-C439-7A42-7938-7EDF50B2CA55}.wem"
+      "CachePath": "B1/{B18C4001-5D64-A3C2-9320-4BB391E334CF}.wem"
      },
      {
       "Id": "96935299",
@@ -142,14 +142,6 @@
       "Location": "Memory",
       "ShortName": "Lumming_Levitate_2.wav",
       "CachePath": "58/{5872CC3B-DCF1-4A11-8B8B-ACE0D9F73675}.wem"
-     },
-     {
-      "Id": "172725934",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_ElectricInteraction_003.wav",
-      "CachePath": "98/{9816C850-CC1D-E460-5278-EF0D0EB63401}.wem"
      },
      {
       "Id": "184096320",
@@ -222,14 +214,6 @@
       "Location": "Memory",
       "ShortName": "Player_Footstep_Stone_2.wav",
       "CachePath": "AD/{ADD0608E-BC63-F675-F58B-83172751021F}.wem"
-     },
-     {
-      "Id": "278910325",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_FireInteraction_003.wav",
-      "CachePath": "89/{8953BC79-D500-5D19-C562-DCA010A6E663}.wem"
      },
      {
       "Id": "298032319",
@@ -578,14 +562,6 @@
       "CachePath": "8E/{8E0974B9-385B-2029-9D76-30534B307B07}.wem"
      },
      {
-      "Id": "758563551",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_ElectricInteraction_002.wav",
-      "CachePath": "20/{20197BDA-77EF-AC05-FA03-D4360F696726}.wem"
-     },
-     {
       "Id": "774050302",
       "Language": "SFX",
       "Streaming": "false",
@@ -722,14 +698,6 @@
       "CachePath": "8D/{8D672DE2-D12E-F323-4EB8-014AAF05B62E}.wem"
      },
      {
-      "Id": "890901767",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_FireInteraction_002.wav",
-      "CachePath": "B6/{B6483901-A86B-A630-B8D2-FBCCB704576D}.wem"
-     },
-     {
       "Id": "892475828",
       "Language": "SFX",
       "Streaming": "false",
@@ -842,28 +810,12 @@
       "CachePath": "90/{90DEE9F1-8254-B8B6-1EE7-87D472C3C42B}.wem"
      },
      {
-      "Id": "996284096",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_FireInteraction_001.wav",
-      "CachePath": "03/{0383BBEE-18B4-3970-BA6E-EE626FA0D72E}.wem"
-     },
-     {
       "Id": "999034300",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Player_Footstep_Stone_4.wav",
       "CachePath": "F9/{F9CE4BA8-EEC3-32AF-EBE4-89992CFBF4BA}.wem"
-     },
-     {
-      "Id": "1026765125",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lumming_Idle_ElectricInteraction_001.wav",
-      "CachePath": "77/{77CF0A6F-8E45-8804-1475-638D66E1F6A4}.wem"
      },
      {
       "Id": "1034203104",
@@ -955,7 +907,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Ambient\\Ambient_Lava",
       "GUID": "{08ED279A-8209-4CE9-8C53-94ACA939ABAB}",
       "Color": "15",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1017,7 +969,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Levitate",
       "GUID": "{86CEEACD-B2E3-4BB2-AC46-554026C847F3}",
       "Color": "15",
-      "MaxAttenuation": "30",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1076,10 +1028,10 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
       "Color": "15",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
-      "DurationMin": "1.09",
-      "DurationMax": "1.09",
+      "DurationMin": "7.09",
+      "DurationMax": "7.09",
       "MediaRefs": [
        {
         "Id": "96935299"
@@ -1115,7 +1067,7 @@
       "Name": "Enemy_Attack_Baby",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Attack_Baby",
       "GUID": "{3ABFDF21-8D58-49C7-90D2-433180571C3D}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.49866667",
       "DurationMax": "0.73041666",
@@ -1137,7 +1089,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Death",
       "GUID": "{C87E5E1B-B10A-496F-B556-26AEDA087099}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.2090833",
       "DurationMax": "1.2715417",
@@ -1159,7 +1111,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Footstep_Adult",
       "GUID": "{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.41320834",
       "DurationMax": "0.45464584",
@@ -1183,7 +1135,7 @@
       "Name": "Enemy_Footstep_Baby",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Footstep_Baby",
       "GUID": "{554435D1-9929-4D7F-BD93-B2EF661ECC84}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.36885417",
       "DurationMax": "0.43922916",
@@ -1208,7 +1160,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Shoot_Basic",
       "GUID": "{D5B4029C-F6DF-411E-886D-CA10E5DAE467}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.79108334",
       "DurationMax": "0.89152086",
@@ -1233,7 +1185,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Spawn_Adult",
       "GUID": "{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.366625",
       "DurationMax": "1.6922083",
@@ -1254,7 +1206,7 @@
       "Name": "Enemy_Spawn_Baby",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_Spawn_Baby",
       "GUID": "{048F18E3-B54F-4609-A8CF-890F9C4A0944}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.3264583",
       "DurationMax": "1.5798334",
@@ -1276,7 +1228,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Enemy_TakeDamage",
       "GUID": "{30A93EC0-31F0-4DDE-BFCE-510D1297C630}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.2676875",
       "DurationMax": "0.32154167",
@@ -1300,7 +1252,7 @@
       "Name": "Lumming_Ability_Electric_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Electric\\Lumming_Ability_Electric_Impact",
       "GUID": "{7FA934BB-7197-48FF-ACBF-468F9AC31460}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "2.640625",
       "DurationMax": "2.640625",
@@ -1318,7 +1270,7 @@
       "Name": "Lumming_Ability_Electric_Shoot",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Electric\\Lumming_Ability_Electric_Shoot",
       "GUID": "{763AEA02-9F99-4EB2-A671-C62F50EEE7EC}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.0809375",
       "DurationMax": "1.1606041",
@@ -1339,7 +1291,6 @@
       "Name": "Lumming_Ability_Electric_Start",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Electric\\Lumming_Ability_Electric_Start",
       "GUID": "{8D90FE84-A906-4DC2-919F-FAA13FE46797}",
-      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.14589584",
       "DurationMax": "0.19372916",
@@ -1360,7 +1311,7 @@
       "Name": "Lumming_Ability_Fire_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Fire\\Lumming_Ability_Fire_Impact",
       "GUID": "{4B39072A-FBA8-497A-9ABD-F3879B0D59A4}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.8643541",
       "DurationMax": "2.321375",
@@ -1381,7 +1332,7 @@
       "Name": "Lumming_Ability_Fire_Shoot",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Fire\\Lumming_Ability_Fire_Shoot",
       "GUID": "{5BB897F5-AA9E-49BC-9C9F-20C5AF53CDD1}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1397,7 +1348,6 @@
       "Name": "Lumming_Ability_Fire_Start",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Fire\\Lumming_Ability_Fire_Start",
       "GUID": "{7EFF0B72-D253-4833-8E94-D1AF3C3E7650}",
-      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.31672916",
       "DurationMax": "0.3741875",
@@ -1433,49 +1383,29 @@
       "Name": "Lumming_Idle_ElectricInteraction",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Electric\\Lumming_Idle_ElectricInteraction",
       "GUID": "{51F1768D-29FC-4325-9410-E7580728FA10}",
-      "MaxAttenuation": "20",
+      "Color": "10",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0.71802086",
-      "DurationMax": "0.9440208",
-      "MediaRefs": [
-       {
-        "Id": "172725934"
-       },
-       {
-        "Id": "758563551"
-       },
-       {
-        "Id": "1026765125"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "1512820010",
       "Name": "Lumming_Idle_FireInteraction",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Fire\\Lumming_Idle_FireInteraction",
       "GUID": "{C378DE83-0AA9-4198-B013-3DE861278702}",
-      "MaxAttenuation": "20",
+      "Color": "10",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0.7109375",
-      "DurationMax": "0.85889584",
-      "MediaRefs": [
-       {
-        "Id": "278910325"
-       },
-       {
-        "Id": "890901767"
-       },
-       {
-        "Id": "996284096"
-       }
-      ]
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "3986156551",
       "Name": "Lumming_Levitate",
       "ObjectPath": "\\Events\\Default Work Unit\\Lumming\\Healing\\Lumming_Levitate",
       "GUID": "{8D18B643-3ADE-4C77-A1B0-21F56F2A1084}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1821,7 +1751,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_BasicProjectile",
       "GUID": "{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}",
       "Color": "15",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "0.73360324",
       "DurationMax": "0.8724062",
@@ -1839,7 +1769,7 @@
       "Name": "Projectile_Hit_ElectricProjectile",
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Hit_ElectricProjectile",
       "GUID": "{C34832DC-DBE8-4818-A6D7-4F3C632A2794}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.391631",
       "DurationMax": "1.8047222",
@@ -1861,7 +1791,7 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Projectile\\Projectile_Soul_Deploy",
       "GUID": "{2DFB4019-B1DD-4058-8FB9-C394A09F9883}",
       "Color": "15",
-      "MaxAttenuation": "25",
+      "MaxAttenuation": "40",
       "DurationType": "OneShot",
       "DurationMin": "1.5",
       "DurationMax": "1.5",
@@ -2108,6 +2038,6 @@
     ]
    }
   ],
-  "FileHash": "{D27E9FBA-5346-1C52-D534-45EE550E4923}"
+  "FileHash": "{809EF2DB-C825-A402-5FA7-6A756DF289C5}"
  }
 }
