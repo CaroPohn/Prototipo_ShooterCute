@@ -13,7 +13,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{A12B1824-0CEF-4447-A7F1-8BB227CB049E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
@@ -48,6 +48,7 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
@@ -62,8 +63,7 @@
 												<SourceFadeOut>
 													<MusicFade Name="Source Fade-out" ID="{CFD10612-04E6-43D8-BA3E-38B102F7FA6F}">
 														<PropertyList>
-															<Property Name="FadeOffset" Type="Real64" Value="1"/>
-															<Property Name="FadeTime" Type="Real64" Value="1"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.01"/>
 															<Property Name="FadeType" Type="int16" Value="1"/>
 														</PropertyList>
 													</MusicFade>
@@ -71,8 +71,8 @@
 												<DestinationFadeIn>
 													<MusicFade Name="Destination Fade-in" ID="{F6615266-7B82-4B54-A5F3-54C2C74FDFB9}">
 														<PropertyList>
-															<Property Name="FadeOffset" Type="Real64" Value="-1"/>
-															<Property Name="FadeTime" Type="Real64" Value="1"/>
+															<Property Name="FadeCurve" Type="int16" Value="6"/>
+															<Property Name="FadeTime" Type="Real64" Value="3"/>
 														</PropertyList>
 													</MusicFade>
 												</DestinationFadeIn>

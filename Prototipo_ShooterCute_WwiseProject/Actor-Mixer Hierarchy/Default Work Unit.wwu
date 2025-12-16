@@ -1063,6 +1063,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
@@ -1129,6 +1130,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
@@ -1236,6 +1238,9 @@
 						<Folder Name="Electric" ID="{371801B6-B126-4EFB-9343-F0226B894C1F}" ShortID="260584715">
 							<ChildrenList>
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
+									<PropertyList>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
 											<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
@@ -1378,6 +1383,7 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" ShortID="413468859">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1737,6 +1743,7 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Fire_Impact" ID="{B17F4B70-317A-4341-8886-3EE51403F5DC}" ShortID="708983902">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1821,6 +1828,7 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" ShortID="753814262">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1926,6 +1934,7 @@
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
@@ -2159,13 +2168,14 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
@@ -2192,6 +2202,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -2205,7 +2216,7 @@
 									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
@@ -2259,6 +2270,7 @@
 						<RandomSequenceContainer Name="Ambient_DistantImpacts" ID="{FA1BA383-6949-4E73-A8A1-078125B242F8}" ShortID="429915665">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
@@ -2318,7 +2330,7 @@
 									<ObjectRef Name="Attenuation_DistantImpacts" ID="{EFAF204B-C02F-442A-A26B-99B907939B6A}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
@@ -2488,6 +2500,7 @@
 						<RandomSequenceContainer Name="Projectile_Hit_BasicProjectile" ID="{A545B015-0BC7-4C71-9F82-0D8B76DF95F6}" ShortID="776219510">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="Highpass" Type="int16">
 									<ModifierList>
 										<ModifierInfo>
@@ -2592,6 +2605,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
@@ -2641,6 +2655,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2744,6 +2759,7 @@
 						<RandomSequenceContainer Name="Enemy_Death" ID="{203BD543-1930-493B-9866-12258C56C443}" ShortID="1012993237">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -2829,6 +2845,7 @@
 						<RandomSequenceContainer Name="Enemy_Spawn_Adult" ID="{48025873-2DBF-4A20-87C8-19BE76439800}" ShortID="856720792">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -2915,6 +2932,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -3022,6 +3040,7 @@
 						<RandomSequenceContainer Name="Enemy_Shoot_Basic" ID="{77A714C2-3062-4F39-AAB0-C37B859E53D5}" ShortID="14004464">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -3129,6 +3148,7 @@
 						<RandomSequenceContainer Name="Enemy_TakeDamage" ID="{FCB3732E-2896-4FDC-A65F-3BD5A2EE69F1}" ShortID="427440073">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -3237,6 +3257,7 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3343,6 +3364,7 @@
 						<RandomSequenceContainer Name="Enemy_Spawn_Baby" ID="{E2EF1840-BC7C-4493-9CA3-98746034609F}" ShortID="834232449">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3427,6 +3449,7 @@
 						<RandomSequenceContainer Name="Enemy_Attack_Baby" ID="{57E42EAF-3861-4ED6-8D06-B886DD54617E}" ShortID="332008369">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">

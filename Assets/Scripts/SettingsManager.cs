@@ -31,7 +31,7 @@ public class SettingsManager : MonoBehaviour
     private TextMeshProUGUI sfxText;
 
     [SerializeField] private float baseFOV;
-    private float baseVolume = 50;
+    private float baseVolume = 100;
 
     public event Action OnSensChange;
 
