@@ -5,11 +5,13 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="Music Manager" ID="{0B055E43-C1EA-43B2-9478-44C8E8628D6F}" ShortID="78356595">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="OutputBusVolume" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
 							</ValueList>
 						</Property>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -72,121 +74,317 @@
 													<MusicFade Name="Destination Fade-in" ID="{F6615266-7B82-4B54-A5F3-54C2C74FDFB9}">
 														<PropertyList>
 															<Property Name="FadeCurve" Type="int16" Value="6"/>
-															<Property Name="FadeTime" Type="Real64" Value="3"/>
+															<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 														</PropertyList>
 													</MusicFade>
 												</DestinationFadeIn>
 											</TransitionInfo>
 										</MusicTransition>
-										<MusicTransition Name="Transition" ID="{325CADA6-7CDE-479B-A277-D068487B6F6E}">
+										<MusicTransition Name="Gameplay transitions" ID="{5DAE8C4E-03C7-4877-9D80-64F98BA8D895}">
 											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-												<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
-												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-											</ReferenceList>
-											<TransitionInfo>
-												<TransitionObjectRef Name="Music_TransitionTo_Stage1" ID="{1C18238A-5018-4E4E-AB66-3BEE3F432159}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												<SourceFadeOut>
-													<MusicFade Name="Source Fade-out" ID="{C54F65C0-35B7-4582-B2A3-F5132BD6CF5C}">
-														<PropertyList>
-															<Property Name="FadeOffset" Type="Real64" Value="1"/>
-															<Property Name="FadeTime" Type="Real64" Value="2"/>
-															<Property Name="FadeType" Type="int16" Value="1"/>
-														</PropertyList>
-													</MusicFade>
-												</SourceFadeOut>
-												<TransitionFadeIn>
-													<MusicFade Name="Transition Fade-in" ID="{1B121E37-83B8-4DEC-BDD9-1DB4D5886276}">
-														<PropertyList>
-															<Property Name="FadeOffset" Type="Real64" Value="-1"/>
-															<Property Name="FadeTime" Type="Real64" Value="2"/>
-														</PropertyList>
-													</MusicFade>
-												</TransitionFadeIn>
-											</TransitionInfo>
-										</MusicTransition>
-										<MusicTransition Name="Transition" ID="{5905FB88-51C4-427B-9C92-A105134E9260}">
-											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-											</ReferenceList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{325CADA6-7CDE-479B-A277-D068487B6F6E}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+														<Property Name="UseTransitionObject" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<TransitionObjectRef Name="Music_TransitionTo_Stage1" ID="{1C18238A-5018-4E4E-AB66-3BEE3F432159}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{C54F65C0-35B7-4582-B2A3-F5132BD6CF5C}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<TransitionFadeIn>
+															<MusicFade Name="Transition Fade-in" ID="{1B121E37-83B8-4DEC-BDD9-1DB4D5886276}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="2"/>
+																</PropertyList>
+															</MusicFade>
+														</TransitionFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{5905FB88-51C4-427B-9C92-A105134E9260}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo/>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{8DB5C3CB-FB47-4871-858E-B6E6E52AF262}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo/>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{D44B85DF-8079-477A-8C61-2BD2C89A94B9}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Calm" ID="{2D9CF387-195F-4B99-B746-9DB59F15839F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{42872FFA-2AE9-4008-9738-29EF10E9446C}">
+																<PropertyList>
+																	<Property Name="FadeCurve" Type="int16" Value="6"/>
+																	<Property Name="FadeOffset" Type="Real64" Value="5"/>
+																	<Property Name="FadeTime" Type="Real64" Value="10"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{6ED84AA6-F87C-4512-95E1-5A5AE9E3EFC1}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-2"/>
+																	<Property Name="FadeTime" Type="Real64" Value="4"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+											</ChildrenList>
 											<TransitionInfo/>
 										</MusicTransition>
-										<MusicTransition Name="Transition" ID="{8DB5C3CB-FB47-4871-858E-B6E6E52AF262}">
+										<MusicTransition Name="Restart transitions" ID="{9BF64F29-24E6-4BE4-A6DE-8B4B488A4BFF}">
 											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-											</ReferenceList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{5BBE647C-A5DF-42BC-AF29-9186503DE2FD}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{D636DD51-6A0F-4A1E-B80B-1D9252A81B41}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{B5219F27-9B57-4D94-AEB6-0C4E2CE8982A}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{2031B404-8647-4C3F-AFF0-2009F2C0B76D}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{1A6E7585-7595-49D2-BDAA-EFF616C9D289}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{81691058-0C44-4672-9E4B-877536AF8972}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{1D3E089E-3B4D-423A-8032-46E381A521C9}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{B657312B-AE4F-4024-A34A-EB63CE9A2A09}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{35B31675-9DD1-430D-8929-6C082B7E4034}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{1A23F2EE-B7A4-45EF-AF4D-64DD1FDA6E48}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{BFCF37E8-032B-49E9-85D5-BD876C608A5F}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{CCFA7861-3357-45E5-816E-7E26C965C8D2}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{66501E64-36D3-48CA-9C6B-2ADB2602B1AC}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="SourceContextType" Type="int16" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+														<Reference Name="SourceContextObject">
+															<ObjectRef Name="Gameplay_Calm" ID="{2D9CF387-195F-4B99-B746-9DB59F15839F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{2E7B0EE7-1966-4C22-8890-6C6BAE01BD69}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{FF837699-5ACF-4DD0-8CBC-D788E056DDB4}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="-0.1"/>
+																	<Property Name="FadeTime" Type="Real64" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+											</ChildrenList>
 											<TransitionInfo/>
-										</MusicTransition>
-										<MusicTransition Name="Transition" ID="{D44B85DF-8079-477A-8C61-2BD2C89A94B9}">
-											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
-												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
-												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Gameplay_Calm" ID="{2D9CF387-195F-4B99-B746-9DB59F15839F}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" WorkUnitID="{C36C2BFF-3256-4642-A8D0-F7803347437F}"/>
-												</Reference>
-											</ReferenceList>
-											<TransitionInfo>
-												<SourceFadeOut>
-													<MusicFade Name="Source Fade-out" ID="{42872FFA-2AE9-4008-9738-29EF10E9446C}">
-														<PropertyList>
-															<Property Name="FadeCurve" Type="int16" Value="6"/>
-															<Property Name="FadeOffset" Type="Real64" Value="5"/>
-															<Property Name="FadeTime" Type="Real64" Value="10"/>
-															<Property Name="FadeType" Type="int16" Value="1"/>
-														</PropertyList>
-													</MusicFade>
-												</SourceFadeOut>
-												<DestinationFadeIn>
-													<MusicFade Name="Destination Fade-in" ID="{6ED84AA6-F87C-4512-95E1-5A5AE9E3EFC1}">
-														<PropertyList>
-															<Property Name="FadeOffset" Type="Real64" Value="-2"/>
-															<Property Name="FadeTime" Type="Real64" Value="4"/>
-														</PropertyList>
-													</MusicFade>
-												</DestinationFadeIn>
-											</TransitionInfo>
 										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
@@ -197,7 +395,9 @@
 					<ChildrenList>
 						<MusicPlaylistContainer Name="Menu" ID="{5244AFEA-FCBE-4791-ACC7-BF271EFB3383}" ShortID="154352173">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="98"/>
 							</PropertyList>
 							<ReferenceList>
@@ -431,7 +631,9 @@
 							<ChildrenList>
 								<MusicPlaylistContainer Name="Gameplay_Calm" ID="{2D9CF387-195F-4B99-B746-9DB59F15839F}" ShortID="411676112">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
 									</PropertyList>
 									<ReferenceList>
@@ -569,8 +771,15 @@
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Gameplay_Stage2" ID="{F1F0E919-630F-4822-908C-89CF8F14797F}" ShortID="106366104">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -767,8 +976,15 @@
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Gameplay_Stage1" ID="{2B646DB8-2719-4898-ABBC-94506166331C}" ShortID="771120380">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -979,8 +1195,15 @@
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Gameplay_Stage3" ID="{51576FF9-2310-4129-B211-0D23C705D363}" ShortID="539835854">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1177,9 +1400,16 @@
 								</MusicPlaylistContainer>
 								<MusicSegment Name="Music_TransitionTo_Stage1" ID="{1C18238A-5018-4E4E-AB66-3BEE3F432159}" ShortID="787385280">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="EndPosition" Type="Real64" Value="13089.8598484849"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="110"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1272,6 +1502,10 @@
 									</ObjectLists>
 								</MusicSegment>
 								<MusicPlaylistContainer Name="Gameplay_Start" ID="{0E2CAAB9-EA8C-48ED-82A0-9769BFEA6391}" ShortID="311109838">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>

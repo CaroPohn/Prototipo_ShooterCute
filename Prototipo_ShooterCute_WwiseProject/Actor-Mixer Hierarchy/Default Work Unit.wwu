@@ -538,7 +538,9 @@
 						</SwitchContainer>
 						<Sound Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" ShortID="5687844">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1093,6 +1095,9 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{7C8F63F6-10D4-4E83-AC18-55CD8732C19C}"/>
+							</PositioningInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="Egg_Levitate_Loop" ID="{756850FB-0A06-4171-A2B6-000358CB2C92}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -1239,7 +1244,9 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" ShortID="479976871">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1302,6 +1309,13 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Start" ID="{599E4176-D284-4187-A09A-D66BE77DB7D6}" ShortID="753287490">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1383,7 +1397,9 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" ShortID="413468859">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1467,6 +1483,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Lumming_Idle_ElectricInteraction" ID="{3816542A-7F73-4E67-85FD-8783EB09E7AF}" ShortID="806687644">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
 										<Property Name="Inclusion" Type="bool">
 											<ValueList>
 												<Value>False</Value>
@@ -1479,6 +1496,7 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1566,6 +1584,7 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Lumming_Idle_FireInteraction" ID="{1F526F3A-E9D7-4225-949A-75F5B126BE75}" ShortID="802932520">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
 										<Property Name="Inclusion" Type="bool">
 											<ValueList>
 												<Value>False</Value>
@@ -1578,6 +1597,7 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1662,6 +1682,18 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Fire_Start" ID="{4D17A73D-E779-4E43-90E7-CE034BFD6C36}" ShortID="20281787">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1743,7 +1775,14 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Fire_Impact" ID="{B17F4B70-317A-4341-8886-3EE51403F5DC}" ShortID="708983902">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1828,7 +1867,9 @@
 								<RandomSequenceContainer Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" ShortID="753814262">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1933,7 +1974,7 @@
 								<Sound Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" ShortID="1026447161">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
-										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="Color" Type="int16" Value="19"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -2049,6 +2090,7 @@
 						</Sound>
 						<Sound Name="UI_Slider" ID="{19BC614C-141C-409B-9216-78A872A7E9F0}" ShortID="256054162">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -2056,6 +2098,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -2134,6 +2177,11 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2172,6 +2220,11 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2238,6 +2291,11 @@
 						<Sound Name="Ambient_Collapse" ID="{E0746827-F003-430A-986D-DD477216DBCD}" ShortID="590881798">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -3258,6 +3316,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3365,6 +3424,7 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3450,6 +3510,7 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">

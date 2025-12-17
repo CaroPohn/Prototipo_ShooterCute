@@ -93,7 +93,7 @@ public class GamePause : MonoBehaviour
         projectileDamageEffect.SetFloat("_Intensity", 0);
         healthEffect.SetFloat("_Intensity", 0);
 
-        AkUnitySoundEngine.PostEvent("TransitionTo_Menu", gameObject);
+        AkUnitySoundEngine.PostEvent("TransitionTo_Level", gameObject);
 
         SceneLoader.Instance.ChangeScene("LavaWorld-Map");
     }

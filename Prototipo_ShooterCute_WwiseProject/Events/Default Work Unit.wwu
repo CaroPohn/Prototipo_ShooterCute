@@ -6,6 +6,10 @@
 				<Folder Name="Music" ID="{9FBEA2F6-4B97-4241-862A-A335E3F3AAF7}" ShortID="843001279">
 					<ChildrenList>
 						<Event Name="Music_Initialize" ID="{1FE70671-A783-4C24-83DF-6544D0A4B9F8}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{486A3686-DFBD-4A83-957C-F12759E00602}" ShortID="296544260">
 									<ReferenceList>
@@ -17,6 +21,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Music_Stop" ID="{06E400DB-C479-484A-9F72-DA401BB1EA88}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{1D00ABC2-0D4E-4A41-B79F-91C40340EBDE}" ShortID="769220679">
 									<PropertyList>
@@ -90,7 +98,7 @@
 					<ChildrenList>
 						<Event Name="Player_Footstep" ID="{0EB49463-85D3-4425-A97B-6BC92274A370}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -105,7 +113,7 @@
 						</Event>
 						<Event Name="Player_Shoot" ID="{069EFDFC-4941-421D-9D97-7FA5411138FD}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -129,6 +137,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Player_ShootCharge_Electric" ID="{84768FD9-4248-43E5-9833-69D4D2280890}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{A522198D-BF8B-4E08-A130-D8F6FA75B8E0}" ShortID="867658336">
 									<ReferenceList>
@@ -141,7 +153,7 @@
 						</Event>
 						<Event Name="Player_Burn" ID="{3EE8A37B-1A94-4DD7-83A8-7C741D8C556C}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -156,7 +168,7 @@
 						</Event>
 						<Event Name="Player_TakeDamage_Generic" ID="{81046388-C246-4D12-8170-0F305F4CD7C0}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -171,7 +183,7 @@
 						</Event>
 						<Event Name="Player_Jump" ID="{DACBE424-C116-42DD-8719-8E2F19AEA4DA}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -191,6 +203,10 @@
 						<Folder Name="Electric" ID="{AD15BDC4-2054-404B-B800-A88ECEFF9BEE}" ShortID="363191094">
 							<ChildrenList>
 								<Event Name="Lumming_Ability_Electric_Start" ID="{8D90FE84-A906-4DC2-919F-FAA13FE46797}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{3D2549A1-8A3E-40C3-8726-38AD16CC7D4F}" ShortID="467633775">
 											<ReferenceList>
@@ -202,6 +218,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Ability_Electric_Impact" ID="{7FA934BB-7197-48FF-ACBF-468F9AC31460}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{23A77618-1C04-45AA-AE40-D98B02F7935A}" ShortID="549079182">
 											<ReferenceList>
@@ -223,6 +243,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Ability_Electric_Shoot" ID="{763AEA02-9F99-4EB2-A671-C62F50EEE7EC}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{3FBD9AD4-350E-43A7-9498-355BBC359F0C}" ShortID="3943238">
 											<ReferenceList>
@@ -244,6 +268,10 @@
 						<Folder Name="Fire" ID="{8074F9EC-EF24-40F4-9296-042A067A32E8}" ShortID="327408924">
 							<ChildrenList>
 								<Event Name="Lumming_Ability_Fire_Start" ID="{7EFF0B72-D253-4833-8E94-D1AF3C3E7650}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{EB13CA4C-85FA-4FEB-BC6D-0BAB35BD6A23}" ShortID="774496280">
 											<ReferenceList>
@@ -255,6 +283,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Ability_Fire_Impact" ID="{4B39072A-FBA8-497A-9ABD-F3879B0D59A4}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{05BFF8DD-262F-41E3-93DA-F0A0CB82BFB3}" ShortID="733893142">
 											<ReferenceList>
@@ -276,6 +308,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Ability_Fire_Shoot" ID="{5BB897F5-AA9E-49BC-9C9F-20C5AF53CDD1}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{ACE146F1-985C-4A11-9770-F7A6ACA1D949}" ShortID="1035600194">
 											<ReferenceList>
@@ -298,7 +334,7 @@
 							<ChildrenList>
 								<Event Name="Lumming_Heal" ID="{08E1FB78-8A3A-4ECA-8DE1-4B04DFD61079}">
 									<PropertyList>
-										<Property Name="Color" Type="int16" Value="15"/>
+										<Property Name="Color" Type="int16" Value="17"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
@@ -323,6 +359,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Levitate" ID="{8D18B643-3ADE-4C77-A1B0-21F56F2A1084}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{2DF81512-CFE5-4953-80F8-144BF031B5A1}" ShortID="526487111">
 											<ReferenceList>
@@ -334,6 +374,10 @@
 									</ChildrenList>
 								</Event>
 								<Event Name="Lumming_Levitate_Stop" ID="{9B62BC41-1369-4D66-832A-13EAF84DBB77}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Action Name="" ID="{CD83514C-1E28-498E-A2C7-2604C0495560}" ShortID="923307213">
 											<PropertyList>
@@ -355,7 +399,7 @@
 					<ChildrenList>
 						<Event Name="Egg_Levitate" ID="{86CEEACD-B2E3-4BB2-AC46-554026C847F3}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -370,7 +414,7 @@
 						</Event>
 						<Event Name="Egg_ShieldActivate" ID="{A1E25DE1-4A57-4614-A4B4-D42E0D45E917}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -385,7 +429,7 @@
 						</Event>
 						<Event Name="Egg_ShieldDestroy" ID="{87296857-A859-4A3B-87B2-F20E2D2D9FC4}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -400,7 +444,7 @@
 						</Event>
 						<Event Name="Egg_Soul_Impact" ID="{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -426,7 +470,7 @@
 						</Event>
 						<Event Name="Egg_PickUp" ID="{597FB879-0D5F-49DA-9FF4-C30590A92459}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -460,7 +504,7 @@
 					<ChildrenList>
 						<Event Name="Enemy_Spawn_Adult" ID="{665F0CDD-4CAC-4DC0-B598-564F7CAA8DA4}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -474,6 +518,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Enemy_Spawn_Baby" ID="{048F18E3-B54F-4609-A8CF-890F9C4A0944}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{E2EE69F9-C0DC-4A65-83CB-3D29133FF780}" ShortID="101969203">
 									<ReferenceList>
@@ -486,7 +534,7 @@
 						</Event>
 						<Event Name="Enemy_Footstep_Adult" ID="{A5136EAD-FC20-4FA6-AC50-5088E52F1F63}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -500,6 +548,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Enemy_Footstep_Baby" ID="{554435D1-9929-4D7F-BD93-B2EF661ECC84}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5D6136EF-23DD-46DB-A4CF-212C52D84679}" ShortID="386530749">
 									<ReferenceList>
@@ -512,7 +564,7 @@
 						</Event>
 						<Event Name="Enemy_Shoot_Basic" ID="{D5B4029C-F6DF-411E-886D-CA10E5DAE467}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -527,7 +579,7 @@
 						</Event>
 						<Event Name="Enemy_TakeDamage" ID="{30A93EC0-31F0-4DDE-BFCE-510D1297C630}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -542,7 +594,7 @@
 						</Event>
 						<Event Name="Enemy_Death" ID="{C87E5E1B-B10A-496F-B556-26AEDA087099}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -556,6 +608,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Enemy_Attack_Baby" ID="{3ABFDF21-8D58-49C7-90D2-433180571C3D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{8C9AE150-CA4E-4139-A812-8EF75A8AFCB2}" ShortID="847692563">
 									<ReferenceList>
@@ -572,7 +628,7 @@
 					<ChildrenList>
 						<Event Name="Ambient_Lava" ID="{08ED279A-8209-4CE9-8C53-94ACA939ABAB}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -587,7 +643,7 @@
 						</Event>
 						<Event Name="Ambient_Wind" ID="{D3C01CD1-68A5-4FBD-9B83-4CD651E5813B}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -602,7 +658,7 @@
 						</Event>
 						<Event Name="Ambient_DistantImpacts" ID="{A37B3518-9697-4999-82F7-DDA810DD0450}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -632,7 +688,7 @@
 						</Event>
 						<Event Name="Ambient_Lava_Stop" ID="{4E8C2E56-188B-4790-B910-F17C97FCD248}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -653,6 +709,10 @@
 				<Folder Name="UI" ID="{74829F72-5249-4F2C-AE95-9A3510A0841E}" ShortID="952974412">
 					<ChildrenList>
 						<Event Name="UI_Button_Normal" ID="{8A68EB02-E0A1-4E78-9137-4EDEDD136A5B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{91589A05-AB47-42DD-AB1D-5699CA78349E}" ShortID="257533790">
 									<ReferenceList>
@@ -664,6 +724,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="UI_Button_Special" ID="{EB428E82-5A3C-473D-96E5-76937AC605AF}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5BACE6FF-DC83-48F0-BDAB-B3B8A5FFB586}" ShortID="410270203">
 									<ReferenceList>
@@ -675,6 +739,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="UI_Slider" ID="{3558FD6F-8026-493C-A46C-2D21325EDD2D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{B7DA0DA1-4649-45A4-B663-6ADBB1CAFA48}" ShortID="780985807">
 									<ReferenceList>
@@ -686,6 +754,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="UI_SkillReady" ID="{8DE71464-444E-4B48-8176-158129DF6CBE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{37E2A6C4-7394-40E1-BFF2-449EB1D9218A}" ShortID="923255205">
 									<ReferenceList>
@@ -702,7 +774,7 @@
 					<ChildrenList>
 						<Event Name="Projectile_Hit_BasicProjectile" ID="{2E6AF9C5-F5B0-4029-B478-B994F1EEE7ED}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -716,6 +788,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Projectile_Hit_ElectricProjectile" ID="{C34832DC-DBE8-4818-A6D7-4F3C632A2794}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{CA84E547-67B8-48A2-932F-C5A02355FBEC}" ShortID="356785342">
 									<ReferenceList>
@@ -728,7 +804,7 @@
 						</Event>
 						<Event Name="Projectile_Soul_Deploy" ID="{2DFB4019-B1DD-4058-8FB9-C394A09F9883}">
 							<PropertyList>
-								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -746,11 +822,16 @@
 				<Folder Name="Transitions" ID="{2FAFC534-0203-42AB-9D4A-EC87847AC018}" ShortID="1027692020">
 					<ChildrenList>
 						<Event Name="TransitionTo_Menu" ID="{35B371BC-25D6-45FC-ABAC-5DAE1E45305A}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{128FFFED-2BFA-406B-9FA2-09601DE1F4BD}" ShortID="222040091">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -761,7 +842,8 @@
 								<Action Name="" ID="{CA50B1B6-4FC0-44BF-AC3A-C5F424B6FB16}" ShortID="269935761">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -772,7 +854,8 @@
 								<Action Name="" ID="{25627F06-A305-4F61-A094-FF2ECE4A51AD}" ShortID="346300779">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -783,7 +866,8 @@
 								<Action Name="" ID="{1D75934A-EFBF-4C05-A9BC-B4642023F92E}" ShortID="733878393">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -794,7 +878,8 @@
 								<Action Name="" ID="{F5AC1AA7-56C8-4B89-B359-0A6259C92710}" ShortID="534905764">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -805,7 +890,8 @@
 								<Action Name="" ID="{754E8BA0-6EBD-454F-BABB-A258C5B036A4}" ShortID="54336017">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -816,7 +902,8 @@
 								<Action Name="" ID="{A4E56576-B1CB-41C2-A082-F3BE065EF219}" ShortID="390850415">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -827,7 +914,8 @@
 								<Action Name="" ID="{063D2988-845E-4CA8-ACC9-F9BB2A4C281F}" ShortID="258490933">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -838,7 +926,8 @@
 								<Action Name="" ID="{11731DDE-C286-4DAA-8ADC-4E7E9DF38331}" ShortID="768603133">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -846,9 +935,328 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{4404D4D0-9F5C-43E8-AE4F-43E3BE81DC64}" ShortID="309987107">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SkillReady" ID="{1A686B81-EF1B-4D6D-9975-32C2BE5E4453}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3F0D9A5B-EF3D-4C0C-B743-04FD5F0FE75D}" ShortID="173589571">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{5C8455D0-616B-45E0-9808-F9791351E993}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="TransitionTo_Level" ID="{1F3813F0-7A8D-420B-834F-CE940BC89FDE}"/>
+						<Event Name="TransitionTo_Level" ID="{1F3813F0-7A8D-420B-834F-CE940BC89FDE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{DA046E9E-F79E-4720-844B-F2EB198B1F3F}" ShortID="1070220721">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient_DistantImpacts" ID="{FA1BA383-6949-4E73-A8A1-078125B242F8}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AA9D721B-AEA0-4ED2-A984-BC2DFE5A48FF}" ShortID="338806727">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient_Lava" ID="{30B3363E-B2D3-4C08-A7AA-F32FB1E55036}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{52814766-AFAB-4EC9-B1AB-C836973AF8F4}" ShortID="697131189">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Burn" ID="{A395AB6D-B570-4E65-91E5-F46A58C67AAB}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{938FA9F7-1ABF-44E2-895D-C17A34799524}" ShortID="16136745">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient_Wind" ID="{75CE978D-40FA-4FF3-B1E0-072AC11D25FF}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3D529239-D8A9-4CDA-A52C-EDE77558CE85}" ShortID="335806980">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Levitate" ID="{4614F840-2CB9-4846-AC7C-94DAC68EAB33}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3313F75A-903D-4FBA-B9F5-372A3AD500BA}" ShortID="379748404">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B52A0A77-EE85-4CF4-A803-7CCB0A442286}" ShortID="906618306">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9B2C5046-1885-43A0-9D50-B764E12DF58E}" ShortID="155552074">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Egg_Levitate" ID="{6D01CEF8-2AAA-4865-99A1-B12F8647EE5E}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0D2F4466-4F97-420D-88A6-523094117A27}" ShortID="128658719">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C99541C6-35FC-40D5-9D2C-E792C187B47A}" ShortID="501057988">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SkillReady" ID="{1A686B81-EF1B-4D6D-9975-32C2BE5E4453}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{86F4D017-C49E-4030-A4D7-DD485F36BA77}" ShortID="297497079">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stage_Start" ID="{1D825628-5986-4E03-8FB5-0204128B1008}" WorkUnitID="{5E1CFD9D-6454-49E8-A283-806F46A94016}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pause_SFX" ID="{618D8DEC-5DE3-4DC9-8025-D18E8EFD3671}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{B749A653-3942-485A-B484-D99000C54706}" ShortID="871898592">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SkillReady" ID="{1A686B81-EF1B-4D6D-9975-32C2BE5E4453}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BB02C522-6047-40D7-A425-FF61880A2473}" ShortID="284411904">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D135C82B-F750-43EE-8450-7768B00F381B}" ShortID="299353501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DC9B5F0C-0FD6-4FC4-B194-79EC05A325F7}" ShortID="164657978">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B45BEFDC-77F5-412E-9ACE-1838F1384216}" ShortID="272007543">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{36C5F25D-AEEE-41F9-B76E-202718EF7B4B}" ShortID="324317463">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Fire_Impact" ID="{B17F4B70-317A-4341-8886-3EE51403F5DC}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Resume_SFX" ID="{2F3E440A-40D5-420C-A93E-D7DB68E03C2C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{25811817-488B-4698-B1C7-A80779C91B39}" ShortID="324878084">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SkillReady" ID="{1A686B81-EF1B-4D6D-9975-32C2BE5E4453}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FA5FB982-F277-4523-960E-F9D8B62D4A6B}" ShortID="189982654">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Shoot" ID="{C534681C-75CF-457F-8039-D96435E19B11}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{652E95D3-1E5A-4A9E-A66E-C358E2D21EBD}" ShortID="999375698">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_ShootCharge_Electric" ID="{B2EF809C-471D-4C37-970C-384A6383603D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{39585668-1D21-4E2B-9084-3B97274F9918}" ShortID="973538344">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Fire_Shoot" ID="{81DF35C2-8A3D-4A40-A6D4-759E588ECF1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{179CCDE2-3F41-410C-A359-A6DA7D00B51F}" ShortID="651643658">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Electric_Impact" ID="{7AE63E61-16EF-4C1B-9AD1-88B34FDD1C1D}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B67FE246-74B8-4359-8053-64937853157D}" ShortID="401697112">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumming_Ability_Fire_Impact" ID="{B17F4B70-317A-4341-8886-3EE51403F5DC}" WorkUnitID="{3A84B1CB-23E8-42B8-82AA-609AB9EF9350}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

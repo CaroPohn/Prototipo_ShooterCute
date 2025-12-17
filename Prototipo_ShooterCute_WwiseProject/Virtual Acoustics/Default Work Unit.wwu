@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F0D2BB1C-B7F2-4C61-BC24-A35340367BF3}" SchemaVersion="123">
 	<VirtualAcoustics>
-		<WorkUnit Name="Default Work Unit" ID="{F0D2BB1C-B7F2-4C61-BC24-A35340367BF3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F0D2BB1C-B7F2-4C61-BC24-A35340367BF3}" PersistMode="Standalone">
+			<ChildrenList>
+				<AcousticTexture Name="Rock" ID="{7954E3D9-AF8B-49E2-AF7D-0D2EE1A98170}">
+					<PropertyList>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionLow" Type="Real32" Value="5"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="35"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="15"/>
+					</PropertyList>
+				</AcousticTexture>
+			</ChildrenList>
+		</WorkUnit>
 	</VirtualAcoustics>
 </WwiseDocument>

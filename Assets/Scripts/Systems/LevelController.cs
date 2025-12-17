@@ -152,6 +152,9 @@ public class LevelController : MonoBehaviour
             OnGamePaused?.Invoke();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            
+            AkUnitySoundEngine.SetState("Gameplay_Pause", "Paused");
+            AkUnitySoundEngine.PostEvent("Pause_SFX", gameObject);
         }
         else
         {
@@ -159,6 +162,8 @@ public class LevelController : MonoBehaviour
             OnGameUnpaused?.Invoke();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            AkUnitySoundEngine.SetState("Gameplay_Pause", "Unpaused");
+            AkUnitySoundEngine.PostEvent("Resume_SFX", gameObject);
         }
     }
 }

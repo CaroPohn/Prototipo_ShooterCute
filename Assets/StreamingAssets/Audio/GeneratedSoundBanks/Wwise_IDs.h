@@ -46,6 +46,7 @@ namespace AK
         static const AkUniqueID LUMMING_LEVITATE_STOP = 1325059842U;
         static const AkUniqueID MUSIC_INITIALIZE = 2612520127U;
         static const AkUniqueID MUSIC_STOP = 3227181061U;
+        static const AkUniqueID PAUSE_SFX = 3430733157U;
         static const AkUniqueID PLAYER_BURN = 3890490206U;
         static const AkUniqueID PLAYER_FOOTSTEP = 2453392179U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
@@ -55,6 +56,7 @@ namespace AK
         static const AkUniqueID PROJECTILE_HIT_BASICPROJECTILE = 950925848U;
         static const AkUniqueID PROJECTILE_HIT_ELECTRICPROJECTILE = 3600532549U;
         static const AkUniqueID PROJECTILE_SOUL_DEPLOY = 2994932292U;
+        static const AkUniqueID RESUME_SFX = 4118937608U;
         static const AkUniqueID TRANSITIONTO_LEVEL = 248906496U;
         static const AkUniqueID TRANSITIONTO_MENU = 3095158519U;
         static const AkUniqueID UI_BUTTON_NORMAL = 3345914708U;

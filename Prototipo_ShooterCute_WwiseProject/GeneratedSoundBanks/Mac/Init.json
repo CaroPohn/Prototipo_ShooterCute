@@ -10,19 +10,19 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{74BF3988-400F-10D3-2744-11EDCA593F0A}",
+    "Hash": "{BA30367C-C7C8-CDBD-6227-69C24B4892B0}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
       {
-       "Id": "3369903790",
-       "Name": "Pause_EQ",
-       "ObjectPath": "\\Effects\\Default Work Unit\\Pause_EQ",
-       "GUID": "{9EED38C0-D46B-4CB9-B545-F2A4EF9D32C8}",
-       "LibName": "Wwise Parametric EQ",
-       "LibId": "6881283"
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
       }
      ],
      "AudioDevices": [
@@ -49,13 +49,15 @@
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX",
-      "GUID": "{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}"
+      "GUID": "{FF2E341C-4FF8-48A1-9437-CA0059BCBB6E}",
+      "Color": "23"
      },
      {
       "Id": "1551306167",
       "Name": "UI",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UI",
-      "GUID": "{56C5D930-922C-4417-B4E1-49046EEA62A8}"
+      "GUID": "{56C5D930-922C-4417-B4E1-49046EEA62A8}",
+      "Color": "23"
      },
      {
       "Id": "3803692087",
@@ -65,7 +67,7 @@
       "PluginRefs": {
        "ShareSets": [
         {
-         "Id": "3369903790"
+         "Id": "1459522457"
         }
        ]
       }
@@ -74,7 +76,8 @@
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
-      "GUID": "{A12B1824-0CEF-4447-A7F1-8BB227CB049E}"
+      "GUID": "{A12B1824-0CEF-4447-A7F1-8BB227CB049E}",
+      "Color": "13"
      }
     ],
     "GameParameters": [
@@ -278,9 +281,44 @@
        }
       ]
      }
+    ],
+    "AcousticTextures": [
+     {
+      "Id": "2144363834",
+      "Name": "Rock",
+      "ObjectPath": "\\Virtual Acoustics\\Default Work Unit\\Rock",
+      "GUID": "{7954E3D9-AF8B-49E2-AF7D-0D2EE1A98170}",
+      "Properties": [
+       {
+        "Name": "AbsorptionLow",
+        "Type": "Real32",
+        "Value": "5"
+       },
+       {
+        "Name": "AbsorptionMidLow",
+        "Type": "Real32",
+        "Value": "15"
+       },
+       {
+        "Name": "AbsorptionMidHigh",
+        "Type": "Real32",
+        "Value": "35"
+       },
+       {
+        "Name": "AbsorptionHigh",
+        "Type": "Real32",
+        "Value": "60"
+       },
+       {
+        "Name": "Scattering",
+        "Type": "Real32",
+        "Value": "0"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{0D04669F-077A-E7E9-EC65-A90810045554}"
+  "FileHash": "{E6AB56EA-6524-4E1C-FC03-E265E646EA17}"
  }
 }
