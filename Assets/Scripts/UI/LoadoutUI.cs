@@ -12,14 +12,18 @@ public class LoadoutUI : MonoBehaviour
     [SerializeField] LummingOnTable lummingOnTable;
     public Lumming savedWeaponLumming = Lumming.None;
     public Lumming savedAbilityLumming = Lumming.None;
+    private string wiseEventName = "UI_Button_Normal";
 
     public void WeaponButtonPressed()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+       
         if(currentSelectedSlot == weaponSlot)
         {
             optionsPanel.HideOptions();
             weaponSlot.StopActiveAnimation();
             currentSelectedSlot = null;
+            AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
         }
         else
         {
@@ -27,11 +31,14 @@ public class LoadoutUI : MonoBehaviour
             abilitySlot.StopActiveAnimation();
             currentSelectedSlot = weaponSlot;
             optionsPanel.ShowOptions();
+            AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
         }
     }
 
     public void AbilityButtonPressed()
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        
         if (currentSelectedSlot == abilitySlot)
         {
             optionsPanel.HideOptions();
@@ -49,6 +56,8 @@ public class LoadoutUI : MonoBehaviour
 
     public void SlotPressed(int lumming)
     {
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        
         currentSelectedSlot.ReplaceLumming((Lumming)lumming);
         if(currentSelectedSlot == weaponSlot)
         {
@@ -80,5 +89,6 @@ public class LoadoutUI : MonoBehaviour
         summaryUI.UpdateLoadout(savedWeaponLumming, savedAbilityLumming);
         saveChangesButton.PlayAnimationDisabled();
         FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
     }
 }

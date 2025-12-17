@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{800F2F87-9F3D-F817-E724-401CB51B0AAE}",
+    "Hash": "{D0AAC549-CC89-D976-7411-B0C6AD7A1954}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Egg_Soul_Impact.wav",
-      "CachePath": "0B/{0BAAA337-7C3F-6B37-6BA9-760AD9AF8542}.wem"
+      "CachePath": "2F/{2F2472E1-3772-FA96-7B52-DAC2681E6356}.wem"
      },
      {
       "Id": "98675770",
@@ -1017,10 +1017,10 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Egg\\Egg_Soul_Impact",
       "GUID": "{5E3C29B0-B827-427D-B7AF-72F7CF2AE84A}",
       "Color": "17",
-      "MaxAttenuation": "40",
+      "MaxAttenuation": "60",
       "DurationType": "OneShot",
-      "DurationMin": "7.09",
-      "DurationMax": "7.09",
+      "DurationMin": "0.4465972",
+      "DurationMax": "0.4465972",
       "MediaRefs": [
        {
         "Id": "96935299"
@@ -1516,6 +1516,32 @@
           "Id": "98675770"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "1545043933",
+         "GUID": "{F2D87AE5-55E1-4B5F-A440-6D64B18F0557}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "369631873"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3826569560",
+         "Id": "1019463238",
+         "GUID": "{47525A07-AD97-4532-9BC9-941A78BCFEE3}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "369631873"
+         }
+        ]
        }
       ]
      },
@@ -1535,6 +1561,7 @@
       "Name": "Pause_SFX",
       "ObjectPath": "\\Events\\Default Work Unit\\Transitions\\Pause_SFX",
       "GUID": "{618D8DEC-5DE3-4DC9-8025-D18E8EFD3671}",
+      "Color": "17",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1820,6 +1847,7 @@
       "Name": "Resume_SFX",
       "ObjectPath": "\\Events\\Default Work Unit\\Transitions\\Resume_SFX",
       "GUID": "{2F3E440A-40D5-420C-A93E-D7DB68E03C2C}",
+      "Color": "17",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -1830,19 +1858,11 @@
       "Name": "TransitionTo_Level",
       "ObjectPath": "\\Events\\Default Work Unit\\Transitions\\TransitionTo_Level",
       "GUID": "{1F3813F0-7A8D-420B-834F-CE940BC89FDE}",
+      "Color": "17",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0",
-      "ActionSetState": [
-       {
-        "GroupId": "3826569560",
-        "Id": "779076336",
-        "Name": "Stage_Start",
-        "ObjectPath": "\\States\\Default Work Unit\\Music_State\\Stage_Start",
-        "GUID": "{1D825628-5986-4E03-8FB5-0204128B1008}"
-       }
-      ]
+      "DurationMax": "0"
      },
      {
       "Id": "3095158519",
@@ -2085,6 +2105,6 @@
     ]
    }
   ],
-  "FileHash": "{BF23FEB9-6FD6-F2AC-D4A4-FAABE3DA3E3A}"
+  "FileHash": "{7515ABF9-4933-F05A-537A-8B0B615FDD40}"
  }
 }

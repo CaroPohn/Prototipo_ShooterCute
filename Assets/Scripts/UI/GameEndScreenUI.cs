@@ -12,15 +12,11 @@ public class GameEndScreenUI : MonoBehaviour
         containerGO.SetActive(true);
         anim.SetTrigger("Failed");
         missionFailedContainer.SetActive(true);
-
-        AkUnitySoundEngine.PostEvent("TransitionTo_Menu", gameObject);
     }
     public void PlayMissionAccomplishedAnimation()
     {
         containerGO.SetActive(true);
         anim.SetTrigger("Accomplished");
         missionAccomplishedContainer.SetActive(true);
-
-        AkUnitySoundEngine.PostEvent("TransitionTo_Menu", gameObject);
     }
 }

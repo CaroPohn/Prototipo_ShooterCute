@@ -11,6 +11,8 @@ public class WorldSelectUI : MonoBehaviour
     [SerializeField] RotatingPlanets rotatingPlanets;
     [SerializeField] CurrentPlanetInformation currentPlanetInformation;
 
+    private string wiseEventName = "UI_Button_Normal";
+
     bool planetSelected = false;
 
 
@@ -45,6 +47,8 @@ public class WorldSelectUI : MonoBehaviour
         {
             planetSelected = true;
             summaryUI.UpdatePlanet(currentWorld);
+
+            AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
         }
         else
         {

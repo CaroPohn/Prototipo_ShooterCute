@@ -1133,36 +1133,31 @@
 						</Sound>
 						<Sound Name="Egg_Soul_Impact" ID="{2D361936-4355-4EEE-B871-BAE9037953DD}" ShortID="509061660">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Color" Type="int16" Value="17"/>
 								<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-								<Property Name="InitialDelay" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
-								</Property>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>25</Value>
-									</ValueList>
-								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Attenuation_World" ID="{5251E2EE-6D0C-4711-AE22-79E081F1D91B}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
+									<ObjectRef Name="Attenuation_Egg_Soul_Impact" ID="{E69A2263-0745-4ED7-9731-515425E96C6D}" WorkUnitID="{A88CD6C8-08AA-480B-8904-877F3178BA75}"/>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
@@ -1173,6 +1168,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Egg_Soul_Impact" ID="{CF6A3E24-F7DA-43D1-85D5-D165C28DCDDA}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.406857651347915"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.446597202519576"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Egg_Soul_Impact.wav</AudioFile>
 									<MediaIDList>
@@ -1313,7 +1313,7 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
