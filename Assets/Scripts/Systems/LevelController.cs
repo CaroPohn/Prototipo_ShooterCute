@@ -35,6 +35,8 @@ public class LevelController : MonoBehaviour
 
     [SerializeField] private GameObject winCollider;
 
+    private bool isLevelLost = false;
+
     private void OnEnable()
     {
         Time.timeScale = 1.0f;
@@ -80,7 +82,7 @@ public class LevelController : MonoBehaviour
 
     private void Update()
     {
-        if (playerHealthSystem.health <= 0)
+        if (playerHealthSystem.health <= 0 && !isLevelLost)
         {
             LoseLevel();
         }
@@ -119,12 +121,13 @@ public class LevelController : MonoBehaviour
 
     private void LoseLevel()
     {
+        isLevelLost = true;
+
         Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         OnDefeat?.Invoke();
-
         gameEndScreenUI.PlayMissionFailedAnimation();
     }
 

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{8B372C42-ECB1-4691-81BD-DB0C5B83147C}",
     "Language": "SFX",
-    "Hash": "{6CF27EE8-EB0E-316C-5065-866E3F027C99}",
+    "Hash": "{47405A5C-119C-E236-0416-6E5517535C63}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lummins_SoundBank",
     "ShortName": "Lummins_SoundBank",
     "Path": "Lummins_SoundBank.bnk",
@@ -816,6 +816,14 @@
       "Location": "Memory",
       "ShortName": "Player_Jump_1.wav",
       "CachePath": "90/{90DEE9F1-8254-B8B6-1EE7-87D472C3C42B}.wem"
+     },
+     {
+      "Id": "990762395",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ship_DoorClose.wav",
+      "CachePath": "3A/{3AB9D5AA-A9B5-2845-A749-42B4853BE49C}.wem"
      },
      {
       "Id": "999034300",
@@ -1873,6 +1881,25 @@
       "DurationMax": "0"
      },
      {
+      "Id": "1371212321",
+      "Name": "TransitionTo_EndScreen",
+      "ObjectPath": "\\Events\\Default Work Unit\\Transitions\\TransitionTo_EndScreen",
+      "GUID": "{E65FB1F4-25AC-4537-BEDE-3BF7491B7F8F}",
+      "Color": "17",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionPostEvent": [
+       {
+        "Id": "1708136960",
+        "Name": "UI_ShipDoorClose",
+        "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_ShipDoorClose",
+        "GUID": "{D7C79D47-4F43-43BA-B815-20F6B6938DC1}",
+        "Color": "17"
+       }
+      ]
+     },
+     {
       "Id": "248906496",
       "Name": "TransitionTo_Level",
       "ObjectPath": "\\Events\\Default Work Unit\\Transitions\\TransitionTo_Level",
@@ -1881,7 +1908,16 @@
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "1652209498",
+        "Id": "1365518790",
+        "Name": "Unpaused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Unpaused",
+        "GUID": "{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"
+       }
+      ]
      },
      {
       "Id": "3095158519",
@@ -1894,6 +1930,13 @@
       "DurationMin": "0",
       "DurationMax": "0",
       "ActionSetState": [
+       {
+        "GroupId": "1652209498",
+        "Id": "1365518790",
+        "Name": "Unpaused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Unpaused",
+        "GUID": "{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"
+       },
        {
         "GroupId": "3826569560",
         "Id": "2607556080",
@@ -1930,6 +1973,21 @@
       "MediaRefs": [
        {
         "Id": "472405016"
+       }
+      ]
+     },
+     {
+      "Id": "1708136960",
+      "Name": "UI_ShipDoorClose",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\UI_ShipDoorClose",
+      "GUID": "{D7C79D47-4F43-43BA-B815-20F6B6938DC1}",
+      "Color": "17",
+      "DurationType": "OneShot",
+      "DurationMin": "5.431365",
+      "DurationMax": "5.431365",
+      "MediaRefs": [
+       {
+        "Id": "990762395"
        }
       ]
      },
@@ -1973,6 +2031,32 @@
      }
     ],
     "StateGroups": [
+     {
+      "Id": "1652209498",
+      "Name": "Gameplay_Pause",
+      "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause",
+      "GUID": "{0221C828-D207-4922-8316-A956ABD3CDF5}",
+      "States": [
+       {
+        "Id": "319258907",
+        "Name": "Paused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Paused",
+        "GUID": "{F6A0128C-B8B2-4F08-98FE-0AB909A0FAFA}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\None",
+        "GUID": "{EB4D05F4-12AD-4410-A739-6E88DE6C33F7}"
+       },
+       {
+        "Id": "1365518790",
+        "Name": "Unpaused",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameplay_Pause\\Unpaused",
+        "GUID": "{5F5C5EFA-0F63-440A-BF4D-39DA7F70AA59}"
+       }
+      ]
+     },
      {
       "Id": "3826569560",
       "Name": "Music_State",
@@ -2124,6 +2208,6 @@
     ]
    }
   ],
-  "FileHash": "{E078765A-F761-F138-4D5F-6F94BD12D4DC}"
+  "FileHash": "{17376BA2-DCB8-3878-F221-4D51DB8B403C}"
  }
 }

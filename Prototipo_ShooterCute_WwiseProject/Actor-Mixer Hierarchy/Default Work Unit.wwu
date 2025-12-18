@@ -2207,6 +2207,37 @@
 								<ActiveSource Name="UI_SkillReady" ID="{83279449-E823-4EDA-B91E-11B53932D804}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="UI_ShipDoorClose" ID="{B99FBEFE-D210-42BE-BB1A-DE3E21315417}" ShortID="106823740">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1.2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{47481D2A-7238-4D47-8F05-D2E1E30F781A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ship_DoorClose" ID="{132221CA-B4CA-4D8D-A0D0-0A532C6CF194}">
+									<Language>SFX</Language>
+									<AudioFile>Ship_DoorClose.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="990762395"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ship_DoorClose" ID="{132221CA-B4CA-4D8D-A0D0-0A532C6CF194}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambient" ID="{5AA18C35-3A0D-49D7-B4B7-EA3E62425E32}" ShortID="352447747">
