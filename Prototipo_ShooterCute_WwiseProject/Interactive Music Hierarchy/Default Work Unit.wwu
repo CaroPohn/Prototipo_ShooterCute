@@ -2064,7 +2064,7 @@
 								<MusicSegment Name="(PLACEHOLDER)Stage_Win" ID="{DFC4F1C0-75FC-4BCB-A139-F24060A82DCA}" ShortID="299834641">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="19"/>
-										<Property Name="EndPosition" Type="Real64" Value="11998.9507575758"/>
+										<Property Name="EndPosition" Type="Real64" Value="12545.4648526077"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -2076,21 +2076,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="PLACEHOLDER_Stage_Win" ID="{57CD540F-EC28-44BB-BB9E-29C42AFDFA06}" ShortID="536913846">
-											<PropertyList>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<MusicTrack Name="Stage_Win_1" ID="{2192A9C7-9EBD-4B3D-B0DB-5D5F27D270A5}" ShortID="132294394">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{F06FF85C-D68B-4AE1-8FD3-8DD398BD8233}">
+														<MusicTransition Name="Root" ID="{04A95CC2-8171-4DEA-8F8D-2569F2944EA2}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -2100,11 +2093,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Music_Transition_ToStage1" ID="{43E00C56-29AF-4B1A-8293-DFB6CBC08C26}">
+												<AudioFileSource Name="Stage_Win_1" ID="{36CC61CB-60AA-453B-BEE9-37B6836AAEB2}">
 													<Language>SFX</Language>
-													<AudioFile>Music_Transition_ToStage1.wav</AudioFile>
+													<AudioFile>Stage_Win_1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="369631873"/>
+														<MediaID ID="124549538"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -2112,79 +2105,70 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{2E9F044F-7A07-46D4-A07C-4A4AFF3495D4}">
+															<MusicTrackSequence Name="" ID="{8AF2F738-9634-4D53-871F-D4F6E6C12A59}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="Music_Transition_ToStage1" ID="{CD447D73-3389-4D03-B656-3FE8FA047A92}">
+																				<MusicClip Name="Stage_Win_1" ID="{6FA6837A-F6C1-4991-93EF-C7651FE5B3DD}">
 																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="500"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="10908.0416666667"/>
-																						<Property Name="FadeInDuration" Type="Real64" Value="261.61562312733"/>
-																						<Property Name="FadeOutDuration" Type="Real64" Value="6446.95642706635"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-500"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="12545.4648526077"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="Music_Transition_ToStage1" ID="{43E00C56-29AF-4B1A-8293-DFB6CBC08C26}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{1846A0DA-E95A-4EB0-8853-7B61F7EAE189}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0.5</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>10.9080416666667</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{7F66BABB-3480-48AF-9697-41557370DC96}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0.5</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>10.9080416666667</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{FC0F378E-BEA8-4793-A195-0A288F778F0E}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0.5</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>10.9080416666667</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
+																					<AudioSourceRef Name="Stage_Win_1" ID="{36CC61CB-60AA-453B-BEE9-37B6836AAEB2}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Stage_Win_2" ID="{BC9CF0A5-F019-4AA4-B398-28D5555BB0AF}" ShortID="630688252">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE32938E-A637-4288-A0E9-22CF941D5F73}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{B8C730AA-11C5-438E-8D8C-BE21D129167A}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stage_Win_2" ID="{15656191-AEDE-4E0A-AB07-8B3035DDA1F7}">
+													<Language>SFX</Language>
+													<AudioFile>Stage_Win_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="224106181"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{75A11F72-B496-4AA6-AF42-1C6397ACB6BD}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Stage_Win_2" ID="{0D6CA85F-045D-4123-9698-DBC952294EBB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="7090.90702947846"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Stage_Win_2" ID="{15656191-AEDE-4E0A-AB07-8B3035DDA1F7}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
