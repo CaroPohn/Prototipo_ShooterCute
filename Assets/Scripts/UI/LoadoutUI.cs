@@ -1,84 +1,144 @@
+using System;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadoutUI : MonoBehaviour
 {
-    [SerializeField] LummingOptionsUI optionsPanel;
-    [SerializeField] LummingSlots weaponSlot;
-    [SerializeField] LummingSlots abilitySlot;
     [SerializeField] SummaryUI summaryUI;
-    LummingSlots currentSelectedSlot = null;
-    [SerializeField] Ready_Button_Spaceship saveChangesButton;
     [SerializeField] LummingOnTable lummingOnTable;
-    public Lumming savedWeaponLumming = Lumming.None;
-    public Lumming savedAbilityLumming = Lumming.None;
 
-    public void WeaponButtonPressed()
+    [SerializeField] LoadoutTabButton weaponTabUI;
+    [SerializeField] LoadoutTabButton abilityTabUI;
+    [SerializeField] LoadoutLumming[] selectableLummingsSlots;
+
+    [SerializeField] LoadoutSummery loadoutSummaryUI;
+
+    [SerializeField] Button confirmButton;
+
+    TabData currentTab;
+    TabData weaponTab;
+    TabData abilityTab;
+    TabData[] tabs;
+
+    public Lumming savedWeaponLumming 
     {
-        if(currentSelectedSlot == weaponSlot)
+        get
         {
-            optionsPanel.HideOptions();
-            weaponSlot.StopActiveAnimation();
-            currentSelectedSlot = null;
+            return weaponTab.savedLumming;
         }
-        else
+    }
+    public Lumming savedAbilityLumming
+    {
+        get
         {
-            weaponSlot.PlayActiveAnimation();
-            abilitySlot.StopActiveAnimation();
-            currentSelectedSlot = weaponSlot;
-            optionsPanel.ShowOptions();
+            return abilityTab.savedLumming;
         }
     }
 
-    public void AbilityButtonPressed()
+    private void Start()
     {
-        if (currentSelectedSlot == abilitySlot)
-        {
-            optionsPanel.HideOptions();
-            abilitySlot.StopActiveAnimation();
-            currentSelectedSlot = null;
-        }
-        else
-        {
-            weaponSlot.StopActiveAnimation();
-            abilitySlot.PlayActiveAnimation();
-            currentSelectedSlot = abilitySlot;
-            optionsPanel.ShowOptions();
-        }     
+        weaponTab = new TabData(weaponTabUI,Lumming.None);
+        abilityTab = new TabData(abilityTabUI,Lumming.None);
+
+        currentTab = weaponTab;
+        tabs = new TabData[2] {weaponTab,abilityTab};
     }
 
-    public void SlotPressed(int lumming)
+    public void TabPressed(LoadoutTabButton tabPressed)
     {
-        currentSelectedSlot.ReplaceLumming((Lumming)lumming);
-        if(currentSelectedSlot == weaponSlot)
+        foreach(TabData tab in tabs)
         {
-            lummingOnTable.UpdateLummingOnTable((Lumming)lumming);
+            if(tabPressed != tab.tabUI)
+            {
+                tab.tabUI.SendToTheBack();
+                tab.tabUI.gameObject.transform.SetAsFirstSibling();
+            }
+            else
+            {
+                tab.tabUI.BringToFront();
+                currentTab = tab;
+                break;
+            }
         }
+        UpdateSelectableLummingSlots();
 
-        if (ButtonShouldActivate())
+    }
+    void UpdateSelectableLummingSlots()
+    {
+      
+        foreach(LoadoutLumming selectableLummingSlot in selectableLummingsSlots)
         {
-            saveChangesButton.PlayAnimationReady();
+            if (currentTab.savedLumming == selectableLummingSlot.lummingInSlot) selectableLummingSlot.MarkAsSelected();
+            else if (LummingIsUsedOnOtherTabs(selectableLummingSlot.lummingInSlot)) selectableLummingSlot.BlockOption();
+            else selectableLummingSlot.UnlockOption();
         }
-        else saveChangesButton.PlayAnimationDisabled();
-        optionsPanel.HideOptions();
-        weaponSlot.StopActiveAnimation();
-        abilitySlot.StopActiveAnimation();
+    }
+    bool LummingIsUsedOnOtherTabs(Lumming lummingToSearch)
+    {
+        bool lummingFound = false;
+        foreach(TabData tab in tabs)
+        {
+            if(tab != currentTab)
+            {
+                lummingFound = (tab.savedLumming == lummingToSearch);
+                if (lummingFound) break;
+            }
+        }
+        return lummingFound;
+        
+    }
+    public void SlotPressed(LoadoutLumming lummingSlot)
+    {
+        Debug.Log("Pressed on lumming slot: " + lummingSlot.lummingInSlot.ToString() + " ID: " + (int)lummingSlot.lummingInSlot);
+        //If already selected, deselect it
+        if (currentTab.savedLumming == lummingSlot.lummingInSlot)
+        {
+            currentTab.savedLumming = Lumming.None;
+            lummingSlot.UnlockOption();
+        }
+        else 
+        {
+            //Deselect previous chosen lumming
+            if (currentTab.savedLumming != Lumming.None)
+            {
+                LoadoutLumming foundLummingSlot = Array.Find(selectableLummingsSlots, p => (p.lummingInSlot == currentTab.savedLumming));
+                if(foundLummingSlot != null) foundLummingSlot.UnlockOption();
+            }
+            lummingSlot.MarkAsSelected();
+            currentTab.savedLumming = lummingSlot.lummingInSlot;
+        }
+        UpdateLoadoutSummery();
+        UpdateConfirmButton();
     }
 
-    bool ButtonShouldActivate()
+    void UpdateLoadoutSummery()
     {
-        if (weaponSlot.GetCurrentLumming() == Lumming.None || abilitySlot.GetCurrentLumming() == Lumming.None) return false;
-        if (weaponSlot.GetCurrentLumming() == abilitySlot.GetCurrentLumming()) return false;
-        if (weaponSlot.GetCurrentLumming() == savedWeaponLumming || abilitySlot.GetCurrentLumming() == savedAbilityLumming) return false;
-        return true;
+        loadoutSummaryUI.UpdateAbilityImage(abilityTab.savedLumming);
+        loadoutSummaryUI.UpdateWeaponImage(weaponTab.savedLumming);
+    }
+    void UpdateConfirmButton()
+    {
+        if (weaponTab.savedLumming != Lumming.None && abilityTab.savedLumming != Lumming.None) confirmButton.interactable = true;
+        else confirmButton.interactable = false;
     }
 
     public void SaveChanges()
     {
-        savedWeaponLumming = weaponSlot.GetCurrentLumming();
-        savedAbilityLumming = abilitySlot.GetCurrentLumming();
-        summaryUI.UpdateLoadout(savedWeaponLumming, savedAbilityLumming);
-        saveChangesButton.PlayAnimationDisabled();
+        summaryUI.UpdateLoadout(weaponTab.savedLumming, abilityTab.savedLumming);
+        //saveChangesButton.PlayAnimationDisabled();
         FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
+    }
+}
+public class TabData
+{
+    public LoadoutTabButton tabUI;
+    public Lumming savedLumming;
+
+    public TabData(LoadoutTabButton tabUIButton, Lumming lummingToSave)
+    {
+        tabUI = tabUIButton;
+        savedLumming = lummingToSave;
     }
 }

@@ -1,39 +1,43 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class TestArt : MonoBehaviour
 {
-    float previousHP = 1;
-    [SerializeField] HealthBarUI healthBarUI;
-    [SerializeField] InteractHUD_UI interactHUD_UI;
-    bool isVisible = false;
+    [SerializeField] EggShield[] roots;
+    [SerializeField] float timeForGrowth;
+    [SerializeField] float timeAfterGrowthToDisappear;
     private void Update()
     {
         
 
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            previousHP -= 0.45f;
-            healthBarUI.UpdateHPBar(previousHP); 
+            StartCoroutine("RootsCoroutine");
         }
-        else if (Input.GetKeyUp(KeyCode.S))
+
+    }
+    IEnumerator RootsCoroutine()
+    {
+        foreach (EggShield root in roots) 
         {
-
-            previousHP += 0.2f;
-            healthBarUI.UpdateHPBar(previousHP);
-
+            root.SetGrowValue(0);
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        foreach (EggShield root in roots)
         {
-            
-            if (isVisible)
+            float timer = 0f;
+            while(timer < timeForGrowth)
             {
-                interactHUD_UI.Hide();
+                root.SetGrowValue(timer / timeForGrowth);
+                timer += Time.deltaTime;
+                yield return null;
             }
-            else interactHUD_UI.Appear();
-            isVisible = !isVisible;
         }
-
+        yield return new WaitForSeconds(timeAfterGrowthToDisappear);
+        foreach (EggShield root in roots)
+        {
+            root.Desintegrate();
+        }
     }
 }

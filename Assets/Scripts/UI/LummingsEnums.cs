@@ -6,4 +6,5 @@ public enum Lumming
     Chispean, // Default value 1
     Bomb, // Default value 2
     Shotgun,
+    Ice,
 }

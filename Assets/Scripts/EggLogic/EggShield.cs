@@ -73,6 +73,10 @@ public class EggShield : MonoBehaviour
 
         AkUnitySoundEngine.PostEvent("Egg_Soul_Impact", gameObject);
     }
+    public void SetGrowValue(float value)
+    {
+        UpdateRenderersPropertyValue(corruptedEggRenderers, value, "_Grow");
+    }
     IEnumerator ShieldGetHitCoroutine()
     {
         UpdateShieldHitGlow(maxGlowWhenHit);
