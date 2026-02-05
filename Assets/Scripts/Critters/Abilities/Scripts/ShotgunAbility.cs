@@ -12,6 +12,9 @@ public class ShotgunAbility : MonoBehaviour
 
     [SerializeField] InputReader inputReader;
 
+    [SerializeField] private Animator armsAnimator;
+    [SerializeField] private Animator jhonnyAnimator;
+
     private GameObject playerGO;
     private WeaponChanger weaponChangerScript;
 
@@ -25,16 +28,28 @@ public class ShotgunAbility : MonoBehaviour
 
     private void OnEnable()
     {
-        inputReader.OnShoot += ShootAbility;
+        inputReader.OnShoot += ActivateAbility;
+        ArmsAnimatorHandler.OnSqueezeJhonny += ShootAbility;
+        ArmsAnimatorHandler.OnSqueezeJhonnyToGun += ChangeWeaponScriptValues;
     }
 
     private void OnDisable()
     {
-        inputReader.OnShoot -= ShootAbility;
+        inputReader.OnShoot -= ActivateAbility;
+        ArmsAnimatorHandler.OnSqueezeJhonny -= ShootAbility;
+        ArmsAnimatorHandler.OnSqueezeJhonnyToGun -= ChangeWeaponScriptValues;
     }
 
-    public void ShootAbility()
+    private void ActivateAbility()
     {
+        armsAnimator.SetTrigger("Squeeze");
+        jhonnyAnimator.SetTrigger("Squeeze");
+    }
+
+    private void ChangeWeaponScriptValues()
+    {
+        Debug.Log("AAAAAAAAAA");
+
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
         weaponChangerScript.FillAbilityImage.fillAmount = 0;
@@ -42,6 +57,11 @@ public class ShotgunAbility : MonoBehaviour
         weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
         weaponChangerScript.ChangeWeapon();
 
+        gameObject.SetActive(false);
+    }
+
+    public void ShootAbility()
+    {
         for (int i = 0; i < raysPerShot; i++)
         {
             RaycastHit hit;
@@ -63,8 +83,6 @@ public class ShotgunAbility : MonoBehaviour
                 TestLineRenderer(shootPoint.position + shotDir * distance);
             }
         }
-
-        gameObject.SetActive(false);
     }
 
     private Vector3 GetShotSpread()

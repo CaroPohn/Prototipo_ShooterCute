@@ -30,9 +30,11 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] public Animator armsAnimator;
     [SerializeField] private Animator bombAnimator;
     [SerializeField] private Animator electricAnimator;
+    [SerializeField] private Animator jhonnyAnimator;
 
     [SerializeField] private GameObject bombAbilityAnimGO;
     [SerializeField] private GameObject electricAbilityAnimGO;
+    [SerializeField] private GameObject jhonnyAbilityAnimGO;
 
     [SerializeField] private ZapGun zapGunScript;
 
@@ -50,8 +52,6 @@ public class WeaponChanger : MonoBehaviour
 
         selectedGun = FindChildWithTag(gunHandler.transform, weaponName);
         selectedAbility = GetAbilityPrefabByTag(abilityName);
-
-        Debug.Log(selectedAbility);
 
         changeToAbility = false;
 
@@ -153,6 +153,7 @@ public class WeaponChanger : MonoBehaviour
 
             bombAbilityAnimGO.SetActive(false);
             electricAbilityAnimGO.SetActive(false);
+            jhonnyAbilityAnimGO.SetActive(false);
         }
         else if (weaponIndex == 2 && timer >= 10.0f && !zapGunScript.isHoldingShoot)
         {
@@ -174,7 +175,10 @@ public class WeaponChanger : MonoBehaviour
             }
             else if (abilityName == "ShotgunAbility")
             {
-                //Art
+                jhonnyAbilityAnimGO.SetActive(true);
+
+                armsAnimator.SetBool("UsingAbility", true);
+                jhonnyAnimator.SetTrigger("Ability");
             }
 
             if (selectedAbility != null)

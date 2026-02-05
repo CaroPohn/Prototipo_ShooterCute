@@ -8,6 +8,9 @@ public class ShotgunLogic : Gun
     [SerializeField] private float spread;
     [SerializeField] private int raysPerShot;
 
+    [SerializeField] private Animator armsAnimator;
+    [SerializeField] private Animator jhonnyAnimator;
+
     [SerializeField] private GameObject lineRenderer;
     [SerializeField] private Transform shootPoint;
 
@@ -48,6 +51,9 @@ public class ShotgunLogic : Gun
                 TestLineRenderer(shootPoint.position + shotDir * distance);
             }
         }
+
+        armsAnimator.SetTrigger("Shoot");
+        jhonnyAnimator.SetTrigger("Shot");
     }
 
     private Vector3 GetShotSpread()
