@@ -35,6 +35,13 @@ public class ShotgunAbility : MonoBehaviour
 
     public void ShootAbility()
     {
+        weaponChangerScript.timer = 0.0f;
+        weaponChangerScript.weaponIndex = 1;
+        weaponChangerScript.FillAbilityImage.fillAmount = 0;
+
+        weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
+        weaponChangerScript.ChangeWeapon();
+
         for (int i = 0; i < raysPerShot; i++)
         {
             RaycastHit hit;
@@ -57,12 +64,7 @@ public class ShotgunAbility : MonoBehaviour
             }
         }
 
-        weaponChangerScript.timer = 0.0f;
-        weaponChangerScript.weaponIndex = 1;
-        weaponChangerScript.FillAbilityImage.fillAmount = 0;
-
-        weaponChangerScript.armsAnimator.SetBool("UsingAbility", false);
-        weaponChangerScript.ChangeWeapon();
+        gameObject.SetActive(false);
     }
 
     private Vector3 GetShotSpread()
