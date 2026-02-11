@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class HeavyFlyingEnemy : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float flyingHeight;
+
+    [SerializeField] private float stopDistance;
+
+    private float distanceToPlayer;
 
     private void Start()
     {
@@ -21,13 +26,25 @@ public class HeavyFlyingEnemy : MonoBehaviour
     private void Update()
     {
         MoveToTarget();
+        StopAgent();
+
+        distanceToPlayer = Vector3.Distance(transform.position, target.position);
     }
 
     private void MoveToTarget()
     {
-        if (target != null) 
+        if (target != null && distanceToPlayer >= stopDistance) 
         { 
+            agent.isStopped = false;
             agent.destination = target.position;
         }
+    }
+
+    private void StopAgent()
+    {
+        if (distanceToPlayer <= stopDistance) 
+        {
+            agent.isStopped = true;
+        }  
     }
 }
