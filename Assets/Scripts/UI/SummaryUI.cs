@@ -102,7 +102,16 @@ public class SummaryUI : MonoBehaviour
         if (loadout.savedAbilityLumming == Lumming.Shotgun)
         {
             abilityName = "ShotgunAbility";
-        }    
+        }
+
+        if (loadout.savedWeaponLumming == Lumming.Ice)
+        {
+            weaponName = "FreezeGun";
+        }
+        if (loadout.savedAbilityLumming == Lumming.Ice)
+        {
+            abilityName = "FreezeAbility";
+        }
 
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
