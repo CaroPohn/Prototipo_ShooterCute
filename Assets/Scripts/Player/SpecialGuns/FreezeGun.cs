@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FreezeGun : Gun
@@ -9,9 +10,10 @@ public class FreezeGun : Gun
     //[SerializeField] private GameObject hitEffect;
 
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private GameObject lineRenderer;
 
     [SerializeField] private float damage = 10f;
-    [SerializeField] private float range = 100f;
+    [SerializeField] private float distance = 100f;
     [SerializeField] private int burstCount = 3;
     [SerializeField] private float timeBetweenShots = 0.1f;
     [SerializeField] private float timeBetweenBursts = 0.5f;  
@@ -64,12 +66,11 @@ public class FreezeGun : Gun
         //    Instantiate(muzzleFlash, shootPoint.position, shootPoint.rotation);
         //}
 
-        Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
         Vector3 rayDirection = playerCamera.transform.forward;
 
         RaycastHit hit;
 
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, range))
+        if ((Physics.Raycast(shootPoint.position, rayDirection, out hit, distance)))
         {
             HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
 
@@ -78,10 +79,18 @@ public class FreezeGun : Gun
                 health.TakeDamage(damage);
             }
 
-            //if (hitEffect != null)
-            //{
-            //    Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            //}
+            TestLineRenderer(hit.point);
         }
+        else
+        {
+            TestLineRenderer(shootPoint.position + rayDirection * distance);
+        }
+    }
+
+    private void TestLineRenderer(Vector3 end)
+    {
+        LineRenderer lR = Instantiate(lineRenderer).GetComponent<LineRenderer>();
+
+        lR.SetPositions(new Vector3[2] { shootPoint.position, end });
     }
 }
