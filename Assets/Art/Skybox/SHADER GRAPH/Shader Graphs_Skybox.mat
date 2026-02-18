@@ -31,13 +31,26 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: _StarPower
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_76876c0b73bf4a9dad3317f2dacaff45_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: f41ad1a737d915f438ff454f262d2194, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -54,6 +67,8 @@ Material:
     - _NadirBlend: 1.4
     - _NadirBlend_Sky: 1
     - _Phase_Moon: 0.05
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Size_Moon: 541
     - _StarHeight: 611.8
     - _StarPower: 37
@@ -70,3 +85,17 @@ Material:
     - _Sky_Color: {r: 0.8490566, g: 0.27731243, b: 0.19624422, a: 0}
     - _Tint_Moon: {r: 4.3018837, g: 1.094945, b: 0.9537195, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &3669734760860910422
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
