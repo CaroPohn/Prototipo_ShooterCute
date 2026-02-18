@@ -1,13 +1,15 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class FreezeGun : Gun
 {
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Camera playerCamera;
-    //[SerializeField] private GameObject muzzleFlash;
+    [SerializeField] private GameObject muzzleFlash;
     //[SerializeField] private GameObject hitEffect;
+
+    [SerializeField] private Animator armsAnimator;
+    [SerializeField] private Animator iceAnimator;
 
     [SerializeField] private InputReader inputReader;
     [SerializeField] private GameObject lineRenderer;
@@ -41,6 +43,9 @@ public class FreezeGun : Gun
     public override void Shoot()
     {
         StartCoroutine(FireBurstRoutine());
+
+        iceAnimator.SetTrigger("Shot");
+        armsAnimator.SetTrigger("Spray_Shot");
     }
 
     private IEnumerator FireBurstRoutine()
@@ -61,10 +66,10 @@ public class FreezeGun : Gun
 
     private void ExecuteRaycastShot()
     {
-        //if (muzzleFlash != null)
-        //{
-        //    Instantiate(muzzleFlash, shootPoint.position, shootPoint.rotation);
-        //}
+        if (muzzleFlash != null)
+        {
+            Instantiate(muzzleFlash, shootPoint);
+        }
 
         Vector3 rayDirection = playerCamera.transform.forward;
 

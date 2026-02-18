@@ -14,6 +14,8 @@ public class ShotgunLogic : Gun
     [SerializeField] private GameObject lineRenderer;
     [SerializeField] private Transform shootPoint;
 
+    [SerializeField] private GameObject contactPoint;
+
     [SerializeField] InputReader inputReader;
 
     [SerializeField] private Camera playerCamera;
@@ -43,6 +45,8 @@ public class ShotgunLogic : Gun
                 {
                     health.TakeDamage(damagePerBullet);
                 }
+
+                Instantiate(contactPoint, hit.point, Quaternion.LookRotation(hit.normal));
 
                 TestLineRenderer(hit.point);
             }

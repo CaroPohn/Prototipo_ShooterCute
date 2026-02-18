@@ -5280,6 +5280,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1878606546}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
+      propertyPath: contactPoint
+      value: 
+      objectReference: {fileID: 5608618860741487540, guid: 62b928f5155df00478b6106eba7692b2, type: 3}
+    - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1562146863}
@@ -5305,7 +5309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110601539912259826, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353866733168266893, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: m_Layer
@@ -5389,7 +5393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582247294708385688, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8582247294708385688, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: m_TagString
@@ -5675,6 +5679,11 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!95 &1200581365 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 94239407078161459, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+  m_PrefabInstance: {fileID: 4448878602764694646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1208791131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21921,7 +21930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7056063358021122907, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7103301346930543118, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: m_Layer
@@ -21949,7 +21958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7392695175615640260, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7392695175615640260, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: m_TagString
@@ -21988,9 +21997,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 100858931}
     - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: iceAnimator
+      value: 
+      objectReference: {fileID: 1200581365}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 200610471}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 6293098479497533782, guid: 7572691949dbf77458bd56876d30d1d0, type: 3}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: armsAnimator
+      value: 
+      objectReference: {fileID: 1878606546}
     - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: lineRenderer
       value: 
