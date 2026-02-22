@@ -16,6 +16,8 @@ public class ChangeGameplayUILumming : MonoBehaviour
     private void Start()
     {
         abilityName = PlayerSelectionData.selectedAbility;
+
+        Debug.Log(abilityName);
     }
 
     //private void OnEnable()

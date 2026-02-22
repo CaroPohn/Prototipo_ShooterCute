@@ -8,6 +8,7 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] private GameObject bomb;
     [SerializeField] private GameObject electric;
     [SerializeField] private GameObject shotgunAbility;
+    [SerializeField] private GameObject iceAbility;
 
     [SerializeField] private GameObject bombHolder;
     [SerializeField] private GameObject gunHandler;
@@ -31,10 +32,12 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] private Animator bombAnimator;
     [SerializeField] private Animator electricAnimator;
     [SerializeField] private Animator jhonnyAnimator;
+    [SerializeField] private Animator iceAnimator;
 
     [SerializeField] private GameObject bombAbilityAnimGO;
     [SerializeField] private GameObject electricAbilityAnimGO;
     [SerializeField] private GameObject jhonnyAbilityAnimGO;
+    [SerializeField] private GameObject iceAbilityAnimGO;
 
     [SerializeField] private ZapGun zapGunScript;
 
@@ -180,6 +183,13 @@ public class WeaponChanger : MonoBehaviour
                 armsAnimator.SetBool("UsingAbility", true);
                 jhonnyAnimator.SetTrigger("Ability");
             }
+            else if (abilityName == "FreezeAbility")
+            {
+                iceAbilityAnimGO.SetActive(true);
+
+                armsAnimator.SetBool("UsingAbility", true);
+                iceAnimator.SetTrigger("Ability");
+            }
 
             if (selectedAbility != null)
             {
@@ -224,6 +234,8 @@ public class WeaponChanger : MonoBehaviour
             return bomb;
         if (tag == "ShotgunAbility")
             return shotgunAbility;
+        if (tag == "FreezeAbility")
+            return iceAbility;
 
         return null;
     }
