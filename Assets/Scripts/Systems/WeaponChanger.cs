@@ -157,6 +157,7 @@ public class WeaponChanger : MonoBehaviour
             bombAbilityAnimGO.SetActive(false);
             electricAbilityAnimGO.SetActive(false);
             jhonnyAbilityAnimGO.SetActive(false);
+            iceAbilityAnimGO.SetActive(false);
         }
         else if (weaponIndex == 2 && timer >= 10.0f && !zapGunScript.isHoldingShoot)
         {

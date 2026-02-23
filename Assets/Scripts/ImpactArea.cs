@@ -4,6 +4,8 @@ public class ImpactArea : MonoBehaviour
 {
     [SerializeField] private float lifetime = 3f;
 
+    private float speedToApply = 2f;
+
     [SerializeField] private int explosionRadius = 5;
     [SerializeField] private float damage;
 
@@ -28,10 +30,20 @@ public class ImpactArea : MonoBehaviour
             if (hitRb != null && hitRb.tag == "Enemy")
             {
                 HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
+
+                PatrolEnemy enemy = hitCollider.GetComponentInParent<PatrolEnemy>();
+                MeleeEnemy meleeEnemy = hitCollider.GetComponentInParent<MeleeEnemy>();
+
                 if (enemyHealth != null)
                 {
                     enemyHealth.TakeDamage(damage);
                 }
+
+                if (enemy != null)
+                    enemy.SlowEnemy(speedToApply, lifetime - 1);
+
+                if (meleeEnemy != null)
+                    meleeEnemy.SlowEnemy(speedToApply, lifetime - 1);
             }
         }
     }

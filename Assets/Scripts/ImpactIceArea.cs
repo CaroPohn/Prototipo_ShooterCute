@@ -3,7 +3,8 @@ using UnityEngine.AI;
 
 public class ImpactIceArea : MonoBehaviour
 {
-    [SerializeField] private float lifetime = 3f;
+    [SerializeField] private float lifetime = 4f;
+    [SerializeField] private float speedToApply = 0f;
 
     [SerializeField] private int explosionRadius = 5;
 
@@ -23,11 +24,16 @@ public class ImpactIceArea : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            NavMeshAgent agent = hitCollider.GetComponentInParent<NavMeshAgent>();
+            PatrolEnemy enemy = hitCollider.GetComponentInParent<PatrolEnemy>();
+            MeleeEnemy meleeEnemy = hitCollider.GetComponentInParent<MeleeEnemy>();
 
-            if (agent != null && agent.gameObject.tag == "Enemy")
+            if (enemy != null && enemy.gameObject.tag == "Enemy" || meleeEnemy != null && meleeEnemy.gameObject.tag == "Enemy")
             {
-                agent.speed = 0;
+                if (enemy != null)
+                    enemy.SlowEnemy(speedToApply, lifetime - 1);
+
+                if (meleeEnemy != null)
+                    meleeEnemy.SlowEnemy(speedToApply, lifetime - 1);
             }
         }
     }
