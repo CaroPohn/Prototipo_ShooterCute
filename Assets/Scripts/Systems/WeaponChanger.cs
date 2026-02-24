@@ -1,5 +1,4 @@
 using System;
-using System.Net;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +6,6 @@ public class WeaponChanger : MonoBehaviour
 {
     [SerializeField] private GameObject bomb;
     [SerializeField] private GameObject electric;
-    [SerializeField] private GameObject shotgunAbility;
 
     [SerializeField] private GameObject bombHolder;
     [SerializeField] private GameObject gunHandler;
@@ -30,11 +28,9 @@ public class WeaponChanger : MonoBehaviour
     [SerializeField] public Animator armsAnimator;
     [SerializeField] private Animator bombAnimator;
     [SerializeField] private Animator electricAnimator;
-    [SerializeField] private Animator jhonnyAnimator;
 
     [SerializeField] private GameObject bombAbilityAnimGO;
     [SerializeField] private GameObject electricAbilityAnimGO;
-    [SerializeField] private GameObject jhonnyAbilityAnimGO;
 
     [SerializeField] private ZapGun zapGunScript;
 
@@ -132,6 +128,7 @@ public class WeaponChanger : MonoBehaviour
         OnAbilitySelected?.Invoke();
         weaponIndex = 2;
         ChangeWeapon();
+        OnAbilitySelected?.Invoke();
 
         if(abilityName == "ElectricAbility")
         {
@@ -153,7 +150,6 @@ public class WeaponChanger : MonoBehaviour
 
             bombAbilityAnimGO.SetActive(false);
             electricAbilityAnimGO.SetActive(false);
-            jhonnyAbilityAnimGO.SetActive(false);
         }
         else if (weaponIndex == 2 && timer >= 10.0f && !zapGunScript.isHoldingShoot)
         {
@@ -173,13 +169,6 @@ public class WeaponChanger : MonoBehaviour
                 armsAnimator.SetBool("UsingAbility", true);
                 electricAnimator.SetTrigger("Ability");             
             }
-            else if (abilityName == "ShotgunAbility")
-            {
-                jhonnyAbilityAnimGO.SetActive(true);
-
-                armsAnimator.SetBool("UsingAbility", true);
-                jhonnyAnimator.SetTrigger("Ability");
-            }
 
             if (selectedAbility != null)
             {
@@ -198,9 +187,11 @@ public class WeaponChanger : MonoBehaviour
             if (selectedGun != null)
                 selectedGun.SetActive(true);
         }
-
-        if (selectedGun != null)
-            selectedGun.SetActive(true);
+        else if (!selectedAbility.activeSelf && timer >= 10.0f)
+        {
+            if (selectedGun != null)
+                selectedGun.SetActive(true);
+        }
     }
 
     GameObject FindChildWithTag(Transform parent, string tag)
@@ -222,8 +213,6 @@ public class WeaponChanger : MonoBehaviour
             return electric;
         if (tag == "BombAbility")
             return bomb;
-        if (tag == "ShotgunAbility")
-            return shotgunAbility;
 
         return null;
     }
