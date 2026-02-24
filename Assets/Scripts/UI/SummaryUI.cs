@@ -81,21 +81,28 @@ public class SummaryUI : MonoBehaviour
         {
             weaponName = "FireGun";
         }
-
-        if (loadout.savedAbilityLumming == Lumming.Chispean)
+        if (loadout.savedAbilityLumming == Lumming.Bomb)
         {
-            abilityName = "ElectricAbility";
+            abilityName = "BombAbility";
         }
 
         if (loadout.savedWeaponLumming == Lumming.Chispean)
         {
             weaponName = "ZapGun";
         }
-
-        if (loadout.savedAbilityLumming == Lumming.Bomb)
+        if (loadout.savedAbilityLumming == Lumming.Chispean)
         {
-            abilityName = "BombAbility";
+            abilityName = "ElectricAbility";
         }
+        
+        if (loadout.savedWeaponLumming == Lumming.Shotgun) 
+        {
+            weaponName = "Shotgun";
+        }
+        if (loadout.savedAbilityLumming == Lumming.Shotgun)
+        {
+            abilityName = "ShotgunAbility";
+        }    
 
         PlayerSelectionData.selectedWeapon = weaponName;
         PlayerSelectionData.selectedAbility = abilityName;
