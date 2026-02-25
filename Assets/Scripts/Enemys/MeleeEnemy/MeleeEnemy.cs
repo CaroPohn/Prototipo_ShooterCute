@@ -59,23 +59,6 @@ public class MeleeEnemy : MonoBehaviour
         meleeAnimationHandler.OnEnemyStep -= StepSoundActivation;
     }
 
-    public void SlowEnemy(float newSpeed, float time)
-    {
-        StartCoroutine(SlowEnemyCoroutine(newSpeed, time));
-    }
-
-    private IEnumerator SlowEnemyCoroutine(float newSpeed, float duration)
-    {
-        enemyAnimator.SetFloat("Velocity", newSpeed / 10);
-
-        agent.speed = newSpeed;
-
-        yield return new WaitForSeconds(duration);
-
-        agent.speed = 9;
-        enemyAnimator.SetFloat("Velocity", 0.8f);
-    }
-
     public void StepSoundActivation()
     {
         AkUnitySoundEngine.PostEvent("Enemy_Footstep_Baby", gameObject);
