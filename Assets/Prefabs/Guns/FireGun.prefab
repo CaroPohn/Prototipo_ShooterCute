@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7585805212570319555
 Transform:
   m_ObjectHideFlags: 0
@@ -49,11 +49,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 4501490468144980956}
   projectilePrefab: {fileID: 6736405824576053705, guid: 1e8e5d5c4e8201149b0bdbd6d6db278a, type: 3}
+  armsAnimator: {fileID: 0}
+  bombAnimator: {fileID: 0}
   playerCamera: {fileID: 0}
   muzzleFlash: {fileID: 6113756677811671005, guid: b669f9310112ac9479485de8d38a4fa1, type: 3}
+  levelController: {fileID: 0}
+  bombAnimationHandler: {fileID: 0}
   damage: 50
-  timeBetweenShots: 0.4
   inputReader: {fileID: 0}
+  minDelay: 2
+  maxDelay: 6
 --- !u!114 &4958462624840535108
 MonoBehaviour:
   m_ObjectHideFlags: 0
