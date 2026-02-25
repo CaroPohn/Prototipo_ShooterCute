@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -77,6 +78,24 @@ public class PatrolEnemy : MonoBehaviour
             projScript.SetDamage(damage);
             projScript.SetDirection(direction);
         }
+    }
+
+    public void SlowEnemy(float newSpeed, float time)
+    {
+        StartCoroutine(SlowEnemyCoroutine(newSpeed, time));
+    }
+
+    private IEnumerator SlowEnemyCoroutine(float newSpeed, float duration)
+    {
+        float originalSpeed = agent.speed;
+        enemyAnimator.SetFloat("Velocity", newSpeed / 10);
+
+        agent.speed = newSpeed;
+
+        yield return new WaitForSeconds(duration);
+
+        agent.speed = 6;
+        enemyAnimator.SetFloat("Velocity", 0.5f);
     }
 
     public void DeactivateColliders()
@@ -172,7 +191,6 @@ public class PatrolEnemy : MonoBehaviour
         enemyAnimator.SetTrigger("Spawn");
 
         yield return null;
-
     }
 
     private void OnDrawGizmos()

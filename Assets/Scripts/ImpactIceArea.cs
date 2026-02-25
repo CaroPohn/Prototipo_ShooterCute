@@ -1,13 +1,12 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-public class ImpactArea : MonoBehaviour
+public class ImpactIceArea : MonoBehaviour
 {
-    [SerializeField] private float lifetime = 3f;
-
-    private float speedToApply = 2f;
+    [SerializeField] private float lifetime = 4f;
+    [SerializeField] private float speedToApply = 0f;
 
     [SerializeField] private int explosionRadius = 5;
-    [SerializeField] private float damage;
 
     private void Start()
     {
@@ -25,20 +24,11 @@ public class ImpactArea : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            Rigidbody hitRb = hitCollider.GetComponentInParent<Rigidbody>();
+            PatrolEnemy enemy = hitCollider.GetComponentInParent<PatrolEnemy>();
+            MeleeEnemy meleeEnemy = hitCollider.GetComponentInParent<MeleeEnemy>();
 
-            if (hitRb != null && hitRb.tag == "Enemy")
+            if (enemy != null && enemy.gameObject.tag == "Enemy" || meleeEnemy != null && meleeEnemy.gameObject.tag == "Enemy")
             {
-                HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
-
-                PatrolEnemy enemy = hitCollider.GetComponentInParent<PatrolEnemy>();
-                MeleeEnemy meleeEnemy = hitCollider.GetComponentInParent<MeleeEnemy>();
-
-                if (enemyHealth != null)
-                {
-                    enemyHealth.TakeDamage(damage);
-                }
-
                 if (enemy != null)
                     enemy.SlowEnemy(speedToApply, lifetime - 1);
 
