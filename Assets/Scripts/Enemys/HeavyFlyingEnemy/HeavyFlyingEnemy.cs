@@ -36,8 +36,6 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     private void Update()
     {
-        shootTimer += Time.deltaTime;
-
         //MoveToTarget();
         //StopAgent();
     }
