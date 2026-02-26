@@ -9,16 +9,23 @@ public class FlyingHSpawnState : FlyingHStates
 
         flyingHEnemy.SetHealthSystemActive(healthSystem, false);
 
-        //patrolEnemy.SpawnAnimationHandler();
+        flyingHEnemy.agent.enabled = false;
+
+        flyingHEnemy.SpawnAnimationHandler();
     }
 
     public override void UpdateState(HeavyFlyingEnemy flyingHEnemy)
     {
         flyingHEnemy.StopFollowingPlayer(true);
 
-        //if (patrolEnemy.stopSpawnAnimation)
-        //{
-        flyingHEnemy.GetComponent<FlyingHFSM>().ChangeState(flyingHEnemy.GetComponent<FlyingHFSM>().states[2]);
-        //}
+        if (flyingHEnemy.hasReachTop)
+        {
+            flyingHEnemy.StartDescend();
+        }
+
+        if (flyingHEnemy.hasReachSurface) 
+        {
+            flyingHEnemy.GetComponent<FlyingHFSM>().ChangeState(flyingHEnemy.GetComponent<FlyingHFSM>().states[2]);
+        }
     }
 }

@@ -59,7 +59,7 @@ public class PlayerProjectile : MonoBehaviour
             visual.Play();
         }
 
-        if (!collision.transform.CompareTag("Player"))
+        if (!collision.transform.CompareTag("Player") || !collision.transform.CompareTag("FloatingNavMesh"))
         {
             Destroy(gameObject);
         }

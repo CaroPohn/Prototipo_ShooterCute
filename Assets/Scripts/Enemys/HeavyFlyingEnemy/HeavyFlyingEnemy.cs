@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class HeavyFlyingEnemy : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     private Transform player;
 
     public float shootTimer;
@@ -21,6 +21,14 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     [SerializeField] private float stopDistance;
 
+    [SerializeField] private float jumpHight;
+    [SerializeField] private float ascentTime;
+    public bool hasReachTop;
+    public bool hasReachSurface;
+
+    [SerializeField] private float goToSurfaceSpeed;
+    [SerializeField] private LayerMask navMeshSurfaceLayer;
+
     //private List<Collider> enemyColliders;
 
     private void Start()
@@ -29,6 +37,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         //enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
+
+        hasReachTop = false;
+        hasReachSurface = false;
 
         agent.baseOffset = flyingHeight;
         agent.speed = moveSpeed;
@@ -99,7 +110,8 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     public void StopFollowingPlayer(bool doesEnemyhasToStop)
     {
-        agent.isStopped = doesEnemyhasToStop;
+        if (agent.enabled == true)
+            agent.isStopped = doesEnemyhasToStop;
 
         if (!doesEnemyhasToStop)
         {
@@ -135,14 +147,12 @@ public class HeavyFlyingEnemy : MonoBehaviour
     //    enemyAnimator.SetTrigger("Attack");
     //}
 
-    //public void SpawnAnimationHandler()
-    //{
-    //    AkUnitySoundEngine.PostEvent("Enemy_Spawn_Adult", gameObject);
+    public void SpawnAnimationHandler()
+    {
+        StartCoroutine(AscenderCorroutine());
 
-    //    StartCoroutine(SpawnCoroutine());
-
-    //    Instantiate(spawnVFX, transform.position, transform.rotation);
-    //}
+        //Instantiate(spawnVFX, transform.position, transform.rotation);
+    }
 
     //public void DieAnimationHandler()
     //{
@@ -160,12 +170,69 @@ public class HeavyFlyingEnemy : MonoBehaviour
     //    }
     //}
 
-    //public IEnumerator SpawnCoroutine()
-    //{
-    //    enemyAnimator.SetTrigger("Spawn");
+    private IEnumerator AscenderCorroutine()
+    {
+        Vector3 initialPosition = transform.position;
+        Vector3 objectivePosition = initialPosition + Vector3.up * jumpHight;
+        float timer = 0f;
 
-    //    yield return null;
-    //}
+        while (timer < ascentTime)
+        {
+            transform.position = Vector3.Lerp(initialPosition, objectivePosition, timer / ascentTime);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = objectivePosition;
+        hasReachTop = true;
+    }
+
+    public void StartDescend()
+    {
+        if (hasReachTop)
+        {
+            hasReachTop = false;
+            StartCoroutine(DescenderCorroutine());
+        }
+    }
+
+    private IEnumerator DescenderCorroutine()
+    {
+        Vector3 destinationPoint = transform.position;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitpoint, Mathf.Infinity, navMeshSurfaceLayer))
+        {
+            if (NavMesh.SamplePosition(hitpoint.point, out NavMeshHit hitNavMesh, 5f, NavMesh.AllAreas))
+            {
+                destinationPoint = hitNavMesh.position;
+            }
+            else
+            {
+                destinationPoint = hitpoint.point;
+            }
+        }
+        else
+        {
+            yield break;
+        }
+
+        while (Vector3.Distance(transform.position, destinationPoint) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, goToSurfaceSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        transform.position = destinationPoint;
+        agent.enabled = true;
+        hasReachSurface = true;
+    }
+
+public IEnumerator SpawnCoroutine()
+    {
+        //enemyAnimator.SetTrigger("Spawn");
+
+        yield return null;
+    }
 
     public IEnumerator SpawnCorroutine()
     {
