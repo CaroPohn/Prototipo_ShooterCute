@@ -3,17 +3,42 @@ using UnityEngine.UI;
 
 public class LoadoutSummery : MonoBehaviour
 {
-    [SerializeField] Sprite[] lummingSprites;
-    [SerializeField] Image weaponLummingImage;
-    [SerializeField] Image abilityLummingImage;
+    [SerializeField] LummingCell weaponCell;
+    [SerializeField] LummingCell abilityCell;
+
+    private void Start()
+    {
+        UpdateWeaponImage(Lumming.None);
+        UpdateAbilityImage(Lumming.None);
+    }
+
 
     public void UpdateWeaponImage(Lumming newLumming)
     {
-        Debug.Log("Updated to lumming ID: " + (int)newLumming);
-        weaponLummingImage.sprite = lummingSprites[(int)newLumming];
+        if (newLumming == Lumming.None)
+        {
+            weaponCell.ShowNonSelected();
+            weaponCell.HideLumming();
+        }
+
+        else
+        {
+            weaponCell.ChangeLumming(newLumming);
+            weaponCell.ShowAsWeapon();
+        }
     }
     public void UpdateAbilityImage(Lumming newLumming)
     {
-        abilityLummingImage.sprite = lummingSprites[(int)newLumming];
+        if (newLumming == Lumming.None) 
+        {
+            abilityCell.ShowNonSelected();
+            abilityCell.HideLumming();
+        } 
+        else 
+        {
+            abilityCell.ChangeLumming(newLumming);
+            abilityCell.ShowAsAbility();
+        }
+
     }
 }

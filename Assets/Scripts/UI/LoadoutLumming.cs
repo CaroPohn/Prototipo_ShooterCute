@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class LoadoutLumming : MonoBehaviour
 {
     [SerializeField] private Lumming lumming;
-    [SerializeField] private Image cellImage;
+    [SerializeField] private LummingCell cell;
     private LoadoutUI loadoutUI;
-    bool blocked = false;
+    [SerializeField] bool blocked = false;
 
 
     public Lumming lummingInSlot
@@ -16,7 +16,18 @@ public class LoadoutLumming : MonoBehaviour
             return lumming;
         }
     }
-
+    private void OnEnable()
+    {
+        if (blocked) 
+        {
+            cell.ShowBlocked();
+        }
+        else
+        {
+            cell.ChangeLumming(lumming);
+            cell.ShowNonSelected();
+        }
+    }
     public void Clicked()
     {
         if (blocked) return;
@@ -26,18 +37,16 @@ public class LoadoutLumming : MonoBehaviour
         }
         loadoutUI.SlotPressed(this);
     }
-    public void BlockOption()
+    public void SelectAsWeapon()
     {
-        blocked = true;
-        cellImage.color = Color.red;
+        cell.ShowAsWeapon();
     }
-    public void UnlockOption()
+    public void SelectAsAbility()
     {
-        blocked = false;
-        cellImage.color = Color.white;
+        cell.ShowAsAbility();
     }
-    public void MarkAsSelected()
+    public void Deselect()
     {
-        cellImage.color = Color.yellow;
+        cell.ShowNonSelected();
     }
 }
