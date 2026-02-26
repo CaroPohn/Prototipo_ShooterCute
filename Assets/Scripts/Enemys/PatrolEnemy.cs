@@ -26,6 +26,7 @@ public class PatrolEnemy : MonoBehaviour
 
     public float shootCoolDown;
     public float damage;
+    public float projSpeed = 120;
     public float shootTimer;
 
     public bool stopDieAnimation;
@@ -77,6 +78,7 @@ public class PatrolEnemy : MonoBehaviour
         {
             projScript.SetDamage(damage);
             projScript.SetDirection(direction);
+            projScript.SetSpeed(projSpeed);
         }
     }
 
