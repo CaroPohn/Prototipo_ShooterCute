@@ -19,7 +19,7 @@ public class LoadoutTabButton : MonoBehaviour
         {
             loadoutUI = FindFirstObjectByType<LoadoutUI>();
         }
-        loadoutUI.TabPressed(this);
+        //loadoutUI.TabPressed(this);
     }
     public void BringToFront()
     {

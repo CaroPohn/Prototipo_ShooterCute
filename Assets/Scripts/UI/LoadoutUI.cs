@@ -4,141 +4,172 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadoutUI : MonoBehaviour
+public class LoadoutUI : SpaceShipZoneScreen
 {
     [SerializeField] SummaryUI summaryUI;
     [SerializeField] LummingOnTable lummingOnTable;
-
-    [SerializeField] LoadoutTabButton weaponTabUI;
-    [SerializeField] LoadoutTabButton abilityTabUI;
-    [SerializeField] LoadoutLumming[] selectableLummingsSlots;
-
     [SerializeField] LoadoutSummery loadoutSummaryUI;
 
     [SerializeField] Button confirmButton;
+    [SerializeField] GameObject confirmButtonGlowGO;
+    [SerializeField] ChooseButton weaponChooseButton;
+    [SerializeField] ChooseButton abilityChooseButton;
+    [SerializeField] LummingDescription lummingDescriptions;
+    [SerializeField] LoadoutLumming[] lummingSlots;
+    [SerializeField] LoadoutLumming firstSlot;
 
-    TabData currentTab;
-    TabData weaponTab;
-    TabData abilityTab;
-    TabData[] tabs;
+    [SerializeField] GameObject lummingSelectionContainer;
+   
+
+    Lumming savedLumming_Weapon;
+    Lumming savedLumming_Ability;
+
+    Lumming currentLumming = Lumming.Bomb;
+    LoadoutLumming lastSlotPressed;
+
 
     public Lumming savedWeaponLumming 
     {
         get
         {
-            return weaponTab.savedLumming;
+            return savedLumming_Weapon;
         }
     }
     public Lumming savedAbilityLumming
     {
         get
         {
-            return abilityTab.savedLumming;
+            return savedLumming_Ability;
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        weaponTab = new TabData(weaponTabUI,Lumming.None);
-        abilityTab = new TabData(abilityTabUI,Lumming.None);
-
-        currentTab = weaponTab;
-        tabs = new TabData[2] {weaponTab,abilityTab};
-    }
-
-    public void TabPressed(LoadoutTabButton tabPressed)
-    {
-        foreach(TabData tab in tabs)
+        if(lastSlotPressed == null)
         {
-            if(tabPressed != tab.tabUI)
-            {
-                tab.tabUI.SendToTheBack();
-                tab.tabUI.gameObject.transform.SetAsFirstSibling();
-            }
-            else
-            {
-                tab.tabUI.BringToFront();
-                currentTab = tab;
-                break;
-            }
+            lastSlotPressed = firstSlot;
         }
-        UpdateSelectableLummingSlots();
+        SlotPressed(lastSlotPressed);
+    }
 
-    }
-    void UpdateSelectableLummingSlots()
+    public override void ShowAllScreens()
     {
-      
-        foreach(LoadoutLumming selectableLummingSlot in selectableLummingsSlots)
-        {
-            if (currentTab.savedLumming == selectableLummingSlot.lummingInSlot) selectableLummingSlot.MarkAsSelected();
-            else if (LummingIsUsedOnOtherTabs(selectableLummingSlot.lummingInSlot)) selectableLummingSlot.BlockOption();
-            else selectableLummingSlot.UnlockOption();
-        }
+        lummingDescriptions.ShowScreen();
+        loadoutSummaryUI.ShowScreen();
+        lummingSelectionContainer.SetActive(true);
     }
-    bool LummingIsUsedOnOtherTabs(Lumming lummingToSearch)
+    public override void HideAllScreens() 
     {
-        bool lummingFound = false;
-        foreach(TabData tab in tabs)
-        {
-            if(tab != currentTab)
-            {
-                lummingFound = (tab.savedLumming == lummingToSearch);
-                if (lummingFound) break;
-            }
-        }
-        return lummingFound;
-        
+        lummingDescriptions.HideScreen();
+        loadoutSummaryUI.HideScreen();
+        lummingSelectionContainer.SetActive(false);
     }
     public void SlotPressed(LoadoutLumming lummingSlot)
     {
-        Debug.Log("Pressed on lumming slot: " + lummingSlot.lummingInSlot.ToString() + " ID: " + (int)lummingSlot.lummingInSlot);
-        //If already selected, deselect it
-        if (currentTab.savedLumming == lummingSlot.lummingInSlot)
-        {
-            currentTab.savedLumming = Lumming.None;
-            lummingSlot.UnlockOption();
-        }
-        else 
-        {
-            //Deselect previous chosen lumming
-            if (currentTab.savedLumming != Lumming.None)
-            {
-                LoadoutLumming foundLummingSlot = Array.Find(selectableLummingsSlots, p => (p.lummingInSlot == currentTab.savedLumming));
-                if(foundLummingSlot != null) foundLummingSlot.UnlockOption();
-            }
-            lummingSlot.MarkAsSelected();
-            currentTab.savedLumming = lummingSlot.lummingInSlot;
-        }
-        UpdateLoadoutSummery();
-        UpdateConfirmButton();
+        currentLumming = lummingSlot.lummingInSlot;
+        lummingOnTable.UpdateLummingOnTable(currentLumming);
+        UpdateLummingDataShown();
+        UpdateChooseButtons();
     }
-
+    public void LummingChosenAsWeapon()
+    {
+        if(currentLumming == Lumming.None)
+        {
+            Debug.LogWarning("Cannot chose an empty lumming as weapon");
+            return;
+        }
+        savedLumming_Weapon = currentLumming;
+        if(savedLumming_Ability == currentLumming)
+        {
+            savedLumming_Ability = Lumming.None;
+        }
+        UpdateChooseButtons();
+        UpdateConfirmButton();
+        UpdateLoadoutSummery();
+        UpdateCells();
+    }
+    public void LummingChosenAsAbility()
+    {
+        if (currentLumming == Lumming.None)
+        {
+            Debug.LogWarning("Cannot chose an empty lumming as ability");
+            return;
+        }
+        savedLumming_Ability = currentLumming;
+        if (savedLumming_Weapon == currentLumming)
+        {
+            savedLumming_Weapon = Lumming.None;
+        }
+        UpdateChooseButtons();
+        UpdateConfirmButton();
+        UpdateLoadoutSummery();
+        UpdateCells();
+    }
+    void UpdateCells()
+    {
+        foreach(LoadoutLumming lummingSlot in lummingSlots)
+        {
+            if(lummingSlot.lummingInSlot == savedLumming_Weapon)
+            {
+                lummingSlot.SelectAsWeapon();
+            }
+            else if(lummingSlot.lummingInSlot == savedLumming_Ability)
+            {
+                lummingSlot.SelectAsAbility();
+            }
+            else
+            {
+                lummingSlot.Deselect();
+            }
+        }
+    }
+    void UpdateChooseButtons()
+    {
+        if(savedLumming_Weapon == currentLumming)
+        {
+            weaponChooseButton.Disable();
+        }
+        else
+        {
+            weaponChooseButton.Enable();
+        }
+        if(savedLumming_Ability == currentLumming)
+        {
+            abilityChooseButton.Disable();
+        }
+        else
+        {
+            abilityChooseButton.Enable();
+        }
+    }
+    void UpdateLummingDataShown()
+    {
+        lummingDescriptions.UpdateLummingDescription(currentLumming);
+    }
     void UpdateLoadoutSummery()
     {
-        loadoutSummaryUI.UpdateAbilityImage(abilityTab.savedLumming);
-        loadoutSummaryUI.UpdateWeaponImage(weaponTab.savedLumming);
+        loadoutSummaryUI.UpdateAbilityImage(savedLumming_Ability);
+        loadoutSummaryUI.UpdateWeaponImage(savedLumming_Weapon);
     }
     void UpdateConfirmButton()
     {
-        if (weaponTab.savedLumming != Lumming.None && abilityTab.savedLumming != Lumming.None) confirmButton.interactable = true;
-        else confirmButton.interactable = false;
+        if (savedLumming_Ability != Lumming.None && savedLumming_Weapon != Lumming.None) 
+        {
+            confirmButton.interactable = true;
+            confirmButtonGlowGO.SetActive(true);
+        }
+        else
+        {
+            confirmButton.interactable = false;
+            confirmButtonGlowGO.SetActive(false);
+        }
     }
 
     public void SaveChanges()
     {
-        summaryUI.UpdateLoadout(weaponTab.savedLumming, abilityTab.savedLumming);
+        summaryUI.UpdateLoadout(savedLumming_Weapon, savedLumming_Ability);
         //saveChangesButton.PlayAnimationDisabled();
         FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
     }
 }
-public class TabData
-{
-    public LoadoutTabButton tabUI;
-    public Lumming savedLumming;
 
-    public TabData(LoadoutTabButton tabUIButton, Lumming lummingToSave)
-    {
-        tabUI = tabUIButton;
-        savedLumming = lummingToSave;
-    }
-}

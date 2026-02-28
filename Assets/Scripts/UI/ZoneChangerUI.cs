@@ -2,28 +2,15 @@ using UnityEngine;
 
 public class ZoneChangerUI : MonoBehaviour
 {
-    [SerializeField] GameObject worldSelectLineGO;
-    [SerializeField] GameObject readyLineGO;
-    [SerializeField] GameObject loadoutLineGO;
-    public void UpdateZoneChanger(SpaceshipZone zone)
+    [SerializeField] ZoneUI locationZone;
+    [SerializeField] ZoneUI loadoutZone;
+    [SerializeField] ZoneUI readyZone;
+
+    SpaceshipZone currentZone = SpaceshipZone.WorldSelect;
+
+    public void GoToLoadout()
     {
-        if (zone == SpaceshipZone.WorldSelect)
-        {
-            worldSelectLineGO.SetActive(true);
-            readyLineGO.SetActive(false);
-            loadoutLineGO.SetActive(false);
-        }
-        else if (zone == SpaceshipZone.Loadout)
-        {
-            worldSelectLineGO.SetActive(false);
-            readyLineGO.SetActive(false);
-            loadoutLineGO.SetActive(true);
-        }
-        else if(zone == SpaceshipZone.Ready)
-        {
-            worldSelectLineGO.SetActive(false);
-            readyLineGO.SetActive(true);
-            loadoutLineGO.SetActive(false);
-        }
+
     }
+
 }

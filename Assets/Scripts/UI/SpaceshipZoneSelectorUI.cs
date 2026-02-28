@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpaceshipZoneSelectorUI : MonoBehaviour
@@ -8,8 +9,16 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] GameObject WorldselectUI;
     [SerializeField] GameObject loadoutUI;
     [SerializeField] SummaryUI summaryUI;
-    [SerializeField] CameraChanger camChanger;
-    [SerializeField] ZoneChangerUI zoneChangerUI;
+    [SerializeField] float timeToMoveBetweenZones = 2;
+    bool moving = false;
+    [SerializeField] PointLineUI left_pointLineUI;
+    [SerializeField] PointLineUI right_pointLineUI;
+
+    [SerializeField] SpaceShipZoneScreen[] spaceShipZones;
+    [SerializeField] ZoneUI[] zoneMarkers;
+    [SerializeField] PointLineUI[] pointLineUIs;
+    [SerializeField] CameraChanger cameraChanger;
+    int currentZoneIndex = 0;
 
     private void OnEnable()
     {
@@ -17,39 +26,31 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         Cursor.visible = true;
 
         Time.timeScale = 1.0f;
-        GoToWorldSelect();
+        
     }
 
     private void Update()
     {
         MoveWithInput();
     }
-
-    void UpdateCanvas()
+    private void Start()
     {
-        zoneChangerUI.UpdateZoneChanger(currentZone);
-        if (currentZone == SpaceshipZone.WorldSelect)
-        {
-            WorldselectUI.SetActive(true);
-            loadoutUI.SetActive(false);
-            summaryUI.LeaveReadyZone();
-        }
-        else if(currentZone == SpaceshipZone.Loadout)
-        {
-            WorldselectUI.SetActive(false);
-            loadoutUI.SetActive(true);
-            summaryUI.LeaveReadyZone();
-        }
-        else if(currentZone == SpaceshipZone.Ready)
-        {
-            WorldselectUI.SetActive(false);
-            loadoutUI.SetActive(false);
-            summaryUI.DisplaySummaryCanvas();
-        }
+        zoneMarkers[0].SelectThisZone();
+        spaceShipZones[0].ShowAllScreens();
     }
 
+
+    void TurnOffAllScreens()
+    {
+        foreach(SpaceShipZoneScreen screen in spaceShipZones) 
+        {
+            screen.HideAllScreens();
+        }
+
+    }
     private void MoveWithInput()
     {
+        if (moving) return;
         if (Input.GetKeyDown(KeyCode.Q))
             MoveLeft();
 
@@ -59,61 +60,51 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
 
     public void MoveLeft()
     {
-        index--;
-        if (index < 0)
-        {
-            index = spaceshipZonesInOrder.Length - 1;
-        }
-        currentZone = spaceshipZonesInOrder[index];
-        UpdateCanvas();
-        camChanger.ChangeCameraTo(currentZone);
+        if(moving) return;
+        if (currentZoneIndex == 0) return;
+        StopAllCoroutines();
+        StartCoroutine(MoveZoneCoroutine(false));
     }
 
     public void MoveRight()
     {
-        index++;
-        if (index >= spaceshipZonesInOrder.Length)
+        if (moving) return;
+        if (currentZoneIndex >= spaceShipZones.Length) return;
+        StopAllCoroutines();
+        StartCoroutine(MoveZoneCoroutine(true));
+    }
+
+    
+    IEnumerator MoveZoneCoroutine(bool movingRight)
+    {
+        moving = true;
+        int direction = 1;
+        if(!movingRight) direction  = -1;
+        spaceShipZones[currentZoneIndex].HideAllScreens();
+        if (movingRight)
         {
-            index = 0;
+            zoneMarkers[currentZoneIndex].LeaveThisZone();
         }
-        currentZone = spaceshipZonesInOrder[index];
-        UpdateCanvas();
-        camChanger.ChangeCameraTo(currentZone);
-    }
-
-    void UpdateIndex(SpaceshipZone newSpaceshipZone)
-    {
-        for (int i = 0; i < spaceshipZonesInOrder.Length; i++)
+        else
         {
-            if(newSpaceshipZone == spaceshipZonesInOrder[i])
-            {
-                index = i;
-                i += spaceshipZonesInOrder.Length;
-            }
+            zoneMarkers[currentZoneIndex].BlockThisZone();
         }
-    }
+        
+        float timer = 0f;
+        while(timer < timeToMoveBetweenZones)
+        {
+            timer += Time.deltaTime;
+            float progress = timer / timeToMoveBetweenZones;
+            if(movingRight) pointLineUIs[currentZoneIndex].SetProgress(progress);
+            else pointLineUIs[currentZoneIndex-1].SetProgress(1 - progress);
 
-    public void GoToLoadout()
-    {
-        currentZone = SpaceshipZone.Loadout;
-        UpdateIndex(currentZone);
-        UpdateCanvas();
-        camChanger.ChangeCameraTo(currentZone);
-    }
-
-    public void GoToWorldSelect()
-    {
-        currentZone = SpaceshipZone.WorldSelect;
-        UpdateIndex(currentZone);
-        UpdateCanvas();
-        camChanger.ChangeCameraTo(currentZone);
-    }
-
-    public void GoToReady()
-    {
-        currentZone = SpaceshipZone.Ready;
-        UpdateIndex(currentZone);
-        UpdateCanvas();
-        camChanger.ChangeCameraTo(currentZone);
+            cameraChanger.TransitionToCamera(currentZoneIndex + direction,progress);
+            yield return null;
+        }
+        if (movingRight) currentZoneIndex++;
+        else currentZoneIndex--;
+        spaceShipZones[currentZoneIndex].ShowAllScreens();
+        zoneMarkers[(currentZoneIndex)].SelectThisZone();
+        moving = false;
     }
 }

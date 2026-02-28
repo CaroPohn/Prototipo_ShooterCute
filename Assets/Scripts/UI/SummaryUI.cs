@@ -1,17 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SummaryUI : MonoBehaviour
+public class SummaryUI : SpaceShipZoneScreen
 {
     [SerializeField] Image weaponImage;
     [SerializeField] Image abilityImage;
     [SerializeField] Sprite[] lummingsSprites;
-    [SerializeField] Image planetImage;
-    [SerializeField] Sprite lavaWorldSprite;
-    [SerializeField] GameObject missionDescriptionGO;
     [SerializeField] Ready_Button_Spaceship readyButton;
     [SerializeField] CameraChanger changer;
-    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject container;
 
     private string weaponName;
     private string abilityName;
@@ -20,55 +17,29 @@ public class SummaryUI : MonoBehaviour
 
     [SerializeField] private LoadoutUI loadout;
 
-    bool aLoadoutWasSelected = false;
-    bool aPlanetWasSelected = false;
-
-    public void DisplaySummaryCanvas()
+    public override void ShowAllScreens()
     {
-        canvas.SetActive(true);
-        TurnOnOffLever();
+        container.SetActive(true);
+        readyButton.PlayAnimationReady();
     }
 
-    public void LeaveReadyZone()
+    public override void HideAllScreens()
     {
-        canvas.SetActive(false);
+        container.SetActive(false);
     }
 
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
         weaponImage.sprite = lummingsSprites[(int)weapon];
+        Debug.Log("Updated to Weapon: " + weapon.ToString() + "id: " +(int)weapon);
         abilityImage.sprite = lummingsSprites[(int)ability];
-        aLoadoutWasSelected = true;
-        
-    }
-
-    public void UpdatePlanet(World world)
-    {
-        aPlanetWasSelected = (world != World.None);
-        if(world  == World.Lava)
-        {
-            missionDescriptionGO.SetActive(true);
-            planetImage.sprite = lavaWorldSprite;
-        }
-
-    }
-
-    public void TurnOnOffLever()
-    {
-        if(aLoadoutWasSelected && aPlanetWasSelected)
-        {
-            readyButton.PlayAnimationReady();
-        }
-        else
-        {
-            readyButton.PlayAnimationDisabled();
-        }
+        Debug.Log("Updated to Ability: " + ability.ToString() + "id: " + (int)ability);
     }
 
     public void StartLevel()
     {
         readyButton.PlayAnimationDisabled();
-        changer.ChangeCameraTo(SpaceshipZone.LookingAtDoor);
+        changer.TransitionToCamera(3, 1);
 
         AkUnitySoundEngine.PostEvent("UI_Button_Special", gameObject);
 
