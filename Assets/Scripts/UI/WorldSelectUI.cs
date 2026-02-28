@@ -3,13 +3,24 @@ using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WorldSelectUI : MonoBehaviour
+public class WorldSelectUI : SpaceShipZoneScreen
 {
     World currentWorld = World.Lava;
     [SerializeField] Ready_Button_Spaceship chooseButton;
-    [SerializeField] SummaryUI summaryUI;
     [SerializeField] RotatingPlanets rotatingPlanets;
     [SerializeField] CurrentPlanetInformation currentPlanetInformation;
+    [SerializeField] GameObject container;
+
+
+    public override void HideAllScreens()
+    {
+        container.SetActive(false);
+    }
+    public override void ShowAllScreens()
+    {
+        container.SetActive(true);
+        CheckIfChooseButtonShouldBeActive();
+    }
 
     bool planetSelected = false;
 
@@ -41,15 +52,6 @@ public class WorldSelectUI : MonoBehaviour
     public void Choose()
     {
         chooseButton.PlayAnimationDisabled();
-        if (!planetSelected)
-        {
-            planetSelected = true;
-            summaryUI.UpdatePlanet(currentWorld);
-        }
-        else
-        {
-            planetSelected = false;
-        }
         FindFirstObjectByType<SpaceshipZoneSelectorUI>().MoveRight();
     }
 }

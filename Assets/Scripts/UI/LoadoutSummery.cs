@@ -5,13 +5,21 @@ public class LoadoutSummery : MonoBehaviour
 {
     [SerializeField] LummingCell weaponCell;
     [SerializeField] LummingCell abilityCell;
+    [SerializeField] GameObject container;
 
     private void Start()
     {
         UpdateWeaponImage(Lumming.None);
         UpdateAbilityImage(Lumming.None);
     }
-
+    public void HideScreen()
+    {
+        container.SetActive(false);
+    }
+    public void ShowScreen()
+    {
+        container.SetActive(true);
+    }
 
     public void UpdateWeaponImage(Lumming newLumming)
     {

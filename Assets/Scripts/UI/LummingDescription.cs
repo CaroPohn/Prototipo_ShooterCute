@@ -8,6 +8,7 @@ public class LummingDescription : MonoBehaviour
     [SerializeField] TextMeshProUGUI tmpLummingName;
     [SerializeField] TextMeshProUGUI tmpLummingWeaponDescription;
     [SerializeField] TextMeshProUGUI tmpLummingAbilityDescription;
+    [SerializeField] GameObject container;
 
 
     public void UpdateLummingDescription(Lumming lumming)
@@ -17,7 +18,14 @@ public class LummingDescription : MonoBehaviour
         tmpLummingWeaponDescription.text = lummingsData[index].weaponDescription;
         tmpLummingAbilityDescription.text = lummingsData[index].abilityDescription;
     }
-
+    public void HideScreen()
+    {
+        container.SetActive(false);
+    }
+    public void ShowScreen()
+    {
+        container.SetActive(true);
+    }
 
 }
 [Serializable]

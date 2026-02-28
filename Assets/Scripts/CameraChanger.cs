@@ -1,33 +1,28 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class CameraChanger : MonoBehaviour
 {
-    [SerializeField] Transform LevelSelectorCameraTransform;
-    [SerializeField] Transform LoadoutCameraTransform;
-    [SerializeField] Transform SummaryCameraTransform;
-    [SerializeField] Transform LookingAtDoorCameraTransform;
+    [SerializeField] Transform[] cameras;
 
-    public void ChangeCameraTo(SpaceshipZone zone)
+    int currentCamIndex;
+    int tempCamIndex;
+
+    private void Start()
     {
-        Transform transformToChangeTo = null;
-        if(zone == SpaceshipZone.Ready)
-        {
-            transformToChangeTo = SummaryCameraTransform;
-        }
-        else if(zone == SpaceshipZone.WorldSelect)
-        {
-            transformToChangeTo = LevelSelectorCameraTransform;
-        }
-        else if (zone == SpaceshipZone.Loadout)
-        {
-            transformToChangeTo = LoadoutCameraTransform;
-        }
-        else
-        {
-            transformToChangeTo = LookingAtDoorCameraTransform;
-        }
-
-        Camera.main.transform.position = transformToChangeTo.position;
-        Camera.main.transform.rotation = transformToChangeTo.rotation;
+        currentCamIndex = 0;
     }
+
+    public void TransitionToCamera(int camIndex,float progress)
+    {
+        if(currentCamIndex != camIndex) 
+        {
+            tempCamIndex = currentCamIndex;
+            currentCamIndex = camIndex;
+        }
+        Camera.main.transform.position = Vector3.Lerp(cameras[tempCamIndex].position, cameras[currentCamIndex].position, progress);
+        Camera.main.transform.rotation = Quaternion.Lerp(cameras[tempCamIndex].rotation, cameras[currentCamIndex].rotation, progress);
+    }
+
+    
 }

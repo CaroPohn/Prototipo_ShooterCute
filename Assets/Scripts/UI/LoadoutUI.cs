@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadoutUI : MonoBehaviour
+public class LoadoutUI : SpaceShipZoneScreen
 {
     [SerializeField] SummaryUI summaryUI;
     [SerializeField] LummingOnTable lummingOnTable;
@@ -17,6 +17,8 @@ public class LoadoutUI : MonoBehaviour
     [SerializeField] LummingDescription lummingDescriptions;
     [SerializeField] LoadoutLumming[] lummingSlots;
     [SerializeField] LoadoutLumming firstSlot;
+
+    [SerializeField] GameObject lummingSelectionContainer;
    
 
     Lumming savedLumming_Weapon;
@@ -50,7 +52,18 @@ public class LoadoutUI : MonoBehaviour
         SlotPressed(lastSlotPressed);
     }
 
-
+    public override void ShowAllScreens()
+    {
+        lummingDescriptions.ShowScreen();
+        loadoutSummaryUI.ShowScreen();
+        lummingSelectionContainer.SetActive(true);
+    }
+    public override void HideAllScreens() 
+    {
+        lummingDescriptions.HideScreen();
+        loadoutSummaryUI.HideScreen();
+        lummingSelectionContainer.SetActive(false);
+    }
     public void SlotPressed(LoadoutLumming lummingSlot)
     {
         currentLumming = lummingSlot.lummingInSlot;
