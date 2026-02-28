@@ -16,14 +16,15 @@ public class FlyingHSpawnState : FlyingHStates
 
     public override void UpdateState(HeavyFlyingEnemy flyingHEnemy)
     {
-        flyingHEnemy.StopFollowingPlayer(true);
+        if (flyingHEnemy.agent.enabled)
+            flyingHEnemy.StopFollowingPlayer(true);
 
-        if (flyingHEnemy.hasReachTop)
-        {
-            flyingHEnemy.StartDescend();
-        }
+        //if (flyingHEnemy.hasReachTop)
+        //{
+        //    flyingHEnemy.StartDescend();
+        //}
 
-        if (flyingHEnemy.hasReachSurface) 
+        if (flyingHEnemy.agent.enabled) 
         {
             flyingHEnemy.GetComponent<FlyingHFSM>().ChangeState(flyingHEnemy.GetComponent<FlyingHFSM>().states[2]);
         }
