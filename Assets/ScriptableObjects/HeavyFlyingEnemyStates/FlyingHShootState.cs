@@ -5,9 +5,7 @@ public class FlyingHShootState : FlyingHStates
 {
     public override void UpdateState(HeavyFlyingEnemy flyingHEnemy)
     {
-        //flyingHEnemy.ShootAnimationHandler();
-
-        flyingHEnemy.Shoot();
+        flyingHEnemy.ShootAnimationHandler();
 
         flyingHEnemy.SetLookAt();
 

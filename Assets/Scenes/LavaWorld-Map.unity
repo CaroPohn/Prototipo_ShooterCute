@@ -2649,6 +2649,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5328023299039321964, guid: 8395109203724434c8ad75076917f61c, type: 3}
   m_PrefabInstance: {fileID: 642836406}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &645912553 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3130485793493915134, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+  m_PrefabInstance: {fileID: 9064768368628324228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647162547
 GameObject:
   m_ObjectHideFlags: 0
@@ -25316,7 +25321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71467777345578492, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.78
+      value: -5.84
       objectReference: {fileID: 0}
     - target: {fileID: 71467777345578492, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25350,9 +25355,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1494409424270148100, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060748115256629383, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5318586128383533184, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: HeavyFlyingEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: jumpHight
@@ -25367,8 +25380,20 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 645912553}
+    - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: goToLayerSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: goToSurfaceTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: goToSurfaceSpeed
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: navMeshSurfaceLayer.m_Bits

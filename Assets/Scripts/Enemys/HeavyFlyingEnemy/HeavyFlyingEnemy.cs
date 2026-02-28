@@ -15,59 +15,46 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private float projSpeed;
 
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float flyingHeight;
 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootPoint;
 
     [SerializeField] private float stopDistance;
 
-    [SerializeField] private float jumpHight;
-    [SerializeField] private float ascentTime;
     public bool hasReachTop;
     public bool hasReachSurface;
 
-    [SerializeField] private float goToSurfaceSpeed;
+    [SerializeField] private float goToSurfaceTime;
+    [SerializeField] private float goToLayerSpeed;
     [SerializeField] private LayerMask navMeshSurfaceLayer;
 
-    //private List<Collider> enemyColliders;
+    [SerializeField] private Animator enemyAnimator;
+    [SerializeField] private HeavyFlyingEnemyAnimatorHandler animatorHandler;
+
+    private List<Collider> enemyColliders;
+
+    private void OnEnable()
+    {
+        animatorHandler.OnFlyingHAttack += Shoot;
+    }
+
+    private void OnDisable()
+    {
+        animatorHandler.OnFlyingHAttack -= Shoot;
+    }
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        //enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
+        enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
 
         hasReachTop = false;
         hasReachSurface = false;
 
-        agent.baseOffset = flyingHeight;
         agent.speed = moveSpeed;
     }
-
-    private void Update()
-    {
-        //MoveToTarget();
-        //StopAgent();
-    }
-
-    //public void MoveToTarget()
-    //{
-    //    if (player != null && distanceToPlayer >= stopDistance) 
-    //    { 
-    //        agent.isStopped = false;
-    //        agent.destination = player.position;
-    //    }
-    //}
-
-    //public void StopAgent()
-    //{
-    //    if (distanceToPlayer <= stopDistance) 
-    //    {
-    //        agent.isStopped = true;
-    //    }  
-    //}
 
     public void SetHealthSystemActive(HealthSystem healthSystem, bool isActive)
     {
@@ -89,13 +76,13 @@ public class HeavyFlyingEnemy : MonoBehaviour
         }
     }
 
-    //public void DeactivateColliders()
-    //{
-    //    foreach (Collider collider in enemyColliders)
-    //    {
-    //        collider.enabled = false;
-    //    }
-    //}
+    public void DeactivateColliders()
+    {
+        foreach (Collider collider in enemyColliders)
+        {
+            collider.enabled = false;
+        }
+    }
 
     public bool IsPlayerOnRange()
     {
@@ -119,14 +106,14 @@ public class HeavyFlyingEnemy : MonoBehaviour
             SetTargetToFollow();
         }
 
-        //if (!agent.isStopped)
-        //{
-        //    enemyAnimator.SetFloat("Velocity", 0.5f);
-        //}
-        //else
-        //{
-        //    enemyAnimator.SetFloat("Velocity", 0.0f);
-        //}
+        if (!agent.isStopped)
+        {
+            enemyAnimator.SetFloat("Speed", 1f);
+        }
+        else
+        {
+            enemyAnimator.SetFloat("Speed", 0.0f);
+        }
     }
 
     public void SetLookAt()
@@ -143,14 +130,15 @@ public class HeavyFlyingEnemy : MonoBehaviour
         }
     }
 
-    //public void ShootAnimationHandler()
-    //{
-    //    enemyAnimator.SetTrigger("Attack");
-    //}
+    public void ShootAnimationHandler()
+    {
+        enemyAnimator.SetTrigger("Attack");
+    }
 
     public void SpawnAnimationHandler()
     {
         StartCoroutine(AscenderCorroutine());
+        StartCoroutine(SpawnCoroutine());
 
         //Instantiate(spawnVFX, transform.position, transform.rotation);
     }
@@ -174,16 +162,10 @@ public class HeavyFlyingEnemy : MonoBehaviour
     private IEnumerator AscenderCorroutine()
     {
         Vector3 destinationPoint = transform.position;
+        float timer = 0f;
 
         if (Physics.Raycast(transform.position, Vector3.up, out RaycastHit hitpoint, Mathf.Infinity, navMeshSurfaceLayer))
         {
-            //if (hitpoint.collider.gameObject.layer.ToString() != navMeshSurfaceLayer.ToString()) 
-            //{
-                
-            //}
-
-            Debug.Log(hitpoint.collider.gameObject.layer.ToString());
-
             if (NavMesh.SamplePosition(hitpoint.point, out NavMeshHit hitNavMesh, 5f, NavMesh.AllAreas))
             {
                 destinationPoint = hitNavMesh.position;
@@ -198,13 +180,15 @@ public class HeavyFlyingEnemy : MonoBehaviour
             yield break;
         }
 
-        while (Vector3.Distance(transform.position, destinationPoint) > 0.1f)
+        while (timer <= goToSurfaceTime)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, goToSurfaceSpeed * Time.deltaTime);
+            timer += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, destinationPoint, timer / goToSurfaceTime);
             yield return null;
         }
 
         transform.position = destinationPoint;
+        agent.enabled = true;
         hasReachTop = true;
     }
 
@@ -239,7 +223,7 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
         while (Vector3.Distance(transform.position, destinationPoint) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, goToSurfaceSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, goToLayerSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -248,15 +232,10 @@ public class HeavyFlyingEnemy : MonoBehaviour
         hasReachSurface = true;
     }
 
-public IEnumerator SpawnCoroutine()
+    public IEnumerator SpawnCoroutine()
     {
-        //enemyAnimator.SetTrigger("Spawn");
+        enemyAnimator.SetTrigger("Spawn");
 
-        yield return null;
-    }
-
-    public IEnumerator SpawnCorroutine()
-    {
         yield return null;
     }
 }
