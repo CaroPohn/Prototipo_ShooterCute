@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -172,18 +173,38 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     private IEnumerator AscenderCorroutine()
     {
-        Vector3 initialPosition = transform.position;
-        Vector3 objectivePosition = initialPosition + Vector3.up * jumpHight;
-        float timer = 0f;
+        Vector3 destinationPoint = transform.position;
 
-        while (timer < ascentTime)
+        if (Physics.Raycast(transform.position, Vector3.up, out RaycastHit hitpoint, Mathf.Infinity, navMeshSurfaceLayer))
         {
-            transform.position = Vector3.Lerp(initialPosition, objectivePosition, timer / ascentTime);
-            timer += Time.deltaTime;
+            //if (hitpoint.collider.gameObject.layer.ToString() != navMeshSurfaceLayer.ToString()) 
+            //{
+                
+            //}
+
+            Debug.Log(hitpoint.collider.gameObject.layer.ToString());
+
+            if (NavMesh.SamplePosition(hitpoint.point, out NavMeshHit hitNavMesh, 5f, NavMesh.AllAreas))
+            {
+                destinationPoint = hitNavMesh.position;
+            }
+            else
+            {
+                destinationPoint = hitpoint.point;
+            }
+        }
+        else
+        {
+            yield break;
+        }
+
+        while (Vector3.Distance(transform.position, destinationPoint) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, goToSurfaceSpeed * Time.deltaTime);
             yield return null;
         }
 
-        transform.position = objectivePosition;
+        transform.position = destinationPoint;
         hasReachTop = true;
     }
 
