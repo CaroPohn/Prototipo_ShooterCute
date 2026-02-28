@@ -6,7 +6,7 @@ public class EnemyProjectile : MonoBehaviour
     private float damage;
     private Vector3 moveDirection;
     private Rigidbody projectileRB;
-    public float speed;
+    private float speed;
 
     private float lifeTime = 5.0f;
 
@@ -38,9 +38,14 @@ public class EnemyProjectile : MonoBehaviour
         damage = damageValue;
     }
 
+    public void SetSpeed(float speedValue)
+    {
+        speed = speedValue;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.transform.CompareTag("Enemy"))
+        if (!collision.transform.CompareTag("Enemy") && !collision.transform.CompareTag("FloatingNavMesh"))
         {
             Destroy(gameObject);
         }
