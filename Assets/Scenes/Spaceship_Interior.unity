@@ -1002,17 +1002,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1858820278 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2669694513793641369, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
-  m_PrefabInstance: {fileID: 2852609459424426667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1961521139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,17 +1148,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff466e391a4ad2e46adfcd854bb8e97f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2025263623 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6283935404332716786, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
-  m_PrefabInstance: {fileID: 2852609459424426667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2031579408
@@ -1646,17 +1624,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
---- !u!114 &2852609459424426668 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4637579278465025559, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
-  m_PrefabInstance: {fileID: 2852609459424426667}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7e150bd0ec2154a976242232f8379a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2852609459424426669 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8439514359391185214, guid: caf4745d00cf532488746d777a58b4e5, type: 3}
@@ -1713,14 +1680,6 @@ PrefabInstance:
       propertyPath: sceneName
       value: LavaWorld-Map
       objectReference: {fileID: 0}
-    - target: {fileID: 207070916214613749, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
-      propertyPath: weaponImage
-      value: 
-      objectReference: {fileID: 1858820278}
-    - target: {fileID: 207070916214613749, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
-      propertyPath: abilityImage
-      value: 
-      objectReference: {fileID: 2025263623}
     - target: {fileID: 1002576506569219267, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: camChanger
       value: 
@@ -1732,7 +1691,7 @@ PrefabInstance:
     - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2852609459424426668}
+      objectReference: {fileID: 8856061277610045828}
     - target: {fileID: 2285183842481188721, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartLevel
@@ -1829,10 +1788,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShipInterior_Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5243310075628253487, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
-      propertyPath: summaryUI
-      value: 
-      objectReference: {fileID: 2852609459424426668}
     - target: {fileID: 5243310075628253487, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: lummingOnTable
       value: 
@@ -2152,7 +2107,7 @@ PrefabInstance:
     - target: {fileID: 8922519774020057440, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: summaryUI
       value: 
-      objectReference: {fileID: 2852609459424426668}
+      objectReference: {fileID: 0}
     - target: {fileID: 8922519774020057440, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
       propertyPath: rotatingPlanets
       value: 
@@ -2206,6 +2161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7be922c53c1b95748bd87326af0d3796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8856061277610045828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 207070916214613749, guid: 52136bfd05e961b4d879434d0df74298, type: 3}
+  m_PrefabInstance: {fileID: 8856061277610045825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137396238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7e150bd0ec2154a976242232f8379a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

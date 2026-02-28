@@ -31,8 +31,9 @@ public class SummaryUI : SpaceShipZoneScreen
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
         weaponImage.sprite = lummingsSprites[(int)weapon];
+        Debug.Log("Updated to Weapon: " + weapon.ToString() + "id: " +(int)weapon);
         abilityImage.sprite = lummingsSprites[(int)ability];
-        
+        Debug.Log("Updated to Ability: " + ability.ToString() + "id: " + (int)ability);
     }
 
     public void StartLevel()

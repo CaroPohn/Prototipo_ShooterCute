@@ -499,7 +499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4637579278465025559}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SummaryUI, Assembly-CSharp
         m_MethodName: StartLevel
         m_Mode: 1
@@ -1230,7 +1230,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2709646103311457813}
-  - component: {fileID: 4637579278465025559}
   m_Layer: 0
   m_Name: Summary
   m_TagString: Untagged
@@ -1255,33 +1254,6 @@ Transform:
   - {fileID: 8247526544395454358}
   m_Father: {fileID: 917915459482621985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4637579278465025559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7385087380423962628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7e150bd0ec2154a976242232f8379a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponImage: {fileID: 2669694513793641369}
-  abilityImage: {fileID: 6283935404332716786}
-  lummingsSprites:
-  - {fileID: 21300000, guid: 635dd2f10bdd8b04ea0681e0c480a9bd, type: 3}
-  - {fileID: 21300000, guid: f3baa079c47fd2c47802be6023ed9c7d, type: 3}
-  - {fileID: 21300000, guid: ece8d3ef98b776e469ad1b7f1d346913, type: 3}
-  - {fileID: 21300000, guid: 2b0915164af8fbe4fa9498a36bd5f60a, type: 3}
-  planetImage: {fileID: 3859643267592345438}
-  lavaWorldSprite: {fileID: 21300000, guid: d7bb219da71a79443b357a53ef3d6579, type: 3}
-  missionDescriptionGO: {fileID: 0}
-  readyButton: {fileID: 0}
-  changer: {fileID: 0}
-  canvas: {fileID: 0}
-  sceneName: 
-  loadout: {fileID: 0}
 --- !u!1 &7491036226839610673
 GameObject:
   m_ObjectHideFlags: 0
