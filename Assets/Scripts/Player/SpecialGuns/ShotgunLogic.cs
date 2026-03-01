@@ -15,6 +15,7 @@ public class ShotgunLogic : Gun
     [SerializeField] private Transform shootPoint;
 
     [SerializeField] private GameObject contactPoint;
+    [SerializeField] private GameObject muzzleFlash;
 
     [SerializeField] InputReader inputReader;
 
@@ -55,6 +56,8 @@ public class ShotgunLogic : Gun
                 TestLineRenderer(shootPoint.position + shotDir * distance);
             }
         }
+
+        Instantiate(muzzleFlash, shootPoint);
 
         armsAnimator.SetTrigger("Shoot");
         jhonnyAnimator.SetTrigger("Shot");

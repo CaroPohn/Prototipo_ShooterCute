@@ -35,8 +35,6 @@ public class HeavyFExplotionManager : MonoBehaviour
                 continue;
             }
 
-            Debug.Log("aaa");
-
             bool hasDamaged = false;
 
             HealthSystem health = hit.GetComponent<HealthSystem>();
