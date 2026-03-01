@@ -59,7 +59,7 @@ public class PlayerProjectile : MonoBehaviour
             visual.Play();
         }
 
-        if (!collision.transform.CompareTag("Player") || !collision.transform.CompareTag("FloatingNavMesh"))
+        if (!collision.transform.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
@@ -70,7 +70,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             Destroy(gameObject);
 
-            HealthSystem healthSystem = collision.transform.GetComponent<HealthSystem>();
+            HealthSystem healthSystem = collision.gameObject.GetComponentInParent<HealthSystem>();
 
             if (healthSystem != null)
             {

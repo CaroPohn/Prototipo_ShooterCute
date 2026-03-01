@@ -31,16 +31,20 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private Animator enemyAnimator;
     [SerializeField] private HeavyFlyingEnemyAnimatorHandler animatorHandler;
 
-    private List<Collider> enemyColliders;
+    public bool hasFallStarted;
 
     private void OnEnable()
     {
         animatorHandler.OnFlyingHAttack += Shoot;
+        animatorHandler.OnFlyingFall += DeactivateNavMesh;
+        animatorHandler.OnFlyingFall += StartFall;
     }
 
     private void OnDisable()
     {
         animatorHandler.OnFlyingHAttack -= Shoot;
+        animatorHandler.OnFlyingFall -= DeactivateNavMesh;
+        animatorHandler.OnFlyingFall -= StartFall;
     }
 
     private void Start()
@@ -48,10 +52,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
-
         hasReachTop = false;
         hasReachSurface = false;
+        hasFallStarted = false;
 
         agent.speed = moveSpeed;
     }
@@ -76,12 +79,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
         }
     }
 
-    public void DeactivateColliders()
+    public void DeactivateNavMesh()
     {
-        foreach (Collider collider in enemyColliders)
-        {
-            collider.enabled = false;
-        }
+        agent.enabled = false;
     }
 
     public bool IsPlayerOnRange()
@@ -143,21 +143,25 @@ public class HeavyFlyingEnemy : MonoBehaviour
         //Instantiate(spawnVFX, transform.position, transform.rotation);
     }
 
-    //public void DieAnimationHandler()
-    //{
-    //    StartCoroutine(DieCoroutine());
-    //}
+    public void DieAnimationHandler()
+    {
+        enemyAnimator.SetTrigger("Death");
+    }
 
-    //public IEnumerator DieCoroutine()
-    //{
-    //    while (!stopDieAnimation)
-    //    {
-    //        enemyAnimator.SetTrigger("Die");
-    //        onStopDieAnimation?.Invoke(gameObject);
+    private float fallSpeed = 0f;
 
-    //        yield return null;
-    //    }
-    //}
+    private void StartFall()
+    {
+        hasFallStarted = true;
+    }
+
+    public void Fall()
+    {
+        fallSpeed += 14f * Time.deltaTime;
+        float movementDistance = fallSpeed;
+
+        transform.Translate(Vector3.down * movementDistance * Time.deltaTime, Space.World);
+    }
 
     private IEnumerator AscenderCorroutine()
     {

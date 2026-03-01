@@ -7,6 +7,7 @@ public class HeavyFlyingEnemyAnimatorHandler : MonoBehaviour
 
     public event Action OnFinishFlyingSpawn;
     public event Action OnFlyingHAttack;
+    public event Action OnFlyingFall;
 
     //private void Start()
     //{
@@ -21,5 +22,10 @@ public class HeavyFlyingEnemyAnimatorHandler : MonoBehaviour
     public void OnFinishSpawn()
     {
         OnFinishFlyingSpawn?.Invoke();
+    }
+
+    public void OnStartFall()
+    {
+        OnFlyingFall?.Invoke();
     }
 }
