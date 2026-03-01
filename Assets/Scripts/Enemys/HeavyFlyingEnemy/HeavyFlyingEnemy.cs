@@ -14,6 +14,10 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float projSpeed;
 
+    private float fallSpeed = 0f;
+    [SerializeField] private float fallCollisionRadius = 0.5f;
+    [SerializeField] private GameObject explotionPrefab;
+
     [SerializeField] private float moveSpeed;
 
     [SerializeField] private GameObject projectilePrefab;
@@ -148,8 +152,6 @@ public class HeavyFlyingEnemy : MonoBehaviour
         enemyAnimator.SetTrigger("Death");
     }
 
-    private float fallSpeed = 0f;
-
     private void StartFall()
     {
         hasFallStarted = true;
@@ -161,6 +163,27 @@ public class HeavyFlyingEnemy : MonoBehaviour
         float movementDistance = fallSpeed;
 
         transform.Translate(Vector3.down * movementDistance * Time.deltaTime, Space.World);
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, fallCollisionRadius);
+
+        bool hasCrushed = false;
+
+        foreach (Collider collider in hitColliders)
+        {
+            if (collider.transform.root != this.transform.root && !collider.isTrigger)
+            {
+                hasCrushed = true;
+                break;
+            }
+        }
+
+        if (hasCrushed)
+        {
+            if (explotionPrefab != null)
+            {
+                Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+            }
+        }
     }
 
     private IEnumerator AscenderCorroutine()
