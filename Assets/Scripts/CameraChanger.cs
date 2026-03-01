@@ -4,6 +4,7 @@ using UnityEngine;
 public class CameraChanger : MonoBehaviour
 {
     [SerializeField] Transform[] cameras;
+    [SerializeField] AnimationCurve curve;
 
     int currentCamIndex;
     int tempCamIndex;
@@ -11,6 +12,7 @@ public class CameraChanger : MonoBehaviour
     private void Start()
     {
         currentCamIndex = 0;
+        tempCamIndex = 0;
     }
 
     public void TransitionToCamera(int camIndex,float progress)
@@ -20,8 +22,9 @@ public class CameraChanger : MonoBehaviour
             tempCamIndex = currentCamIndex;
             currentCamIndex = camIndex;
         }
-        Camera.main.transform.position = Vector3.Lerp(cameras[tempCamIndex].position, cameras[currentCamIndex].position, progress);
-        Camera.main.transform.rotation = Quaternion.Lerp(cameras[tempCamIndex].rotation, cameras[currentCamIndex].rotation, progress);
+        float curveSmooth = curve.Evaluate(progress);
+        Camera.main.transform.position = Vector3.Lerp(cameras[tempCamIndex].position, cameras[currentCamIndex].position, curveSmooth);
+        Camera.main.transform.rotation = Quaternion.Lerp(cameras[tempCamIndex].rotation, cameras[currentCamIndex].rotation, curveSmooth);
     }
 
     
