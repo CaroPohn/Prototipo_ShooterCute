@@ -16,10 +16,17 @@ public class EggShield : MonoBehaviour
     [SerializeField] float maxGlowWhenHit;
     [SerializeField] float timeForGlowToFadeOut;
     [SerializeField] VisualEffect vfx;
+    [SerializeField] bool isInverted;
+    public bool IsInverted
+    {
+        get { return  isInverted; }
+    }
     Coroutine eggGetHitCoroutine;
     private MaterialPropertyBlock block;
 
     public static event Action OnFinishDesintegrate;
+
+
 
     private void OnEnable()
     {
