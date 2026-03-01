@@ -7,7 +7,6 @@ public class FreezeGun : Gun
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject muzzleFlash;
     [SerializeField] private GameObject bulletPrefab;
-    //[SerializeField] private GameObject hitEffect;
 
     [SerializeField] private Animator armsAnimator;
     [SerializeField] private Animator iceAnimator;

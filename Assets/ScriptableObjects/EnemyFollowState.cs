@@ -17,6 +17,15 @@ public class EnemyFollowState : EnemyStates
 
         patrolEnemy.shootTimer -= Time.deltaTime;
 
+        if (patrolEnemy.frostTest)
+        {
+            patrolEnemy.FreezeEnemyEffect();
+        }
+        else 
+        { 
+            patrolEnemy.StopFreezeEffect();
+        }
+
         if (!patrolEnemy.IsPlayerOnRange())
         {
             patrolEnemy.StopFollowingPlayer(false);

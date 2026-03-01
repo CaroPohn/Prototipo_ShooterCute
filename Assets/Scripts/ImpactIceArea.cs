@@ -30,10 +30,16 @@ public class ImpactIceArea : MonoBehaviour
             if (enemy != null && enemy.gameObject.tag == "Enemy" || meleeEnemy != null && meleeEnemy.gameObject.tag == "Enemy")
             {
                 if (enemy != null)
+                {
                     enemy.SlowEnemy(speedToApply, lifetime - 1);
+                    enemy.frostTest = true;
+                }                
 
                 if (meleeEnemy != null)
+                {
                     meleeEnemy.SlowEnemy(speedToApply, lifetime - 1);
+                    meleeEnemy.frostTest = true;
+                }                
             }
         }
     }

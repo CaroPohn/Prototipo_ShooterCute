@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class MeleeEnemy : MonoBehaviour
 {
@@ -31,6 +32,10 @@ public class MeleeEnemy : MonoBehaviour
 
     public float attackRadius;
 
+    public bool frostTest;
+    [SerializeField] private GameObject frezeVFXPrefab;
+    private VisualEffect frostEffect;
+
     public static event Action<GameObject> onStopDieAnimation;
 
     private NavMeshAgent agent;
@@ -45,6 +50,10 @@ public class MeleeEnemy : MonoBehaviour
 
         stopMeleeDieAnimation = false;
         stopMeleeSpawnAnimation = false;
+
+        frostTest = false;
+        frezeVFXPrefab.SetActive(false);
+        frostEffect = frezeVFXPrefab.GetComponent<VisualEffect>();
     }
 
     private void OnEnable()
@@ -57,6 +66,18 @@ public class MeleeEnemy : MonoBehaviour
     {
         meleeAnimationHandler.OnEnemyAttacking -= MeleeLogic;
         meleeAnimationHandler.OnEnemyStep -= StepSoundActivation;
+    }
+
+    public void FreezeEnemyEffect()
+    {
+        frezeVFXPrefab.SetActive(true);
+        frostEffect.Play();
+    }
+
+    public void StopFreezeEffect()
+    {
+        frostEffect.Stop();
+        frezeVFXPrefab.SetActive(false);
     }
 
     public void SlowEnemy(float newSpeed, float time)

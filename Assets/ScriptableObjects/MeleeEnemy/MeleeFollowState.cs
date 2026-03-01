@@ -17,6 +17,15 @@ public class MeleeFollowState : MeleeStates
 
         meleeEnemy.attackTimer -= Time.deltaTime;
 
+        if (meleeEnemy.frostTest)
+        {
+            meleeEnemy.FreezeEnemyEffect();
+        }
+        else
+        {
+            meleeEnemy.StopFreezeEffect();
+        }
+
         if (!meleeEnemy.IsPlayerOnRange())
         {
             meleeEnemy.StopFollowingPlayer(false);

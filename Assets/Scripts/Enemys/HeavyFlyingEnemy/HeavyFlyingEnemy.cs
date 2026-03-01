@@ -14,6 +14,7 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float projSpeed;
 
+    [SerializeField] private float fallSpeedSetter = 18f;
     private float fallSpeed = 0f;
     [SerializeField] private float fallCollisionRadius = 0.5f;
     [SerializeField] private GameObject explotionPrefab;
@@ -159,7 +160,7 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
     public void Fall()
     {
-        fallSpeed += 14f * Time.deltaTime;
+        fallSpeed += fallSpeedSetter * Time.deltaTime;
         float movementDistance = fallSpeed;
 
         transform.Translate(Vector3.down * movementDistance * Time.deltaTime, Space.World);

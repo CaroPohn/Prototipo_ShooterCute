@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class PatrolEnemy : MonoBehaviour
 {
@@ -32,9 +33,15 @@ public class PatrolEnemy : MonoBehaviour
     public bool stopDieAnimation;
     public bool stopSpawnAnimation;
 
+    public bool frostTest;
+    [SerializeField] private GameObject frezeVFXPrefab;
+    private VisualEffect frostEffect;
+
     public static event Action<GameObject> onStopDieAnimation;
 
     private NavMeshAgent agent;
+
+    public float count = 0;
 
     private void Start()
     {
@@ -46,6 +53,10 @@ public class PatrolEnemy : MonoBehaviour
 
         stopDieAnimation = false;
         stopSpawnAnimation = false;
+
+        frostTest = false;
+        frezeVFXPrefab.SetActive(false);
+        frostEffect = frezeVFXPrefab.GetComponent<VisualEffect>();
     }
 
     private void OnEnable()
@@ -63,6 +74,18 @@ public class PatrolEnemy : MonoBehaviour
     public void StepSoundActivation()
     {
         AkUnitySoundEngine.PostEvent("Enemy_Footstep_Adult", gameObject);
+    }
+
+    public void FreezeEnemyEffect()
+    {
+        frezeVFXPrefab.SetActive(true);
+        frostEffect.Play();
+    }
+
+    public void StopFreezeEffect()
+    {
+        frostEffect.Stop();
+        frezeVFXPrefab.SetActive(false);        
     }
 
     public void ShootLogic()
@@ -98,6 +121,7 @@ public class PatrolEnemy : MonoBehaviour
 
         agent.speed = 6;
         enemyAnimator.SetFloat("Velocity", 0.5f);
+        frostTest = false;
     }
 
     public void DeactivateColliders()
