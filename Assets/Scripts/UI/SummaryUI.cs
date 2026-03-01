@@ -1,11 +1,14 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SummaryUI : SpaceShipZoneScreen
 {
-    [SerializeField] Image weaponImage;
-    [SerializeField] Image abilityImage;
-    [SerializeField] Sprite[] lummingsSprites;
+    [SerializeField] GameObject[] lummingsWeapon;
+    [SerializeField] GameObject[] lummingsAbility;
+    [SerializeField] TextMeshProUGUI weaponTMP;
+    [SerializeField] TextMeshProUGUI abilityTMP;
+    [SerializeField] string[] lummingsNames;
     [SerializeField] Ready_Button_Spaceship readyButton;
     [SerializeField] CameraChanger changer;
     [SerializeField] GameObject container;
@@ -30,10 +33,18 @@ public class SummaryUI : SpaceShipZoneScreen
 
     public void UpdateLoadout(Lumming weapon,Lumming ability)
     {
-        weaponImage.sprite = lummingsSprites[(int)weapon];
-        Debug.Log("Updated to Weapon: " + weapon.ToString() + "id: " +(int)weapon);
-        abilityImage.sprite = lummingsSprites[(int)ability];
-        Debug.Log("Updated to Ability: " + ability.ToString() + "id: " + (int)ability);
+        foreach (GameObject lumming in lummingsWeapon)
+        {
+            lumming.SetActive(false);
+        }
+        foreach (GameObject lumming in lummingsAbility)
+        {
+            lumming.SetActive(false);
+        }
+        lummingsWeapon[(int)weapon - 1].SetActive(true);
+        lummingsAbility[(int)ability - 1].SetActive(true);
+        weaponTMP.text = lummingsNames[(int)weapon - 1];
+        abilityTMP.text = lummingsNames[(int)ability - 1];
     }
 
     public void StartLevel()
