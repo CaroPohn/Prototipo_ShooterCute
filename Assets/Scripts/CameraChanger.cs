@@ -32,7 +32,7 @@ public class CameraChanger : MonoBehaviour
 
         float loadoutVolumeSmooth = loadoutCurve.Evaluate(progress);
         if (currentCamIndex == 1) loadoutVolume.weight = loadoutVolumeSmooth;
-        else loadoutVolume.weight = 1f - loadoutVolumeSmooth;
+        else loadoutVolume.weight = loadoutCurve.Evaluate(1f) - loadoutVolumeSmooth;
     }
 
     

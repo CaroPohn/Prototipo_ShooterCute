@@ -51,11 +51,11 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     private void MoveWithInput()
     {
         if (moving) return;
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Escape))
             MoveLeft();
 
-        if (Input.GetKeyDown(KeyCode.E))
-            MoveRight();
+        /*if (Input.GetKeyDown(KeyCode.E))
+            MoveRight();*/
     }
 
     public void MoveLeft()
@@ -94,7 +94,7 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
         while(timer < timeToMoveBetweenZones)
         {
             timer += Time.deltaTime;
-            float progress = timer / timeToMoveBetweenZones;
+            float progress = Mathf.Clamp01(timer / timeToMoveBetweenZones);
             if(movingRight) pointLineUIs[currentZoneIndex].SetProgress(progress);
             else pointLineUIs[currentZoneIndex-1].SetProgress(1 - progress);
 
