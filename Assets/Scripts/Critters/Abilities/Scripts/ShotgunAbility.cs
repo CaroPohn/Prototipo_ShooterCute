@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class ShotgunAbility : MonoBehaviour
@@ -6,6 +7,7 @@ public class ShotgunAbility : MonoBehaviour
     [SerializeField] private float distance;
     [SerializeField] private float spread;
     [SerializeField] private int raysPerShot;
+    [SerializeField] private float recoilForce;
 
     [SerializeField] private GameObject lineRenderer;
     [SerializeField] private Transform shootPoint;
@@ -16,13 +18,16 @@ public class ShotgunAbility : MonoBehaviour
     [SerializeField] private Animator jhonnyAnimator;
 
     private GameObject playerGO;
+    private Rigidbody playerRB;
     private WeaponChanger weaponChangerScript;
 
-    [SerializeField] private Camera playerCamera;
+    private Camera playerCamera;
 
     private void Start()
     {
         playerGO = GameObject.FindGameObjectWithTag("Player");
+        playerCamera = playerGO.GetComponentInChildren<Camera>();
+        playerRB = playerGO.GetComponent<Rigidbody>();
         weaponChangerScript = playerGO.GetComponent<WeaponChanger>();
     }
 
@@ -48,8 +53,6 @@ public class ShotgunAbility : MonoBehaviour
 
     private void ChangeWeaponScriptValues()
     {
-        Debug.Log("AAAAAAAAAA");
-
         weaponChangerScript.timer = 0.0f;
         weaponChangerScript.weaponIndex = 1;
         weaponChangerScript.FillAbilityImage.fillAmount = 0;
@@ -62,10 +65,16 @@ public class ShotgunAbility : MonoBehaviour
 
     public void ShootAbility()
     {
+        Vector3 recoilDirection = -playerCamera.transform.forward;
+
+        UnityEngine.Debug.Log("AA");
+
         for (int i = 0; i < raysPerShot; i++)
         {
             RaycastHit hit;
             Vector3 shotDir = GetShotSpread();
+
+            playerRB.AddForce(recoilDirection * recoilForce, ForceMode.Impulse);
 
             if ((Physics.Raycast(shootPoint.position, GetShotSpread(), out hit, distance)))
             {
