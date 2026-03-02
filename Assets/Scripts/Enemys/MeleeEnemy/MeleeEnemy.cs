@@ -95,6 +95,7 @@ public class MeleeEnemy : MonoBehaviour
 
         agent.speed = 9;
         enemyAnimator.SetFloat("Velocity", 0.8f);
+        frostTest = false;
     }
 
     public void StepSoundActivation()
