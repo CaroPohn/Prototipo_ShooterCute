@@ -3,12 +3,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FlyingHDieState", menuName = "FlyingHSO/FlyingHDieState")]
 public class FlyingHDieState : FlyingHStates
 {
-    public override void Enter(HeavyFlyingEnemy patrolEnemy)
+    public override void Enter(HeavyFlyingEnemy flyingHEnemy)
     {
-        patrolEnemy.StopFollowingPlayer(true);
+        flyingHEnemy.StopFollowingPlayer(true);
 
         //patrolEnemy.DeactivateColliders();
 
-        //patrolEnemy.DieAnimationHandler();
+        flyingHEnemy.DieAnimationHandler();
+    }
+
+    public override void UpdateState(HeavyFlyingEnemy flyingHEnemy)
+    {
+        if(flyingHEnemy.hasFallStarted)
+            flyingHEnemy.Fall();
     }
 }

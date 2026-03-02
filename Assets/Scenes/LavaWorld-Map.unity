@@ -3983,6 +3983,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 200610471}
     - target: {fileID: 7978891532715337914, guid: b7874c992084c584ea144065f9098b38, type: 3}
+      propertyPath: recoilForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978891532715337914, guid: b7874c992084c584ea144065f9098b38, type: 3}
       propertyPath: armsAnimator
       value: 
       objectReference: {fileID: 1878606546}
@@ -5389,6 +5393,10 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 200610471}
+    - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 1882912200475695124, guid: 5899bbeb443909a4497da98d5af87af3, type: 3}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: armsAnimator
       value: 
@@ -7819,6 +7827,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4938692274386361493, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
   m_PrefabInstance: {fileID: 1643189359}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402578866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561665798129900002, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+  m_PrefabInstance: {fileID: 9064768368628324228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edbf109a6350e741a004b92443b13e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415428087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8336304867454241943, guid: fc3d69a9c7e45614380d1de5344d795b, type: 3}
@@ -22494,9 +22513,17 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: shootPoint
       value: 
       objectReference: {fileID: 100858931}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: bulletSpeed
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: iceAnimator
       value: 
@@ -22513,6 +22540,10 @@ PrefabInstance:
       propertyPath: armsAnimator
       value: 
       objectReference: {fileID: 1878606546}
+    - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7936916301976851052, guid: 9f2e5ad1d37423c4ea3edc967049e6b0, type: 3}
     - target: {fileID: 8803168815111055542, guid: 310e899d66dd53d41b83f739feba0113, type: 3}
       propertyPath: lineRenderer
       value: 
@@ -25355,6 +25386,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1141158461624116893, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1494409424270148100, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: m_Height
       value: 1.7
@@ -25363,9 +25398,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3193832779817117055, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: effectControllerScript
+      value: 
+      objectReference: {fileID: 1402578866}
     - target: {fileID: 5318586128383533184, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: m_Name
       value: HeavyFlyingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: fallSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: jumpHight
@@ -25388,6 +25431,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: explotionPrefab
+      value: 
+      objectReference: {fileID: 4120919331641794590, guid: a4e06a12bc929184abe4b02c77b555d5, type: 3}
+    - target: {fileID: 8446107430885763599, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
       propertyPath: goToSurfaceTime
       value: 1
       objectReference: {fileID: 0}
@@ -25399,7 +25446,16 @@ PrefabInstance:
       propertyPath: navMeshSurfaceLayer.m_Bits
       value: 33554432
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8576377980287035127, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625455754020567086, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5365531112172308727, guid: 7ed80bf95562b7949a9fcf45107a3b7b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

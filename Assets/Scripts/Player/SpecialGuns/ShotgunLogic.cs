@@ -11,10 +11,10 @@ public class ShotgunLogic : Gun
     [SerializeField] private Animator armsAnimator;
     [SerializeField] private Animator jhonnyAnimator;
 
-    [SerializeField] private GameObject lineRenderer;
     [SerializeField] private Transform shootPoint;
 
     [SerializeField] private GameObject contactPoint;
+    [SerializeField] private GameObject muzzleFlash;
 
     [SerializeField] InputReader inputReader;
 
@@ -41,20 +41,16 @@ public class ShotgunLogic : Gun
             {
                 HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
 
-                if (health != null) 
+                if (health != null)
                 {
                     health.TakeDamage(damagePerBullet);
                 }
 
                 Instantiate(contactPoint, hit.point, Quaternion.LookRotation(hit.normal));
-
-                TestLineRenderer(hit.point);
-            }
-            else
-            {
-                TestLineRenderer(shootPoint.position + shotDir * distance);
             }
         }
+
+        Instantiate(muzzleFlash, shootPoint);
 
         armsAnimator.SetTrigger("Shoot");
         jhonnyAnimator.SetTrigger("Shot");
@@ -72,12 +68,5 @@ public class ShotgunLogic : Gun
 
         Vector3 direction = shootDir - shootPoint.position;
         return direction;
-    }
-
-    private void TestLineRenderer(Vector3 end)
-    {
-        LineRenderer lR = Instantiate(lineRenderer).GetComponent<LineRenderer>();
-
-        lR.SetPositions(new Vector3[2] { shootPoint.position, end });
     }
 }

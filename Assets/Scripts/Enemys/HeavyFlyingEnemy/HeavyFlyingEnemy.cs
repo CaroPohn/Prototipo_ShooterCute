@@ -14,6 +14,11 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float projSpeed;
 
+    [SerializeField] private float fallSpeedSetter = 18f;
+    private float fallSpeed = 0f;
+    [SerializeField] private float fallCollisionRadius = 0.5f;
+    [SerializeField] private GameObject explotionPrefab;
+
     [SerializeField] private float moveSpeed;
 
     [SerializeField] private GameObject projectilePrefab;
@@ -31,16 +36,20 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private Animator enemyAnimator;
     [SerializeField] private HeavyFlyingEnemyAnimatorHandler animatorHandler;
 
-    private List<Collider> enemyColliders;
+    public bool hasFallStarted;
 
     private void OnEnable()
     {
         animatorHandler.OnFlyingHAttack += Shoot;
+        animatorHandler.OnFlyingFall += DeactivateNavMesh;
+        animatorHandler.OnFlyingFall += StartFall;
     }
 
     private void OnDisable()
     {
         animatorHandler.OnFlyingHAttack -= Shoot;
+        animatorHandler.OnFlyingFall -= DeactivateNavMesh;
+        animatorHandler.OnFlyingFall -= StartFall;
     }
 
     private void Start()
@@ -48,10 +57,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        enemyColliders = new List<Collider>(GetComponentsInChildren<Collider>());
-
         hasReachTop = false;
         hasReachSurface = false;
+        hasFallStarted = false;
 
         agent.speed = moveSpeed;
     }
@@ -76,12 +84,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
         }
     }
 
-    public void DeactivateColliders()
+    public void DeactivateNavMesh()
     {
-        foreach (Collider collider in enemyColliders)
-        {
-            collider.enabled = false;
-        }
+        agent.enabled = false;
     }
 
     public bool IsPlayerOnRange()
@@ -143,21 +148,44 @@ public class HeavyFlyingEnemy : MonoBehaviour
         //Instantiate(spawnVFX, transform.position, transform.rotation);
     }
 
-    //public void DieAnimationHandler()
-    //{
-    //    StartCoroutine(DieCoroutine());
-    //}
+    public void DieAnimationHandler()
+    {
+        enemyAnimator.SetTrigger("Death");
+    }
 
-    //public IEnumerator DieCoroutine()
-    //{
-    //    while (!stopDieAnimation)
-    //    {
-    //        enemyAnimator.SetTrigger("Die");
-    //        onStopDieAnimation?.Invoke(gameObject);
+    private void StartFall()
+    {
+        hasFallStarted = true;
+    }
 
-    //        yield return null;
-    //    }
-    //}
+    public void Fall()
+    {
+        fallSpeed += fallSpeedSetter * Time.deltaTime;
+        float movementDistance = fallSpeed;
+
+        transform.Translate(Vector3.down * movementDistance * Time.deltaTime, Space.World);
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, fallCollisionRadius);
+
+        bool hasCrushed = false;
+
+        foreach (Collider collider in hitColliders)
+        {
+            if (collider.transform.root != this.transform.root && !collider.isTrigger)
+            {
+                hasCrushed = true;
+                break;
+            }
+        }
+
+        if (hasCrushed)
+        {
+            if (explotionPrefab != null)
+            {
+                Instantiate(explotionPrefab, transform.position, Quaternion.identity);
+            }
+        }
+    }
 
     private IEnumerator AscenderCorroutine()
     {
