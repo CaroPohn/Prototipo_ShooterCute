@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public void StartLevel()
     {
         AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
-        SceneLoader.Instance.ChangeScene("Spaceship_Interior");  
+        SceneLoader.Instance.ChangeScene("ComicIntroScene");  
     }
 
     public void OpenSettings()

@@ -13,6 +13,8 @@ public class ComicManager : MonoBehaviour
     [SerializeField] float timeForEachImageToBeDisplayed;
     [SerializeField] Image image;
     int ammountOfTexts = 3;
+
+    private string wiseEventName = "UI_Button_Normal";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,8 +36,8 @@ public class ComicManager : MonoBehaviour
     }
     void GoToNextLevel()
     {
-        /*.gameObject.SetActive(false);
-        tmp.gameObject.SetActive(false);*/
+        AkUnitySoundEngine.PostEvent(wiseEventName, gameObject);
+        SceneLoader.Instance.ChangeScene("Spaceship_Interior");
     }
     IEnumerator ShowComic()
     {
