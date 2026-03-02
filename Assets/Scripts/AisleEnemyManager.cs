@@ -35,7 +35,6 @@ public class AisleEnemyManager : MonoBehaviour
         if (zone.hasTriggered) return;
 
         zone.hasTriggered = true;
-        Debug.Log($"Activando zona: {zone.zoneName}");
 
         int spawnIndex = 0;
 

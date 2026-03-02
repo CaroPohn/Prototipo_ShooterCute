@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     private bool readyToJump;
-    private bool isMoving;
+    [HideInInspector] public bool isMoving;
 
     [SerializeField] private Animator armsAnimator;
 
