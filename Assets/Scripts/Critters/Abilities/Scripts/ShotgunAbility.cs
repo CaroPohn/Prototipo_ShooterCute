@@ -9,8 +9,8 @@ public class ShotgunAbility : MonoBehaviour
     [SerializeField] private int raysPerShot;
     [SerializeField] private float recoilForce;
 
-    [SerializeField] private GameObject lineRenderer;
     [SerializeField] private Transform shootPoint;
+    [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] InputReader inputReader;
 
@@ -67,7 +67,7 @@ public class ShotgunAbility : MonoBehaviour
     {
         Vector3 recoilDirection = -playerCamera.transform.forward;
 
-        UnityEngine.Debug.Log("AA");
+        Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
 
         for (int i = 0; i < raysPerShot; i++)
         {
@@ -84,12 +84,6 @@ public class ShotgunAbility : MonoBehaviour
                 {
                     health.TakeDamage(damagePerBullet);
                 }
-
-                TestLineRenderer(hit.point);
-            }
-            else
-            {
-                TestLineRenderer(shootPoint.position + shotDir * distance);
             }
         }
     }
@@ -106,12 +100,5 @@ public class ShotgunAbility : MonoBehaviour
 
         Vector3 direction = shootDir - shootPoint.position;
         return direction;
-    }
-
-    private void TestLineRenderer(Vector3 end)
-    {
-        LineRenderer lR = Instantiate(lineRenderer).GetComponent<LineRenderer>();
-
-        lR.SetPositions(new Vector3[2] { shootPoint.position, end });
     }
 }

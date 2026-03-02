@@ -13,8 +13,8 @@ public class ShotgunLogic : Gun
 
     [SerializeField] private Transform shootPoint;
 
-    [SerializeField] private GameObject contactPoint;
     [SerializeField] private GameObject muzzleFlash;
+    [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] InputReader inputReader;
 
@@ -34,19 +34,15 @@ public class ShotgunLogic : Gun
     {
         for (int i = 0; i < raysPerShot; i++) 
         {
-            RaycastHit hit;
             Vector3 shotDir = GetShotSpread();
 
-            if ((Physics.Raycast(shootPoint.position, GetShotSpread(), out hit, distance)))
+            GameObject projectile = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+
+            PlayerProjectile projScript = projectile.GetComponent<PlayerProjectile>();
+            if (projScript != null)
             {
-                HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
-
-                if (health != null)
-                {
-                    health.TakeDamage(damagePerBullet);
-                }
-
-                Instantiate(contactPoint, hit.point, Quaternion.LookRotation(hit.normal));
+                projScript.SetDamage(damagePerBullet);
+                projScript.SetDirection(shotDir);
             }
         }
 
