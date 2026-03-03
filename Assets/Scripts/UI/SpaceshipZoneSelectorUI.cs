@@ -18,6 +18,8 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
     [SerializeField] ZoneUI[] zoneMarkers;
     [SerializeField] PointLineUI[] pointLineUIs;
     [SerializeField] CameraChanger cameraChanger;
+    [SerializeField] GameObject warningSignGO;
+    bool warningSingVisible = false;
     int currentZoneIndex = 0;
 
     private void OnEnable()
@@ -60,15 +62,32 @@ public class SpaceshipZoneSelectorUI : MonoBehaviour
 
     public void MoveLeft()
     {
-        if(moving) return;
-        if (currentZoneIndex == 0) return;
+        if(moving || warningSingVisible) return;
+        if (currentZoneIndex == 0)
+        {
+            ShowWarningSign();
+            return;
+        }
         StopAllCoroutines();
         StartCoroutine(MoveZoneCoroutine(false));
     }
-
+    void ShowWarningSign()
+    {
+        warningSignGO.SetActive(true);
+        warningSingVisible = true;
+    }
+    public void CloseWarningSign()
+    {
+        warningSignGO.SetActive(false);
+        warningSingVisible = false;
+    }
+    public void GoBackToMainMenu()
+    {
+        Debug.Log("Going Back To Main Menu");
+    }
     public void MoveRight()
     {
-        if (moving) return;
+        if (moving || warningSingVisible) return;
         if (currentZoneIndex >= spaceShipZones.Length) return;
         StopAllCoroutines();
         StartCoroutine(MoveZoneCoroutine(true));

@@ -10,6 +10,8 @@ public class ChangeGameplayUILumming : MonoBehaviour
 
     [SerializeField] private Sprite fireLumming;
     [SerializeField] private Sprite zapLumming;
+    [SerializeField] private Sprite shotgunLumming;
+    [SerializeField] private Sprite iceLumming;
 
     private string abilityName;
 
@@ -37,6 +39,14 @@ public class ChangeGameplayUILumming : MonoBehaviour
         else if (abilityName == "ElectricAbility")
         {
             lummingGameplayUI.sprite = zapLumming;
+        }
+        else if(abilityName == "ShotgunAbility")
+        {
+            lummingGameplayUI.sprite = shotgunLumming;
+        }
+        else if(abilityName == "FreezeAbility")
+        {
+            lummingGameplayUI.sprite = iceLumming;
         }
     }
 }
