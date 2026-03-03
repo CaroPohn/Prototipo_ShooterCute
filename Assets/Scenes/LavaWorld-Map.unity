@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 100858930}
   serializedVersion: 2
   m_LocalRotation: {x: 0.477605, y: 0.2980634, z: 0.2361401, w: 0.79201615}
-  m_LocalPosition: {x: 0.327, y: -0.146, z: 0.841}
+  m_LocalPosition: {x: 0.306, y: -0.142, z: 0.879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5892,8 +5892,12 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
+      propertyPath: spread
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: distance
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: shootPoint
@@ -5907,6 +5911,10 @@ PrefabInstance:
       propertyPath: muzzleFlash
       value: 
       objectReference: {fileID: 1882912200475695124, guid: 5899bbeb443909a4497da98d5af87af3, type: 3}
+    - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
+      propertyPath: raysPerShot
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: armsAnimator
       value: 
@@ -5929,7 +5937,7 @@ PrefabInstance:
       objectReference: {fileID: 1165680716}
     - target: {fileID: 5708463753021447601, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: damagePerBullet
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5741277137339332327, guid: d6af5c663c7549649916fb176b833e15, type: 3}
       propertyPath: m_Layer

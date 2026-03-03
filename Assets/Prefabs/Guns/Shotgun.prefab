@@ -46,14 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerBullet: 10
-  distance: 2
+  distance: 3
   timeBetweenShots: 1
-  spread: 0.2
-  raysPerShot: 5
+  spread: 0.5
+  raysPerShot: 10
   armsAnimator: {fileID: 0}
   jhonnyAnimator: {fileID: 0}
-  lineRenderer: {fileID: 812446398524389961, guid: 0e7bb11592c954b4fbc95beed49903c8, type: 3}
   shootPoint: {fileID: 0}
+  muzzleFlash: {fileID: 0}
+  bulletPrefab: {fileID: 0}
   inputReader: {fileID: 0}
   playerCamera: {fileID: 0}
 --- !u!1 &8752384672092125661
