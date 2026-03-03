@@ -9,6 +9,10 @@ public class PlayerProjectile : MonoBehaviour
     public float speed;
     public float fallGravity = 9.81f;
 
+    [SerializeField] private bool hasAreaDamage = false;
+    [SerializeField] private float explosionRadius = 2;
+    [SerializeField] private float explosionDamage = 40;
+
     [SerializeField] private GameObject effect;
 
     private float lifeTime = 5.0f;
@@ -75,6 +79,27 @@ public class PlayerProjectile : MonoBehaviour
             if (healthSystem != null)
             {
                 healthSystem.TakeDamage(damage);
+            }
+        }
+
+        if (hasAreaDamage)
+        {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
+            foreach (var hitCollider in hitColliders)
+            {
+                Rigidbody hitRb = hitCollider.GetComponentInParent<Rigidbody>();
+
+                if (hitRb != null && hitRb.tag == "Enemy")
+                {
+                    HealthSystem enemyHealth = hitCollider.GetComponentInParent<HealthSystem>();
+                    if (enemyHealth != null)
+                    {
+                        enemyHealth.TakeDamage((int)explosionDamage);
+
+                        break;
+                    }
+                }
             }
         }
     }

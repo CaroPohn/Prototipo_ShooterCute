@@ -89,8 +89,6 @@ public class ZapGun : Gun
             }
         }
 
-        Debug.Log(canPlayerShot);
-
         timer += Time.deltaTime;
 
         if (timer >= nextPlayTime)
@@ -186,9 +184,7 @@ public class ZapGun : Gun
     public override void Shoot()
     {
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Vector3 shootPoint = screenCenter;
-
-        Ray ray = playerCamera.ScreenPointToRay(shootPoint);
+        Ray ray = playerCamera.ScreenPointToRay(screenCenter);
 
         RaycastHit[] hits = Physics.RaycastAll(ray, range);
 
@@ -199,17 +195,18 @@ public class ZapGun : Gun
         int sfxLayer = LayerMask.NameToLayer("SFX");
 
         bool hitSomething = false;
+        float furthestDistance = 0f;
 
         foreach (RaycastHit hit in hits)
         {
-            if (hit.collider.gameObject.layer == winLayer || hit.collider.gameObject.layer == playerLayer || hit.collider.gameObject.layer == sfxLayer)
+            if (hit.collider.gameObject.layer == winLayer ||
+                hit.collider.gameObject.layer == playerLayer ||
+                hit.collider.gameObject.layer == sfxLayer)
                 continue;
 
             hitSomething = true;
-            hitDistance = Vector3.Distance(hit.point, shootPoint);
 
-            VisualEffect newHitVFX = Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            newHitVFX.Play();
+            furthestDistance = Mathf.Max(furthestDistance, hit.distance);
 
             HealthSystem health = hit.collider.GetComponentInParent<HealthSystem>();
             if (health != null)
@@ -217,16 +214,20 @@ public class ZapGun : Gun
                 health.TakeDamage(totalDamage);
             }
 
-            break;
+            VisualEffect newHitVFX = Instantiate(hitPointEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            newHitVFX.Play();
         }
 
         if (!hitSomething)
         {
-            Vector3 endPoint = ray.origin + ray.direction * range;
             hitDistance = range;
-
+            Vector3 endPoint = ray.origin + ray.direction * range;
             VisualEffect newHitVFX = Instantiate(hitPointEffect, endPoint, Quaternion.LookRotation(-ray.direction));
             newHitVFX.Play();
+        }
+        else
+        {
+            hitDistance = furthestDistance;
         }
 
         if (activeMuzzleEffect != null)
