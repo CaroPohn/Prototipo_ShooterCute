@@ -13,10 +13,10 @@ public class ZapGun : Gun
 
     private bool canPlayerShot;
 
-    private int damageLevel1 = 25;
-    private int damageLevel2 = 40;
-    private int damageLevel3 = 60;
-    private int damageLevel4 = 120;
+    private int damageLevel1 = 30;
+    private int damageLevel2 = 70;
+    private int damageLevel3 = 100;
+    private int damageLevel4 = 200;
 
     private float shootHoldTime;
     public bool isHoldingShoot;
