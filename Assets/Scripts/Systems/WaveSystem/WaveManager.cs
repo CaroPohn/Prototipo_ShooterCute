@@ -15,11 +15,14 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private ObjectiveUI objectiveUI;
 
     [SerializeField] private EggInteraction eggInteracionScript;
+    [SerializeField] private WaveProgressBar waveProgressBar;
 
     private int currentWaveIndex = 0;
     private int enemiesAlive = 0;
     private bool spawningWave = false;
     private bool hasRescueTextShow = false;
+    private int totalEnemies = 0;
+    private int enemiesKilled = 0;
 
     private bool hasEggInteractedToStartWaves;
 
@@ -34,6 +37,7 @@ public class WaveManager : MonoBehaviour
         hasEggInteractedToStartWaves = false;
 
         objectiveUI.ShowNewMission("FIND THE EGG", "Locate the endangered Lumming egg");
+        CalculateHowManyEnemies();
     }
 
     private void OnEnable()
@@ -69,6 +73,7 @@ public class WaveManager : MonoBehaviour
         Invoke(nameof(ShowSurviveMissionText), 2f);
 
         stationEffectsScript.Close();
+        Invoke("DisplayProgressBar", 3.5f) ;
     }
 
     private void CheckIfPlayerHasWinAllWaves()
@@ -81,6 +86,7 @@ public class WaveManager : MonoBehaviour
 
             stationCollider.enabled = false;
             stationEffectsScript.Die();
+            waveProgressBar.HideProgressBar();
         }
     }
 
@@ -171,6 +177,26 @@ public class WaveManager : MonoBehaviour
     void OnEnemyDeath()
     {
         enemiesAlive--;
+        enemiesKilled++;
+        UpdateProgressBar();
+    }
+    private void CalculateHowManyEnemies()
+    {
+        foreach(Wave wave in waves) 
+        {
+            foreach(SpawnInstruction spawnInst in wave.spawnInstructions)
+            {
+                totalEnemies = totalEnemies + spawnInst.enemyCount;
+            }
+        }
+    }
+    private void UpdateProgressBar()
+    {
+        waveProgressBar.UpdateProgress((float)enemiesKilled/(float)totalEnemies);
+    }
+    private void DisplayProgressBar()
+    {
+        waveProgressBar.DisplayProgressBar();
     }
 }
 
