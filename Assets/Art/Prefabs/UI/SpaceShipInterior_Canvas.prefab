@@ -1093,20 +1093,28 @@ MonoBehaviour:
     abilityDescription: 
   - lumming: 1
     lummingName: CHISPEAN
-    weaponDescription: Chispean weapon desc
-    abilityDescription: Chispean ability desc
+    weaponDescription: Fires an electric beam. Charging the shot increases its power,
+      releasing a massive bolt that deals heavy damage.
+    abilityDescription: Creates a circular field on impact. Slows down enemies inside
+      and deals progressive damage over time.
   - lumming: 2
     lummingName: BOMB
-    weaponDescription: Bomb weapon desc
-    abilityDescription: Bomb ability desc
+    weaponDescription: Semi-auto grenade launcher. Fires explosive rounds with a
+      ballistic arc. Deals good damage on direct impact.
+    abilityDescription: Rolls a heavy charge forward. After a brief delay, it triggers
+      a large explosion with high damage.
   - lumming: 3
     lummingName: BULLETS
-    weaponDescription: Bullets weapon desc
-    abilityDescription: Bullets ability desc
+    weaponDescription: Standard shotgun firing a wide spread of kinetic bullets.
+      Effective for clearing close-range threats quickly.
+    abilityDescription: Fires a massive, high-impact shotgun blast. The recoil propels
+      you backward after the shot.
   - lumming: 4
     lummingName: ICE
-    weaponDescription: Ice weapon desc
-    abilityDescription: Ice ability desc
+    weaponDescription: Fires rapid bursts of sub-zero projectiles. Ideal for keeping
+      enemies at a distance with constant hits.
+    abilityDescription: Releases a cryo-charge that explodes on impact. Instantly
+      freezes all enemies in the area for a few seconds.
   tmpLummingName: {fileID: 7633629251105859065}
   tmpLummingWeaponDescription: {fileID: 5665167057157928822}
   tmpLummingAbilityDescription: {fileID: 1851609859069489964}
@@ -1431,8 +1439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172, y: 168}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -173.999, y: 142.56}
+  m_SizeDelta: {x: 269.101, y: 147.114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6876907056109542487
 CanvasRenderer:
@@ -1462,7 +1470,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Fires an electric beam. Charging the shot increases its power, releasing
+    a massive bolt that deals heavy damage.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c28a72671a2b97143b2249c3d87a3a9f, type: 2}
   m_sharedMaterial: {fileID: 5242256338208500051, guid: c28a72671a2b97143b2249c3d87a3a9f, type: 2}
@@ -1496,7 +1505,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5298,8 +5307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 138, y: 168}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 146.71793, y: 138.824}
+  m_SizeDelta: {x: 280.779, y: 154.585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6194238425044546548
 CanvasRenderer:
@@ -5329,7 +5338,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Creates a circular field on impact. Slows down enemies inside and deals
+    progressive damage over time.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c28a72671a2b97143b2249c3d87a3a9f, type: 2}
   m_sharedMaterial: {fileID: 5242256338208500051, guid: c28a72671a2b97143b2249c3d87a3a9f, type: 2}
@@ -5363,7 +5373,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
