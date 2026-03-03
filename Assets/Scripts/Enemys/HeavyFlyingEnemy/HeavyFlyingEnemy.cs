@@ -36,6 +36,8 @@ public class HeavyFlyingEnemy : MonoBehaviour
     [SerializeField] private Animator enemyAnimator;
     [SerializeField] private HeavyFlyingEnemyAnimatorHandler animatorHandler;
 
+    private float fallCount = 0;
+
     public bool hasFallStarted;
 
     private void OnEnable()
@@ -181,8 +183,9 @@ public class HeavyFlyingEnemy : MonoBehaviour
 
         if (hasCrushed)
         {
-            if (explotionPrefab != null)
+            if (explotionPrefab != null && fallCount == 0)
             {
+                fallCount++;
                 Instantiate(explotionPrefab, transform.position, Quaternion.identity);
             }
         }
