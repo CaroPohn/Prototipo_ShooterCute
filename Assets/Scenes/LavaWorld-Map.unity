@@ -8460,6 +8460,7 @@ MonoBehaviour:
   stationCollider: {fileID: 1496181498}
   objectiveUI: {fileID: 474043192}
   eggInteracionScript: {fileID: 433519070}
+  waveProgressBar: {fileID: 1426117747}
 --- !u!4 &1362483730
 Transform:
   m_ObjectHideFlags: 0
@@ -8564,6 +8565,17 @@ MonoBehaviour:
   damage: 0.2
   postExitDuration: 3
   damageInterval: 0.1
+--- !u!114 &1426117747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2098540747612017031, guid: c4cd1243a9545e44c825ed7ee31b602a, type: 3}
+  m_PrefabInstance: {fileID: 1643189359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9ebb10f1762b1488236cf1e522159b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1467930312
 PrefabInstance:
   m_ObjectHideFlags: 0
