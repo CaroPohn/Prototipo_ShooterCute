@@ -9,6 +9,7 @@ public class FlyingHDieState : FlyingHStates
 
         //patrolEnemy.DeactivateColliders();
 
+        Debug.Log("Death state");
         flyingHEnemy.DieAnimationHandler();
     }
 

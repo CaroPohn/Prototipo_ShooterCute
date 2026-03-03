@@ -20,6 +20,8 @@ public class ShotgunLogic : Gun
 
     [SerializeField] private Camera playerCamera;
 
+    private float nextTimeToShoot = 0f;
+
     private void OnEnable()
     {
         inputReader.OnShoot += Shoot;
@@ -32,6 +34,13 @@ public class ShotgunLogic : Gun
 
     public override void Shoot()
     {
+        if (Time.time < nextTimeToShoot)
+        {
+            return;
+        }
+
+        nextTimeToShoot = Time.time + timeBetweenShots;
+
         for (int i = 0; i < raysPerShot; i++) 
         {
             Vector3 shotDir = GetShotSpread();

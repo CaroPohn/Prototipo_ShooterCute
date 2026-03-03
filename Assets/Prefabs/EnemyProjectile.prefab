@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd055efdbf23ac46b21fbdaa46fdaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 120
 --- !u!54 &-1829707992573191657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -178,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 1278525635013401230, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488126265850130314, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306839588662600315, guid: 8fc180ed42e6bed45a02b8ef830ff3e8, type: 3}
       propertyPath: m_Name

@@ -71,12 +71,10 @@ public class MeleeEnemy : MonoBehaviour
     public void FreezeEnemyEffect()
     {
         frezeVFXPrefab.SetActive(true);
-        frostEffect.Play();
     }
 
     public void StopFreezeEffect()
     {
-        frostEffect.Stop();
         frezeVFXPrefab.SetActive(false);
     }
 

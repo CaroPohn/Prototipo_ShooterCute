@@ -16,7 +16,22 @@ public class TriggerZone
 
 public class AisleEnemyManager : MonoBehaviour
 {
+    public static AisleEnemyManager Instance { get; private set; }
+
     [SerializeField] private List<TriggerZone> aisleZones;
+    [SerializeField] private TriggerZone triggerZone;
+
+    [SerializeField] LevelController levelController;
+
+    int count = 0;
+
+    private float activeEnemiesCount = 6;
+
+    private void Awake()
+    {
+        if (Instance == null) { Instance = this; }
+        else { Destroy(gameObject); }
+    }
 
     private void Start()
     {
@@ -62,6 +77,23 @@ public class AisleEnemyManager : MonoBehaviour
         }
 
         return zone.triggerCollider.transform.position;
+    }
+
+    public void OnEnemyDied()
+    {
+        activeEnemiesCount--;
+        CheckIfAreaIsCleared();
+    }
+
+    private void CheckIfAreaIsCleared()
+    {
+        bool allEnemiesDead = (activeEnemiesCount <= 0);
+
+        if (allEnemiesDead && count == 0)
+        {
+            levelController.WallDeactivate();
+            count++;
+        }
     }
 }
 

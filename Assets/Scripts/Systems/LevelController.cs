@@ -28,6 +28,13 @@ public class LevelController : MonoBehaviour
     [Header("Egg")]
     [SerializeField] private EggInteraction eggInteractionScript;
 
+    [Header("Wall")]
+    [SerializeField] private Material wallMaterial;
+    [SerializeField] private Collider wallCollider;
+    [SerializeField] private float wallFadeDuration = 1.5f;
+
+    private Coroutine wallFadeCoroutine;
+
     public static event Action OnDefeat;
     public static event Action OnWin;
 
@@ -42,7 +49,10 @@ public class LevelController : MonoBehaviour
         winCollider.SetActive(false);
 
         WinColliderTrigger.OnWinningLevel += WinLevel;
+
         EggInteraction.OnGrabbingEgg += ChangeObjetiveToWinCollider;
+        EggInteraction.OnGrabbingEgg += WallDeactivate;
+        EggInteraction.OnStartWaves += WallActivation;
 
         WaveManager.OnWinningAllWaves += DesintegrateObjects;
 
@@ -56,6 +66,8 @@ public class LevelController : MonoBehaviour
     {
         WinColliderTrigger.OnWinningLevel -= WinLevel;
         EggInteraction.OnGrabbingEgg -= ChangeObjetiveToWinCollider;
+        EggInteraction.OnGrabbingEgg -= WallDeactivate;
+        EggInteraction.OnStartWaves -= WallActivation;
 
         WaveManager.OnWinningAllWaves -= DesintegrateObjects;
 
@@ -66,6 +78,8 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
+        wallMaterial.SetFloat("_Alpha", 1);
+
         Application.targetFrameRate = 144;
 
         gamePlayCanvas.gameObject.SetActive(true);
@@ -99,6 +113,45 @@ public class LevelController : MonoBehaviour
                 eggShield.Desintegrate();
             }
         }
+    }
+
+    public void WallDeactivate()
+    {
+        wallCollider.enabled = false;
+        if (wallFadeCoroutine != null)
+        {
+            StopCoroutine(wallFadeCoroutine);
+        }
+
+        wallFadeCoroutine = StartCoroutine(FadeWallAlpha(0f, wallFadeDuration));
+    }
+
+    public void WallActivation()
+    {
+        wallCollider.enabled = true;
+        if (wallFadeCoroutine != null)
+        {
+            StopCoroutine(wallFadeCoroutine);
+        }
+
+        wallFadeCoroutine = StartCoroutine(FadeWallAlpha(1f, wallFadeDuration));
+    }
+
+    private System.Collections.IEnumerator FadeWallAlpha(float targetAlpha, float duration)
+    {
+        float startAlpha = wallMaterial.GetFloat("_Alpha");
+        float timeElapsed = 0f;
+
+        while (timeElapsed < duration)
+        {
+            float currentAlpha = Mathf.Lerp(startAlpha, targetAlpha, timeElapsed / duration);
+            wallMaterial.SetFloat("_Alpha", currentAlpha);
+
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        wallMaterial.SetFloat("_Alpha", targetAlpha);
     }
 
     private void DestroyDesintegrateObjects()

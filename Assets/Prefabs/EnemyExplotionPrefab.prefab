@@ -80,7 +80,7 @@ VFXRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3946336473807624048}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4958356192424989407}
   - component: {fileID: 378642573306554764}
+  - component: {fileID: 7552389745610406442}
   m_Layer: 0
   m_Name: EnemyExplotionPrefab
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   damageableLayers:
     serializedVersion: 2
     m_Bits: 4352
+--- !u!114 &7552389745610406442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4120919331641794590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f13780015ccd934e9213efcdcab1757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 2

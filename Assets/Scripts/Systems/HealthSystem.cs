@@ -76,6 +76,11 @@ public class HealthSystem : MonoBehaviour
                 onDeath?.Invoke();
                 AkUnitySoundEngine.PostEvent("Enemy_Death", gameObject);
             }
+
+            if (AisleEnemyManager.Instance != null && deathCounter == 1)
+            {
+                AisleEnemyManager.Instance.OnEnemyDied();
+            }
         }
     }
 

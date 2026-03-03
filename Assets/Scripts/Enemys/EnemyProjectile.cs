@@ -31,6 +31,11 @@ public class EnemyProjectile : MonoBehaviour
     public void SetDirection(Vector3 dir)
     {
         moveDirection = dir;
+
+        if (moveDirection != Vector3.zero)
+        {
+            transform.forward = moveDirection;
+        }
     }
 
     public void SetDamage(float damageValue)

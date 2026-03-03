@@ -156,6 +156,7 @@ public class HeavyFlyingEnemy : MonoBehaviour
     private void StartFall()
     {
         hasFallStarted = true;
+        Debug.Log("Fall started");
     }
 
     public void Fall()
