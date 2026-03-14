@@ -2,8 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEditor.ShaderGraph.Internal;
-using Unity.VisualScripting;
 
 public class ZoneUI : MonoBehaviour
 {
